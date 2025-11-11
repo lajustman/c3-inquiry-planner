@@ -35,4 +35,17 @@ document.addEventListener('DOMContentLoaded', () => {
   setupDrawer('vocab-toggle', 'vocab-drawer', 'close-vocab');
   setupDrawer('standards-toggle', 'standards-drawer', 'close-standards');
   setupDrawer('mi-standards-toggle', 'mi-standards-drawer', 'close-mi-standards');
+
+  const gradeSelect = document.getElementById('mi-grade-select');
+  if (gradeSelect) {
+    const panels = document.querySelectorAll('.mi-grade-panel');
+    gradeSelect.addEventListener('change', () => {
+      panels.forEach((panel) => {
+        panel.classList.add('hidden');
+      });
+      const selected = gradeSelect.value;
+      const target = document.querySelector(`[data-grade-panel=\"${selected}\"]`);
+      target?.classList.remove('hidden');
+    });
+  }
 });

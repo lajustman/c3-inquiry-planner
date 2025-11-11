@@ -288,7 +288,11 @@ def _build_expectation_vocab_entries(expectation: ExpectationEntry, selection: D
     return entries
 
 
-def _build_standard_entries(codes: Iterable[str], description: str) -> List[Dict[str, str]]:
+def _build_standard_entries(
+    codes: Iterable[str],
+    description: str,
+    grade_level: Optional[str] = None,
+) -> List[Dict[str, str]]:
     entries: List[Dict[str, str]] = []
     for code in codes:
         clean_code = str(code or "").strip()
@@ -298,6 +302,7 @@ def _build_standard_entries(codes: Iterable[str], description: str) -> List[Dict
             {
                 "code": clean_code,
                 "description": description,
+                "grade": grade_level or "",
             }
         )
     return entries
@@ -575,6 +580,7 @@ def load_plan_runtime(plan_key: str) -> PlanRuntime:
     plan["standards"] = _build_standard_entries(
         plan_config.required_standards or [],
         plan_config.teacher_intent or plan_config.compelling_question or plan_config.title,
+        grade_level=plan_config.grade_band,
     )
     exemplar_terms = extract_exemplar_terms(plan)
     runtime = PlanRuntime(
