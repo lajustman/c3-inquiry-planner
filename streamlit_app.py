@@ -7,19 +7,20 @@ Run with:
 
 from __future__ import annotations
 
-from functools import lru_cache
+from pathlib import Path
 from typing import Dict, List, Tuple
 
 import streamlit as st
-from webapp.app import app, build_lesson_from_expectation
+from webapp.app import APP_ROOT, app, build_lesson_from_expectation
 from webapp.standards_catalog import StandardsCatalog, get_michigan_catalog
 
 
 @st.cache_resource(show_spinner=False)
 def load_catalog() -> StandardsCatalog:
     """Load and cache the Michigan standards catalog once per Streamlit session."""
+    catalog_dir = Path(APP_ROOT) / "Curriculum-Ontology" / "michigan"
     with app.app_context():
-        return get_michigan_catalog(app.root_path / "Curriculum-Ontology" / "michigan")
+        return get_michigan_catalog(catalog_dir)
 
 
 def _unit_label(unit: Dict[str, object]) -> str:
