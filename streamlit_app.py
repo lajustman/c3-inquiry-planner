@@ -87,8 +87,23 @@ def _render_plan(plan: Dict[str, object]) -> None:
         for vocab in plan.get("vocabulary", []):
             st.markdown(f"- **{vocab['term']}** – {vocab['definition']}")
     with st.expander("Michigan Standards", expanded=False):
-        for standard in plan.get("standards", []):
-            st.markdown(f"- **{standard['code']}** – {standard['description']}")
+        standards = plan.get("standards", [])
+        if standards:
+            grade_groups: Dict[str, List[Dict[str, str]]] = {}
+            for item in standards:
+                grade = item.get("grade") or "General"
+                grade_groups.setdefault(grade, []).append(item)
+            grade_options = list(grade_groups.keys())
+            selected_grade = st.selectbox(
+                "Select grade band:",
+                grade_options,
+                index=0,
+                key="mi_standard_grade_select",
+            )
+            for standard in grade_groups.get(selected_grade, []):
+                st.markdown(f"- **{standard['code']}** – {standard['description']}")
+        else:
+            st.info("No Michigan standards attached yet.")
 
 
 def main() -> None:
