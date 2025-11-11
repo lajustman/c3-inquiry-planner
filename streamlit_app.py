@@ -79,18 +79,9 @@ def _render_plan(plan: Dict[str, object]) -> None:
             st.write(f"- {obj}")
 
     with st.expander("Suggested Resources"):
-        stages = plan.get("sequence", [])
-        for stage in stages:
-            title = stage.get("stage") or stage.get("goal") or "Stage"
-            st.markdown(f"**{title}** – {stage.get('goal', '').strip()}")
-            for resource in stage.get("resources", []):
-                label = resource.get("title", "Resource")
-                url = resource.get("url", "")
-                description = resource.get("description", "")
-                if url:
-                    st.markdown(f"- [{label}]({url}) – {description}")
-                else:
-                    st.markdown(f"- {label} – {description}")
+        st.info(
+            "Generate a personalized learning path below to see stage-specific resources for this lesson."
+        )
 
     with st.expander("Key Vocabulary", expanded=False):
         for vocab in plan.get("vocabulary", []):
