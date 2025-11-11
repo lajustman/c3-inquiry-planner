@@ -131,8 +131,6 @@ def build_vocab_list(
         ("Civic Participation", vocab_defs.get("civic participation")),
         ("Evidence", vocab_defs.get("evidence")),
         ("Corroborate", vocab_defs.get("corroborate")),
-        ("Counterclaim", vocab_defs.get("counterclaim")),
-        ("Indicator", vocab_defs.get("indicator")),
     ]
     terms.extend(base_terms)
     extras = [
@@ -241,9 +239,13 @@ PLAN_CACHE: Dict[str, PlanRuntime] = {}
 def build_vocab_definitions(plan: Dict[str, object]) -> Dict[str, str]:
     vocab = dict(BASE_VOCAB_DEFS)
     for concept in plan.get("focus_concepts", []):
-        if not concept:
+        label = str(concept or "").strip()
+        if not label:
             continue
-        vocab.setdefault(str(concept).lower(), f"A key concept in this lesson: {concept}.")
+        if re.search(r"\d", label):
+            # Standard-like tokens belong to the standards drawer, not vocab.
+            continue
+        vocab.setdefault(label.lower(), f"A key concept in this lesson: {label}.")
     return vocab
 
 
@@ -278,17 +280,12 @@ def _build_expectation_vocab_entries(expectation: ExpectationEntry, selection: D
         seen.add(key)
         entries.append((clean, definition))
 
-    add(expectation.label, expectation.text)
-    discipline = selection.get("discipline_label")
-    if discipline:
-        add(
-            discipline,
-            f"This is the disciplinary lens for the lesson: we explore {expectation.label.lower()} through {discipline}.",
-        )
+    trimmed_label = expectation.label.split("(", 1)[0].strip()
+    add(trimmed_label, expectation.text)
     tokens = _extract_vocab_terms(expectation.text)
-    for token in tokens:
-        add(token, f"A key word from this expectation that helps you discuss {expectation.label.lower()}.")
-    return entries[:6]
+    for token in tokens[:4]:
+        add(token, f"A key word from this expectation that helps you discuss {trimmed_label.lower()}.")
+    return entries
 
 
 def _build_standard_entries(codes: Iterable[str], description: str) -> List[Dict[str, str]]:
@@ -714,7 +711,12 @@ def build_lesson_from_expectation(expectation_code: str) -> Tuple[PlanRuntime, D
             f"A key disciplinary lens for this lesson: {discipline_label}.",
         )
     plan["vocabulary"] = build_vocab_list(vocab_defs, priority_terms=lesson_vocab)
-    plan["standards"] = [{"code": expectation.full_code, "description": expectation.text}]
+    plan["standards"] = [
+        {
+            "code": expectation.full_code,
+            "description": expectation.text,
+        }
+    ]
     exemplar_terms = extract_exemplar_terms(plan)
 
     updated_config = replace(
