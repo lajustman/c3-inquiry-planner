@@ -117,6 +117,10 @@ def main() -> None:
             st.success(f'Lesson ready for {selected_code}')
 
     plan = st.session_state.get("plan")
+    if plan and "standards" not in plan:
+        st.session_state.pop("plan", None)
+        plan = None
+
     if plan:
         _render_plan(plan)
 
@@ -196,7 +200,7 @@ def main() -> None:
                         st.markdown(f"- {act}")
                 st.markdown("---")
     else:
-        st.info("Build a lesson to unlock inquiry preferences and learning path tools.")
+        st.info("Build a lesson to unlock inquiry preferences and learning path tools. (Existing saved lessons may need rebuilding after updates.)")
 
 
 if __name__ == "__main__":
