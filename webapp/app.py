@@ -308,6 +308,15 @@ def _build_standard_entries(
     return entries
 
 
+def _attach_standard_groups(plan: Dict[str, object]) -> None:
+    standards = plan.get("standards", [])
+    grouped: Dict[str, List[Dict[str, str]]] = {}
+    for entry in standards:
+        grade = entry.get("grade") or plan.get("grade_band") or "General"
+        grouped.setdefault(grade, []).append(entry)
+    plan["standards_by_grade"] = grouped
+
+
 def extract_exemplar_terms(plan: Dict[str, object]) -> Set[str]:
     terms: Set[str] = set()
     for exemplar in plan.get("exemplars", []):
@@ -582,6 +591,7 @@ def load_plan_runtime(plan_key: str) -> PlanRuntime:
         plan_config.teacher_intent or plan_config.compelling_question or plan_config.title,
         grade_level=plan_config.grade_band,
     )
+    _attach_standard_groups(plan)
     exemplar_terms = extract_exemplar_terms(plan)
     runtime = PlanRuntime(
         key=resolved_key,
@@ -721,8 +731,10 @@ def build_lesson_from_expectation(expectation_code: str) -> Tuple[PlanRuntime, D
         {
             "code": expectation.full_code,
             "description": expectation.text,
+            "grade": selection.get("unit_label") or metadata.get("grade_band"),
         }
     ]
+    _attach_standard_groups(plan)
     exemplar_terms = extract_exemplar_terms(plan)
 
     updated_config = replace(

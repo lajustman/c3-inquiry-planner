@@ -89,10 +89,12 @@ def _render_plan(plan: Dict[str, object]) -> None:
     with st.expander("Michigan Standards", expanded=False):
         standards = plan.get("standards", [])
         if standards:
-            grade_groups: Dict[str, List[Dict[str, str]]] = {}
-            for item in standards:
-                grade = item.get("grade") or "General"
-                grade_groups.setdefault(grade, []).append(item)
+            grade_groups = plan.get("standards_by_grade") or {}
+            if not grade_groups:
+                grade_groups = {}
+                for item in standards:
+                    grade = item.get("grade") or "General"
+                    grade_groups.setdefault(grade, []).append(item)
             grade_options = list(grade_groups.keys())
             selected_grade = st.selectbox(
                 "Select grade band:",

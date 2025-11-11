@@ -63,19 +63,12 @@
         <button class="close-drawer" id="close-mi-standards" aria-label="Close Michigan standards panel">×</button>
       </div>
       <div class="drawer-content">
-        {% if plan.standards %}
-          {% set grade_groups = {} %}
-          {% for standard in plan.standards %}
-            {% set grade = standard.grade or 'General' %}
-            {% if grade not in grade_groups %}
-              {% set _ = grade_groups.__setitem__(grade, []) %}
-            {% endif %}
-            {% set _ = grade_groups[grade].append(standard) %}
-          {% endfor %}
+        {% if plan.standards_by_grade %}
+          {% set grade_groups = plan.standards_by_grade %}
           <div class="drawer-grade-selector">
             <label for="mi-grade-select">Show standards for:</label>
             <select id="mi-grade-select">
-              {% for grade in grade_groups.keys() %}
+              {% for grade in grade_groups %}
               <option value="mi-grade-{{ loop.index0 }}">{{ grade }}</option>
               {% endfor %}
             </select>
