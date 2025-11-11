@@ -31,12 +31,15 @@ def _unit_label(unit: Dict[str, object]) -> str:
 
 def _list_expectations(catalog: StandardsCatalog) -> List[Tuple[str, str, object]]:
     options: List[Tuple[str, str, object]] = []
-    for unit in catalog.units:
-        unit_label = _unit_label(unit)
-        for category in unit.categories:
-            for expectation in category.expectations:
-                display = f"{expectation.full_code} – {expectation.label} ({unit_label})"
-                options.append((display, expectation.full_code, category))
+    for unit in getattr(catalog, "units", []):
+        unit_data = unit if isinstance(unit, dict) else unit.__dict__
+        unit_label = _unit_label(unit_data)
+        for category in unit_data.get("categories", []):
+            category_data = category if isinstance(category, dict) else category.__dict__
+            for expectation in category_data.get("expectations", []):
+                expectation_data = expectation if isinstance(expectation, dict) else expectation.__dict__
+                display = f"{expectation_data['full_code']} – {expectation_data['label']} ({unit_label})"
+                options.append((display, expectation_data["full_code"], expectation_data))
     return options
 
 
