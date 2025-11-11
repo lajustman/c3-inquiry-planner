@@ -7,11 +7,20 @@ Run with:
 
 from __future__ import annotations
 
+from contextlib import contextmanager
 from pathlib import Path
 from typing import Dict, List, Tuple
 
 import streamlit as st
-from webapp.app import APP_ROOT, app, build_lesson_from_expectation
+from flask import session
+
+from webapp.app import (
+    APP_ROOT,
+    app,
+    api_learning_path,
+    build_lesson_from_expectation,
+    store_student_interests,
+)
 from webapp.standards_catalog import StandardsCatalog, get_michigan_catalog
 
 
@@ -24,13 +33,13 @@ def load_catalog() -> StandardsCatalog:
 
 
 def _unit_label(unit: Dict[str, object]) -> str:
-    if unit["type"] == "grade":
-        return f"Grade {unit['code']}"
-    return unit["label"]
+    if unit.get("type") == "grade":
+        return f"Grade {unit.get('code')}"
+    return unit.get("label", "Unit")
 
 
-def _list_expectations(catalog: StandardsCatalog) -> List[Tuple[str, str, object]]:
-    options: List[Tuple[str, str, object]] = []
+def _list_expectations(catalog: StandardsCatalog) -> List[Tuple[str, str]]:
+    options: List[Tuple[str, str]] = []
     for unit in getattr(catalog, "units", []):
         unit_data = unit if isinstance(unit, dict) else unit.__dict__
         unit_label = _unit_label(unit_data)
@@ -39,19 +48,22 @@ def _list_expectations(catalog: StandardsCatalog) -> List[Tuple[str, str, object
             for expectation in category_data.get("expectations", []):
                 expectation_data = expectation if isinstance(expectation, dict) else expectation.__dict__
                 display = f"{expectation_data['full_code']} – {expectation_data['label']} ({unit_label})"
-                options.append((display, expectation_data["full_code"], expectation_data))
+                options.append((display, expectation_data["full_code"]))
     return options
 
 
-@st.cache_data(show_spinner=False)
-def _expectation_index(catalog: StandardsCatalog) -> Dict[str, Dict[str, object]]:
-    index: Dict[str, Dict[str, object]] = {}
-    for label, code, category in _list_expectations(catalog):
-        index[code] = {
-            "label": label,
-            "category": category,
-        }
-    return index
+@contextmanager
+def flask_session_context(path: str = "/", method: str = "GET", json_payload: Dict | None = None):
+    stored = st.session_state.get("flask_session", {})
+    ctx = app.test_request_context(path, method=method, json=json_payload)
+    ctx.push()
+    session.clear()
+    session.update(stored)
+    try:
+        yield
+        st.session_state["flask_session"] = dict(session)
+    finally:
+        ctx.pop()
 
 
 def _render_plan(plan: Dict[str, object]) -> None:
@@ -96,26 +108,101 @@ def main() -> None:
         st.error("No Michigan expectations found. Check the ontology assets.")
         return
 
-    option_labels = [label for label, _, _ in expectation_options]
+    option_labels = [label for label, _ in expectation_options]
     selected_label = st.selectbox("Select a standard:", option_labels, index=0)
-    selected_code = ""
-    for label, code, _ in expectation_options:
-        if label == selected_label:
-            selected_code = code
-            break
+    selected_code = next((code for label, code in expectation_options if label == selected_label), "")
 
-    if not selected_code:
-        st.warning("Choose a standard to generate a lesson preview.")
-        return
+    if "plan" not in st.session_state:
+        st.session_state["plan"] = None
 
-    if st.button("Generate Lesson Preview", type="primary"):
+    if selected_code and st.button("Build Lesson", type="primary"):
         with st.spinner("Building lesson..."):
-            with app.test_request_context(f"/streamlit/preview/{selected_code}"):
+            with flask_session_context(f"/streamlit/preview/{selected_code}", method="POST"):
                 runtime, _, _, _ = build_lesson_from_expectation(selected_code)
-                st.success("Lesson ready!")
-                _render_plan(runtime.plan)
+            st.session_state["plan"] = runtime.plan
+            st.success(f'Lesson ready for {selected_code}')
+
+    plan = st.session_state.get("plan")
+    if plan:
+        _render_plan(plan)
+
+        st.markdown("---")
+        st.header("Shape Your Inquiry Preferences")
+        interest_options = [
+            "debates",
+            "stories",
+            "data",
+            "maps",
+            "design",
+            "art",
+            "action",
+        ]
+        learning_modes = ["speaking", "visual", "data", "writing", "project"]
+        support_levels = ["structure", "balance", "independent"]
+
+        with st.form("interest-form"):
+            selected_modes = st.multiselect("What sparks your curiosity?", interest_options)
+            topic_focus = st.text_area(
+                "Topics you care about",
+                placeholder="youth climate strikes, school discipline, local government",
+            )
+            chosen_learning = st.multiselect("Learning experiences that fit you", learning_modes)
+            support_choice = st.radio("Support preference", support_levels, horizontal=True)
+            exemplar_text = st.text_area(
+                "Preferred exemplar contexts (comma separated)",
+                placeholder="Student climate walkouts, Youth voting drives",
+            )
+            save_clicked = st.form_submit_button("Save interests")
+
+        if save_clicked:
+            keywords = [piece.strip() for piece in topic_focus.split(",") if piece.strip()]
+            selected_exemplars = [piece.strip() for piece in exemplar_text.split(",") if piece.strip()]
+            interests_payload = {
+                "interest_modes": selected_modes,
+                "topic_focus": topic_focus.strip(),
+                "learning_mode": chosen_learning,
+                "support_preference": support_choice,
+                "selected_exemplars": selected_exemplars,
+                "keywords": keywords,
+                "ai_suggestions": [],
+            }
+            with flask_session_context("/streamlit/interests", method="POST"):
+                store_student_interests(interests_payload)
+            st.success("Interests saved. Generate a learning path when ready.")
+
+        st.markdown("---")
+        st.header("Generate Learning Path")
+        if st.button("Generate Personalized Path"):
+            with st.spinner("Assembling learning path..."):
+                with flask_session_context("/api/learning-path", method="POST", json_payload={"force": True}):
+                    response = api_learning_path()
+                data = response.get_json()
+                st.session_state["learning_path"] = data.get("path")
+                st.success("Learning path updated!")
+
+        learning_path = st.session_state.get("learning_path")
+        if learning_path:
+            for idx, stage in enumerate(learning_path.get("stages", []), start=1):
+                st.subheader(f"Stage {idx}: {stage.get('title', 'Stage')}")
+                st.write(stage.get("prompt") or stage.get("purpose", ""))
+                resources = stage.get("resources", [])
+                if resources:
+                    st.markdown("**Resources**")
+                    for res in resources:
+                        title = res.get("title", "Resource")
+                        desc = res.get("description", "")
+                        url = res.get("url")
+                        if url:
+                            st.markdown(f"- [{title}]({url}) – {desc}")
+                        else:
+                            st.markdown(f"- {title} – {desc}")
+                if stage.get("activities"):
+                    st.markdown("**Activities**")
+                    for act in stage["activities"]:
+                        st.markdown(f"- {act}")
+                st.markdown("---")
     else:
-        st.info("Choose a standard above and click “Generate Lesson Preview”.")
+        st.info("Build a lesson to unlock inquiry preferences and learning path tools.")
 
 
 if __name__ == "__main__":
