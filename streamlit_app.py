@@ -86,6 +86,9 @@ def _render_plan(plan: Dict[str, object]) -> None:
     with st.expander("Key Vocabulary", expanded=False):
         for vocab in plan.get("vocabulary", []):
             st.markdown(f"- **{vocab['term']}** – {vocab['definition']}")
+    with st.expander("Michigan Standards", expanded=False):
+        for standard in plan.get("standards", []):
+            st.markdown(f"- **{standard['code']}** – {standard['description']}")
 
 
 def main() -> None:

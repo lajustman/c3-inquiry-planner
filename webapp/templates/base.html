@@ -56,6 +56,27 @@
         {% endfor %}
       </div>
     </aside>
+    <button class="drawer-tab mi-standards-tab" id="mi-standards-toggle" aria-expanded="false">Michigan Standards</button>
+    <aside class="drawer-panel drawer-panel--mi-standards" id="mi-standards-drawer" aria-hidden="true">
+      <div class="drawer-header">
+        <h2>Michigan Standards</h2>
+        <button class="close-drawer" id="close-mi-standards" aria-label="Close Michigan standards panel">×</button>
+      </div>
+      <div class="drawer-content">
+        {% if plan.standards %}
+          <ul class="drawer-standard-list">
+            {% for standard in plan.standards %}
+            <li>
+              <strong>{{ standard.code }}</strong>
+              <p>{{ standard.description }}</p>
+            </li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <p>No Michigan standards attached yet.</p>
+        {% endif %}
+      </div>
+    </aside>
     {% set header_objective = plan.objectives[0] if plan.objectives else plan.questions.compelling %}
     <header class="app-header navbar navbar-expand-lg navbar-dark sticky-top">
       <div class="container-fluid">

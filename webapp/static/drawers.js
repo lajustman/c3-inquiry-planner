@@ -34,4 +34,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
   setupDrawer('vocab-toggle', 'vocab-drawer', 'close-vocab');
   setupDrawer('standards-toggle', 'standards-drawer', 'close-standards');
+  setupDrawer('mi-standards-toggle', 'mi-standards-drawer', 'close-mi-standards');
 });

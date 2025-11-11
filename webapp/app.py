@@ -285,11 +285,24 @@ def _build_expectation_vocab_entries(expectation: ExpectationEntry, selection: D
             discipline,
             f"This is the disciplinary lens for the lesson: we explore {expectation.label.lower()} through {discipline}.",
         )
-    unit_label = selection.get("unit_label")
-    if unit_label:
-        add(unit_label, f"The grade/unit context anchoring this lesson is {unit_label}.")
-    for token in _extract_vocab_terms(expectation.text):
+    tokens = _extract_vocab_terms(expectation.text)
+    for token in tokens:
         add(token, f"A key word from this expectation that helps you discuss {expectation.label.lower()}.")
+    return entries[:6]
+
+
+def _build_standard_entries(codes: Iterable[str], description: str) -> List[Dict[str, str]]:
+    entries: List[Dict[str, str]] = []
+    for code in codes:
+        clean_code = str(code or "").strip()
+        if not clean_code:
+            continue
+        entries.append(
+            {
+                "code": clean_code,
+                "description": description,
+            }
+        )
     return entries
 
 
@@ -562,6 +575,10 @@ def load_plan_runtime(plan_key: str) -> PlanRuntime:
     plan = prepare_plan(plan_data_raw)
     vocab_defs = build_vocab_definitions(plan)
     plan["vocabulary"] = build_vocab_list(vocab_defs)
+    plan["standards"] = _build_standard_entries(
+        plan_config.required_standards or [],
+        plan_config.teacher_intent or plan_config.compelling_question or plan_config.title,
+    )
     exemplar_terms = extract_exemplar_terms(plan)
     runtime = PlanRuntime(
         key=resolved_key,
@@ -697,13 +714,7 @@ def build_lesson_from_expectation(expectation_code: str) -> Tuple[PlanRuntime, D
             f"A key disciplinary lens for this lesson: {discipline_label}.",
         )
     plan["vocabulary"] = build_vocab_list(vocab_defs, priority_terms=lesson_vocab)
-    plan["vocabulary"].append(
-        {
-            "term": f"Michigan Expectation {expectation.full_code}",
-            "definition": expectation.text,
-            "url": "",
-        }
-    )
+    plan["standards"] = [{"code": expectation.full_code, "description": expectation.text}]
     exemplar_terms = extract_exemplar_terms(plan)
 
     updated_config = replace(
