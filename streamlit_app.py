@@ -11,8 +11,6 @@ from functools import lru_cache
 from typing import Dict, List, Tuple
 
 import streamlit as st
-from flask import session
-
 from webapp.app import app, build_lesson_from_expectation
 from webapp.standards_catalog import StandardsCatalog, get_michigan_catalog
 
