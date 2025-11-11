@@ -1,0 +1,21 @@
+# Python caches
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.env
+.env.local
+
+# Mac and editor junk
+.DS_Store
+*.swp
+
+# Local data dumps
+current-html/
+output/
+
+# Build artifacts
+*.log

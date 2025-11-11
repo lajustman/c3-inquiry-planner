@@ -1,0 +1,377 @@
+@prefix c3:     <urn:c3:> .
+@prefix dcterms:<http://purl.org/dc/terms/> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@base <file:///Users/louisjustman/Downloads/C3%20Project/Curriculum-Ontology/c3/> .
+
+<c3-dimension4.ttl> a owl:Ontology ;
+  rdfs:label "C3 Framework — Dimension 4 Module" ;
+  dcterms:description "Modular slice of the C3 Framework capturing Dimension 4 (Communicating Conclusions & Taking Informed Action) with SKOS-aligned labels and provenance." ;
+  dcterms:creator "NCSS — College, Career, and Civic Life (C3) Framework for Social Studies State Standards" ;
+  dcterms:source "C3 Framework, pp. 60–63" .
+
+#################################################################
+# Annotation properties
+#################################################################
+
+c3:status        a owl:AnnotationProperty .
+c3:createdOn     a owl:AnnotationProperty .
+c3:alignmentNote a owl:AnnotationProperty .
+c3:officialText  a owl:AnnotationProperty .
+c3:sourceDoc     a owl:AnnotationProperty .
+c3:sourcePage    a owl:AnnotationProperty .
+
+#################################################################
+# Property alignment with SKOS navigation
+#################################################################
+
+c3:hasDomain     rdfs:subPropertyOf skos:narrower .
+c3:hasStrand     rdfs:subPropertyOf skos:narrower .
+c3:hasIndicator  rdfs:subPropertyOf skos:narrower .
+
+#################################################################
+# Dimension 4 — Core structure
+#################################################################
+
+c3:Dimension4 a c3:Dimension ;
+  rdfs:label "Dimension 4: Communicating Conclusions & Taking Informed Action" ;
+  skos:prefLabel "Dimension 4: Communicating Conclusions & Taking Informed Action" ;
+  skos:altLabel "D4" ;
+  c3:status "official" ;
+  c3:sourceDoc "NCSS — College, Career, and Civic Life (C3) Framework for Social Studies State Standards" ;
+  c3:sourcePage "60" ;
+  c3:createdOn "2025-11-02"^^xsd:date .
+
+c3:CommAction a c3:DisciplinaryDomain ;
+  rdfs:label "Communicating Conclusions & Taking Informed Action" ;
+  skos:prefLabel "Communicating Conclusions & Taking Informed Action" ;
+  skos:altLabel "Dimension 4 Domain" ;
+  c3:status "official" ;
+  c3:sourcePage "60" ;
+  c3:alignmentNote "Domain combining the communication/critique and informed action strands of Dimension 4." .
+
+c3:Dimension4 c3:hasDomain c3:CommAction .
+
+#################################################################
+# Strands (Dimension 4)
+#################################################################
+
+c3:Str_D4_CommunicateCritique a c3:Strand ;
+  rdfs:label "Communicating & Critiquing Conclusions" ;
+  skos:prefLabel "Communicating & Critiquing Conclusions" ;
+  skos:altLabel "D4.1–D4.5 — Communicating & Critiquing" ;
+  c3:status "official" ;
+  c3:sourcePage "61" .
+
+c3:Str_D4_TakingAction a c3:Strand ;
+  rdfs:label "Taking Informed Action" ;
+  skos:prefLabel "Taking Informed Action" ;
+  skos:altLabel "D4.6–D4.8 — Taking Informed Action" ;
+  c3:status "official" ;
+  c3:sourcePage "62" .
+
+c3:CommAction c3:hasStrand
+  c3:Str_D4_CommunicateCritique ,
+  c3:Str_D4_TakingAction .
+
+#################################################################
+# Indicators — Dimension 4
+#################################################################
+
+c3:I_D4_1_K_2 a c3:Indicator ;
+  c3:hasCode "D4.1.K-2" ; rdfs:label "Construct an argument with reasons." ;
+  skos:prefLabel "Construct an argument with reasons." ;
+  skos:altLabel "Indicator D4.1.K-2" ;
+  c3:officialText "Construct an argument with reasons." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:Argumentation, c3:SourcesEvidence ; c3:requiresSkill c3:ConstructClaim ;
+  c3:inStrand c3:Str_D4_CommunicateCritique ; c3:inDimension c3:Dimension4 ; c3:isIndicatorOf c3:CommAction ;
+  dcterms:source "C3 Framework, Table 27, p. 61" .
+
+c3:I_D4_1_3_5 a c3:Indicator ;
+  c3:hasCode "D4.1.3-5" ; rdfs:label "Construct arguments using claims and evidence from multiple sources." ;
+  skos:prefLabel "Construct arguments using claims and evidence from multiple sources." ;
+  skos:altLabel "Indicator D4.1.3-5" ;
+  c3:officialText "Construct arguments using claims and evidence from multiple sources." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:Argumentation, c3:SourcesEvidence ; c3:requiresSkill c3:ConstructClaim, c3:Explain ;
+  c3:inStrand c3:Str_D4_CommunicateCritique ; c3:inDimension c3:Dimension4 ; c3:isIndicatorOf c3:CommAction ;
+  dcterms:source "C3 Framework, Table 27, p. 61" .
+
+c3:I_D4_1_6_8 a c3:Indicator ;
+  c3:hasCode "D4.1.6-8" ; rdfs:label "Construct arguments using claims and evidence from multiple sources, while acknowledging the strengths and limitations of the arguments." ;
+  skos:prefLabel "Construct arguments using claims and evidence from multiple sources, while acknowledging the strengths and limitations of the arguments." ;
+  skos:altLabel "Indicator D4.1.6-8" ;
+  c3:officialText "Construct arguments using claims and evidence from multiple sources, while acknowledging the strengths and limitations of the arguments." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:Argumentation, c3:SourcesEvidence ; c3:requiresSkill c3:ConstructClaim, c3:Evaluate ;
+  c3:inStrand c3:Str_D4_CommunicateCritique ; c3:inDimension c3:Dimension4 ; c3:isIndicatorOf c3:CommAction ;
+  dcterms:source "C3 Framework, Table 27, p. 61" .
+
+c3:I_D4_1_9_12 a c3:Indicator ;
+  c3:hasCode "D4.1.9-12" ; rdfs:label "Construct arguments using precise and knowledgeable claims, with evidence from multiple sources, while acknowledging counterclaims and evidentiary weaknesses." ;
+  skos:prefLabel "Construct arguments using precise and knowledgeable claims, with evidence from multiple sources, while acknowledging counterclaims and evidentiary weaknesses." ;
+  skos:altLabel "Indicator D4.1.9-12" ;
+  c3:officialText "Construct arguments using precise and knowledgeable claims, with evidence from multiple sources, while acknowledging counterclaims and evidentiary weaknesses." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:Argumentation, c3:SourcesEvidence ; c3:requiresSkill c3:ConstructClaim, c3:Synthesize, c3:Evaluate ;
+  c3:inStrand c3:Str_D4_CommunicateCritique ; c3:inDimension c3:Dimension4 ; c3:isIndicatorOf c3:CommAction ;
+  dcterms:source "C3 Framework, Table 27, p. 61" .
+
+c3:I_D4_2_K_2 a c3:Indicator ;
+  c3:hasCode "D4.2.K-2" ; rdfs:label "Construct explanations using correct sequence and relevant information." ;
+  skos:prefLabel "Construct explanations using correct sequence and relevant information." ;
+  skos:altLabel "Indicator D4.2.K-2" ;
+  c3:officialText "Construct explanations using correct sequence and relevant information." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:ReasonedJudgment, c3:SourcesEvidence ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_D4_CommunicateCritique ; c3:inDimension c3:Dimension4 ; c3:isIndicatorOf c3:CommAction ;
+  dcterms:source "C3 Framework, Table 27, p. 61" .
+
+c3:I_D4_2_3_5 a c3:Indicator ;
+  c3:hasCode "D4.2.3-5" ; rdfs:label "Construct explanations using reasoning, correct sequence, examples, and details with relevant information and data." ;
+  skos:prefLabel "Construct explanations using reasoning, correct sequence, examples, and details with relevant information and data." ;
+  skos:altLabel "Indicator D4.2.3-5" ;
+  c3:officialText "Construct explanations using reasoning, correct sequence, examples, and details with relevant information and data." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:ReasonedJudgment, c3:SourcesEvidence ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_D4_CommunicateCritique ; c3:inDimension c3:Dimension4 ; c3:isIndicatorOf c3:CommAction ;
+  dcterms:source "C3 Framework, Table 27, p. 61" .
+
+c3:I_D4_2_6_8 a c3:Indicator ;
+  c3:hasCode "D4.2.6-8" ; rdfs:label "Construct explanations using reasoning, correct sequence, examples, and details with relevant information and data, while acknowledging the strengths and weaknesses of the explanations." ;
+  skos:prefLabel "Construct explanations using reasoning, correct sequence, examples, and details with relevant information and data, while acknowledging the strengths and weaknesses of the explanations." ;
+  skos:altLabel "Indicator D4.2.6-8" ;
+  c3:officialText "Construct explanations using reasoning, correct sequence, examples, and details with relevant information and data, while acknowledging the strengths and weaknesses of the explanations." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:ReasonedJudgment, c3:SourcesEvidence ; c3:requiresSkill c3:Explain, c3:Analyze ;
+  c3:inStrand c3:Str_D4_CommunicateCritique ; c3:inDimension c3:Dimension4 ; c3:isIndicatorOf c3:CommAction ;
+  dcterms:source "C3 Framework, Table 27, p. 61" .
+
+c3:I_D4_2_9_12 a c3:Indicator ;
+  c3:hasCode "D4.2.9-12" ; rdfs:label "Construct explanations using sound reasoning, correct sequence (linear or non-linear), examples, and details with significant and pertinent information and data, while acknowledging the strengths and weaknesses of the explanation given its purpose (e.g., cause and effect, chronological, procedural, technical)." ;
+  skos:prefLabel "Construct explanations using sound reasoning, correct sequence (linear or non-linear), examples, and details with significant and pertinent information and data, while acknowledging the strengths and weaknesses of the explanation given its purpose (e.g., cause and effect, chronological, procedural, technical)." ;
+  skos:altLabel "Indicator D4.2.9-12" ;
+  c3:officialText "Construct explanations using sound reasoning, correct sequence (linear or non-linear), examples, and details with significant and pertinent information and data, while acknowledging the strengths and weaknesses of the explanation given its purpose (e.g., cause and effect, chronological, procedural, technical)." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:ReasonedJudgment, c3:SourcesEvidence ; c3:requiresSkill c3:Synthesize, c3:Explain ;
+  c3:inStrand c3:Str_D4_CommunicateCritique ; c3:inDimension c3:Dimension4 ; c3:isIndicatorOf c3:CommAction ;
+  dcterms:source "C3 Framework, Table 27, p. 61" .
+
+c3:I_D4_3_K_2 a c3:Indicator ;
+  c3:hasCode "D4.3.K-2" ; rdfs:label "Present a summary of an argument using print, oral, and digital technologies." ;
+  skos:prefLabel "Present a summary of an argument using print, oral, and digital technologies." ;
+  skos:altLabel "Indicator D4.3.K-2" ;
+  c3:officialText "Present a summary of an argument using print, oral, and digital technologies." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:CommunicationModes, c3:AudiencePurpose ; c3:requiresSkill c3:Communicate ;
+  c3:inStrand c3:Str_D4_CommunicateCritique ; c3:inDimension c3:Dimension4 ; c3:isIndicatorOf c3:CommAction ;
+  dcterms:source "C3 Framework, Table 27, p. 61" .
+
+c3:I_D4_3_3_5 a c3:Indicator ;
+  c3:hasCode "D4.3.3-5" ; rdfs:label "Present a summary of arguments and explanations to others outside the classroom using print and oral technologies (e.g., posters, essays, letters, debates, speeches, and reports) and digital technologies (e.g., Internet, social media, and digital documentary)." ;
+  skos:prefLabel "Present a summary of arguments and explanations to others outside the classroom using print and oral technologies (e.g., posters, essays, letters, debates, speeches, and reports) and digital technologies (e.g., Internet, social media, and digital documentary)." ;
+  skos:altLabel "Indicator D4.3.3-5" ;
+  c3:officialText "Present a summary of arguments and explanations to others outside the classroom using print and oral technologies (e.g., posters, essays, letters, debates, speeches, and reports) and digital technologies (e.g., Internet, social media, and digital documentary)." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:CommunicationModes, c3:AudiencePurpose ; c3:requiresSkill c3:Communicate ;
+  c3:inStrand c3:Str_D4_CommunicateCritique ; c3:inDimension c3:Dimension4 ; c3:isIndicatorOf c3:CommAction ;
+  dcterms:source "C3 Framework, Table 27, p. 61" .
+
+c3:I_D4_3_6_8 a c3:Indicator ;
+  c3:hasCode "D4.3.6-8" ; rdfs:label "Present adaptations of arguments and explanations on topics of interest to others to reach audiences and venues outside the classroom using print and oral technologies (e.g., posters, essays, letters, debates, speeches, reports, and maps) and digital technologies (e.g., Internet, social media, and digital documentary)." ;
+  skos:prefLabel "Present adaptations of arguments and explanations on topics of interest to others to reach audiences and venues outside the classroom using print and oral technologies (e.g., posters, essays, letters, debates, speeches, reports, and maps) and digital technologies (e.g., Internet, social media, and digital documentary)." ;
+  skos:altLabel "Indicator D4.3.6-8" ;
+  c3:officialText "Present adaptations of arguments and explanations on topics of interest to others to reach audiences and venues outside the classroom using print and oral technologies (e.g., posters, essays, letters, debates, speeches, reports, and maps) and digital technologies (e.g., Internet, social media, and digital documentary)." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:CommunicationModes, c3:AudiencePurpose ; c3:requiresSkill c3:Communicate, c3:Analyze ;
+  c3:inStrand c3:Str_D4_CommunicateCritique ; c3:inDimension c3:Dimension4 ; c3:isIndicatorOf c3:CommAction ;
+  dcterms:source "C3 Framework, Table 27, p. 61" .
+
+c3:I_D4_3_9_12 a c3:Indicator ;
+  c3:hasCode "D4.3.9-12" ; rdfs:label "Present adaptations of arguments and explanations that feature evocative ideas and perspectives on issues and topics to reach a range of audiences and venues outside the classroom using print and oral technologies (e.g., posters, essays, letters, debates, speeches, reports, and maps) and digital technologies (e.g., Internet, social media, and digital documentary)." ;
+  skos:prefLabel "Present adaptations of arguments and explanations that feature evocative ideas and perspectives on issues and topics to reach a range of audiences and venues outside the classroom using print and oral technologies (e.g., posters, essays, letters, debates, speeches, reports, and maps) and digital technologies (e.g., Internet, social media, and digital documentary)." ;
+  skos:altLabel "Indicator D4.3.9-12" ;
+  c3:officialText "Present adaptations of arguments and explanations that feature evocative ideas and perspectives on issues and topics to reach a range of audiences and venues outside the classroom using print and oral technologies (e.g., posters, essays, letters, debates, speeches, reports, and maps) and digital technologies (e.g., Internet, social media, and digital documentary)." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:CommunicationModes, c3:AudiencePurpose ; c3:requiresSkill c3:Communicate, c3:Synthesize ;
+  c3:inStrand c3:Str_D4_CommunicateCritique ; c3:inDimension c3:Dimension4 ; c3:isIndicatorOf c3:CommAction ;
+  dcterms:source "C3 Framework, Table 27, p. 61" .
+
+c3:I_D4_4_K_2 a c3:Indicator ;
+  c3:hasCode "D4.4.K-2" ; rdfs:label "Ask and answer questions about arguments." ;
+  skos:prefLabel "Ask and answer questions about arguments." ;
+  skos:altLabel "Indicator D4.4.K-2" ;
+  c3:officialText "Ask and answer questions about arguments." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:FeedbackCritique, c3:Argumentation ; c3:requiresSkill c3:Identify ;
+  c3:inStrand c3:Str_D4_CommunicateCritique ; c3:inDimension c3:Dimension4 ; c3:isIndicatorOf c3:CommAction ;
+  dcterms:source "C3 Framework, Table 29, p. 61" .
+
+c3:I_D4_4_3_5 a c3:Indicator ;
+  c3:hasCode "D4.4.3-5" ; rdfs:label "Critique arguments." ;
+  skos:prefLabel "Critique arguments." ;
+  skos:altLabel "Indicator D4.4.3-5" ;
+  c3:officialText "Critique arguments." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:FeedbackCritique, c3:Argumentation ; c3:requiresSkill c3:Evaluate ;
+  c3:inStrand c3:Str_D4_CommunicateCritique ; c3:inDimension c3:Dimension4 ; c3:isIndicatorOf c3:CommAction ;
+  dcterms:source "C3 Framework, Table 29, p. 61" .
+
+c3:I_D4_4_6_8 a c3:Indicator ;
+  c3:hasCode "D4.4.6-8" ; rdfs:label "Critique arguments for credibility." ;
+  skos:prefLabel "Critique arguments for credibility." ;
+  skos:altLabel "Indicator D4.4.6-8" ;
+  c3:officialText "Critique arguments for credibility." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:FeedbackCritique, c3:Argumentation ; c3:requiresSkill c3:Evaluate ;
+  c3:inStrand c3:Str_D4_CommunicateCritique ; c3:inDimension c3:Dimension4 ; c3:isIndicatorOf c3:CommAction ;
+  dcterms:source "C3 Framework, Table 29, p. 61" .
+
+c3:I_D4_4_9_12 a c3:Indicator ;
+  c3:hasCode "D4.4.9-12" ; rdfs:label "Critique the use of claims and evidence in arguments for credibility." ;
+  skos:prefLabel "Critique the use of claims and evidence in arguments for credibility." ;
+  skos:altLabel "Indicator D4.4.9-12" ;
+  c3:officialText "Critique the use of claims and evidence in arguments for credibility." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:FeedbackCritique, c3:Argumentation ; c3:requiresSkill c3:Evaluate, c3:Analyze ;
+  c3:inStrand c3:Str_D4_CommunicateCritique ; c3:inDimension c3:Dimension4 ; c3:isIndicatorOf c3:CommAction ;
+  dcterms:source "C3 Framework, Table 29, p. 61" .
+
+c3:I_D4_5_K_2 a c3:Indicator ;
+  c3:hasCode "D4.5.K-2" ; rdfs:label "Ask and answer questions about explanations." ;
+  skos:prefLabel "Ask and answer questions about explanations." ;
+  skos:altLabel "Indicator D4.5.K-2" ;
+  c3:officialText "Ask and answer questions about explanations." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:FeedbackCritique, c3:ReasonedJudgment ; c3:requiresSkill c3:Identify ;
+  c3:inStrand c3:Str_D4_CommunicateCritique ; c3:inDimension c3:Dimension4 ; c3:isIndicatorOf c3:CommAction ;
+  dcterms:source "C3 Framework, Table 29, p. 61" .
+
+c3:I_D4_5_3_5 a c3:Indicator ;
+  c3:hasCode "D4.5.3-5" ; rdfs:label "Critique explanations." ;
+  skos:prefLabel "Critique explanations." ;
+  skos:altLabel "Indicator D4.5.3-5" ;
+  c3:officialText "Critique explanations." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:FeedbackCritique, c3:ReasonedJudgment ; c3:requiresSkill c3:Evaluate ;
+  c3:inStrand c3:Str_D4_CommunicateCritique ; c3:inDimension c3:Dimension4 ; c3:isIndicatorOf c3:CommAction ;
+  dcterms:source "C3 Framework, Table 29, p. 61" .
+
+c3:I_D4_5_6_8 a c3:Indicator ;
+  c3:hasCode "D4.5.6-8" ; rdfs:label "Critique the structure of explanations." ;
+  skos:prefLabel "Critique the structure of explanations." ;
+  skos:altLabel "Indicator D4.5.6-8" ;
+  c3:officialText "Critique the structure of explanations." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:FeedbackCritique, c3:ReasonedJudgment ; c3:requiresSkill c3:Evaluate ;
+  c3:inStrand c3:Str_D4_CommunicateCritique ; c3:inDimension c3:Dimension4 ; c3:isIndicatorOf c3:CommAction ;
+  dcterms:source "C3 Framework, Table 29, p. 61" .
+
+c3:I_D4_5_9_12 a c3:Indicator ;
+  c3:hasCode "D4.5.9-12" ; rdfs:label "Critique the use of the reasoning, sequencing, and supporting details of explanations." ;
+  skos:prefLabel "Critique the use of the reasoning, sequencing, and supporting details of explanations." ;
+  skos:altLabel "Indicator D4.5.9-12" ;
+  c3:officialText "Critique the use of the reasoning, sequencing, and supporting details of explanations." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:FeedbackCritique, c3:ReasonedJudgment ; c3:requiresSkill c3:Evaluate, c3:Analyze ;
+  c3:inStrand c3:Str_D4_CommunicateCritique ; c3:inDimension c3:Dimension4 ; c3:isIndicatorOf c3:CommAction ;
+  dcterms:source "C3 Framework, Table 29, p. 61" .
+
+c3:I_D4_6_K_2 a c3:Indicator ;
+  c3:hasCode "D4.6.K-2" ; rdfs:label "Identify and explain a range of local, regional, and global problems, and some ways in which people are trying to address these problems." ;
+  skos:prefLabel "Identify and explain a range of local, regional, and global problems, and some ways in which people are trying to address these problems." ;
+  skos:altLabel "Indicator D4.6.K-2" ;
+  c3:officialText "Identify and explain a range of local, regional, and global problems, and some ways in which people are trying to address these problems." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:CivicAction, c3:ActionPlan ; c3:requiresSkill c3:Describe ;
+  c3:inStrand c3:Str_D4_TakingAction ; c3:inDimension c3:Dimension4 ; c3:isIndicatorOf c3:CommAction ;
+  dcterms:source "C3 Framework, Table 30, p. 62" .
+
+c3:I_D4_6_3_5 a c3:Indicator ;
+  c3:hasCode "D4.6.3-5" ; rdfs:label "Draw on disciplinary concepts to explain the challenges people have faced and opportunities they have created, in addressing local, regional, and global problems at various times and places." ;
+  skos:prefLabel "Draw on disciplinary concepts to explain the challenges people have faced and opportunities they have created, in addressing local, regional, and global problems at various times and places." ;
+  skos:altLabel "Indicator D4.6.3-5" ;
+  c3:officialText "Draw on disciplinary concepts to explain the challenges people have faced and opportunities they have created, in addressing local, regional, and global problems at various times and places." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:CivicAction, c3:ActionPlan ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_D4_TakingAction ; c3:inDimension c3:Dimension4 ; c3:isIndicatorOf c3:CommAction ;
+  dcterms:source "C3 Framework, Table 30, p. 62" .
+
+c3:I_D4_6_6_8 a c3:Indicator ;
+  c3:hasCode "D4.6.6-8" ; rdfs:label "Draw on multiple disciplinary lenses to analyze how a specific problem can manifest itself at local, regional, and global levels over time, identifying its characteristics and causes, and the challenges and opportunities faced by those trying to address the problem." ;
+  skos:prefLabel "Draw on multiple disciplinary lenses to analyze how a specific problem can manifest itself at local, regional, and global levels over time, identifying its characteristics and causes, and the challenges and opportunities faced by those trying to address the problem." ;
+  skos:altLabel "Indicator D4.6.6-8" ;
+  c3:officialText "Draw on multiple disciplinary lenses to analyze how a specific problem can manifest itself at local, regional, and global levels over time, identifying its characteristics and causes, and the challenges and opportunities faced by those trying to address the problem." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:CivicAction, c3:ActionPlan ; c3:requiresSkill c3:Analyze ;
+  c3:inStrand c3:Str_D4_TakingAction ; c3:inDimension c3:Dimension4 ; c3:isIndicatorOf c3:CommAction ;
+  dcterms:source "C3 Framework, Table 30, p. 62" .
+
+c3:I_D4_6_9_12 a c3:Indicator ;
+  c3:hasCode "D4.6.9-12" ; rdfs:label "Use disciplinary and interdisciplinary lenses to understand the characteristics and causes of local, regional, and global problems; instances of such problems in multiple contexts; and challenges and opportunities faced by those trying to address these problems over time and place." ;
+  skos:prefLabel "Use disciplinary and interdisciplinary lenses to understand the characteristics and causes of local, regional, and global problems; instances of such problems in multiple contexts; and challenges and opportunities faced by those trying to address these problems over time and place." ;
+  skos:altLabel "Indicator D4.6.9-12" ;
+  c3:officialText "Use disciplinary and interdisciplinary lenses to understand the characteristics and causes of local, regional, and global problems; instances of such problems in multiple contexts; and challenges and opportunities faced by those trying to address these problems over time and place." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:CivicAction, c3:ActionPlan ; c3:requiresSkill c3:Synthesize, c3:Analyze ;
+  c3:inStrand c3:Str_D4_TakingAction ; c3:inDimension c3:Dimension4 ; c3:isIndicatorOf c3:CommAction ;
+  dcterms:source "C3 Framework, Table 30, p. 62" .
+
+c3:I_D4_7_K_2 a c3:Indicator ;
+  c3:hasCode "D4.7.K-2" ; rdfs:label "Identify ways to take action to help address local, regional, and global problems." ;
+  skos:prefLabel "Identify ways to take action to help address local, regional, and global problems." ;
+  skos:altLabel "Indicator D4.7.K-2" ;
+  c3:officialText "Identify ways to take action to help address local, regional, and global problems." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:CivicAction, c3:ActionPlan ; c3:requiresSkill c3:Identify ;
+  c3:inStrand c3:Str_D4_TakingAction ; c3:inDimension c3:Dimension4 ; c3:isIndicatorOf c3:CommAction ;
+  dcterms:source "C3 Framework, Table 30, p. 62" .
+
+c3:I_D4_7_3_5 a c3:Indicator ;
+  c3:hasCode "D4.7.3-5" ; rdfs:label "Explain different strategies and approaches students and others could take in working alone and together to address local, regional, and global problems, and predict possible results of their actions." ;
+  skos:prefLabel "Explain different strategies and approaches students and others could take in working alone and together to address local, regional, and global problems, and predict possible results of their actions." ;
+  skos:altLabel "Indicator D4.7.3-5" ;
+  c3:officialText "Explain different strategies and approaches students and others could take in working alone and together to address local, regional, and global problems, and predict possible results of their actions." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:CivicAction, c3:ActionPlan ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_D4_TakingAction ; c3:inDimension c3:Dimension4 ; c3:isIndicatorOf c3:CommAction ;
+  dcterms:source "C3 Framework, Table 30, p. 62" .
+
+c3:I_D4_7_6_8 a c3:Indicator ;
+  c3:hasCode "D4.7.6-8" ; rdfs:label "Assess their individual and collective capacities to take action to address local, regional, and global problems, taking into account a range of possible levers of power, strategies, and potential outcomes." ;
+  skos:prefLabel "Assess their individual and collective capacities to take action to address local, regional, and global problems, taking into account a range of possible levers of power, strategies, and potential outcomes." ;
+  skos:altLabel "Indicator D4.7.6-8" ;
+  c3:officialText "Assess their individual and collective capacities to take action to address local, regional, and global problems, taking into account a range of possible levers of power, strategies, and potential outcomes." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:CivicAction, c3:ActionPlan ; c3:requiresSkill c3:Evaluate ;
+  c3:inStrand c3:Str_D4_TakingAction ; c3:inDimension c3:Dimension4 ; c3:isIndicatorOf c3:CommAction ;
+  dcterms:source "C3 Framework, Table 30, p. 62" .
+
+c3:I_D4_7_9_12 a c3:Indicator ;
+  c3:hasCode "D4.7.9-12" ; rdfs:label "Assess options for individual and collective action to address local, regional, and global problems by engaging in self-reflection, strategy identification, and complex causal reasoning." ;
+  skos:prefLabel "Assess options for individual and collective action to address local, regional, and global problems by engaging in self-reflection, strategy identification, and complex causal reasoning." ;
+  skos:altLabel "Indicator D4.7.9-12" ;
+  c3:officialText "Assess options for individual and collective action to address local, regional, and global problems by engaging in self-reflection, strategy identification, and complex causal reasoning." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:CivicAction, c3:ActionPlan ; c3:requiresSkill c3:Evaluate, c3:Synthesize ;
+  c3:inStrand c3:Str_D4_TakingAction ; c3:inDimension c3:Dimension4 ; c3:isIndicatorOf c3:CommAction ;
+  dcterms:source "C3 Framework, Table 30, p. 62" .
+
+c3:I_D4_8_K_2 a c3:Indicator ;
+  c3:hasCode "D4.8.K-2" ; rdfs:label "Use listening, consensus-building, and voting procedures to decide on and take action in their classrooms." ;
+  skos:prefLabel "Use listening, consensus-building, and voting procedures to decide on and take action in their classrooms." ;
+  skos:altLabel "Indicator D4.8.K-2" ;
+  c3:officialText "Use listening, consensus-building, and voting procedures to decide on and take action in their classrooms." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:Deliberation, c3:CivicParticipation ; c3:requiresSkill c3:Apply ;
+  c3:inStrand c3:Str_D4_TakingAction ; c3:inDimension c3:Dimension4 ; c3:isIndicatorOf c3:CommAction ;
+  dcterms:source "C3 Framework, Table 30, p. 62" .
+
+c3:I_D4_8_3_5 a c3:Indicator ;
+  c3:hasCode "D4.8.3-5" ; rdfs:label "Use a range of deliberative and democratic procedures to make decisions about and act on civic problems in their classrooms and schools." ;
+  skos:prefLabel "Use a range of deliberative and democratic procedures to make decisions about and act on civic problems in their classrooms and schools." ;
+  skos:altLabel "Indicator D4.8.3-5" ;
+  c3:officialText "Use a range of deliberative and democratic procedures to make decisions about and act on civic problems in their classrooms and schools." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:Deliberation, c3:CivicParticipation ; c3:requiresSkill c3:Apply ;
+  c3:inStrand c3:Str_D4_TakingAction ; c3:inDimension c3:Dimension4 ; c3:isIndicatorOf c3:CommAction ;
+  dcterms:source "C3 Framework, Table 30, p. 62" .
+
+c3:I_D4_8_6_8 a c3:Indicator ;
+  c3:hasCode "D4.8.6-8" ; rdfs:label "Apply a range of deliberative and democratic procedures to make decisions and take action in their classrooms and schools, and in out-of-school civic contexts." ;
+  skos:prefLabel "Apply a range of deliberative and democratic procedures to make decisions and take action in their classrooms and schools, and in out-of-school civic contexts." ;
+  skos:altLabel "Indicator D4.8.6-8" ;
+  c3:officialText "Apply a range of deliberative and democratic procedures to make decisions and take action in their classrooms and schools, and in out-of-school civic contexts." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:Deliberation, c3:CivicParticipation ; c3:requiresSkill c3:Apply, c3:Evaluate ;
+  c3:inStrand c3:Str_D4_TakingAction ; c3:inDimension c3:Dimension4 ; c3:isIndicatorOf c3:CommAction ;
+  dcterms:source "C3 Framework, Table 30, p. 62" .
+
+c3:I_D4_8_9_12 a c3:Indicator ;
+  c3:hasCode "D4.8.9-12" ; rdfs:label "Apply a range of deliberative and democratic strategies and procedures to make decisions and take action in their classrooms, schools, and out-of-school civic contexts." ;
+  skos:prefLabel "Apply a range of deliberative and democratic strategies and procedures to make decisions and take action in their classrooms, schools, and out-of-school civic contexts." ;
+  skos:altLabel "Indicator D4.8.9-12" ;
+  c3:officialText "Apply a range of deliberative and democratic strategies and procedures to make decisions and take action in their classrooms, schools, and out-of-school civic contexts." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:Deliberation, c3:CivicParticipation ; c3:requiresSkill c3:Apply, c3:Synthesize ;
+  c3:inStrand c3:Str_D4_TakingAction ; c3:inDimension c3:Dimension4 ; c3:isIndicatorOf c3:CommAction ;
+  dcterms:source "C3 Framework, Table 30, p. 62" .
+
+#################################################################
+# Provenance summary
+#################################################################
+
+c3:Dimension4
+  c3:alignmentNote "Module extracted for reuse; see C3 Framework pp. 60–63 for official text." .

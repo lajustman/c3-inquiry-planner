@@ -1,0 +1,2617 @@
+@prefix mi:     <urn:mi:ss:> .
+@prefix dcterms:<http://purl.org/dc/terms/> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@base <file:///Users/louisjustman/Downloads/C3%20Project/Curriculum-Ontology/michigan/> .
+
+<mi-grade-6.ttl> a owl:Ontology ;
+  owl:versionIRI <urn:mi:ss:grade:6> ;
+  rdfs:label "Michigan Social Studies GLCE - Grade 6" ;
+  dcterms:creator "Michigan Department of Education" ;
+  dcterms:source "Michigan K-12 Social Studies Standards (Michigan Department of Education)" ;
+  owl:imports <mi-base.ttl> .
+
+mi:Grade_6 a mi:Grade ;
+  skos:prefLabel "Grade 6" ;
+  mi:hasCategory
+    mi:Cat_6_C1_1 ,
+    mi:Cat_6_C3_6 ,
+    mi:Cat_6_C4_3 ,
+    mi:Cat_6_E1_1 ,
+    mi:Cat_6_E2_3 ,
+    mi:Cat_6_E3_1 ,
+    mi:Cat_6_E3_3 ,
+    mi:Cat_6_G1_1 ,
+    mi:Cat_6_G1_2 ,
+    mi:Cat_6_G1_3 ,
+    mi:Cat_6_G2_1 ,
+    mi:Cat_6_G2_2 ,
+    mi:Cat_6_G3_1 ,
+    mi:Cat_6_G3_2 ,
+    mi:Cat_6_G4_1 ,
+    mi:Cat_6_G4_2 ,
+    mi:Cat_6_G4_3 ,
+    mi:Cat_6_G4_4 ,
+    mi:Cat_6_G5_1 ,
+    mi:Cat_6_G5_2 ,
+    mi:Cat_6_G6_1 ,
+    mi:Cat_6_H1_1 ,
+    mi:Cat_6_H1_2 ,
+    mi:Cat_6_H1_4 ,
+    mi:Cat_6_P3_1 ,
+    mi:Cat_6_P4_2 ,
+    mi:Cat_6_W1_1 ,
+    mi:Cat_6_W1_2 ,
+    mi:Cat_6_W2_1 ,
+    mi:Cat_6_W3_1 ;
+  mi:isGradeOf mi:MichiganGLCEFramework ;
+  mi:gradeCode "6" ;
+  mi:gradeOrder 6 .
+
+#################################################################
+# Categories
+#################################################################
+mi:Cat_6_C1_1 a mi:StandardCategory ;
+  mi:categoryCode "C1.1" ;
+  skos:prefLabel "Nature of Civic Life, Politics, and Government" ;
+  mi:categoryDescription "Describe Civic Life, Politics, and Government and explain their relationships." ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExpectation
+    mi:Exp_6_C1_1_1 ;
+  mi:isCategoryOf mi:Grade_6 .
+
+mi:Cat_6_C3_6 a mi:StandardCategory ;
+  mi:categoryCode "C3.6" ;
+  skos:prefLabel "Characteristics of Nation-States" ;
+  mi:categoryDescription "Describe the characteristics of nation-states and how they may interact." ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExpectation
+    mi:Exp_6_C3_6_1 ,
+    mi:Exp_6_C3_6_2 ;
+  mi:isCategoryOf mi:Grade_6 .
+
+mi:Cat_6_C4_3 a mi:StandardCategory ;
+  mi:categoryCode "C4.3" ;
+  skos:prefLabel "Conflict and Cooperation Between and Among Nations" ;
+  mi:categoryDescription "Explain the various ways that nations interact both positively and negatively." ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExpectation
+    mi:Exp_6_C4_3_1 ,
+    mi:Exp_6_C4_3_2 ,
+    mi:Exp_6_C4_3_3 ;
+  mi:isCategoryOf mi:Grade_6 .
+
+mi:Cat_6_E1_1 a mi:StandardCategory ;
+  mi:categoryCode "E1.1" ;
+  skos:prefLabel "Individual, Business, and Government Choices" ;
+  mi:categoryDescription "Describe how individuals, businesses and government make economic decisions when confronting scarcity in the market economy ." ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExpectation
+    mi:Exp_6_E1_1_1 ;
+  mi:isCategoryOf mi:Grade_6 .
+
+mi:Cat_6_E2_3 a mi:StandardCategory ;
+  mi:categoryCode "E2.3" ;
+  skos:prefLabel "Role of Government" ;
+  mi:categoryDescription "Describe how national governments make decisions that affect the national economy" ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExpectation
+    mi:Exp_6_E2_3_1 ;
+  mi:isCategoryOf mi:Grade_6 .
+
+mi:Cat_6_E3_1 a mi:StandardCategory ;
+  mi:categoryCode "E3.1" ;
+  skos:prefLabel "Economic Interdependence" ;
+  mi:categoryDescription "Describe patterns and networks of economic interdependence, including trade." ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExpectation
+    mi:Exp_6_E3_1_1 ,
+    mi:Exp_6_E3_1_2 ,
+    mi:Exp_6_E3_1_3 ;
+  mi:isCategoryOf mi:Grade_6 .
+
+mi:Cat_6_E3_3 a mi:StandardCategory ;
+  mi:categoryCode "E3.3" ;
+  skos:prefLabel "Economic Systems" ;
+  mi:categoryDescription "Describe how societies organize to allocate resources to produce and distribute goods and services." ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExpectation
+    mi:Exp_6_E3_3_1 ;
+  mi:isCategoryOf mi:Grade_6 .
+
+mi:Cat_6_G1_1 a mi:StandardCategory ;
+  mi:categoryCode "G1.1" ;
+  skos:prefLabel "Spatial Thinking" ;
+  mi:categoryDescription "Use maps and other geographic tools to acquire and process information from a spatial perspective." ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:hasExpectation
+    mi:Exp_6_G1_1_1 ,
+    mi:Exp_6_G1_1_2 ;
+  mi:isCategoryOf mi:Grade_6 .
+
+mi:Cat_6_G1_2 a mi:StandardCategory ;
+  mi:categoryCode "G1.2" ;
+  skos:prefLabel "Geographical Inquiry and Analysis" ;
+  mi:categoryDescription "Use geographic inquiry and analysis to answer important questions about relationships between people, cultures, their environment, and relations within the larger world context." ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:hasExample
+    mi:Example_cat_6_G1_2_1 ;
+  mi:hasExpectation
+    mi:Exp_6_G1_2_1 ,
+    mi:Exp_6_G1_2_2 ,
+    mi:Exp_6_G1_2_3 ,
+    mi:Exp_6_G1_2_4 ,
+    mi:Exp_6_G1_2_5 ,
+    mi:Exp_6_G1_2_6 ;
+  mi:isCategoryOf mi:Grade_6 .
+
+mi:Cat_6_G1_3 a mi:StandardCategory ;
+  mi:categoryCode "G1.3" ;
+  skos:prefLabel "Geographical Understanding" ;
+  mi:categoryDescription "Use geographic themes, knowledge about processes and concepts to study the Earth." ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:hasExample
+    mi:Example_cat_6_G1_3_1 ;
+  mi:hasExpectation
+    mi:Exp_6_G1_3_1 ,
+    mi:Exp_6_G1_3_2 ,
+    mi:Exp_6_G1_3_3 ;
+  mi:isCategoryOf mi:Grade_6 .
+
+mi:Cat_6_G2_1 a mi:StandardCategory ;
+  mi:categoryCode "G2.1" ;
+  skos:prefLabel "Physical Characteristics of Place" ;
+  mi:categoryDescription "Describe the physical characteristics of places." ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:hasExpectation
+    mi:Exp_6_G2_1_1 ,
+    mi:Exp_6_G2_1_2 ;
+  mi:isCategoryOf mi:Grade_6 .
+
+mi:Cat_6_G2_2 a mi:StandardCategory ;
+  mi:categoryCode "G2.2" ;
+  skos:prefLabel "Human Characteristics of Place" ;
+  mi:categoryDescription "Describe the human characteristics of places." ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:hasExpectation
+    mi:Exp_6_G2_2_1 ,
+    mi:Exp_6_G2_2_2 ,
+    mi:Exp_6_G2_2_3 ;
+  mi:isCategoryOf mi:Grade_6 .
+
+mi:Cat_6_G3_1 a mi:StandardCategory ;
+  mi:categoryCode "G3.1" ;
+  skos:prefLabel "Physical Processes" ;
+  mi:categoryDescription "Describe the physical processes that shape the patterns of the Earth's surface." ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:hasExpectation
+    mi:Exp_6_G3_1_1 ;
+  mi:isCategoryOf mi:Grade_6 .
+
+mi:Cat_6_G3_2 a mi:StandardCategory ;
+  mi:categoryCode "G3.2" ;
+  skos:prefLabel "Ecosystems" ;
+  mi:categoryDescription "Describe the characteristics and spatial distribution of ecosystems on the Earth's surface." ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:hasExpectation
+    mi:Exp_6_G3_2_1 ,
+    mi:Exp_6_G3_2_2 ;
+  mi:isCategoryOf mi:Grade_6 .
+
+mi:Cat_6_G4_1 a mi:StandardCategory ;
+  mi:categoryCode "G4.1" ;
+  skos:prefLabel "Cultural Mosaic" ;
+  mi:categoryDescription "Describe the characteristics, distribution and complexity of Earth's cultural mosaic." ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:hasExpectation
+    mi:Exp_6_G4_1_1 ;
+  mi:isCategoryOf mi:Grade_6 .
+
+mi:Cat_6_G4_2 a mi:StandardCategory ;
+  mi:categoryCode "G4.2" ;
+  skos:prefLabel "Technology Patterns and Networks" ;
+  mi:categoryDescription "Describe how technology creates patterns and networks that connect people, products, and ideas." ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:hasExpectation
+    mi:Exp_6_G4_2_1 ;
+  mi:isCategoryOf mi:Grade_6 .
+
+mi:Cat_6_G4_3 a mi:StandardCategory ;
+  mi:categoryCode "G4.3" ;
+  skos:prefLabel "Patterns of Human Settlement" ;
+  mi:categoryDescription "Describe patterns, processes, and functions of human settlement." ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:hasExpectation
+    mi:Exp_6_G4_3_1 ,
+    mi:Exp_6_G4_3_2 ;
+  mi:isCategoryOf mi:Grade_6 .
+
+mi:Cat_6_G4_4 a mi:StandardCategory ;
+  mi:categoryCode "G4.4" ;
+  skos:prefLabel "Forces of Cooperation and Conflict" ;
+  mi:categoryDescription "Explain how forces of conflict and cooperation among people influence the division of the Earth's surface and its resources." ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:hasExpectation
+    mi:Exp_6_G4_4_1 ,
+    mi:Exp_6_G4_4_2 ;
+  mi:isCategoryOf mi:Grade_6 .
+
+mi:Cat_6_G5_1 a mi:StandardCategory ;
+  mi:categoryCode "G5.1" ;
+  skos:prefLabel "Humans and the Environment" ;
+  mi:categoryDescription "Describe how human actions modify the environment." ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:hasExpectation
+    mi:Exp_6_G5_1_1 ,
+    mi:Exp_6_G5_1_2 ,
+    mi:Exp_6_G5_1_3 ;
+  mi:isCategoryOf mi:Grade_6 .
+
+mi:Cat_6_G5_2 a mi:StandardCategory ;
+  mi:categoryCode "G5.2" ;
+  skos:prefLabel "Physical and Human Systems" ;
+  mi:categoryDescription "Describe how physical and human systems shape patterns on the Earth's surface." ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:hasExpectation
+    mi:Exp_6_G5_2_1 ;
+  mi:isCategoryOf mi:Grade_6 .
+
+mi:Cat_6_G6_1 a mi:StandardCategory ;
+  mi:categoryCode "G6.1" ;
+  skos:prefLabel "Global Topic Investigation and Issue Analysis (P2)" ;
+  mi:categoryDescription "Capstone projects require the student to use geography, history, economics, and government to inquire about major contemporary and historical issues and events linked to the world outside the classroom.The core disciplines are used to interpret the past and plan for the future." ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:hasExample
+    mi:Example_cat_6_G6_1_1 ;
+  mi:hasExpectation
+    mi:Exp_6_G6_1_1 ,
+    mi:Exp_6_G6_1_2 ;
+  mi:isCategoryOf mi:Grade_6 .
+
+mi:Cat_6_H1_1 a mi:StandardCategory ;
+  mi:categoryCode "H1.1" ;
+  skos:prefLabel "Temporal Thinking" ;
+  mi:categoryDescription "Use historical conceptual devices to organize and study the past." ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_H ;
+  mi:hasExample
+    mi:Example_cat_6_H1_1_1 ;
+  mi:hasExpectation
+    mi:Exp_6_H1_1_1 ,
+    mi:Exp_6_H1_1_2 ;
+  mi:isCategoryOf mi:Grade_6 .
+
+mi:Cat_6_H1_2 a mi:StandardCategory ;
+  mi:categoryCode "H1.2" ;
+  skos:prefLabel "Historical Inquiry and Analysis" ;
+  mi:categoryDescription "Use historical inquiry and analysis to study the past." ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_H ;
+  mi:hasExample
+    mi:Example_cat_6_H1_2_1 ;
+  mi:hasExpectation
+    mi:Exp_6_H1_2_1 ,
+    mi:Exp_6_H1_2_2 ,
+    mi:Exp_6_H1_2_3 ,
+    mi:Exp_6_H1_2_4 ,
+    mi:Exp_6_H1_2_5 ;
+  mi:isCategoryOf mi:Grade_6 .
+
+mi:Cat_6_H1_4 a mi:StandardCategory ;
+  mi:categoryCode "H1.4" ;
+  skos:prefLabel "Historical Understanding" ;
+  mi:categoryDescription "Use historical concepts, patterns, and themes to study the past." ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_H ;
+  mi:hasExample
+    mi:Example_cat_6_H1_4_1 ;
+  mi:hasExpectation
+    mi:Exp_6_H1_4_1 ,
+    mi:Exp_6_H1_4_2 ,
+    mi:Exp_6_H1_4_3 ;
+  mi:isCategoryOf mi:Grade_6 .
+
+mi:Cat_6_P3_1 a mi:StandardCategory ;
+  mi:categoryCode "P3.1" ;
+  skos:prefLabel "Identifying and Analyzing Issues, Decision Making, Persuasive Communication About a Public Issue, and Citizen Involvement" ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_P ;
+  mi:hasExpectation
+    mi:Exp_6_P3_1_1 ;
+  mi:isCategoryOf mi:Grade_6 .
+
+mi:Cat_6_P4_2 a mi:StandardCategory ;
+  mi:categoryCode "P4.2" ;
+  skos:prefLabel "Citizen Involvement" ;
+  mi:categoryDescription "Act constructively to further the public good." ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_P ;
+  mi:hasExpectation
+    mi:Exp_6_P4_2_1 ,
+    mi:Exp_6_P4_2_2 ,
+    mi:Exp_6_P4_2_3 ;
+  mi:isCategoryOf mi:Grade_6 .
+
+mi:Cat_6_W1_1 a mi:StandardCategory ;
+  mi:categoryCode "W1.1" ;
+  skos:prefLabel "Peopling of the Earth" ;
+  mi:categoryDescription "Describe the spread of people in the Western Hemisphere in Era 1." ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:hasExample
+    mi:Example_cat_6_W1_1_1 ;
+  mi:hasExpectation
+    mi:Exp_6_W1_1_1 ,
+    mi:Exp_6_W1_1_2 ;
+  mi:isCategoryOf mi:Grade_6 .
+
+mi:Cat_6_W1_2 a mi:StandardCategory ;
+  mi:categoryCode "W1.2" ;
+  skos:prefLabel "Agricultural Revolution" ;
+  mi:categoryDescription "Describe the Agricultural Revolution and explain why it is a turning point in history." ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:hasExample
+    mi:Example_cat_6_W1_2_1 ;
+  mi:hasExpectation
+    mi:Exp_6_W1_2_1 ,
+    mi:Exp_6_W1_2_2 ,
+    mi:Exp_6_W1_2_3 ;
+  mi:isCategoryOf mi:Grade_6 .
+
+mi:Cat_6_W2_1 a mi:StandardCategory ;
+  mi:categoryCode "W2.1" ;
+  skos:prefLabel "Early Civilizations and Early Pastoral Societies" ;
+  mi:categoryDescription "Describe the characteristics of early Western Hemisphere civilizations and pastoral societies." ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:hasExample
+    mi:Example_cat_6_W2_1_1 ;
+  mi:hasExpectation
+    mi:Exp_6_W2_1_1 ,
+    mi:Exp_6_W2_1_2 ,
+    mi:Exp_6_W2_1_3 ,
+    mi:Exp_6_W2_1_4 ;
+  mi:isCategoryOf mi:Grade_6 .
+
+mi:Cat_6_W3_1 a mi:StandardCategory ;
+  mi:categoryCode "W3.1" ;
+  skos:prefLabel "Classical Traditions and Major Empires in the Western Hemisphere" ;
+  mi:categoryDescription "Describe empires and agrarian civilizations in Mesoamerica and South America." ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:hasExample
+    mi:Example_cat_6_W3_1_1 ;
+  mi:hasExpectation
+    mi:Exp_6_W3_1_1 ,
+    mi:Exp_6_W3_1_2 ,
+    mi:Exp_6_W3_1_3 ,
+    mi:Exp_6_W3_1_4 ,
+    mi:Exp_6_W3_1_5 ;
+  mi:isCategoryOf mi:Grade_6 .
+
+#################################################################
+# Expectations
+#################################################################
+mi:Exp_6_C1_1_1 a mi:Expectation ;
+  mi:expectationCode "C1.1.1" ;
+  mi:fullCode "6-C1.1.1" ;
+  mi:officialText "Analyze competing ideas about the purposes government should serve in a democracy and in a dictatorship." ;
+  skos:prefLabel "Competing Ideas about the Purposes Government Should Serve in a Democracy and in a Dictatorship" ;
+  skos:broader mi:Cat_6_C1_1 ;
+  mi:inCategory mi:Cat_6_C1_1 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_6_C1_1_1_1 ,
+    mi:Example_exp_6_C1_1_1_2 ,
+    mi:Example_exp_6_C1_1_1_3 ,
+    mi:Example_exp_6_C1_1_1_4 ,
+    mi:Example_exp_6_C1_1_1_5 ;
+  mi:isExpectationOf mi:Cat_6_C1_1 .
+
+mi:Exp_6_C3_6_1 a mi:Expectation ;
+  mi:expectationCode "C3.6.1" ;
+  mi:fullCode "6-C3.6.1" ;
+  mi:officialText "Define the characteristics of a nation-state (a specific territory, clearly defined boundaries, citizens, and jurisdiction over people who reside there, laws, and government), and how Western Hemisphere nations interact." ;
+  skos:prefLabel "Define the Characteristics of a Nation-State" ;
+  skos:broader mi:Cat_6_C3_6 ;
+  mi:inCategory mi:Cat_6_C3_6 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_6_C3_6 .
+
+mi:Exp_6_C3_6_2 a mi:Expectation ;
+  mi:expectationCode "C3.6.2" ;
+  mi:fullCode "6-C3.6.2" ;
+  mi:officialText "Compare and contrast a military dictatorship such as Cuba, a presidential system of representative democracy such as the United States, and a parliamentary system of representative democracy such as Canada." ;
+  skos:prefLabel "A Military Dictatorship" ;
+  skos:broader mi:Cat_6_C3_6 ;
+  mi:inCategory mi:Cat_6_C3_6 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_6_C3_6 .
+
+mi:Exp_6_C4_3_1 a mi:Expectation ;
+  mi:expectationCode "C4.3.1" ;
+  mi:fullCode "6-C4.3.1" ;
+  mi:officialText "Explain the geopolitical relationships between countries." ;
+  skos:prefLabel "Geopolitical Relationships between Countries" ;
+  skos:broader mi:Cat_6_C4_3 ;
+  mi:inCategory mi:Cat_6_C4_3 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_6_C4_3_1_1 ,
+    mi:Example_exp_6_C4_3_1_2 ;
+  mi:isExpectationOf mi:Cat_6_C4_3 .
+
+mi:Exp_6_C4_3_2 a mi:Expectation ;
+  mi:expectationCode "C4.3.2" ;
+  mi:fullCode "6-C4.3.2" ;
+  mi:officialText "Explain the challenges to governments and the cooperation needed to address international issues in the Western Hemisphere." ;
+  skos:prefLabel "Challenges to Governments and the Cooperation Needed to Address International Issues in the Western Hemisphere" ;
+  skos:broader mi:Cat_6_C4_3 ;
+  mi:inCategory mi:Cat_6_C4_3 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_6_C4_3_2_1 ;
+  mi:isExpectationOf mi:Cat_6_C4_3 .
+
+mi:Exp_6_C4_3_3 a mi:Expectation ;
+  mi:expectationCode "C4.3.3" ;
+  mi:fullCode "6-C4.3.3" ;
+  mi:officialText "Give examples of how countries work together for mutual benefits through international organizations" ;
+  skos:prefLabel "Give Examples of How Countries Work Together for Mutual Benefits" ;
+  skos:broader mi:Cat_6_C4_3 ;
+  mi:inCategory mi:Cat_6_C4_3 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_6_C4_3_3_1 ,
+    mi:Example_exp_6_C4_3_3_2 ,
+    mi:Example_exp_6_C4_3_3_3 ;
+  mi:isExpectationOf mi:Cat_6_C4_3 .
+
+mi:Exp_6_E1_1_1 a mi:Expectation ;
+  mi:expectationCode "E1.1.1" ;
+  mi:fullCode "6-E1.1.1" ;
+  mi:officialText "Explain how incentives vary in different economic systems" ;
+  skos:prefLabel "Incentives Vary in Different Economic Systems E.g" ;
+  skos:broader mi:Cat_6_E1_1 ;
+  mi:inCategory mi:Cat_6_E1_1 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExample
+    mi:Example_exp_6_E1_1_1_1 ,
+    mi:Example_exp_6_E1_1_1_2 ,
+    mi:Example_exp_6_E1_1_1_3 ,
+    mi:Example_exp_6_E1_1_1_4 ,
+    mi:Example_exp_6_E1_1_1_5 ;
+  mi:isExpectationOf mi:Cat_6_E1_1 .
+
+mi:Exp_6_E2_3_1 a mi:Expectation ;
+  mi:expectationCode "E2.3.1" ;
+  mi:fullCode "6-E2.3.1" ;
+  mi:officialText "Describe the impact of governmental policy (sanctions, tariffs, treaties) on that country and on other countries that use its resources." ;
+  skos:prefLabel "Impact of Governmental Policy on That Country and on Other Countries That Use Its Resources" ;
+  skos:broader mi:Cat_6_E2_3 ;
+  mi:inCategory mi:Cat_6_E2_3 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_6_E2_3 .
+
+mi:Exp_6_E3_1_1 a mi:Expectation ;
+  mi:expectationCode "E3.1.1" ;
+  mi:fullCode "6-E3.1.1" ;
+  mi:officialText "Use charts and graphs to compare imports and exports of different countries in the Western Hemisphere and propose generalizations about patterns of economic interdependence." ;
+  skos:prefLabel "Charts and Graphs to Compare Imports and Exports of Different Countries in the Western Hemisphere..." ;
+  skos:broader mi:Cat_6_E3_1 ;
+  mi:inCategory mi:Cat_6_E3_1 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_6_E3_1 .
+
+mi:Exp_6_E3_1_2 a mi:Expectation ;
+  mi:expectationCode "E3.1.2" ;
+  mi:fullCode "6-E3.1.2" ;
+  mi:officialText "Diagram or map the movement of a consumer product from where it is manufactured to where it is sold to demonstrate the flow of materials, labor, and capital." ;
+  skos:prefLabel "Diagram or Map the Movement of a Consumer Product from Where It Is Manufactured to..." ;
+  skos:broader mi:Cat_6_E3_1 ;
+  mi:inCategory mi:Cat_6_E3_1 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExample
+    mi:Example_exp_6_E3_1_2_1 ,
+    mi:Example_exp_6_E3_1_2_2 ,
+    mi:Example_exp_6_E3_1_2_3 ;
+  mi:isExpectationOf mi:Cat_6_E3_1 .
+
+mi:Exp_6_E3_1_3 a mi:Expectation ;
+  mi:expectationCode "E3.1.3" ;
+  mi:fullCode "6-E3.1.3" ;
+  mi:officialText "Explain how communications innovations have affected economic interactions and where and how people work." ;
+  skos:prefLabel "Communications Innovations Have Affected Economic Interactions and Where" ;
+  skos:broader mi:Cat_6_E3_1 ;
+  mi:inCategory mi:Cat_6_E3_1 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExample
+    mi:Example_exp_6_E3_1_3_1 ,
+    mi:Example_exp_6_E3_1_3_2 ,
+    mi:Example_exp_6_E3_1_3_3 ;
+  mi:isExpectationOf mi:Cat_6_E3_1 .
+
+mi:Exp_6_E3_3_1 a mi:Expectation ;
+  mi:expectationCode "E3.3.1" ;
+  mi:fullCode "6-E3.3.1" ;
+  mi:officialText "Explain and compare how economic systems (traditional, command, and market) answer four basic questions: What should be produced? How will it be produced? How will it be distributed? Who will receive the benefits of production?" ;
+  skos:prefLabel "And Compare How Economic Systems Answer Four Basic Questions: What Should Be Produced? How Will..." ;
+  skos:broader mi:Cat_6_E3_3 ;
+  mi:inCategory mi:Cat_6_E3_3 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExample
+    mi:Example_exp_6_E3_3_1_1 ,
+    mi:Example_exp_6_E3_3_1_2 ;
+  mi:isExpectationOf mi:Cat_6_E3_3 .
+
+mi:Exp_6_G1_1_1 a mi:Expectation ;
+  mi:expectationCode "G1.1.1" ;
+  mi:fullCode "6-G1.1.1" ;
+  mi:officialText "Describe how geographers use mapping to represent places and natural and human phenomena in the world." ;
+  skos:prefLabel "Geographers Use Mapping to Represent Places and Natural and Human Phenomena in the World" ;
+  skos:broader mi:Cat_6_G1_1 ;
+  mi:inCategory mi:Cat_6_G1_1 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:isExpectationOf mi:Cat_6_G1_1 .
+
+mi:Exp_6_G1_1_2 a mi:Expectation ;
+  mi:expectationCode "G1.1.2" ;
+  mi:fullCode "6-G1.1.2" ;
+  mi:officialText "Draw a sketch map from memory of the Western Hemisphere showing the major regions (Canada, United States, Mexico, Central America, South America, and Caribbean)." ;
+  skos:prefLabel "Draw a Sketch Map from Memory of the Western Hemisphere Showing the Major Regions" ;
+  skos:broader mi:Cat_6_G1_1 ;
+  mi:inCategory mi:Cat_6_G1_1 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:isExpectationOf mi:Cat_6_G1_1 .
+
+mi:Exp_6_G1_2_1 a mi:Expectation ;
+  mi:expectationCode "G1.2.1" ;
+  mi:fullCode "6-G1.2.1" ;
+  mi:officialText "Locate the major landforms, rivers (Amazon, Mississippi, Missouri, Colorado), and climate regions of the Western Hemisphere." ;
+  skos:prefLabel "Locate the Major Landforms, Rivers , and Climate Regions of the Western Hemisphere" ;
+  skos:broader mi:Cat_6_G1_2 ;
+  mi:inCategory mi:Cat_6_G1_2 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:isExpectationOf mi:Cat_6_G1_2 .
+
+mi:Exp_6_G1_2_2 a mi:Expectation ;
+  mi:expectationCode "G1.2.2" ;
+  mi:fullCode "6-G1.2.2" ;
+  mi:officialText "Explain why maps of the same place may vary, including cultural perspectives of the Earth and new knowledge based on science and modern technology." ;
+  skos:prefLabel "Why Maps of the Same Place May Vary" ;
+  skos:broader mi:Cat_6_G1_2 ;
+  mi:inCategory mi:Cat_6_G1_2 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:isExpectationOf mi:Cat_6_G1_2 .
+
+mi:Exp_6_G1_2_3 a mi:Expectation ;
+  mi:expectationCode "G1.2.3" ;
+  mi:fullCode "6-G1.2.3" ;
+  mi:officialText "Use data to create thematic maps and graphs showing patterns of population, physical terrain, rainfall, and vegetation, analyze the patterns and then propose two generalizations about the location and density of the population." ;
+  skos:prefLabel "Data to Create Thematic Maps and Graphs Showing Patterns of Population, Physical Terrain, Rainfall, and..." ;
+  skos:broader mi:Cat_6_G1_2 ;
+  mi:inCategory mi:Cat_6_G1_2 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:isExpectationOf mi:Cat_6_G1_2 .
+
+mi:Exp_6_G1_2_4 a mi:Expectation ;
+  mi:expectationCode "G1.2.4" ;
+  mi:fullCode "6-G1.2.4" ;
+  mi:officialText "Use observations from air photos, photographs (print and CD), films (VCR and DVD) as the basis for answering geographic questions about the human and physical characteristics of places and regions." ;
+  skos:prefLabel "Observations from Air Photos, Photographs , Films as the Basis for Answering Geographic Questions about..." ;
+  skos:broader mi:Cat_6_G1_2 ;
+  mi:inCategory mi:Cat_6_G1_2 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:isExpectationOf mi:Cat_6_G1_2 .
+
+mi:Exp_6_G1_2_5 a mi:Expectation ;
+  mi:expectationCode "G1.2.5" ;
+  mi:fullCode "6-G1.2.5" ;
+  mi:officialText "Use information from modern technology such as Geographic Positioning System (GPS), Geographic Information System (GIS), and satellite remote sensing to locate information and process maps and data to analyze spatial patterns of the Western Hemisphere to answer geographic questions." ;
+  skos:prefLabel "Information from Modern Technology" ;
+  skos:broader mi:Cat_6_G1_2 ;
+  mi:inCategory mi:Cat_6_G1_2 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:isExpectationOf mi:Cat_6_G1_2 .
+
+mi:Exp_6_G1_2_6 a mi:Expectation ;
+  mi:expectationCode "G1.2.6" ;
+  mi:fullCode "6-G1.2.6" ;
+  mi:officialText "Apply the skills of geographic inquiry (asking geographic questions, acquiring geographic information, organizing geographic information, analyzing geographic information, and answering geographic questions) to analyze a problem or issue of importance to a region of the Western Hemisphere." ;
+  skos:prefLabel "The Skills of Geographic Inquiry to Analyze a Problem or Issue of Importance to a..." ;
+  skos:broader mi:Cat_6_G1_2 ;
+  mi:inCategory mi:Cat_6_G1_2 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:isExpectationOf mi:Cat_6_G1_2 .
+
+mi:Exp_6_G1_3_1 a mi:Expectation ;
+  mi:expectationCode "G1.3.1" ;
+  mi:fullCode "6-G1.3.1" ;
+  mi:officialText "Use the fundamental themes of geography (location, place, human environment interaction, movement, region) to describe regions or places on earth." ;
+  skos:prefLabel "The Fundamental Themes of Geography to Describe Regions or Places on Earth" ;
+  skos:broader mi:Cat_6_G1_3 ;
+  mi:inCategory mi:Cat_6_G1_3 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:isExpectationOf mi:Cat_6_G1_3 .
+
+mi:Exp_6_G1_3_2 a mi:Expectation ;
+  mi:expectationCode "G1.3.2" ;
+  mi:fullCode "6-G1.3.2" ;
+  mi:officialText "Explain the locations and distributions of physical and human characteristics of Earth by using knowledge of spatial patterns." ;
+  skos:prefLabel "Locations and Distributions of Physical and Human Characteristics of Earth by" ;
+  skos:broader mi:Cat_6_G1_3 ;
+  mi:inCategory mi:Cat_6_G1_3 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:isExpectationOf mi:Cat_6_G1_3 .
+
+mi:Exp_6_G1_3_3 a mi:Expectation ;
+  mi:expectationCode "G1.3.3" ;
+  mi:fullCode "6-G1.3.3" ;
+  mi:officialText "Explain the different ways in which places are connected and how those connections demonstrate interdependence and accessibility." ;
+  skos:prefLabel "Different Ways in Which Places Are Connected" ;
+  skos:broader mi:Cat_6_G1_3 ;
+  mi:inCategory mi:Cat_6_G1_3 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:isExpectationOf mi:Cat_6_G1_3 .
+
+mi:Exp_6_G2_1_1 a mi:Expectation ;
+  mi:expectationCode "G2.1.1" ;
+  mi:fullCode "6-G2.1.1" ;
+  mi:officialText "Describe the landform features and the climate of the region (within the Western or Eastern Hemispheres) under study." ;
+  skos:prefLabel "Landform Features and the Climate of the Region under Study" ;
+  skos:broader mi:Cat_6_G2_1 ;
+  mi:inCategory mi:Cat_6_G2_1 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:isExpectationOf mi:Cat_6_G2_1 .
+
+mi:Exp_6_G2_1_2 a mi:Expectation ;
+  mi:expectationCode "G2.1.2" ;
+  mi:fullCode "6-G2.1.2" ;
+  mi:officialText "Account for topographic and human spatial patterns (where people live) associated with tectonic plates such as volcanoes, earthquakes, settlements (Ring of Fire, recent volcanic and seismic events, settlements in proximity to natural hazards in the Western Hemisphere) by using information from GIS, remote sensing, and the World Wide Web." ;
+  skos:prefLabel "Account for Topographic and Human Spatial Patterns Associated with Tectonic Plates Such as Volcanoes, Earthquakes,..." ;
+  skos:broader mi:Cat_6_G2_1 ;
+  mi:inCategory mi:Cat_6_G2_1 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:isExpectationOf mi:Cat_6_G2_1 .
+
+mi:Exp_6_G2_2_1 a mi:Expectation ;
+  mi:expectationCode "G2.2.1" ;
+  mi:fullCode "6-G2.2.1" ;
+  mi:officialText "Describe the human characteristics of the region under study (including languages, religion, economic system, governmental system, cultural traditions)." ;
+  skos:prefLabel "Human Characteristics of the Region under Study" ;
+  skos:broader mi:Cat_6_G2_2 ;
+  mi:inCategory mi:Cat_6_G2_2 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:isExpectationOf mi:Cat_6_G2_2 .
+
+mi:Exp_6_G2_2_2 a mi:Expectation ;
+  mi:expectationCode "G2.2.2" ;
+  mi:fullCode "6-G2.2.2" ;
+  mi:officialText "Explain that communities are affected positively or negatively by changes in technology." ;
+  skos:prefLabel "That Communities Are Affected Positively or Negatively" ;
+  skos:broader mi:Cat_6_G2_2 ;
+  mi:inCategory mi:Cat_6_G2_2 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:hasExample
+    mi:Example_exp_6_G2_2_2_1 ,
+    mi:Example_exp_6_G2_2_2_2 ,
+    mi:Example_exp_6_G2_2_2_3 ,
+    mi:Example_exp_6_G2_2_2_4 ,
+    mi:Example_exp_6_G2_2_2_5 ,
+    mi:Example_exp_6_G2_2_2_6 ,
+    mi:Example_exp_6_G2_2_2_7 ;
+  mi:isExpectationOf mi:Cat_6_G2_2 .
+
+mi:Exp_6_G2_2_3 a mi:Expectation ;
+  mi:expectationCode "G2.2.3" ;
+  mi:fullCode "6-G2.2.3" ;
+  mi:officialText "Analyze how culture and experience influence people's perception of places and regions." ;
+  skos:prefLabel "Analyze How Culture and Experience Influence People's Perception of Places and Regions (e.g., the Caribbean Region That Presently Displays Enduring Impacts of Different Immigrant Groups" ;
+  skos:broader mi:Cat_6_G2_2 ;
+  mi:inCategory mi:Cat_6_G2_2 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:hasExample
+    mi:Example_exp_6_G2_2_3_1 ,
+    mi:Example_exp_6_G2_2_3_2 ,
+    mi:Example_exp_6_G2_2_3_3 ;
+  mi:isExpectationOf mi:Cat_6_G2_2 .
+
+mi:Exp_6_G3_1_1 a mi:Expectation ;
+  mi:expectationCode "G3.1.1" ;
+  mi:fullCode "6-G3.1.1" ;
+  mi:officialText "Construct and analyze climate graphs for two locations at different latitudes and elevations in the region to answer geographic questions and make predictions based on patterns." ;
+  skos:prefLabel "And Analyze Climate Graphs for Two Locations at Different Latitudes and Elevations in the Region..." ;
+  skos:broader mi:Cat_6_G3_1 ;
+  mi:inCategory mi:Cat_6_G3_1 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:hasExample
+    mi:Example_exp_6_G3_1_1_1 ,
+    mi:Example_exp_6_G3_1_1_2 ,
+    mi:Example_exp_6_G3_1_1_3 ;
+  mi:isExpectationOf mi:Cat_6_G3_1 .
+
+mi:Exp_6_G3_2_1 a mi:Expectation ;
+  mi:expectationCode "G3.2.1" ;
+  mi:fullCode "6-G3.2.1" ;
+  mi:officialText "Explain how and why ecosystems differ as a consequence of differences in latitude, elevation, and human activities." ;
+  skos:prefLabel "And Why Ecosystems Differ as a Consequence of Differences in Latitude, Elevation, and Human Activities" ;
+  skos:broader mi:Cat_6_G3_2 ;
+  mi:inCategory mi:Cat_6_G3_2 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:hasExample
+    mi:Example_exp_6_G3_2_1_1 ,
+    mi:Example_exp_6_G3_2_1_2 ,
+    mi:Example_exp_6_G3_2_1_3 ,
+    mi:Example_exp_6_G3_2_1_4 ;
+  mi:isExpectationOf mi:Cat_6_G3_2 .
+
+mi:Exp_6_G3_2_2 a mi:Expectation ;
+  mi:expectationCode "G3.2.2" ;
+  mi:fullCode "6-G3.2.2" ;
+  mi:officialText "Identify ecosystems and explain why some are more attractive for humans to use than are others." ;
+  skos:prefLabel "Ecosystems and Explain Why Some Are More Attractive for Humans to Use Than Are Others" ;
+  skos:broader mi:Cat_6_G3_2 ;
+  mi:inCategory mi:Cat_6_G3_2 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:hasExample
+    mi:Example_exp_6_G3_2_2_1 ,
+    mi:Example_exp_6_G3_2_2_2 ,
+    mi:Example_exp_6_G3_2_2_3 ,
+    mi:Example_exp_6_G3_2_2_4 ;
+  mi:isExpectationOf mi:Cat_6_G3_2 .
+
+mi:Exp_6_G4_1_1 a mi:Expectation ;
+  mi:expectationCode "G4.1.1" ;
+  mi:fullCode "6-G4.1.1" ;
+  mi:officialText "Identify and explain examples of cultural diffusion within the Americas." ;
+  skos:prefLabel "And Explain Examples of Cultural Diffusion Within the Americas" ;
+  skos:broader mi:Cat_6_G4_1 ;
+  mi:inCategory mi:Cat_6_G4_1 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:hasExample
+    mi:Example_exp_6_G4_1_1_1 ,
+    mi:Example_exp_6_G4_1_1_2 ,
+    mi:Example_exp_6_G4_1_1_3 ,
+    mi:Example_exp_6_G4_1_1_4 ,
+    mi:Example_exp_6_G4_1_1_5 ,
+    mi:Example_exp_6_G4_1_1_6 ,
+    mi:Example_exp_6_G4_1_1_7 ,
+    mi:Example_exp_6_G4_1_1_8 ,
+    mi:Example_exp_6_G4_1_1_9 ,
+    mi:Example_exp_6_G4_1_1_10 ,
+    mi:Example_exp_6_G4_1_1_11 ,
+    mi:Example_exp_6_G4_1_1_12 ;
+  mi:isExpectationOf mi:Cat_6_G4_1 .
+
+mi:Exp_6_G4_2_1 a mi:Expectation ;
+  mi:expectationCode "G4.2.1" ;
+  mi:fullCode "6-G4.2.1" ;
+  mi:officialText "List and describe the advantages and disadvantages of different technologies used to move people, products, and ideas throughout the world." ;
+  skos:prefLabel "Advantages and Disadvantages of Different Technologies Used to Move People, Products, and Ideas Throughout the..." ;
+  skos:broader mi:Cat_6_G4_2 ;
+  mi:inCategory mi:Cat_6_G4_2 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:hasExample
+    mi:Example_exp_6_G4_2_1_1 ,
+    mi:Example_exp_6_G4_2_1_2 ,
+    mi:Example_exp_6_G4_2_1_3 ,
+    mi:Example_exp_6_G4_2_1_4 ;
+  mi:isExpectationOf mi:Cat_6_G4_2 .
+
+mi:Exp_6_G4_3_1 a mi:Expectation ;
+  mi:expectationCode "G4.3.1" ;
+  mi:fullCode "6-G4.3.1" ;
+  mi:officialText "Identify places in the Western Hemisphere that have been modified to be suitable for settlement by describing the modifications that were necessary." ;
+  skos:prefLabel "Places in the Western Hemisphere That Have Been Modified to Be Suitable for Settlement" ;
+  skos:broader mi:Cat_6_G4_3 ;
+  mi:inCategory mi:Cat_6_G4_3 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:hasExample
+    mi:Example_exp_6_G4_3_1_1 ,
+    mi:Example_exp_6_G4_3_1_2 ,
+    mi:Example_exp_6_G4_3_1_3 ;
+  mi:isExpectationOf mi:Cat_6_G4_3 .
+
+mi:Exp_6_G4_3_2 a mi:Expectation ;
+  mi:expectationCode "G4.3.2" ;
+  mi:fullCode "6-G4.3.2" ;
+  mi:officialText "Describe patterns of settlement by using historical and modern maps." ;
+  skos:prefLabel "Describe Patterns of Settlement by Using Historical and Modern Maps (e.g., Coastal and River Cities and Towns in the Past and Present, Locations of Megacities" ;
+  skos:broader mi:Cat_6_G4_3 ;
+  mi:inCategory mi:Cat_6_G4_3 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:hasExample
+    mi:Example_exp_6_G4_3_2_1 ,
+    mi:Example_exp_6_G4_3_2_2 ,
+    mi:Example_exp_6_G4_3_2_3 ,
+    mi:Example_exp_6_G4_3_2_4 ;
+  mi:isExpectationOf mi:Cat_6_G4_3 .
+
+mi:Exp_6_G4_4_1 a mi:Expectation ;
+  mi:expectationCode "G4.4.1" ;
+  mi:fullCode "6-G4.4.1" ;
+  mi:officialText "Identify factors that contribute to conflict and cooperation between and among cultural groups (control/use of natural resources, power, wealth, and cultural diversity)." ;
+  skos:prefLabel "Factors That Contribute to Conflict and Cooperation between and Among Cultural Groups" ;
+  skos:broader mi:Cat_6_G4_4 ;
+  mi:inCategory mi:Cat_6_G4_4 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:isExpectationOf mi:Cat_6_G4_4 .
+
+mi:Exp_6_G4_4_2 a mi:Expectation ;
+  mi:expectationCode "G4.4.2" ;
+  mi:fullCode "6-G4.4.2" ;
+  mi:officialText "Describe the cultural clash of First Peoples, French and English in Canada long ago, and the establishment of Nunavut in 1999." ;
+  skos:prefLabel "Cultural Clash of First Peoples, French and English in Canada Long Ago, and the Establishment..." ;
+  skos:broader mi:Cat_6_G4_4 ;
+  mi:inCategory mi:Cat_6_G4_4 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:isExpectationOf mi:Cat_6_G4_4 .
+
+mi:Exp_6_G5_1_1 a mi:Expectation ;
+  mi:expectationCode "G5.1.1" ;
+  mi:fullCode "6-G5.1.1" ;
+  mi:officialText "Describe the environmental effects of human action on the atmosphere (air), biosphere (people, animals, and plants), lithosphere (soil), and hydrosphere (water)." ;
+  skos:prefLabel "Environmental Effects of Human Action on the Atmosphere , Biosphere , Lithosphere , and Hydrosphere" ;
+  skos:broader mi:Cat_6_G5_1 ;
+  mi:inCategory mi:Cat_6_G5_1 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:hasExample
+    mi:Example_exp_6_G5_1_1_1 ,
+    mi:Example_exp_6_G5_1_1_2 ,
+    mi:Example_exp_6_G5_1_1_3 ;
+  mi:isExpectationOf mi:Cat_6_G5_1 .
+
+mi:Exp_6_G5_1_2 a mi:Expectation ;
+  mi:expectationCode "G5.1.2" ;
+  mi:fullCode "6-G5.1.2" ;
+  mi:officialText "Describe how variations in technology affect human modifications of the landscape." ;
+  skos:prefLabel "Variations in Technology Affect Human Modifications of the Landscape" ;
+  skos:broader mi:Cat_6_G5_1 ;
+  mi:inCategory mi:Cat_6_G5_1 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:hasExample
+    mi:Example_exp_6_G5_1_2_1 ,
+    mi:Example_exp_6_G5_1_2_2 ,
+    mi:Example_exp_6_G5_1_2_3 ,
+    mi:Example_exp_6_G5_1_2_4 ,
+    mi:Example_exp_6_G5_1_2_5 ,
+    mi:Example_exp_6_G5_1_2_6 ;
+  mi:isExpectationOf mi:Cat_6_G5_1 .
+
+mi:Exp_6_G5_1_3 a mi:Expectation ;
+  mi:expectationCode "G5.1.3" ;
+  mi:fullCode "6-G5.1.3" ;
+  mi:officialText "Identify the ways in which human-induced changes in the physical environment in one place can cause changes in other places." ;
+  skos:prefLabel "Ways" ;
+  skos:broader mi:Cat_6_G5_1 ;
+  mi:inCategory mi:Cat_6_G5_1 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:hasExample
+    mi:Example_exp_6_G5_1_3_1 ,
+    mi:Example_exp_6_G5_1_3_2 ;
+  mi:isExpectationOf mi:Cat_6_G5_1 .
+
+mi:Exp_6_G5_2_1 a mi:Expectation ;
+  mi:expectationCode "G5.2.1" ;
+  mi:fullCode "6-G5.2.1" ;
+  mi:officialText "Describe the effects that a change in the physical environment could have on human activities and the choices people would have to make in adjusting to the change." ;
+  skos:prefLabel "Effects That a Change in the Physical Environment Could Have on Human Activities and the..." ;
+  skos:broader mi:Cat_6_G5_2 ;
+  mi:inCategory mi:Cat_6_G5_2 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:hasExample
+    mi:Example_exp_6_G5_2_1_1 ,
+    mi:Example_exp_6_G5_2_1_2 ,
+    mi:Example_exp_6_G5_2_1_3 ;
+  mi:isExpectationOf mi:Cat_6_G5_2 .
+
+mi:Exp_6_G6_1_1 a mi:Expectation ;
+  mi:expectationCode "G6.1.1" ;
+  mi:fullCode "6-G6.1.1" ;
+  mi:officialText "Contemporary Investigations - Conduct research on contemporary global topics and issues, compose persuasive essays, and develop a plan for action. (H1.4.3, G1.2.6, See P3 and P4)" ;
+  skos:prefLabel "Contemporary Investigations" ;
+  skos:broader mi:Cat_6_G6_1 ;
+  mi:inCategory mi:Cat_6_G6_1 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:isExpectationOf mi:Cat_6_G6_1 .
+
+mi:Exp_6_G6_1_2 a mi:Expectation ;
+  mi:expectationCode "G6.1.2" ;
+  mi:fullCode "6-G6.1.2" ;
+  mi:officialText "Investigations Designed for Ancient World History Eras - Conduct research on global topics and issues, compose persuasive essays, and develop a plan for action." ;
+  skos:prefLabel "Investigations Designed for Ancient World History Eras" ;
+  skos:broader mi:Cat_6_G6_1 ;
+  mi:inCategory mi:Cat_6_G6_1 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:hasExample
+    mi:Example_exp_6_G6_1_2_1 ;
+  mi:isExpectationOf mi:Cat_6_G6_1 .
+
+mi:Exp_6_H1_1_1 a mi:Expectation ;
+  mi:expectationCode "H1.1.1" ;
+  mi:fullCode "6-H1.1.1" ;
+  mi:officialText "Explain why and how historians use eras and periods as constructs to organize and explain human activities over time." ;
+  skos:prefLabel "Why" ;
+  skos:broader mi:Cat_6_H1_1 ;
+  mi:inCategory mi:Cat_6_H1_1 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_H ;
+  mi:isExpectationOf mi:Cat_6_H1_1 .
+
+mi:Exp_6_H1_1_2 a mi:Expectation ;
+  mi:expectationCode "H1.1.2" ;
+  mi:fullCode "6-H1.1.2" ;
+  mi:officialText "Compare and contrast several different calendar systems used in the past and present and their cultural significance" ;
+  skos:prefLabel "Compare and Contrast Several Different Calendar Systems Used in the Past and Present and Their Cultural Significance (e.g., Olmec and Mayan Calendar Systems, Aztec Calendar Stone, Sun Dial, Gregorian Calendar" ;
+  skos:broader mi:Cat_6_H1_1 ;
+  mi:inCategory mi:Cat_6_H1_1 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_H ;
+  mi:hasExample
+    mi:Example_exp_6_H1_1_2_1 ,
+    mi:Example_exp_6_H1_1_2_2 ,
+    mi:Example_exp_6_H1_1_2_3 ,
+    mi:Example_exp_6_H1_1_2_4 ,
+    mi:Example_exp_6_H1_1_2_5 ;
+  mi:isExpectationOf mi:Cat_6_H1_1 .
+
+mi:Exp_6_H1_2_1 a mi:Expectation ;
+  mi:expectationCode "H1.2.1" ;
+  mi:fullCode "6-H1.2.1" ;
+  mi:officialText "Explain how historians use a variety of sources to explore the past." ;
+  skos:prefLabel "Historians Use a Variety of Sources to Explore the Past" ;
+  skos:broader mi:Cat_6_H1_2 ;
+  mi:inCategory mi:Cat_6_H1_2 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_H ;
+  mi:hasExample
+    mi:Example_exp_6_H1_2_1_1 ,
+    mi:Example_exp_6_H1_2_1_2 ,
+    mi:Example_exp_6_H1_2_1_3 ,
+    mi:Example_exp_6_H1_2_1_4 ,
+    mi:Example_exp_6_H1_2_1_5 ,
+    mi:Example_exp_6_H1_2_1_6 ,
+    mi:Example_exp_6_H1_2_1_7 ;
+  mi:isExpectationOf mi:Cat_6_H1_2 .
+
+mi:Exp_6_H1_2_2 a mi:Expectation ;
+  mi:expectationCode "H1.2.2" ;
+  mi:fullCode "6-H1.2.2" ;
+  mi:officialText "Read and comprehend a historical passage to identify basic factual knowledge and the literal meaning by indicating who was involved, what happened, where it happened, what events led to the development, and what consequences or outcomes followed." ;
+  skos:prefLabel "Basic Factual Knowledge and the Literal Meaning" ;
+  skos:broader mi:Cat_6_H1_2 ;
+  mi:inCategory mi:Cat_6_H1_2 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_H ;
+  mi:isExpectationOf mi:Cat_6_H1_2 .
+
+mi:Exp_6_H1_2_3 a mi:Expectation ;
+  mi:expectationCode "H1.2.3" ;
+  mi:fullCode "6-H1.2.3" ;
+  mi:officialText "Identify the point of view (perspective of the author) and context when reading and discussing primary and secondary sources." ;
+  skos:prefLabel "Point of View and Context When Reading and Discussing Primary and Secondary Sources" ;
+  skos:broader mi:Cat_6_H1_2 ;
+  mi:inCategory mi:Cat_6_H1_2 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_H ;
+  mi:isExpectationOf mi:Cat_6_H1_2 .
+
+mi:Exp_6_H1_2_4 a mi:Expectation ;
+  mi:expectationCode "H1.2.4" ;
+  mi:fullCode "6-H1.2.4" ;
+  mi:officialText "Compare and evaluate competing historical perspectives about the past based on proof." ;
+  skos:prefLabel "And Evaluate Competing Historical Perspectives about the Past Based on Proof" ;
+  skos:broader mi:Cat_6_H1_2 ;
+  mi:inCategory mi:Cat_6_H1_2 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_H ;
+  mi:isExpectationOf mi:Cat_6_H1_2 .
+
+mi:Exp_6_H1_2_5 a mi:Expectation ;
+  mi:expectationCode "H1.2.5" ;
+  mi:fullCode "6-H1.2.5" ;
+  mi:officialText "Identify the role of the individual in history and the significance of one person's ideas." ;
+  skos:prefLabel "Role of the Individual in History and the Significance of One Person's Ideas" ;
+  skos:broader mi:Cat_6_H1_2 ;
+  mi:inCategory mi:Cat_6_H1_2 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_H ;
+  mi:isExpectationOf mi:Cat_6_H1_2 .
+
+mi:Exp_6_H1_4_1 a mi:Expectation ;
+  mi:expectationCode "H1.4.1" ;
+  mi:fullCode "6-H1.4.1" ;
+  mi:officialText "Describe and use cultural institutions to study an era and a region (political, economic, religion/ belief, science/technology, written language, education, family)." ;
+  skos:prefLabel "And Use Cultural Institutions to Study an Era and a Region" ;
+  skos:broader mi:Cat_6_H1_4 ;
+  mi:inCategory mi:Cat_6_H1_4 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_H ;
+  mi:isExpectationOf mi:Cat_6_H1_4 .
+
+mi:Exp_6_H1_4_2 a mi:Expectation ;
+  mi:expectationCode "H1.4.2" ;
+  mi:fullCode "6-H1.4.2" ;
+  mi:officialText "Describe and use themes of history to study patterns of change and continuity." ;
+  skos:prefLabel "And Use Themes of History to Study Patterns of Change and Continuity" ;
+  skos:broader mi:Cat_6_H1_4 ;
+  mi:inCategory mi:Cat_6_H1_4 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_H ;
+  mi:isExpectationOf mi:Cat_6_H1_4 .
+
+mi:Exp_6_H1_4_3 a mi:Expectation ;
+  mi:expectationCode "H1.4.3" ;
+  mi:fullCode "6-H1.4.3" ;
+  mi:officialText "Use historical perspective to analyze global issues faced by humans long ago and today." ;
+  skos:prefLabel "Historical Perspective to Analyze Global Issues Faced" ;
+  skos:broader mi:Cat_6_H1_4 ;
+  mi:inCategory mi:Cat_6_H1_4 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_H ;
+  mi:isExpectationOf mi:Cat_6_H1_4 .
+
+mi:Exp_6_P3_1_1 a mi:Expectation ;
+  mi:expectationCode "P3.1.1" ;
+  mi:fullCode "6-P3.1.1" ;
+  mi:officialText "Clearly state an issue as a question or public policy, trace the origins of an issue, analyze various perspectives, and generate and evaluate alternative resolutions." ;
+  skos:prefLabel "The Origins of an Issue, Analyze Various Perspectives, and Generate and Evaluate Alternative Resolutions" ;
+  skos:broader mi:Cat_6_P3_1 ;
+  mi:inCategory mi:Cat_6_P3_1 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_P ;
+  mi:hasExample
+    mi:Example_exp_6_P3_1_1_1 ,
+    mi:Example_exp_6_P3_1_1_2 ,
+    mi:Example_exp_6_P3_1_1_3 ,
+    mi:Example_exp_6_P3_1_1_4 ,
+    mi:Example_exp_6_P3_1_1_5 ,
+    mi:Example_exp_6_P3_1_1_6 ,
+    mi:Example_exp_6_P3_1_1_7 ,
+    mi:Example_exp_6_P3_1_1_8 ;
+  mi:isExpectationOf mi:Cat_6_P3_1 .
+
+mi:Exp_6_P4_2_1 a mi:Expectation ;
+  mi:expectationCode "P4.2.1" ;
+  mi:fullCode "6-P4.2.1" ;
+  mi:officialText "Demonstrate knowledge of how, when, and where individuals would plan and conduct activities intended to advance views in matters of public policy, report the results, and evaluate effectiveness." ;
+  skos:prefLabel "Effectiveness" ;
+  skos:broader mi:Cat_6_P4_2 ;
+  mi:inCategory mi:Cat_6_P4_2 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_P ;
+  mi:isExpectationOf mi:Cat_6_P4_2 .
+
+mi:Exp_6_P4_2_2 a mi:Expectation ;
+  mi:expectationCode "P4.2.2" ;
+  mi:fullCode "6-P4.2.2" ;
+  mi:officialText "Engage in activities intended to contribute to solving a national or international problem studied." ;
+  skos:prefLabel "Engage in Activities Intended to Contribute to Solving a National or International Problem Studied" ;
+  skos:broader mi:Cat_6_P4_2 ;
+  mi:inCategory mi:Cat_6_P4_2 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_P ;
+  mi:isExpectationOf mi:Cat_6_P4_2 .
+
+mi:Exp_6_P4_2_3 a mi:Expectation ;
+  mi:expectationCode "P4.2.3" ;
+  mi:fullCode "6-P4.2.3" ;
+  mi:officialText "Participate in projects to help or inform others." ;
+  skos:prefLabel "Participate in Projects to Help or Inform Others" ;
+  skos:broader mi:Cat_6_P4_2 ;
+  mi:inCategory mi:Cat_6_P4_2 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_P ;
+  mi:hasExample
+    mi:Example_exp_6_P4_2_3_1 ;
+  mi:isExpectationOf mi:Cat_6_P4_2 .
+
+mi:Exp_6_W1_1_1 a mi:Expectation ;
+  mi:expectationCode "W1.1.1" ;
+  mi:fullCode "6-W1.1.1" ;
+  mi:officialText "Describe the early migrations of people among Earth's continents (including the Berringa Land Bridge)." ;
+  skos:prefLabel "Early Migrations of People Among Earth's Continents" ;
+  skos:broader mi:Cat_6_W1_1 ;
+  mi:inCategory mi:Cat_6_W1_1 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:isExpectationOf mi:Cat_6_W1_1 .
+
+mi:Exp_6_W1_1_2 a mi:Expectation ;
+  mi:expectationCode "W1.1.2" ;
+  mi:fullCode "6-W1.1.2" ;
+  mi:officialText "Examine the lives of hunting and gathering people during the earliest eras of human society (tools and weapons, language, fire)." ;
+  skos:prefLabel "The Lives of Hunting and Gathering People During the Earliest Eras of Human Society" ;
+  skos:broader mi:Cat_6_W1_1 ;
+  mi:inCategory mi:Cat_6_W1_1 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:isExpectationOf mi:Cat_6_W1_1 .
+
+mi:Exp_6_W1_2_1 a mi:Expectation ;
+  mi:expectationCode "W1.2.1" ;
+  mi:fullCode "6-W1.2.1" ;
+  mi:officialText "Describe the transition from hunter gatherers to sedentary agriculture (domestication of plants and animals)." ;
+  skos:prefLabel "Transition from Hunter Gatherers to Sedentary Agriculture" ;
+  skos:broader mi:Cat_6_W1_2 ;
+  mi:inCategory mi:Cat_6_W1_2 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:isExpectationOf mi:Cat_6_W1_2 .
+
+mi:Exp_6_W1_2_2 a mi:Expectation ;
+  mi:expectationCode "W1.2.2" ;
+  mi:fullCode "6-W1.2.2" ;
+  mi:officialText "Describe the importance of the natural environment in the development of agricultural settlements in different locations." ;
+  skos:prefLabel "Importance of the Natural Environment in the Development of Agricultural Settlements in Different Locations" ;
+  skos:broader mi:Cat_6_W1_2 ;
+  mi:inCategory mi:Cat_6_W1_2 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:hasExample
+    mi:Example_exp_6_W1_2_2_1 ,
+    mi:Example_exp_6_W1_2_2_2 ,
+    mi:Example_exp_6_W1_2_2_3 ;
+  mi:isExpectationOf mi:Cat_6_W1_2 .
+
+mi:Exp_6_W1_2_3 a mi:Expectation ;
+  mi:expectationCode "W1.2.3" ;
+  mi:fullCode "6-W1.2.3" ;
+  mi:officialText "Explain the impact of the Agricultural Revolution (stable food supply, surplus, population growth, trade, division of labor, development of settlements)." ;
+  skos:prefLabel "Impact of the Agricultural Revolution" ;
+  skos:broader mi:Cat_6_W1_2 ;
+  mi:inCategory mi:Cat_6_W1_2 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:isExpectationOf mi:Cat_6_W1_2 .
+
+mi:Exp_6_W2_1_1 a mi:Expectation ;
+  mi:expectationCode "W2.1.1" ;
+  mi:fullCode "6-W2.1.1" ;
+  mi:officialText "Explain how the environment favored hunter gatherer, pastoral, and small scale agricultural ways of life in different parts of the Western Hemisphere." ;
+  skos:prefLabel "The Environment Favored Hunter Gatherer, Pastoral, and Small Scale Agricultural Ways of Life in Different..." ;
+  skos:broader mi:Cat_6_W2_1 ;
+  mi:inCategory mi:Cat_6_W2_1 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:isExpectationOf mi:Cat_6_W2_1 .
+
+mi:Exp_6_W2_1_2 a mi:Expectation ;
+  mi:expectationCode "W2.1.2" ;
+  mi:fullCode "6-W2.1.2" ;
+  mi:officialText "Describe how the invention of agriculture led to the emergence of agrarian civilizations (seasonal harvests, specialized crops, cultivation, and development of villages and towns)." ;
+  skos:prefLabel "The Invention of Agriculture Led to the Emergence of Agrarian Civilizations" ;
+  skos:broader mi:Cat_6_W2_1 ;
+  mi:inCategory mi:Cat_6_W2_1 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:isExpectationOf mi:Cat_6_W2_1 .
+
+mi:Exp_6_W2_1_3 a mi:Expectation ;
+  mi:expectationCode "W2.1.3" ;
+  mi:fullCode "6-W2.1.3" ;
+  mi:officialText "Use multiple sources of evidence to describe how the culture of early peoples of North America reflected the geography and natural resources available." ;
+  skos:prefLabel "Multiple Sources of Evidence to Describe How the Culture of Early Peoples of North America..." ;
+  skos:broader mi:Cat_6_W2_1 ;
+  mi:inCategory mi:Cat_6_W2_1 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:hasExample
+    mi:Example_exp_6_W2_1_3_1 ,
+    mi:Example_exp_6_W2_1_3_2 ,
+    mi:Example_exp_6_W2_1_3_3 ;
+  mi:isExpectationOf mi:Cat_6_W2_1 .
+
+mi:Exp_6_W2_1_4 a mi:Expectation ;
+  mi:expectationCode "W2.1.4" ;
+  mi:fullCode "6-W2.1.4" ;
+  mi:officialText "Use evidence to identify defining characteristics of early civilizations and early pastoral nomads (government, language, religion, social structure, technology, and division of labor)." ;
+  skos:prefLabel "Evidence to Identify Defining Characteristics of Early Civilizations and Early Pastoral Nomads" ;
+  skos:broader mi:Cat_6_W2_1 ;
+  mi:inCategory mi:Cat_6_W2_1 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:isExpectationOf mi:Cat_6_W2_1 .
+
+mi:Exp_6_W3_1_1 a mi:Expectation ;
+  mi:expectationCode "W3.1.1" ;
+  mi:fullCode "6-W3.1.1" ;
+  mi:officialText "Analyze the role of environment in the development of early empires, referencing both useful environmental features and those that presented obstacles." ;
+  skos:prefLabel "Role of Environment in the Development of Early Empires, Referencing Both Useful Environmental Features and..." ;
+  skos:broader mi:Cat_6_W3_1 ;
+  mi:inCategory mi:Cat_6_W3_1 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:isExpectationOf mi:Cat_6_W3_1 .
+
+mi:Exp_6_W3_1_2 a mi:Expectation ;
+  mi:expectationCode "W3.1.2" ;
+  mi:fullCode "6-W3.1.2" ;
+  mi:officialText "Explain the role of economics in shaping the development of early civilizations (trade routes and their significance - Inca Road, supply and demand for products)." ;
+  skos:prefLabel "Explain the Role of Economics in Shaping the Development of Early Civilizations (trade Routes and Their Significance" ;
+  skos:broader mi:Cat_6_W3_1 ;
+  mi:inCategory mi:Cat_6_W3_1 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:isExpectationOf mi:Cat_6_W3_1 .
+
+mi:Exp_6_W3_1_3 a mi:Expectation ;
+  mi:expectationCode "W3.1.3" ;
+  mi:fullCode "6-W3.1.3" ;
+  mi:officialText "Describe similarities and difference among Mayan, Aztec, and Incan societies, including economy, religion, and role and class structure." ;
+  skos:prefLabel "Similarities and Difference Among Mayan, Aztec, and Incan Societies" ;
+  skos:broader mi:Cat_6_W3_1 ;
+  mi:inCategory mi:Cat_6_W3_1 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:isExpectationOf mi:Cat_6_W3_1 .
+
+mi:Exp_6_W3_1_4 a mi:Expectation ;
+  mi:expectationCode "W3.1.4" ;
+  mi:fullCode "6-W3.1.4" ;
+  mi:officialText "Describe the regional struggles and changes in governmental systems among the Mayan, Aztec, and Incan Empires." ;
+  skos:prefLabel "Regional Struggles and Changes in Governmental Systems Among the Mayan, Aztec, and Incan Empires" ;
+  skos:broader mi:Cat_6_W3_1 ;
+  mi:inCategory mi:Cat_6_W3_1 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:isExpectationOf mi:Cat_6_W3_1 .
+
+mi:Exp_6_W3_1_5 a mi:Expectation ;
+  mi:expectationCode "W3.1.5" ;
+  mi:fullCode "6-W3.1.5" ;
+  mi:officialText "Construct a timeline of main events on the origin and development of early and classic ancient civilizations of the Western Hemisphere (Olmec, Mayan, Aztec, and Incan)." ;
+  skos:prefLabel "A Timeline of Main Events on the Origin and Development of Early and Classic Ancient..." ;
+  skos:broader mi:Cat_6_W3_1 ;
+  mi:inCategory mi:Cat_6_W3_1 ;
+  mi:inGrade mi:Grade_6 ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:isExpectationOf mi:Cat_6_W3_1 .
+
+#################################################################
+# Examples
+#################################################################
+mi:Example_cat_6_G1_2_1 a mi:Example ;
+  skos:prefLabel "Geographers use information and skills to reach conclusions about significant questions regarding the relationships between people, their cultures, the environments in which they live, and the relationships within the larger world context. Students will reach their own conclusions using this information and make a reasoned judgment about the most justifiable conclusion based on the authenticity of the information, their skill at critically analyzing the information, and presenting the results of the inquiry." ;
+  mi:exampleText "Geographers use information and skills to reach conclusions about significant questions regarding the relationships between people, their cultures, the environments in which they live, and the relationships within the larger world context. Students will reach their own conclusions using this information and make a reasoned judgment about the most justifiable conclusion based on the authenticity of the information, their skill at critically analyzing the information, and presenting the results of the inquiry." .
+
+mi:Example_cat_6_G1_3_1 a mi:Example ;
+  skos:prefLabel "The nature and uses of geography as a discipline and the spatial perspective require that students observe, interpret, assess, and apply geographic information and skills. The uses of the subject and content of geography are essential in the development of geographical understanding. A spatial perspective enables student to observe, describe, and analyze the organizations of people, places, and environments at different scales and is central to geographic literacy." ;
+  mi:exampleText "The nature and uses of geography as a discipline and the spatial perspective require that students observe, interpret, assess, and apply geographic information and skills. The uses of the subject and content of geography are essential in the development of geographical understanding. A spatial perspective enables student to observe, describe, and analyze the organizations of people, places, and environments at different scales and is central to geographic literacy." .
+
+mi:Example_cat_6_G6_1_1 a mi:Example ;
+  skos:prefLabel "Capstone projects require the student to use geography, history, economics, and government to inquire about major contemporary and historical issues and events linked to the world outside the classroom. The core disciplines are used to interpret the past and plan for the future. During the school year the students will complete at least three capstone projects. (National Geography Standards 17 and 18, p. 179 and 181)" ;
+  mi:exampleText "Capstone projects require the student to use geography, history, economics, and government to inquire about major contemporary and historical issues and events linked to the world outside the classroom. The core disciplines are used to interpret the past and plan for the future. During the school year the students will complete at least three capstone projects. (National Geography Standards 17 and 18, p. 179 and 181)" .
+
+mi:Example_cat_6_H1_1_1 a mi:Example ;
+  skos:prefLabel "Historians use conceptual devices (eras, periods, calendars, time lines) to organize their study of the world. Chronology is based on time and reflects cultural and historical interpretations, including major starting points, and calendars based on different criteria (religious, seasonal, Earth-sun-and-moon relationships). Historians use eras and periods to organize the study of broad developments that have involved large segments of the world's population and have lasting significance for future generations and to explain change and continuity." ;
+  mi:exampleText "Historians use conceptual devices (eras, periods, calendars, time lines) to organize their study of the world. Chronology is based on time and reflects cultural and historical interpretations, including major starting points, and calendars based on different criteria (religious, seasonal, Earth-sun-and-moon relationships). Historians use eras and periods to organize the study of broad developments that have involved large segments of the world's population and have lasting significance for future generations and to explain change and continuity." .
+
+mi:Example_cat_6_H1_2_1 a mi:Example ;
+  skos:prefLabel "History is a process of reasoning based on evidence from the past. Historians use and interpret a variety of historical documents (including narratives), recognize the difference between fact and opinion, appreciate multiple historical perspectives while avoiding present mindedness (judging the past solely in term of norms and values of today), and explain that historical events often are the result of multiple causation. Students will conduct their own inquiry and analysis in their studies about the ancient history of the Western Hemisphere." ;
+  mi:exampleText "History is a process of reasoning based on evidence from the past. Historians use and interpret a variety of historical documents (including narratives), recognize the difference between fact and opinion, appreciate multiple historical perspectives while avoiding present mindedness (judging the past solely in term of norms and values of today), and explain that historical events often are the result of multiple causation. Students will conduct their own inquiry and analysis in their studies about the ancient history of the Western Hemisphere." .
+
+mi:Example_cat_6_H1_4_1 a mi:Example ;
+  skos:prefLabel "Historians apply temporal perspective, historical inquiry, and analysis to spheres of human society to construct knowledge as historical understandings. These understandings are drawn from the record of human history and include human aspirations, strivings, accomplishments, and failures in spheres of human activity." ;
+  mi:exampleText "Historians apply temporal perspective, historical inquiry, and analysis to spheres of human society to construct knowledge as historical understandings. These understandings are drawn from the record of human history and include human aspirations, strivings, accomplishments, and failures in spheres of human activity." .
+
+mi:Example_cat_6_W1_1_1 a mi:Example ;
+  skos:prefLabel "In the first era of human history, people spread throughout the world. As communities of hunters, foragers, or fishers, they adapted creatively and continually to a variety of contrasting, changing environments in the Americas." ;
+  mi:exampleText "In the first era of human history, people spread throughout the world. As communities of hunters, foragers, or fishers, they adapted creatively and continually to a variety of contrasting, changing environments in the Americas." .
+
+mi:Example_cat_6_W1_2_1 a mi:Example ;
+  skos:prefLabel "The Agricultural Revolution was a major turning point in history that resulted in people and civilizations viewing and using the land in a systematic manner to grow food crops, raise animals, produce food surpluses, and the development of sedentary settlement." ;
+  mi:exampleText "The Agricultural Revolution was a major turning point in history that resulted in people and civilizations viewing and using the land in a systematic manner to grow food crops, raise animals, produce food surpluses, and the development of sedentary settlement." .
+
+mi:Example_cat_6_W2_1_1 a mi:Example ;
+  skos:prefLabel "During this era early agrarian civilizations and pastoral societies emerged. Many of the world's most fundamental institutions, discoveries, inventions, and techniques appeared. Pastoral societies developed cultures that reflected the geography and resources that enabled them to inhabit the more challenging physical environments such as the tundra and semi-arid regions of North and South America." ;
+  mi:exampleText "During this era early agrarian civilizations and pastoral societies emerged. Many of the world's most fundamental institutions, discoveries, inventions, and techniques appeared. Pastoral societies developed cultures that reflected the geography and resources that enabled them to inhabit the more challenging physical environments such as the tundra and semi-arid regions of North and South America." .
+
+mi:Example_cat_6_W3_1_1 a mi:Example ;
+  skos:prefLabel "Civilizations and empires that emerged during this era were noted for their political, economic and social systems and their changing interactions with the environment and the agrarian civilizations that emerged in Mesoamerica and South America." ;
+  mi:exampleText "Civilizations and empires that emerged during this era were noted for their political, economic and social systems and their changing interactions with the environment and the agrarian civilizations that emerged in Mesoamerica and South America." .
+
+mi:Example_exp_6_C1_1_1_1 a mi:Example ;
+  skos:prefLabel "protecting individual rights" ;
+  mi:exampleText "protecting individual rights" .
+
+mi:Example_exp_6_C1_1_1_2 a mi:Example ;
+  skos:prefLabel "promoting the common good" ;
+  mi:exampleText "promoting the common good" .
+
+mi:Example_exp_6_C1_1_1_3 a mi:Example ;
+  skos:prefLabel "providing economic security" ;
+  mi:exampleText "providing economic security" .
+
+mi:Example_exp_6_C1_1_1_4 a mi:Example ;
+  skos:prefLabel "molding the character of citizens" ;
+  mi:exampleText "molding the character of citizens" .
+
+mi:Example_exp_6_C1_1_1_5 a mi:Example ;
+  skos:prefLabel "promoting a particular religion" ;
+  mi:exampleText "promoting a particular religion" .
+
+mi:Example_exp_6_C4_3_1_1 a mi:Example ;
+  skos:prefLabel "petroleum and arms purchases in Venezuela and Ecuador" ;
+  mi:exampleText "petroleum and arms purchases in Venezuela and Ecuador" .
+
+mi:Example_exp_6_C4_3_1_2 a mi:Example ;
+  skos:prefLabel "foreign aid for health care in Nicaragua" ;
+  mi:exampleText "foreign aid for health care in Nicaragua" .
+
+mi:Example_exp_6_C4_3_2_1 a mi:Example ;
+  skos:prefLabel "migration and human rights" ;
+  mi:exampleText "migration and human rights" .
+
+mi:Example_exp_6_C4_3_3_1 a mi:Example ;
+  skos:prefLabel "North American Free Trade Agreement (NAFTA)" ;
+  mi:exampleText "North American Free Trade Agreement (NAFTA)" .
+
+mi:Example_exp_6_C4_3_3_2 a mi:Example ;
+  skos:prefLabel "Organization of American States (OAS)" ;
+  mi:exampleText "Organization of American States (OAS)" .
+
+mi:Example_exp_6_C4_3_3_3 a mi:Example ;
+  skos:prefLabel "United Nations (UN)" ;
+  mi:exampleText "United Nations (UN)" .
+
+mi:Example_exp_6_E1_1_1_1 a mi:Example ;
+  skos:prefLabel "acquiring money" ;
+  mi:exampleText "acquiring money" .
+
+mi:Example_exp_6_E1_1_1_2 a mi:Example ;
+  skos:prefLabel "profit" ;
+  mi:exampleText "profit" .
+
+mi:Example_exp_6_E1_1_1_3 a mi:Example ;
+  skos:prefLabel "goods" ;
+  mi:exampleText "goods" .
+
+mi:Example_exp_6_E1_1_1_4 a mi:Example ;
+  skos:prefLabel "wanting to avoid loss in position in society" ;
+  mi:exampleText "wanting to avoid loss in position in society" .
+
+mi:Example_exp_6_E1_1_1_5 a mi:Example ;
+  skos:prefLabel "job placement" ;
+  mi:exampleText "job placement" .
+
+mi:Example_exp_6_E3_1_2_1 a mi:Example ;
+  skos:prefLabel "computers" ;
+  mi:exampleText "computers" .
+
+mi:Example_exp_6_E3_1_2_2 a mi:Example ;
+  skos:prefLabel "athletic shoes" ;
+  mi:exampleText "athletic shoes" .
+
+mi:Example_exp_6_E3_1_2_3 a mi:Example ;
+  skos:prefLabel "clothing" ;
+  mi:exampleText "clothing" .
+
+mi:Example_exp_6_E3_1_3_1 a mi:Example ;
+  skos:prefLabel "internet-based home offices" ;
+  mi:exampleText "internet-based home offices" .
+
+mi:Example_exp_6_E3_1_3_2 a mi:Example ;
+  skos:prefLabel "international work teams" ;
+  mi:exampleText "international work teams" .
+
+mi:Example_exp_6_E3_1_3_3 a mi:Example ;
+  skos:prefLabel "international companies" ;
+  mi:exampleText "international companies" .
+
+mi:Example_exp_6_E3_3_1_1 a mi:Example ;
+  skos:prefLabel "United States and Cuba" ;
+  mi:exampleText "United States and Cuba" .
+
+mi:Example_exp_6_E3_3_1_2 a mi:Example ;
+  skos:prefLabel "Venezuela and Jamaica" ;
+  mi:exampleText "Venezuela and Jamaica" .
+
+mi:Example_exp_6_G2_2_2_1 a mi:Example ;
+  skos:prefLabel "mining in Canada" ;
+  mi:exampleText "mining in Canada" .
+
+mi:Example_exp_6_G2_2_2_2 a mi:Example ;
+  skos:prefLabel "forestry in Canada" ;
+  mi:exampleText "forestry in Canada" .
+
+mi:Example_exp_6_G2_2_2_3 a mi:Example ;
+  skos:prefLabel "hydroelectric power generation" ;
+  mi:exampleText "hydroelectric power generation" .
+
+mi:Example_exp_6_G2_2_2_4 a mi:Example ;
+  skos:prefLabel "agriculture" ;
+  mi:exampleText "agriculture" .
+
+mi:Example_exp_6_G2_2_2_5 a mi:Example ;
+  skos:prefLabel "snowmobiles" ;
+  mi:exampleText "snowmobiles" .
+
+mi:Example_exp_6_G2_2_2_6 a mi:Example ;
+  skos:prefLabel "cell phones" ;
+  mi:exampleText "cell phones" .
+
+mi:Example_exp_6_G2_2_2_7 a mi:Example ;
+  skos:prefLabel "air travel" ;
+  mi:exampleText "air travel" .
+
+mi:Example_exp_6_G2_2_3_1 a mi:Example ;
+  skos:prefLabel "Africans in the Caribbean region" ;
+  mi:exampleText "Africans in the Caribbean region" .
+
+mi:Example_exp_6_G2_2_3_2 a mi:Example ;
+  skos:prefLabel "South Asians" ;
+  mi:exampleText "South Asians" .
+
+mi:Example_exp_6_G2_2_3_3 a mi:Example ;
+  skos:prefLabel "Europeans in the Caribbean region and differing points of view by islanders and tourists" ;
+  mi:exampleText "Europeans in the Caribbean region and differing points of view by islanders and tourists" .
+
+mi:Example_exp_6_G3_1_1_1 a mi:Example ;
+  skos:prefLabel "Buenos Aires and La Paz" ;
+  mi:exampleText "Buenos Aires and La Paz" .
+
+mi:Example_exp_6_G3_1_1_2 a mi:Example ;
+  skos:prefLabel "Mexico City and Guatemala City" ;
+  mi:exampleText "Mexico City and Guatemala City" .
+
+mi:Example_exp_6_G3_1_1_3 a mi:Example ;
+  skos:prefLabel "Edmonton and Toronto" ;
+  mi:exampleText "Edmonton and Toronto" .
+
+mi:Example_exp_6_G3_2_1_1 a mi:Example ;
+  skos:prefLabel "South America's location relative to the equator" ;
+  mi:exampleText "South America's location relative to the equator" .
+
+mi:Example_exp_6_G3_2_1_2 a mi:Example ;
+  skos:prefLabel "effects of elevations on temperature and growing season" ;
+  mi:exampleText "effects of elevations on temperature and growing season" .
+
+mi:Example_exp_6_G3_2_1_3 a mi:Example ;
+  skos:prefLabel "proximity to bodies of water and the effects on temperature and rainfall" ;
+  mi:exampleText "proximity to bodies of water and the effects on temperature and rainfall" .
+
+mi:Example_exp_6_G3_2_1_4 a mi:Example ;
+  skos:prefLabel "effects of annual flooding on vegetation along river flood plains such as the Amazon" ;
+  mi:exampleText "effects of annual flooding on vegetation along river flood plains such as the Amazon" .
+
+mi:Example_exp_6_G3_2_2_1 a mi:Example ;
+  skos:prefLabel "mid-latitude forest in North America" ;
+  mi:exampleText "mid-latitude forest in North America" .
+
+mi:Example_exp_6_G3_2_2_2 a mi:Example ;
+  skos:prefLabel "high latitude of Peru" ;
+  mi:exampleText "high latitude of Peru" .
+
+mi:Example_exp_6_G3_2_2_3 a mi:Example ;
+  skos:prefLabel "tropical forests in Honduras" ;
+  mi:exampleText "tropical forests in Honduras" .
+
+mi:Example_exp_6_G3_2_2_4 a mi:Example ;
+  skos:prefLabel "fish or marine vegetation in coastal zones" ;
+  mi:exampleText "fish or marine vegetation in coastal zones" .
+
+mi:Example_exp_6_G4_1_1_1 a mi:Example ;
+  skos:prefLabel "baseball" ;
+  mi:exampleText "baseball" .
+
+mi:Example_exp_6_G4_1_1_2 a mi:Example ;
+  skos:prefLabel "soccer" ;
+  mi:exampleText "soccer" .
+
+mi:Example_exp_6_G4_1_1_3 a mi:Example ;
+  skos:prefLabel "music" ;
+  mi:exampleText "music" .
+
+mi:Example_exp_6_G4_1_1_4 a mi:Example ;
+  skos:prefLabel "architecture" ;
+  mi:exampleText "architecture" .
+
+mi:Example_exp_6_G4_1_1_5 a mi:Example ;
+  skos:prefLabel "television" ;
+  mi:exampleText "television" .
+
+mi:Example_exp_6_G4_1_1_6 a mi:Example ;
+  skos:prefLabel "languages" ;
+  mi:exampleText "languages" .
+
+mi:Example_exp_6_G4_1_1_7 a mi:Example ;
+  skos:prefLabel "health care" ;
+  mi:exampleText "health care" .
+
+mi:Example_exp_6_G4_1_1_8 a mi:Example ;
+  skos:prefLabel "Internet" ;
+  mi:exampleText "Internet" .
+
+mi:Example_exp_6_G4_1_1_9 a mi:Example ;
+  skos:prefLabel "consumer brands" ;
+  mi:exampleText "consumer brands" .
+
+mi:Example_exp_6_G4_1_1_10 a mi:Example ;
+  skos:prefLabel "currency" ;
+  mi:exampleText "currency" .
+
+mi:Example_exp_6_G4_1_1_11 a mi:Example ;
+  skos:prefLabel "restaurants" ;
+  mi:exampleText "restaurants" .
+
+mi:Example_exp_6_G4_1_1_12 a mi:Example ;
+  skos:prefLabel "international migration" ;
+  mi:exampleText "international migration" .
+
+mi:Example_exp_6_G4_2_1_1 a mi:Example ;
+  skos:prefLabel "call centers in the Eastern Hemisphere that service the Western Hemisphere" ;
+  mi:exampleText "call centers in the Eastern Hemisphere that service the Western Hemisphere" .
+
+mi:Example_exp_6_G4_2_1_2 a mi:Example ;
+  skos:prefLabel "the United States and Canada as hubs for the Internet" ;
+  mi:exampleText "the United States and Canada as hubs for the Internet" .
+
+mi:Example_exp_6_G4_2_1_3 a mi:Example ;
+  skos:prefLabel "transport of people and perishable products" ;
+  mi:exampleText "transport of people and perishable products" .
+
+mi:Example_exp_6_G4_2_1_4 a mi:Example ;
+  skos:prefLabel "spread of individuals' ideas as voice and image messages on electronic networks such as the Internet" ;
+  mi:exampleText "spread of individuals' ideas as voice and image messages on electronic networks such as the Internet" .
+
+mi:Example_exp_6_G4_3_1_1 a mi:Example ;
+  skos:prefLabel "Vancouver in Canada" ;
+  mi:exampleText "Vancouver in Canada" .
+
+mi:Example_exp_6_G4_3_1_2 a mi:Example ;
+  skos:prefLabel "irrigated agriculture" ;
+  mi:exampleText "irrigated agriculture" .
+
+mi:Example_exp_6_G4_3_1_3 a mi:Example ;
+  skos:prefLabel "clearing of forests for farmland" ;
+  mi:exampleText "clearing of forests for farmland" .
+
+mi:Example_exp_6_G4_3_2_1 a mi:Example ;
+  skos:prefLabel "coastal and river cities and towns in the past and present" ;
+  mi:exampleText "coastal and river cities and towns in the past and present" .
+
+mi:Example_exp_6_G4_3_2_2 a mi:Example ;
+  skos:prefLabel "locations of megacities (modern cities over 5 million)" ;
+  mi:exampleText "locations of megacities (modern cities over 5 million)" .
+
+mi:Example_exp_6_G4_3_2_3 a mi:Example ;
+  skos:prefLabel "Mexico City" ;
+  mi:exampleText "Mexico City" .
+
+mi:Example_exp_6_G4_3_2_4 a mi:Example ;
+  skos:prefLabel "patterns of agricultural settlements in South and North America" ;
+  mi:exampleText "patterns of agricultural settlements in South and North America" .
+
+mi:Example_exp_6_G5_1_1_1 a mi:Example ;
+  skos:prefLabel "changes in the tropical forest environments in Brazil" ;
+  mi:exampleText "changes in the tropical forest environments in Brazil" .
+
+mi:Example_exp_6_G5_1_1_2 a mi:Example ;
+  skos:prefLabel "changes in the tropical forest environments in Peru" ;
+  mi:exampleText "changes in the tropical forest environments in Peru" .
+
+mi:Example_exp_6_G5_1_1_3 a mi:Example ;
+  skos:prefLabel "changes in the tropical forest environments in Costa Rica" ;
+  mi:exampleText "changes in the tropical forest environments in Costa Rica" .
+
+mi:Example_exp_6_G5_1_2_1 a mi:Example ;
+  skos:prefLabel "clearing forests for agricultural land in South America" ;
+  mi:exampleText "clearing forests for agricultural land in South America" .
+
+mi:Example_exp_6_G5_1_2_2 a mi:Example ;
+  skos:prefLabel "fishing in the Grand Banks of the Atlantic" ;
+  mi:exampleText "fishing in the Grand Banks of the Atlantic" .
+
+mi:Example_exp_6_G5_1_2_3 a mi:Example ;
+  skos:prefLabel "expansion of cities in South America" ;
+  mi:exampleText "expansion of cities in South America" .
+
+mi:Example_exp_6_G5_1_2_4 a mi:Example ;
+  skos:prefLabel "hydroelectric developments in Canada" ;
+  mi:exampleText "hydroelectric developments in Canada" .
+
+mi:Example_exp_6_G5_1_2_5 a mi:Example ;
+  skos:prefLabel "hydroelectric developments in Brazil and Chile" ;
+  mi:exampleText "hydroelectric developments in Brazil and Chile" .
+
+mi:Example_exp_6_G5_1_2_6 a mi:Example ;
+  skos:prefLabel "mining in Kentucky and West Virginia" ;
+  mi:exampleText "mining in Kentucky and West Virginia" .
+
+mi:Example_exp_6_G5_1_3_1 a mi:Example ;
+  skos:prefLabel "cutting forests in one region may result in river basin flooding elsewhere" ;
+  mi:exampleText "cutting forests in one region may result in river basin flooding elsewhere" .
+
+mi:Example_exp_6_G5_1_3_2 a mi:Example ;
+  skos:prefLabel "building a dam floods land upstream and may permit irrigation in another region" ;
+  mi:exampleText "building a dam floods land upstream and may permit irrigation in another region" .
+
+mi:Example_exp_6_G5_2_1_1 a mi:Example ;
+  skos:prefLabel "drought in northern Mexico" ;
+  mi:exampleText "drought in northern Mexico" .
+
+mi:Example_exp_6_G5_2_1_2 a mi:Example ;
+  skos:prefLabel "disappearance of forest vegetation in the Amazon" ;
+  mi:exampleText "disappearance of forest vegetation in the Amazon" .
+
+mi:Example_exp_6_G5_2_1_3 a mi:Example ;
+  skos:prefLabel "natural hazards and disasters from volcanic eruptions in Central America and the Caribbean and earthquakes in Mexico City and Colombia" ;
+  mi:exampleText "natural hazards and disasters from volcanic eruptions in Central America and the Caribbean and earthquakes in Mexico City and Colombia" .
+
+mi:Example_exp_6_G6_1_2_1 a mi:Example ;
+  skos:prefLabel "Population Growth and Resources - Investigate how population growth affects resource availability; Migration - Investigate the significance of migrations of peoples and the resulting benefits and challenges; Sustainable Agriculture - Investigate the significance of sustainable agriculture and its role in helping societies produce enough food for people; Development - Investigate economic effects on development in a region and its ecosystems and societies." ;
+  mi:exampleText "Population Growth and Resources - Investigate how population growth affects resource availability; Migration - Investigate the significance of migrations of peoples and the resulting benefits and challenges; Sustainable Agriculture - Investigate the significance of sustainable agriculture and its role in helping societies produce enough food for people; Development - Investigate economic effects on development in a region and its ecosystems and societies." .
+
+mi:Example_exp_6_H1_1_2_1 a mi:Example ;
+  skos:prefLabel "Olmec and Mayan calendar systems" ;
+  mi:exampleText "Olmec and Mayan calendar systems" .
+
+mi:Example_exp_6_H1_1_2_2 a mi:Example ;
+  skos:prefLabel "Aztec Calendar Stone" ;
+  mi:exampleText "Aztec Calendar Stone" .
+
+mi:Example_exp_6_H1_1_2_3 a mi:Example ;
+  skos:prefLabel "Sun Dial" ;
+  mi:exampleText "Sun Dial" .
+
+mi:Example_exp_6_H1_1_2_4 a mi:Example ;
+  skos:prefLabel "Gregorian calendar - B.C./A.D." ;
+  mi:exampleText "Gregorian calendar - B.C./A.D." .
+
+mi:Example_exp_6_H1_1_2_5 a mi:Example ;
+  skos:prefLabel "contemporary secular - B.C.E./C.E" ;
+  mi:exampleText "contemporary secular - B.C.E./C.E" .
+
+mi:Example_exp_6_H1_2_1_1 a mi:Example ;
+  skos:prefLabel "artifacts" ;
+  mi:exampleText "artifacts" .
+
+mi:Example_exp_6_H1_2_1_2 a mi:Example ;
+  skos:prefLabel "primary and secondary sources including narratives" ;
+  mi:exampleText "primary and secondary sources including narratives" .
+
+mi:Example_exp_6_H1_2_1_3 a mi:Example ;
+  skos:prefLabel "technology" ;
+  mi:exampleText "technology" .
+
+mi:Example_exp_6_H1_2_1_4 a mi:Example ;
+  skos:prefLabel "historical maps" ;
+  mi:exampleText "historical maps" .
+
+mi:Example_exp_6_H1_2_1_5 a mi:Example ;
+  skos:prefLabel "visual/mathematical quantitative data" ;
+  mi:exampleText "visual/mathematical quantitative data" .
+
+mi:Example_exp_6_H1_2_1_6 a mi:Example ;
+  skos:prefLabel "radiocarbon dating" ;
+  mi:exampleText "radiocarbon dating" .
+
+mi:Example_exp_6_H1_2_1_7 a mi:Example ;
+  skos:prefLabel "DNA analysis" ;
+  mi:exampleText "DNA analysis" .
+
+mi:Example_exp_6_P3_1_1_1 a mi:Example ;
+  skos:prefLabel "Clearly state an issue as a question or public policy, trace the origins of an issue, analyze various perspectives, and generate and evaluate alternative resolutions." ;
+  mi:exampleText "Clearly state an issue as a question or public policy, trace the origins of an issue, analyze various perspectives, and generate and evaluate alternative resolutions." .
+
+mi:Example_exp_6_P3_1_1_2 a mi:Example ;
+  skos:prefLabel "Identify public policy issues related to global topics and issues studied" ;
+  mi:exampleText "Identify public policy issues related to global topics and issues studied" .
+
+mi:Example_exp_6_P3_1_1_3 a mi:Example ;
+  skos:prefLabel "Clearly state the issue as a question of public policy orally or in written form" ;
+  mi:exampleText "Clearly state the issue as a question of public policy orally or in written form" .
+
+mi:Example_exp_6_P3_1_1_4 a mi:Example ;
+  skos:prefLabel "Use inquiry methods to acquire content knowledge and appropriate data about the issue" ;
+  mi:exampleText "Use inquiry methods to acquire content knowledge and appropriate data about the issue" .
+
+mi:Example_exp_6_P3_1_1_5 a mi:Example ;
+  skos:prefLabel "Identify the causes and consequences and analyze the impact both positive and negative" ;
+  mi:exampleText "Identify the causes and consequences and analyze the impact both positive and negative" .
+
+mi:Example_exp_6_P3_1_1_6 a mi:Example ;
+  skos:prefLabel "Share and discuss findings of research and issue analysis in group discussions and debates" ;
+  mi:exampleText "Share and discuss findings of research and issue analysis in group discussions and debates" .
+
+mi:Example_exp_6_P3_1_1_7 a mi:Example ;
+  skos:prefLabel "Compose a persuasive essay justifying the position with a reasoned argument" ;
+  mi:exampleText "Compose a persuasive essay justifying the position with a reasoned argument" .
+
+mi:Example_exp_6_P3_1_1_8 a mi:Example ;
+  skos:prefLabel "Develop an action plan to address or inform others about the issue at the local to global scales" ;
+  mi:exampleText "Develop an action plan to address or inform others about the issue at the local to global scales" .
+
+mi:Example_exp_6_P4_2_3_1 a mi:Example ;
+  skos:prefLabel "service learning projects" ;
+  mi:exampleText "service learning projects" .
+
+mi:Example_exp_6_W1_2_2_1 a mi:Example ;
+  skos:prefLabel "available water for irrigation" ;
+  mi:exampleText "available water for irrigation" .
+
+mi:Example_exp_6_W1_2_2_2 a mi:Example ;
+  skos:prefLabel "adequate precipitation" ;
+  mi:exampleText "adequate precipitation" .
+
+mi:Example_exp_6_W1_2_2_3 a mi:Example ;
+  skos:prefLabel "and suitable growing season" ;
+  mi:exampleText "and suitable growing season" .
+
+mi:Example_exp_6_W2_1_3_1 a mi:Example ;
+  skos:prefLabel "Inuit of the Arctic" ;
+  mi:exampleText "Inuit of the Arctic" .
+
+mi:Example_exp_6_W2_1_3_2 a mi:Example ;
+  skos:prefLabel "Kwakiutl of the Northwest Coast" ;
+  mi:exampleText "Kwakiutl of the Northwest Coast" .
+
+mi:Example_exp_6_W2_1_3_3 a mi:Example ;
+  skos:prefLabel "Anasazi and Apache of the Southwest" ;
+  mi:exampleText "Anasazi and Apache of the Southwest" .
+
+#################################################################
+# Vertical Progressions
+#################################################################
+# Progresses To (next grades)
+mi:Exp_6_C3_6_1 mi:progressesTo mi:Exp_7_C3_6_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_C3_6_1 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_C3_6_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode C3.6.1 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_C4_3_1 mi:progressesTo mi:Exp_7_C4_3_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_C4_3_1 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_C4_3_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode C4.3.1 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_C4_3_2 mi:progressesTo mi:Exp_7_C4_3_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_C4_3_2 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_C4_3_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode C4.3.2 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_C4_3_3 mi:progressesTo mi:Exp_7_C4_3_3 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_C4_3_3 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_C4_3_3 ;
+  skos:note "Vertical progression inferred from shared expectationCode C4.3.3 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_E1_1_1 mi:progressesTo mi:Exp_7_E1_1_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_E1_1_1 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_E1_1_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode E1.1.1 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_E2_3_1 mi:progressesTo mi:Exp_7_E2_3_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_E2_3_1 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_E2_3_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode E2.3.1 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_E3_1_1 mi:progressesTo mi:Exp_7_E3_1_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_E3_1_1 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_E3_1_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode E3.1.1 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_E3_1_2 mi:progressesTo mi:Exp_7_E3_1_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_E3_1_2 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_E3_1_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode E3.1.2 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_E3_1_3 mi:progressesTo mi:Exp_7_E3_1_3 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_E3_1_3 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_E3_1_3 ;
+  skos:note "Vertical progression inferred from shared expectationCode E3.1.3 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_E3_3_1 mi:progressesTo mi:Exp_7_E3_3_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_E3_3_1 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_E3_3_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode E3.3.1 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_G1_1_1 mi:progressesTo mi:Exp_7_G1_1_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_G1_1_1 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_G1_1_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode G1.1.1 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_G1_1_2 mi:progressesTo mi:Exp_7_G1_1_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_G1_1_2 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_G1_1_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode G1.1.2 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_G1_2_1 mi:progressesTo mi:Exp_7_G1_2_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_G1_2_1 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_G1_2_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode G1.2.1 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_G1_2_2 mi:progressesTo mi:Exp_7_G1_2_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_G1_2_2 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_G1_2_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode G1.2.2 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_G1_2_3 mi:progressesTo mi:Exp_7_G1_2_3 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_G1_2_3 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_G1_2_3 ;
+  skos:note "Vertical progression inferred from shared expectationCode G1.2.3 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_G1_2_4 mi:progressesTo mi:Exp_7_G1_2_4 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_G1_2_4 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_G1_2_4 ;
+  skos:note "Vertical progression inferred from shared expectationCode G1.2.4 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_G1_2_5 mi:progressesTo mi:Exp_7_G1_2_5 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_G1_2_5 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_G1_2_5 ;
+  skos:note "Vertical progression inferred from shared expectationCode G1.2.5 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_G1_2_6 mi:progressesTo mi:Exp_7_G1_2_6 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_G1_2_6 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_G1_2_6 ;
+  skos:note "Vertical progression inferred from shared expectationCode G1.2.6 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_G1_3_1 mi:progressesTo mi:Exp_7_G1_3_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_G1_3_1 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_G1_3_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode G1.3.1 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_G1_3_2 mi:progressesTo mi:Exp_7_G1_3_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_G1_3_2 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_G1_3_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode G1.3.2 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_G1_3_3 mi:progressesTo mi:Exp_7_G1_3_3 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_G1_3_3 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_G1_3_3 ;
+  skos:note "Vertical progression inferred from shared expectationCode G1.3.3 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_G2_1_1 mi:progressesTo mi:Exp_7_G2_1_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_G2_1_1 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_G2_1_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode G2.1.1 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_G2_1_2 mi:progressesTo mi:Exp_7_G2_1_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_G2_1_2 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_G2_1_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode G2.1.2 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_G2_2_1 mi:progressesTo mi:Exp_7_G2_2_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_G2_2_1 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_G2_2_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode G2.2.1 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_G2_2_2 mi:progressesTo mi:Exp_7_G2_2_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_G2_2_2 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_G2_2_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode G2.2.2 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_G2_2_3 mi:progressesTo mi:Exp_7_G2_2_3 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_G2_2_3 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_G2_2_3 ;
+  skos:note "Vertical progression inferred from shared expectationCode G2.2.3 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_G3_1_1 mi:progressesTo mi:Exp_7_G3_1_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_G3_1_1 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_G3_1_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode G3.1.1 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_G3_2_1 mi:progressesTo mi:Exp_7_G3_2_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_G3_2_1 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_G3_2_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode G3.2.1 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_G3_2_2 mi:progressesTo mi:Exp_7_G3_2_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_G3_2_2 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_G3_2_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode G3.2.2 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_G4_1_1 mi:progressesTo mi:Exp_7_G4_1_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_G4_1_1 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_G4_1_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode G4.1.1 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_G4_2_1 mi:progressesTo mi:Exp_7_G4_2_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_G4_2_1 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_G4_2_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode G4.2.1 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_G4_3_1 mi:progressesTo mi:Exp_7_G4_3_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_G4_3_1 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_G4_3_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode G4.3.1 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_G4_3_2 mi:progressesTo mi:Exp_7_G4_3_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_G4_3_2 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_G4_3_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode G4.3.2 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_G4_4_1 mi:progressesTo mi:Exp_7_G4_4_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_G4_4_1 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_G4_4_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode G4.4.1 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_G4_4_2 mi:progressesTo mi:Exp_7_G4_4_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_G4_4_2 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_G4_4_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode G4.4.2 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_G5_1_1 mi:progressesTo mi:Exp_7_G5_1_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_G5_1_1 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_G5_1_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode G5.1.1 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_G5_1_2 mi:progressesTo mi:Exp_7_G5_1_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_G5_1_2 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_G5_1_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode G5.1.2 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_G5_1_3 mi:progressesTo mi:Exp_7_G5_1_3 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_G5_1_3 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_G5_1_3 ;
+  skos:note "Vertical progression inferred from shared expectationCode G5.1.3 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_G5_2_1 mi:progressesTo mi:Exp_7_G5_2_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_G5_2_1 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_G5_2_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode G5.2.1 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_G6_1_1 mi:progressesTo mi:Exp_7_G6_1_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_G6_1_1 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_G6_1_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode G6.1.1 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_G6_1_2 mi:progressesTo mi:Exp_7_G6_1_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_G6_1_2 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_G6_1_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode G6.1.2 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_H1_1_1 mi:progressesTo mi:Exp_7_H1_1_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_H1_1_1 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_H1_1_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode H1.1.1 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_H1_1_2 mi:progressesTo mi:Exp_7_H1_1_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_H1_1_2 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_H1_1_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode H1.1.2 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_H1_2_1 mi:progressesTo mi:Exp_7_H1_2_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_H1_2_1 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_H1_2_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode H1.2.1 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_H1_2_2 mi:progressesTo mi:Exp_7_H1_2_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_H1_2_2 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_H1_2_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode H1.2.2 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_H1_2_3 mi:progressesTo mi:Exp_7_H1_2_3 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_H1_2_3 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_H1_2_3 ;
+  skos:note "Vertical progression inferred from shared expectationCode H1.2.3 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_H1_2_4 mi:progressesTo mi:Exp_7_H1_2_4 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_H1_2_4 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_H1_2_4 ;
+  skos:note "Vertical progression inferred from shared expectationCode H1.2.4 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_H1_2_5 mi:progressesTo mi:Exp_7_H1_2_5 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_H1_2_5 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_H1_2_5 ;
+  skos:note "Vertical progression inferred from shared expectationCode H1.2.5 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_H1_4_1 mi:progressesTo mi:Exp_7_H1_4_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_H1_4_1 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_H1_4_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode H1.4.1 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_H1_4_2 mi:progressesTo mi:Exp_7_H1_4_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_H1_4_2 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_H1_4_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode H1.4.2 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_H1_4_3 mi:progressesTo mi:Exp_7_H1_4_3 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_H1_4_3 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_H1_4_3 ;
+  skos:note "Vertical progression inferred from shared expectationCode H1.4.3 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_P3_1_1 mi:progressesTo mi:Exp_7_P3_1_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_P3_1_1 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_P3_1_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode P3.1.1 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_P4_2_1 mi:progressesTo mi:Exp_7_P4_2_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_P4_2_1 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_P4_2_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode P4.2.1 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_P4_2_2 mi:progressesTo mi:Exp_7_P4_2_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_P4_2_2 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_P4_2_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode P4.2.2 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_P4_2_3 mi:progressesTo mi:Exp_7_P4_2_3 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_P4_2_3 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_P4_2_3 ;
+  skos:note "Vertical progression inferred from shared expectationCode P4.2.3 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_W1_1_1 mi:progressesTo mi:Exp_7_W1_1_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_W1_1_1 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_W1_1_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode W1.1.1 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_W1_1_2 mi:progressesTo mi:Exp_7_W1_1_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_W1_1_2 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_W1_1_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode W1.1.2 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_W1_2_1 mi:progressesTo mi:Exp_7_W1_2_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_W1_2_1 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_W1_2_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode W1.2.1 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_W1_2_2 mi:progressesTo mi:Exp_7_W1_2_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_W1_2_2 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_W1_2_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode W1.2.2 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_W1_2_3 mi:progressesTo mi:Exp_7_W1_2_3 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_W1_2_3 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_W1_2_3 ;
+  skos:note "Vertical progression inferred from shared expectationCode W1.2.3 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_W2_1_1 mi:progressesTo mi:Exp_7_W2_1_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_W2_1_1 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_W2_1_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode W2.1.1 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_W2_1_2 mi:progressesTo mi:Exp_7_W2_1_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_W2_1_2 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_W2_1_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode W2.1.2 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_W2_1_3 mi:progressesTo mi:Exp_7_W2_1_3 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_W2_1_3 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_W2_1_3 ;
+  skos:note "Vertical progression inferred from shared expectationCode W2.1.3 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_W2_1_4 mi:progressesTo mi:Exp_7_W2_1_4 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_W2_1_4 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_W2_1_4 ;
+  skos:note "Vertical progression inferred from shared expectationCode W2.1.4 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_W3_1_1 mi:progressesTo mi:Exp_7_W3_1_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_W3_1_1 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_W3_1_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode W3.1.1 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_W3_1_2 mi:progressesTo mi:Exp_7_W3_1_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_W3_1_2 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_W3_1_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode W3.1.2 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_W3_1_3 mi:progressesTo mi:Exp_7_W3_1_3 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_W3_1_3 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_W3_1_3 ;
+  skos:note "Vertical progression inferred from shared expectationCode W3.1.3 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_W3_1_4 mi:progressesTo mi:Exp_7_W3_1_4 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_W3_1_4 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_W3_1_4 ;
+  skos:note "Vertical progression inferred from shared expectationCode W3.1.4 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_W3_1_5 mi:progressesTo mi:Exp_7_W3_1_5 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_W3_1_5 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_7_W3_1_5 ;
+  skos:note "Vertical progression inferred from shared expectationCode W3.1.5 between Grade 6 and Grade 7." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+# Progresses From (prior grades)
+mi:Exp_6_P3_1_1 mi:progressesFrom mi:Exp_4_P3_1_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_P3_1_1 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_4_P3_1_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode P3.1.1 between Grade 4 and Grade 6." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_P4_2_1 mi:progressesFrom mi:Exp_5_P4_2_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_P4_2_1 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_5_P4_2_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode P4.2.1 between Grade 5 and Grade 6." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_6_P4_2_2 mi:progressesFrom mi:Exp_5_P4_2_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_6_P4_2_2 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_5_P4_2_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode P4.2.2 between Grade 5 and Grade 6." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .

@@ -1,0 +1,932 @@
+@prefix mi:     <urn:mi:ss:> .
+@prefix dcterms:<http://purl.org/dc/terms/> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@base <file:///Users/louisjustman/Downloads/C3%20Project/Curriculum-Ontology/michigan/> .
+
+<mi-course-whg.ttl> a owl:Ontology ;
+  owl:versionIRI <urn:mi:ss:course:WHG> ;
+  rdfs:label "Michigan Social Studies GLCE - World History and Geography" ;
+  dcterms:creator "Michigan Department of Education" ;
+  dcterms:source "Michigan K-12 Social Studies Standards (Michigan Department of Education)" ;
+  owl:imports <mi-base.ttl> .
+
+mi:Course_WHG a mi:Course ;
+  skos:prefLabel "World History and Geography" ;
+  mi:hasCategory
+    mi:Cat_WHG_4_1 ,
+    mi:Cat_WHG_4_2 ,
+    mi:Cat_WHG_5_1 ,
+    mi:Cat_WHG_5_2 ,
+    mi:Cat_WHG_6_1 ,
+    mi:Cat_WHG_6_2 ,
+    mi:Cat_WHG_7_1 ,
+    mi:Cat_WHG_7_2 ,
+    mi:Cat_WHG_F1 ;
+  mi:isCourseOf mi:MichiganGLCEFramework ;
+  mi:courseCode "WHG" .
+
+#################################################################
+# Categories
+#################################################################
+mi:Cat_WHG_4_1 a mi:StandardCategory ;
+  mi:categoryCode "4.1" ;
+  skos:prefLabel "Growth and Interactions of World Religions, and Intensifying Trade Networks and Contacts" ;
+  mi:categoryDescription "Analyze important hemispheric interactions and temporal developments during an era of increasing regional power, religious expansion, and the collapse of some powerful empires." ;
+  mi:inCourse mi:Course_WHG ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:hasExpectation
+    mi:Exp_WHG_4_1_1 ,
+    mi:Exp_WHG_4_1_2 ;
+  mi:isCategoryOf mi:Course_WHG .
+
+mi:Cat_WHG_4_2 a mi:StandardCategory ;
+  mi:categoryCode "4.2" ;
+  skos:prefLabel "Growth of Islam and Dar al-Islam, Unification of Eurasia under the Mongols, and Spheres of" ;
+  mi:categoryDescription "Interaction and Influence in the Americas WHG Era 5 - The Emergence of the First Global Age, 15th to 18th Centuries Analyze and compare important hemispheric interactions and cross-regional developments, including the growth and consequences of an interregional system of communication, trade, and culture exchange during an era of increasing regional power and religious expansion." ;
+  mi:inCourse mi:Course_WHG ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:hasExpectation
+    mi:Exp_WHG_4_2_1 ,
+    mi:Exp_WHG_4_2_2 ,
+    mi:Exp_WHG_4_2_3 ;
+  mi:isCategoryOf mi:Course_WHG .
+
+mi:Cat_WHG_5_1 a mi:StandardCategory ;
+  mi:categoryCode "5.1" ;
+  skos:prefLabel "Emerging Global System and Diffusion of World Religions" ;
+  mi:categoryDescription "Analyze the global impact of and significant developments caused by transoceanic travel and the linking of all the major areas of the world by the 18th century." ;
+  mi:inCourse mi:Course_WHG ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:hasExpectation
+    mi:Exp_WHG_5_1_1 ,
+    mi:Exp_WHG_5_1_2 ;
+  mi:isCategoryOf mi:Course_WHG .
+
+mi:Cat_WHG_5_2 a mi:StandardCategory ;
+  mi:categoryCode "5.2" ;
+  skos:prefLabel "Cultural Encounters and the Columbian Exchange, the Trans-Atlantic Slave Trade, and Afro-" ;
+  mi:categoryDescription "Eurasian Empires WHG Era 6 - An Age of Global Revolutions, 18th Century-1914 Evaluate the impact of the global convergence on interregional developments and interactions in various contexts." ;
+  mi:inCourse mi:Course_WHG ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:hasExpectation
+    mi:Exp_WHG_5_2_1 ,
+    mi:Exp_WHG_5_2_2 ,
+    mi:Exp_WHG_5_2_3 ;
+  mi:isCategoryOf mi:Course_WHG .
+
+mi:Cat_WHG_6_1 a mi:StandardCategory ;
+  mi:categoryCode "6.1" ;
+  skos:prefLabel "Global Revolutions, Worldwide Migrations and Population Changes, and Increasing Global" ;
+  mi:categoryDescription "Interconnections Evaluate the causes, characteristics, and consequences of revolutions of the intellectual, political, and economic structures in an era of increasing global trade and consolidations of power." ;
+  mi:inCourse mi:Course_WHG ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:hasExpectation
+    mi:Exp_WHG_6_1_1 ,
+    mi:Exp_WHG_6_1_2 ,
+    mi:Exp_WHG_6_1_3 ;
+  mi:isCategoryOf mi:Course_WHG .
+
+mi:Cat_WHG_6_2 a mi:StandardCategory ;
+  mi:categoryCode "6.2" ;
+  skos:prefLabel "Comparing Political Revolutions and/or Independence Movements, Growth of Nationalism and" ;
+  mi:categoryDescription "Nation-States, Industrialization, and Imperialism WHG Era 7 - Global Crisis and Achievement, 1900-PRESENT DAY Analyze and compare the interregional patterns of nationalism, state building, social and economic reform, and imperialism." ;
+  mi:inCourse mi:Course_WHG ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:hasExpectation
+    mi:Exp_WHG_6_2_1 ,
+    mi:Exp_WHG_6_2_2 ,
+    mi:Exp_WHG_6_2_3 ,
+    mi:Exp_WHG_6_2_4 ;
+  mi:isCategoryOf mi:Course_WHG .
+
+mi:Cat_WHG_7_1 a mi:StandardCategory ;
+  mi:categoryCode "7.1" ;
+  skos:prefLabel "Power and Resistance, Global Conflict, Genocide in the 20th Century, and Technological," ;
+  mi:categoryDescription "Scientific, and Cultural Exchanges Analyze the impact of changes in global balances of military, political, economic, and technological power throughout the 20th century and to the present." ;
+  mi:inCourse mi:Course_WHG ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:hasExpectation
+    mi:Exp_WHG_7_1_1 ,
+    mi:Exp_WHG_7_1_2 ,
+    mi:Exp_WHG_7_1_3 ,
+    mi:Exp_WHG_7_1_4 ;
+  mi:isCategoryOf mi:Course_WHG .
+
+mi:Cat_WHG_7_2 a mi:StandardCategory ;
+  mi:categoryCode "7.2" ;
+  skos:prefLabel "World War I, Interwar Period, World War II, Cold War Conflicts, Revolution, Decolonization, and" ;
+  mi:categoryDescription "Democratization, and Case Studies of Genocide Assess the interregional causes and consequences of the global wars, revolutions, and independence movements during this era." ;
+  mi:inCourse mi:Course_WHG ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:hasExpectation
+    mi:Exp_WHG_7_2_1 ,
+    mi:Exp_WHG_7_2_2 ,
+    mi:Exp_WHG_7_2_3 ,
+    mi:Exp_WHG_7_2_4 ,
+    mi:Exp_WHG_7_2_5 ,
+    mi:Exp_WHG_7_2_6 ;
+  mi:isCategoryOf mi:Course_WHG .
+
+mi:Cat_WHG_F1 a mi:StandardCategory ;
+  mi:categoryCode "F1" ;
+  skos:prefLabel "World Historical and Geographical Inquiry and Literacy Practices" ;
+  mi:categoryDescription "WHG Era 4 - Expanding and Intensified Hemispheric Interactions, Explain and use disciplinary processes and tools from world history." ;
+  mi:inCourse mi:Course_WHG ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:hasExample
+    mi:Example_cat_WHG_F1_1 ,
+    mi:Example_cat_WHG_F1_2 ,
+    mi:Example_cat_WHG_F1_3 ,
+    mi:Example_cat_WHG_F1_4 ,
+    mi:Example_cat_WHG_F1_5 ,
+    mi:Example_cat_WHG_F1_6 ,
+    mi:Example_cat_WHG_F1_7 ,
+    mi:Example_cat_WHG_F1_8 ,
+    mi:Example_cat_WHG_F1_9 ,
+    mi:Example_cat_WHG_F1_10 ,
+    mi:Example_cat_WHG_F1_11 ,
+    mi:Example_cat_WHG_F1_12 ,
+    mi:Example_cat_WHG_F1_13 ,
+    mi:Example_cat_WHG_F1_14 ;
+  mi:hasExpectation
+    mi:Exp_WHG_F1 ;
+  mi:isCategoryOf mi:Course_WHG .
+
+#################################################################
+# Expectations
+#################################################################
+mi:Exp_WHG_4_1_1 a mi:Expectation ;
+  mi:expectationCode "4.1.1" ;
+  mi:fullCode "WHG-4.1.1" ;
+  mi:officialText "Growth and Interactions of World Religions - analyze the significance of the growth of and interactions between world religions." ;
+  skos:prefLabel "Growth and Interactions of World Religions" ;
+  skos:broader mi:Cat_WHG_4_1 ;
+  mi:inCategory mi:Cat_WHG_4_1 ;
+  mi:inCourse mi:Course_WHG ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:hasExample
+    mi:Example_exp_WHG_4_1_1_1 ,
+    mi:Example_exp_WHG_4_1_1_2 ,
+    mi:Example_exp_WHG_4_1_1_3 ,
+    mi:Example_exp_WHG_4_1_1_4 ,
+    mi:Example_exp_WHG_4_1_1_5 ,
+    mi:Example_exp_WHG_4_1_1_6 ;
+  mi:isExpectationOf mi:Cat_WHG_4_1 .
+
+mi:Exp_WHG_4_1_2 a mi:Expectation ;
+  mi:expectationCode "4.1.2" ;
+  mi:fullCode "WHG-4.1.2" ;
+  mi:officialText "Intensifying Trade Networks and Contacts - compare and contrast the development, interdependence, specialization, and importance of interregional land-based and sea-based trading systems both within and between societies." ;
+  skos:prefLabel "Intensifying Trade Networks and Contacts" ;
+  skos:broader mi:Cat_WHG_4_1 ;
+  mi:inCategory mi:Cat_WHG_4_1 ;
+  mi:inCourse mi:Course_WHG ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:hasExample
+    mi:Example_exp_WHG_4_1_2_1 ,
+    mi:Example_exp_WHG_4_1_2_2 ,
+    mi:Example_exp_WHG_4_1_2_3 ,
+    mi:Example_exp_WHG_4_1_2_4 ,
+    mi:Example_exp_WHG_4_1_2_5 ;
+  mi:isExpectationOf mi:Cat_WHG_4_1 .
+
+mi:Exp_WHG_4_2_1 a mi:Expectation ;
+  mi:expectationCode "4.2.1" ;
+  mi:fullCode "WHG-4.2.1" ;
+  mi:officialText "Growth of Islam and Dar al-Islam (a country, territory, land, or abode where Muslim sovereignty prevails) - explain the significance of Islam in an interconnected Afro-Eurasia." ;
+  skos:prefLabel "Growth of Islam and Dar Al-Islam (a Country, Territory, Land, or Abode Where Muslim Sovereignty Prevails)" ;
+  skos:broader mi:Cat_WHG_4_2 ;
+  mi:inCategory mi:Cat_WHG_4_2 ;
+  mi:inCourse mi:Course_WHG ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:hasExample
+    mi:Example_exp_WHG_4_2_1_1 ,
+    mi:Example_exp_WHG_4_2_1_2 ,
+    mi:Example_exp_WHG_4_2_1_3 ,
+    mi:Example_exp_WHG_4_2_1_4 ,
+    mi:Example_exp_WHG_4_2_1_5 ;
+  mi:isExpectationOf mi:Cat_WHG_4_2 .
+
+mi:Exp_WHG_4_2_2 a mi:Expectation ;
+  mi:expectationCode "4.2.2" ;
+  mi:fullCode "WHG-4.2.2" ;
+  mi:officialText "Unification of Eurasia under the Mongols - analyze the significance of Mongol rule in Afro-Eurasia and the impact of the Mongol Empire's disintegration." ;
+  skos:prefLabel "Unification of Eurasia under the Mongols" ;
+  skos:broader mi:Cat_WHG_4_2 ;
+  mi:inCategory mi:Cat_WHG_4_2 ;
+  mi:inCourse mi:Course_WHG ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:hasExample
+    mi:Example_exp_WHG_4_2_2_1 ,
+    mi:Example_exp_WHG_4_2_2_2 ,
+    mi:Example_exp_WHG_4_2_2_3 ;
+  mi:isExpectationOf mi:Cat_WHG_4_2 .
+
+mi:Exp_WHG_4_2_3 a mi:Expectation ;
+  mi:expectationCode "4.2.3" ;
+  mi:fullCode "WHG-4.2.3" ;
+  mi:officialText "Spheres of Interaction and Influence in the Americas - compare and contrast the diverse characteristics and interactions of peoples in the Americas." ;
+  skos:prefLabel "Spheres of Interaction and Influence in the Americas" ;
+  skos:broader mi:Cat_WHG_4_2 ;
+  mi:inCategory mi:Cat_WHG_4_2 ;
+  mi:inCourse mi:Course_WHG ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:hasExample
+    mi:Example_exp_WHG_4_2_3_1 ,
+    mi:Example_exp_WHG_4_2_3_2 ,
+    mi:Example_exp_WHG_4_2_3_3 ,
+    mi:Example_exp_WHG_4_2_3_4 ,
+    mi:Example_exp_WHG_4_2_3_5 ;
+  mi:isExpectationOf mi:Cat_WHG_4_2 .
+
+mi:Exp_WHG_5_1_1 a mi:Expectation ;
+  mi:expectationCode "5.1.1" ;
+  mi:fullCode "WHG-5.1.1" ;
+  mi:officialText "Emerging Global System - differentiate between the global systems of trade, migration, and political power from those in the previous era." ;
+  skos:prefLabel "Emerging Global System" ;
+  skos:broader mi:Cat_WHG_5_1 ;
+  mi:inCategory mi:Cat_WHG_5_1 ;
+  mi:inCourse mi:Course_WHG ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:hasExample
+    mi:Example_exp_WHG_5_1_1_1 ,
+    mi:Example_exp_WHG_5_1_1_2 ,
+    mi:Example_exp_WHG_5_1_1_3 ,
+    mi:Example_exp_WHG_5_1_1_4 ,
+    mi:Example_exp_WHG_5_1_1_5 ;
+  mi:isExpectationOf mi:Cat_WHG_5_1 .
+
+mi:Exp_WHG_5_1_2 a mi:Expectation ;
+  mi:expectationCode "5.1.2" ;
+  mi:fullCode "WHG-5.1.2" ;
+  mi:officialText "Diffusion of World Religions - evaluate the impact of the diffusion of world religions and belief systems on social, political, cultural, and economic systems." ;
+  skos:prefLabel "Diffusion of World Religions" ;
+  skos:broader mi:Cat_WHG_5_1 ;
+  mi:inCategory mi:Cat_WHG_5_1 ;
+  mi:inCourse mi:Course_WHG ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:hasExample
+    mi:Example_exp_WHG_5_1_2_1 ,
+    mi:Example_exp_WHG_5_1_2_2 ,
+    mi:Example_exp_WHG_5_1_2_3 ,
+    mi:Example_exp_WHG_5_1_2_4 ,
+    mi:Example_exp_WHG_5_1_2_5 ,
+    mi:Example_exp_WHG_5_1_2_6 ,
+    mi:Example_exp_WHG_5_1_2_7 ,
+    mi:Example_exp_WHG_5_1_2_8 ;
+  mi:isExpectationOf mi:Cat_WHG_5_1 .
+
+mi:Exp_WHG_5_2_1 a mi:Expectation ;
+  mi:expectationCode "5.2.1" ;
+  mi:fullCode "WHG-5.2.1" ;
+  mi:officialText "Cultural Encounters and the Columbian Exchange - explain the demographic, environmental, and political consequences of European oceanic travel and conquest." ;
+  skos:prefLabel "Cultural Encounters and the Columbian Exchange" ;
+  skos:broader mi:Cat_WHG_5_2 ;
+  mi:inCategory mi:Cat_WHG_5_2 ;
+  mi:inCourse mi:Course_WHG ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:hasExample
+    mi:Example_exp_WHG_5_2_1_1 ,
+    mi:Example_exp_WHG_5_2_1_2 ,
+    mi:Example_exp_WHG_5_2_1_3 ,
+    mi:Example_exp_WHG_5_2_1_4 ;
+  mi:isExpectationOf mi:Cat_WHG_5_2 .
+
+mi:Exp_WHG_5_2_2 a mi:Expectation ;
+  mi:expectationCode "5.2.2" ;
+  mi:fullCode "WHG-5.2.2" ;
+  mi:officialText "The Trans-Atlantic Slave Trade - analyze the causes and development of the Atlantic trade system with respect to the capture and sale of Africans, the creation of the gun-slave cycle, the Middle Passage, and forced migration of Africans to the Americas, the establishment of the plantation complex, and the rise of slave resistance in the New World." ;
+  skos:prefLabel "The Trans-Atlantic Slave Trade" ;
+  skos:broader mi:Cat_WHG_5_2 ;
+  mi:inCategory mi:Cat_WHG_5_2 ;
+  mi:inCourse mi:Course_WHG ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:isExpectationOf mi:Cat_WHG_5_2 .
+
+mi:Exp_WHG_5_2_3 a mi:Expectation ;
+  mi:expectationCode "5.2.3" ;
+  mi:fullCode "WHG-5.2.3" ;
+  mi:officialText "Afro-Eurasian Empires - compare and contrast the different ways governments expanded or centralized control across various parts of Afro-Eurasia, and analyze the consequences of these changes." ;
+  skos:prefLabel "Afro-Eurasian Empires" ;
+  skos:broader mi:Cat_WHG_5_2 ;
+  mi:inCategory mi:Cat_WHG_5_2 ;
+  mi:inCourse mi:Course_WHG ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:hasExample
+    mi:Example_exp_WHG_5_2_3_1 ,
+    mi:Example_exp_WHG_5_2_3_2 ;
+  mi:isExpectationOf mi:Cat_WHG_5_2 .
+
+mi:Exp_WHG_6_1_1 a mi:Expectation ;
+  mi:expectationCode "6.1.1" ;
+  mi:fullCode "WHG-6.1.1" ;
+  mi:officialText "Global Revolutions - explain the characteristics, extent, and impact of the global revolutions, including but not limited to changes in economic and political systems, and shifts in relative political and military power." ;
+  skos:prefLabel "Global Revolutions" ;
+  skos:broader mi:Cat_WHG_6_1 ;
+  mi:inCategory mi:Cat_WHG_6_1 ;
+  mi:inCourse mi:Course_WHG ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:isExpectationOf mi:Cat_WHG_6_1 .
+
+mi:Exp_WHG_6_1_2 a mi:Expectation ;
+  mi:expectationCode "6.1.2" ;
+  mi:fullCode "WHG-6.1.2" ;
+  mi:officialText "Worldwide Migrations and Population Changes - analyze the causes and consequences of shifts in world population and major patterns of long-distance migrations, including the impact of industrialism, imperialism, changing diets, and scientific advances." ;
+  skos:prefLabel "Worldwide Migrations and Population Changes" ;
+  skos:broader mi:Cat_WHG_6_1 ;
+  mi:inCategory mi:Cat_WHG_6_1 ;
+  mi:inCourse mi:Course_WHG ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:isExpectationOf mi:Cat_WHG_6_1 .
+
+mi:Exp_WHG_6_1_3 a mi:Expectation ;
+  mi:expectationCode "6.1.3" ;
+  mi:fullCode "WHG-6.1.3" ;
+  mi:officialText "Increasing Global Interconnections - describe the increasing global interconnections and new global networks that resulted in the spread of major innovations in governance, economic systems, cultural traits, technologies, and commodities." ;
+  skos:prefLabel "Increasing Global Interconnections" ;
+  skos:broader mi:Cat_WHG_6_1 ;
+  mi:inCategory mi:Cat_WHG_6_1 ;
+  mi:inCourse mi:Course_WHG ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:hasExample
+    mi:Example_exp_WHG_6_1_3_1 ;
+  mi:isExpectationOf mi:Cat_WHG_6_1 .
+
+mi:Exp_WHG_6_2_1 a mi:Expectation ;
+  mi:expectationCode "6.2.1" ;
+  mi:fullCode "WHG-6.2.1" ;
+  mi:officialText "Comparing Political Revolutions and/or Independence Movements - compare and contrast the American Revolution, the French Revolution, and one other revolution or independence movement that occurred in a region external to Europe from the standpoint of political, economic, and social causes and consequences." ;
+  skos:prefLabel "Comparing Political Revolutions And/or Independence Movements" ;
+  skos:broader mi:Cat_WHG_6_2 ;
+  mi:inCategory mi:Cat_WHG_6_2 ;
+  mi:inCourse mi:Course_WHG ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:hasExample
+    mi:Example_exp_WHG_6_2_1_1 ,
+    mi:Example_exp_WHG_6_2_1_2 ;
+  mi:isExpectationOf mi:Cat_WHG_6_2 .
+
+mi:Exp_WHG_6_2_2 a mi:Expectation ;
+  mi:expectationCode "6.2.2" ;
+  mi:fullCode "WHG-6.2.2" ;
+  mi:officialText "Growth of Nationalism and Nation-States - compare and contrast the rise of nation-states in a western and non-western context." ;
+  skos:prefLabel "Growth of Nationalism and Nation-States" ;
+  skos:broader mi:Cat_WHG_6_2 ;
+  mi:inCategory mi:Cat_WHG_6_2 ;
+  mi:inCourse mi:Course_WHG ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:hasExample
+    mi:Example_exp_WHG_6_2_2_1 ;
+  mi:isExpectationOf mi:Cat_WHG_6_2 .
+
+mi:Exp_WHG_6_2_3 a mi:Expectation ;
+  mi:expectationCode "6.2.3" ;
+  mi:fullCode "WHG-6.2.3" ;
+  mi:officialText "Industrialization - compare and contrast the causes and consequences of industrialization around the world, including social, economic, and environmental impacts." ;
+  skos:prefLabel "Industrialization" ;
+  skos:broader mi:Cat_WHG_6_2 ;
+  mi:inCategory mi:Cat_WHG_6_2 ;
+  mi:inCourse mi:Course_WHG ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:hasExample
+    mi:Example_exp_WHG_6_2_3_1 ,
+    mi:Example_exp_WHG_6_2_3_2 ,
+    mi:Example_exp_WHG_6_2_3_3 ,
+    mi:Example_exp_WHG_6_2_3_4 ;
+  mi:isExpectationOf mi:Cat_WHG_6_2 .
+
+mi:Exp_WHG_6_2_4 a mi:Expectation ;
+  mi:expectationCode "6.2.4" ;
+  mi:fullCode "WHG-6.2.4" ;
+  mi:officialText "Imperialism - analyze the political, economic, and social causes and consequences of imperialism in different regions." ;
+  skos:prefLabel "Imperialism" ;
+  skos:broader mi:Cat_WHG_6_2 ;
+  mi:inCategory mi:Cat_WHG_6_2 ;
+  mi:inCourse mi:Course_WHG ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:hasExample
+    mi:Example_exp_WHG_6_2_4_1 ,
+    mi:Example_exp_WHG_6_2_4_2 ,
+    mi:Example_exp_WHG_6_2_4_3 ;
+  mi:isExpectationOf mi:Cat_WHG_6_2 .
+
+mi:Exp_WHG_7_1_1 a mi:Expectation ;
+  mi:expectationCode "7.1.1" ;
+  mi:fullCode "WHG-7.1.1" ;
+  mi:officialText "Power and Resistance - describe the global reconfigurations and restructuring of political and economic relationships throughout the 20th century and to the present, including state-organized efforts to expand power and the role of resistance movements against such efforts." ;
+  skos:prefLabel "Power and Resistance" ;
+  skos:broader mi:Cat_WHG_7_1 ;
+  mi:inCategory mi:Cat_WHG_7_1 ;
+  mi:inCourse mi:Course_WHG ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:isExpectationOf mi:Cat_WHG_7_1 .
+
+mi:Exp_WHG_7_1_2 a mi:Expectation ;
+  mi:expectationCode "7.1.2" ;
+  mi:fullCode "WHG-7.1.2" ;
+  mi:officialText "Global Conflict - compare and contrast the nature, extent, and impact of modern warfare with warfare in the previous eras, including the roles of ideology, technology, and civilians." ;
+  skos:prefLabel "Global Conflict" ;
+  skos:broader mi:Cat_WHG_7_1 ;
+  mi:inCategory mi:Cat_WHG_7_1 ;
+  mi:inCourse mi:Course_WHG ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:isExpectationOf mi:Cat_WHG_7_1 .
+
+mi:Exp_WHG_7_1_3 a mi:Expectation ;
+  mi:expectationCode "7.1.3" ;
+  mi:fullCode "WHG-7.1.3" ;
+  mi:officialText "Genocide in the 20th Century - differentiate genocide from other atrocities and forms of mass killing and explain its extent, causes, and consequences in the 20th century and to the present." ;
+  skos:prefLabel "Genocide in the 20th Century" ;
+  skos:broader mi:Cat_WHG_7_1 ;
+  mi:inCategory mi:Cat_WHG_7_1 ;
+  mi:inCourse mi:Course_WHG ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:isExpectationOf mi:Cat_WHG_7_1 .
+
+mi:Exp_WHG_7_1_4 a mi:Expectation ;
+  mi:expectationCode "7.1.4" ;
+  mi:fullCode "WHG-7.1.4" ;
+  mi:officialText "Technological, Scientific, and Cultural Exchanges - describe significant technological innovations and scientific breakthroughs in transportation, communication, medicine, and warfare and analyze how they both benefited and imperiled humanity." ;
+  skos:prefLabel "Technological, Scientific, and Cultural Exchanges" ;
+  skos:broader mi:Cat_WHG_7_1 ;
+  mi:inCategory mi:Cat_WHG_7_1 ;
+  mi:inCourse mi:Course_WHG ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:isExpectationOf mi:Cat_WHG_7_1 .
+
+mi:Exp_WHG_7_2_1 a mi:Expectation ;
+  mi:expectationCode "7.2.1" ;
+  mi:fullCode "WHG-7.2.1" ;
+  mi:officialText "World War I - explain the causes, characteristics, and long-term consequences of World War I, including the major decisions of the Versailles Treaty." ;
+  skos:prefLabel "World War I" ;
+  skos:broader mi:Cat_WHG_7_2 ;
+  mi:inCategory mi:Cat_WHG_7_2 ;
+  mi:inCourse mi:Course_WHG ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:hasExample
+    mi:Example_exp_WHG_7_2_1_1 ,
+    mi:Example_exp_WHG_7_2_1_2 ,
+    mi:Example_exp_WHG_7_2_1_3 ;
+  mi:isExpectationOf mi:Cat_WHG_7_2 .
+
+mi:Exp_WHG_7_2_2 a mi:Expectation ;
+  mi:expectationCode "7.2.2" ;
+  mi:fullCode "WHG-7.2.2" ;
+  mi:officialText "Interwar Period - analyze the transformations that shaped world societies between World War I and World War II, including the economic depression, and the spread of fascism, communism, and nationalism in different world regions." ;
+  skos:prefLabel "Interwar Period" ;
+  skos:broader mi:Cat_WHG_7_2 ;
+  mi:inCategory mi:Cat_WHG_7_2 ;
+  mi:inCourse mi:Course_WHG ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:hasExample
+    mi:Example_exp_WHG_7_2_2_1 ,
+    mi:Example_exp_WHG_7_2_2_2 ,
+    mi:Example_exp_WHG_7_2_2_3 ;
+  mi:isExpectationOf mi:Cat_WHG_7_2 .
+
+mi:Exp_WHG_7_2_3 a mi:Expectation ;
+  mi:expectationCode "7.2.3" ;
+  mi:fullCode "WHG-7.2.3" ;
+  mi:officialText "World War II - analyze the causes, course, characteristics, and consequences of World War II, including the emergence the United States and Soviet Union as global superpowers." ;
+  skos:prefLabel "World War II" ;
+  skos:broader mi:Cat_WHG_7_2 ;
+  mi:inCategory mi:Cat_WHG_7_2 ;
+  mi:inCourse mi:Course_WHG ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:hasExample
+    mi:Example_exp_WHG_7_2_3_1 ,
+    mi:Example_exp_WHG_7_2_3_2 ,
+    mi:Example_exp_WHG_7_2_3_3 ,
+    mi:Example_exp_WHG_7_2_3_4 ;
+  mi:isExpectationOf mi:Cat_WHG_7_2 .
+
+mi:Exp_WHG_7_2_4 a mi:Expectation ;
+  mi:expectationCode "7.2.4" ;
+  mi:fullCode "WHG-7.2.4" ;
+  mi:officialText "Cold War Conflicts - analyze the causes and consequences of major Cold War conflicts, including the global reconfigurations and restructuring of political and economic relationships in the post-World War II era." ;
+  skos:prefLabel "Cold War Conflicts" ;
+  skos:broader mi:Cat_WHG_7_2 ;
+  mi:inCategory mi:Cat_WHG_7_2 ;
+  mi:inCourse mi:Course_WHG ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:hasExample
+    mi:Example_exp_WHG_7_2_4_1 ,
+    mi:Example_exp_WHG_7_2_4_2 ,
+    mi:Example_exp_WHG_7_2_4_3 ,
+    mi:Example_exp_WHG_7_2_4_4 ;
+  mi:isExpectationOf mi:Cat_WHG_7_2 .
+
+mi:Exp_WHG_7_2_5 a mi:Expectation ;
+  mi:expectationCode "7.2.5" ;
+  mi:fullCode "WHG-7.2.5" ;
+  mi:officialText "Revolution, Decolonization, and Democratization - evaluate the causes and consequences of revolutionary and independence movements in different world regions." ;
+  skos:prefLabel "Revolution, Decolonization, and Democratization" ;
+  skos:broader mi:Cat_WHG_7_2 ;
+  mi:inCategory mi:Cat_WHG_7_2 ;
+  mi:inCourse mi:Course_WHG ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:hasExample
+    mi:Example_exp_WHG_7_2_5_1 ,
+    mi:Example_exp_WHG_7_2_5_2 ,
+    mi:Example_exp_WHG_7_2_5_3 ,
+    mi:Example_exp_WHG_7_2_5_4 ,
+    mi:Example_exp_WHG_7_2_5_5 ,
+    mi:Example_exp_WHG_7_2_5_6 ;
+  mi:isExpectationOf mi:Cat_WHG_7_2 .
+
+mi:Exp_WHG_7_2_6 a mi:Expectation ;
+  mi:expectationCode "7.2.6" ;
+  mi:fullCode "WHG-7.2.6" ;
+  mi:officialText "Case Studies of Genocide - analyze the development, enactment, and consequences of, as well as the international community's responses to, the Holocaust (or Shoah), Armenian Genocide, and at least one other genocide." ;
+  skos:prefLabel "Case Studies of Genocide" ;
+  skos:broader mi:Cat_WHG_7_2 ;
+  mi:inCategory mi:Cat_WHG_7_2 ;
+  mi:inCourse mi:Course_WHG ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:hasExample
+    mi:Example_exp_WHG_7_2_6_1 ,
+    mi:Example_exp_WHG_7_2_6_2 ,
+    mi:Example_exp_WHG_7_2_6_3 ;
+  mi:isExpectationOf mi:Cat_WHG_7_2 .
+
+mi:Exp_WHG_F1 a mi:Expectation ;
+  mi:expectationCode "F1" ;
+  mi:fullCode "WHG-F1" ;
+  mi:officialText "WHG Era 4 - Expanding and Intensified Hemispheric Interactions, Explain and use disciplinary processes and tools from world history." ;
+  skos:prefLabel "WHG Era 4" ;
+  skos:broader mi:Cat_WHG_F1 ;
+  mi:inCategory mi:Cat_WHG_F1 ;
+  mi:inCourse mi:Course_WHG ;
+  mi:inDiscipline mi:Discipline_W ;
+  mi:isExpectationOf mi:Cat_WHG_F1 .
+
+#################################################################
+# Examples
+#################################################################
+mi:Example_cat_WHG_F1_1 a mi:Example ;
+  skos:prefLabel "framing questions to guide inquiry" ;
+  mi:exampleText "framing questions to guide inquiry" .
+
+mi:Example_cat_WHG_F1_2 a mi:Example ;
+  skos:prefLabel "determining historical significance" ;
+  mi:exampleText "determining historical significance" .
+
+mi:Example_cat_WHG_F1_3 a mi:Example ;
+  skos:prefLabel "applying concepts of change over time continuity and multiple causes and consequences" ;
+  mi:exampleText "applying concepts of change over time continuity and multiple causes and consequences" .
+
+mi:Example_cat_WHG_F1_4 a mi:Example ;
+  skos:prefLabel "contextualizing evidence and historical phenomena under study" ;
+  mi:exampleText "contextualizing evidence and historical phenomena under study" .
+
+mi:Example_cat_WHG_F1_5 a mi:Example ;
+  skos:prefLabel "explaining and applying different periodization schemes" ;
+  mi:exampleText "explaining and applying different periodization schemes" .
+
+mi:Example_cat_WHG_F1_6 a mi:Example ;
+  skos:prefLabel "using and connecting different spatial frames ( global interregional regional)" ;
+  mi:exampleText "using and connecting different spatial frames ( global interregional regional)" .
+
+mi:Example_cat_WHG_F1_7 a mi:Example ;
+  skos:prefLabel "recognizing that perspectives are shaped by different experiences across time and space" ;
+  mi:exampleText "recognizing that perspectives are shaped by different experiences across time and space" .
+
+mi:Example_cat_WHG_F1_8 a mi:Example ;
+  skos:prefLabel "sourcing analyzing and corroborating multiple sources of evidence ( primary and secondary" ;
+  mi:exampleText "sourcing analyzing and corroborating multiple sources of evidence ( primary and secondary" .
+
+mi:Example_cat_WHG_F1_9 a mi:Example ;
+  skos:prefLabel "verbal and visual" ;
+  mi:exampleText "verbal and visual" .
+
+mi:Example_cat_WHG_F1_10 a mi:Example ;
+  skos:prefLabel "in print three-dimensional and digital)" ;
+  mi:exampleText "in print three-dimensional and digital)" .
+
+mi:Example_cat_WHG_F1_11 a mi:Example ;
+  skos:prefLabel "analyzing maps and graphs to understand large-scale movement trends and patterns" ;
+  mi:exampleText "analyzing maps and graphs to understand large-scale movement trends and patterns" .
+
+mi:Example_cat_WHG_F1_12 a mi:Example ;
+  skos:prefLabel "using spatial reasoning to evaluate the role of human-environment interactions in history" ;
+  mi:exampleText "using spatial reasoning to evaluate the role of human-environment interactions in history" .
+
+mi:Example_cat_WHG_F1_13 a mi:Example ;
+  skos:prefLabel "comparing and contrasting physical political economic and cultural characteristics across time and space. WHG ERA 4" ;
+  mi:exampleText "comparing and contrasting physical political economic and cultural characteristics across time and space. WHG ERA 4" .
+
+mi:Example_cat_WHG_F1_14 a mi:Example ;
+  skos:prefLabel "EXPANDING AND INTENSIFIED HEMISPHERIC INTERACTIONS" ;
+  mi:exampleText "EXPANDING AND INTENSIFIED HEMISPHERIC INTERACTIONS" .
+
+mi:Example_exp_WHG_4_1_1_1 a mi:Example ;
+  skos:prefLabel "increasing trade between Islam and Christianity" ;
+  mi:exampleText "increasing trade between Islam and Christianity" .
+
+mi:Example_exp_WHG_4_1_1_2 a mi:Example ;
+  skos:prefLabel "the Crusades" ;
+  mi:exampleText "the Crusades" .
+
+mi:Example_exp_WHG_4_1_1_3 a mi:Example ;
+  skos:prefLabel "tensions between Catholic and Orthodox Christianity" ;
+  mi:exampleText "tensions between Catholic and Orthodox Christianity" .
+
+mi:Example_exp_WHG_4_1_1_4 a mi:Example ;
+  skos:prefLabel "conflict and cooperation between Muslims Christians and Jews in medieval Spain" ;
+  mi:exampleText "conflict and cooperation between Muslims Christians and Jews in medieval Spain" .
+
+mi:Example_exp_WHG_4_1_1_5 a mi:Example ;
+  skos:prefLabel "the influence of Islam and Christianity on African culture" ;
+  mi:exampleText "the influence of Islam and Christianity on African culture" .
+
+mi:Example_exp_WHG_4_1_1_6 a mi:Example ;
+  skos:prefLabel "influences of Islam and Hinduism in South Asia" ;
+  mi:exampleText "influences of Islam and Hinduism in South Asia" .
+
+mi:Example_exp_WHG_4_1_2_1 a mi:Example ;
+  skos:prefLabel "trans-Saharan trading in gold and salt" ;
+  mi:exampleText "trans-Saharan trading in gold and salt" .
+
+mi:Example_exp_WHG_4_1_2_2 a mi:Example ;
+  skos:prefLabel "intensification of trade around the Indian Ocean" ;
+  mi:exampleText "intensification of trade around the Indian Ocean" .
+
+mi:Example_exp_WHG_4_1_2_3 a mi:Example ;
+  skos:prefLabel "increasing trade and the growth of towns and cities in western Europe" ;
+  mi:exampleText "increasing trade and the growth of towns and cities in western Europe" .
+
+mi:Example_exp_WHG_4_1_2_4 a mi:Example ;
+  skos:prefLabel "the spread of the plague and significance of its consequences" ;
+  mi:exampleText "the spread of the plague and significance of its consequences" .
+
+mi:Example_exp_WHG_4_1_2_5 a mi:Example ;
+  skos:prefLabel "networks of exchange in North Central and South America" ;
+  mi:exampleText "networks of exchange in North Central and South America" .
+
+mi:Example_exp_WHG_4_2_1_1 a mi:Example ;
+  skos:prefLabel "investigating geographic extent of Muslim empires" ;
+  mi:exampleText "investigating geographic extent of Muslim empires" .
+
+mi:Example_exp_WHG_4_2_1_2 a mi:Example ;
+  skos:prefLabel "the artistic scientific technological and economic features that developed in Muslim society through cultural interactions and exchanges" ;
+  mi:exampleText "the artistic scientific technological and economic features that developed in Muslim society through cultural interactions and exchanges" .
+
+mi:Example_exp_WHG_4_2_1_3 a mi:Example ;
+  skos:prefLabel "diverse religious traditions of Islam" ;
+  mi:exampleText "diverse religious traditions of Islam" .
+
+mi:Example_exp_WHG_4_2_1_4 a mi:Example ;
+  skos:prefLabel "the cultural political and economic influence of Dar al-Islam in Afro-Eurasia" ;
+  mi:exampleText "the cultural political and economic influence of Dar al-Islam in Afro-Eurasia" .
+
+mi:Example_exp_WHG_4_2_1_5 a mi:Example ;
+  skos:prefLabel "the caliphate as both a religious and political institution" ;
+  mi:exampleText "the caliphate as both a religious and political institution" .
+
+mi:Example_exp_WHG_4_2_2_1 a mi:Example ;
+  skos:prefLabel "investigating geographic patterns of Mongol conquest and expansion" ;
+  mi:exampleText "investigating geographic patterns of Mongol conquest and expansion" .
+
+mi:Example_exp_WHG_4_2_2_2 a mi:Example ;
+  skos:prefLabel "characteristics and consequences of the Pax Mongolica" ;
+  mi:exampleText "characteristics and consequences of the Pax Mongolica" .
+
+mi:Example_exp_WHG_4_2_2_3 a mi:Example ;
+  skos:prefLabel "revival of long-distance trading networks between China and the Mediterranean world" ;
+  mi:exampleText "revival of long-distance trading networks between China and the Mediterranean world" .
+
+mi:Example_exp_WHG_4_2_3_1 a mi:Example ;
+  skos:prefLabel "case studies of the Maya Aztec Inca Pueblo and/or Eastern Woodland" ;
+  mi:exampleText "case studies of the Maya Aztec Inca Pueblo and/or Eastern Woodland" .
+
+mi:Example_exp_WHG_4_2_3_2 a mi:Example ;
+  skos:prefLabel "the role of the environment in shaping different societies" ;
+  mi:exampleText "the role of the environment in shaping different societies" .
+
+mi:Example_exp_WHG_4_2_3_3 a mi:Example ;
+  skos:prefLabel "goods exchanged between societies" ;
+  mi:exampleText "goods exchanged between societies" .
+
+mi:Example_exp_WHG_4_2_3_4 a mi:Example ;
+  skos:prefLabel "shifting power and influence of groups in each region. WHG ERA 5" ;
+  mi:exampleText "shifting power and influence of groups in each region. WHG ERA 5" .
+
+mi:Example_exp_WHG_4_2_3_5 a mi:Example ;
+  skos:prefLabel "THE EMERGENCE OF THE FIRST GLOBAL AGE 15TH TO 18TH CENTURIES What happens when separate \"worlds\" converge? Did the world become a better place to live because of the global convergence? Why did some societies emerge with more power and others with less? In Era 5 students can investigate questions such as these through both global and interregional lenses. Individually and collaboratively students can use maps graphs primary sources and other documents in planned inquiries" ;
+  mi:exampleText "THE EMERGENCE OF THE FIRST GLOBAL AGE 15TH TO 18TH CENTURIES What happens when separate \"worlds\" converge? Did the world become a better place to live because of the global convergence? Why did some societies emerge with more power and others with less? In Era 5 students can investigate questions such as these through both global and interregional lenses. Individually and collaboratively students can use maps graphs primary sources and other documents in planned inquiries" .
+
+mi:Example_exp_WHG_5_1_1_1 a mi:Example ;
+  skos:prefLabel "investigating the influence of mercantilism and capitalism" ;
+  mi:exampleText "investigating the influence of mercantilism and capitalism" .
+
+mi:Example_exp_WHG_5_1_1_2 a mi:Example ;
+  skos:prefLabel "the role of sugar and silver in the global economy" ;
+  mi:exampleText "the role of sugar and silver in the global economy" .
+
+mi:Example_exp_WHG_5_1_1_3 a mi:Example ;
+  skos:prefLabel "movement of people commodities and ideas across the Atlantic basin" ;
+  mi:exampleText "movement of people commodities and ideas across the Atlantic basin" .
+
+mi:Example_exp_WHG_5_1_1_4 a mi:Example ;
+  skos:prefLabel "rising nationalism militarism and absolutism" ;
+  mi:exampleText "rising nationalism militarism and absolutism" .
+
+mi:Example_exp_WHG_5_1_1_5 a mi:Example ;
+  skos:prefLabel "emergence of European maritime power in Asia and land control in the Americas" ;
+  mi:exampleText "emergence of European maritime power in Asia and land control in the Americas" .
+
+mi:Example_exp_WHG_5_1_2_1 a mi:Example ;
+  skos:prefLabel "investigating the expulsion of Muslims and Jews from Spain" ;
+  mi:exampleText "investigating the expulsion of Muslims and Jews from Spain" .
+
+mi:Example_exp_WHG_5_1_2_2 a mi:Example ;
+  skos:prefLabel "Reformation and expansion of Christianity to the Americas" ;
+  mi:exampleText "Reformation and expansion of Christianity to the Americas" .
+
+mi:Example_exp_WHG_5_1_2_3 a mi:Example ;
+  skos:prefLabel "expansion of Islam to Southeast Asia" ;
+  mi:exampleText "expansion of Islam to Southeast Asia" .
+
+mi:Example_exp_WHG_5_1_2_4 a mi:Example ;
+  skos:prefLabel "Sikhism's contribution to the Punjab area of South Asia" ;
+  mi:exampleText "Sikhism's contribution to the Punjab area of South Asia" .
+
+mi:Example_exp_WHG_5_1_2_5 a mi:Example ;
+  skos:prefLabel "Buddhism's growth in East and Southeast Asia" ;
+  mi:exampleText "Buddhism's growth in East and Southeast Asia" .
+
+mi:Example_exp_WHG_5_1_2_6 a mi:Example ;
+  skos:prefLabel "Taoist and Confucian political influences" ;
+  mi:exampleText "Taoist and Confucian political influences" .
+
+mi:Example_exp_WHG_5_1_2_7 a mi:Example ;
+  skos:prefLabel "cases of religious syncretism (blending of beliefs and traditions)" ;
+  mi:exampleText "cases of religious syncretism (blending of beliefs and traditions)" .
+
+mi:Example_exp_WHG_5_1_2_8 a mi:Example ;
+  skos:prefLabel "continuity of local indigenous beliefs throughout the world" ;
+  mi:exampleText "continuity of local indigenous beliefs throughout the world" .
+
+mi:Example_exp_WHG_5_2_1_1 a mi:Example ;
+  skos:prefLabel "investigating the near-elimination of indigenous civilizations and peoples in the Americas" ;
+  mi:exampleText "investigating the near-elimination of indigenous civilizations and peoples in the Americas" .
+
+mi:Example_exp_WHG_5_2_1_2 a mi:Example ;
+  skos:prefLabel "diet and population changes in Africa Asia and Europe" ;
+  mi:exampleText "diet and population changes in Africa Asia and Europe" .
+
+mi:Example_exp_WHG_5_2_1_3 a mi:Example ;
+  skos:prefLabel "social stratification of peninsulares creoles mestizos slaves and Indigenous Peoples" ;
+  mi:exampleText "social stratification of peninsulares creoles mestizos slaves and Indigenous Peoples" .
+
+mi:Example_exp_WHG_5_2_1_4 a mi:Example ;
+  skos:prefLabel "ecological impact of exchanges of flora and fauna across the Atlantic" ;
+  mi:exampleText "ecological impact of exchanges of flora and fauna across the Atlantic" .
+
+mi:Example_exp_WHG_5_2_3_1 a mi:Example ;
+  skos:prefLabel "case studies of political economic and cultural transformations in the Ottoman Mughal Safavid Songhai and Russian Empires Ming and Qing Dynasties and/or Tokugawa Shogunate. WHG ERA 6" ;
+  mi:exampleText "case studies of political economic and cultural transformations in the Ottoman Mughal Safavid Songhai and Russian Empires Ming and Qing Dynasties and/or Tokugawa Shogunate. WHG ERA 6" .
+
+mi:Example_exp_WHG_5_2_3_2 a mi:Example ;
+  skos:prefLabel "AN AGE OF GLOBAL REVOLUTIONS 18TH CENTURY-1914 What constitutes a \"revolution?\" What makes people want to change their government? How do political and economic forces shape people's identities? In Era 6 students can investigate questions such as these through both global and interregional lenses. Individually and collaboratively students can use maps graphs primary sources and other documents in planned inquiries" ;
+  mi:exampleText "AN AGE OF GLOBAL REVOLUTIONS 18TH CENTURY-1914 What constitutes a \"revolution?\" What makes people want to change their government? How do political and economic forces shape people's identities? In Era 6 students can investigate questions such as these through both global and interregional lenses. Individually and collaboratively students can use maps graphs primary sources and other documents in planned inquiries" .
+
+mi:Example_exp_WHG_6_1_3_1 a mi:Example ;
+  skos:prefLabel "investigating constitutionalism communism and socialism republicanism nationalism capitalism human rights and secularization" ;
+  mi:exampleText "investigating constitutionalism communism and socialism republicanism nationalism capitalism human rights and secularization" .
+
+mi:Example_exp_WHG_6_2_1_1 a mi:Example ;
+  skos:prefLabel "case studies of Chinese Haitian Mexican and/or other Latin American revolutions" ;
+  mi:exampleText "case studies of Chinese Haitian Mexican and/or other Latin American revolutions" .
+
+mi:Example_exp_WHG_6_2_1_2 a mi:Example ;
+  skos:prefLabel "others who fought for a new political order against oppression like Tacky's War in Jamaica in 1760 the rebellion of Tupac Amaru in 1780 or the Indian Rebellion of 1857" ;
+  mi:exampleText "others who fought for a new political order against oppression like Tacky's War in Jamaica in 1760 the rebellion of Tupac Amaru in 1780 or the Indian Rebellion of 1857" .
+
+mi:Example_exp_WHG_6_2_2_1 a mi:Example ;
+  skos:prefLabel "case studies of Germany Italy Japan" ;
+  mi:exampleText "case studies of Germany Italy Japan" .
+
+mi:Example_exp_WHG_6_2_3_1 a mi:Example ;
+  skos:prefLabel "case studies of industrialization in Great Britain Belgium France Germany France Russia and/or Japan" ;
+  mi:exampleText "case studies of industrialization in Great Britain Belgium France Germany France Russia and/or Japan" .
+
+mi:Example_exp_WHG_6_2_3_2 a mi:Example ;
+  skos:prefLabel "effects on women and children" ;
+  mi:exampleText "effects on women and children" .
+
+mi:Example_exp_WHG_6_2_3_3 a mi:Example ;
+  skos:prefLabel "the rise of organized labor movements" ;
+  mi:exampleText "the rise of organized labor movements" .
+
+mi:Example_exp_WHG_6_2_3_4 a mi:Example ;
+  skos:prefLabel "the extent and consequences of urbanization" ;
+  mi:exampleText "the extent and consequences of urbanization" .
+
+mi:Example_exp_WHG_6_2_4_1 a mi:Example ;
+  skos:prefLabel "case studies of Japan (Meiji Restoration) Qing China India Egypt Ethiopia and/or the Congo" ;
+  mi:exampleText "case studies of Japan (Meiji Restoration) Qing China India Egypt Ethiopia and/or the Congo" .
+
+mi:Example_exp_WHG_6_2_4_2 a mi:Example ;
+  skos:prefLabel "encounters between imperial powers (Europe Japan) and local people in India Africa Central Asia and East Asia" ;
+  mi:exampleText "encounters between imperial powers (Europe Japan) and local people in India Africa Central Asia and East Asia" .
+
+mi:Example_exp_WHG_6_2_4_3 a mi:Example ;
+  skos:prefLabel "the connection between imperialism and racism including the social construction of race" ;
+  mi:exampleText "the connection between imperialism and racism including the social construction of race" .
+
+mi:Example_exp_WHG_7_2_1_1 a mi:Example ;
+  skos:prefLabel "investigating effects of nationalism industrialization disputes over territory systems of alliances imperialism the role of colonial peoples and militarism total war ideology and the Armenian Genocide" ;
+  mi:exampleText "investigating effects of nationalism industrialization disputes over territory systems of alliances imperialism the role of colonial peoples and militarism total war ideology and the Armenian Genocide" .
+
+mi:Example_exp_WHG_7_2_1_2 a mi:Example ;
+  skos:prefLabel "distinctive characteristics and impacts of the war on the soldiers and people at home including the use of propaganda" ;
+  mi:exampleText "distinctive characteristics and impacts of the war on the soldiers and people at home including the use of propaganda" .
+
+mi:Example_exp_WHG_7_2_1_3 a mi:Example ;
+  skos:prefLabel "consequences of the mandate system reparations and national self-determination around the globe" ;
+  mi:exampleText "consequences of the mandate system reparations and national self-determination around the globe" .
+
+mi:Example_exp_WHG_7_2_2_1 a mi:Example ;
+  skos:prefLabel "case studies of the economic depression on different regions nations and the globe" ;
+  mi:exampleText "case studies of the economic depression on different regions nations and the globe" .
+
+mi:Example_exp_WHG_7_2_2_2 a mi:Example ;
+  skos:prefLabel "case studies of the rise of fascism and the spread of communism in Europe and Asia" ;
+  mi:exampleText "case studies of the rise of fascism and the spread of communism in Europe and Asia" .
+
+mi:Example_exp_WHG_7_2_2_3 a mi:Example ;
+  skos:prefLabel "comparing and contrasting the rise of nationalism in China Turkey and India" ;
+  mi:exampleText "comparing and contrasting the rise of nationalism in China Turkey and India" .
+
+mi:Example_exp_WHG_7_2_3_1 a mi:Example ;
+  skos:prefLabel "investigating the role of aggression and conflict appeasement that led to war in Europe and Asia" ;
+  mi:exampleText "investigating the role of aggression and conflict appeasement that led to war in Europe and Asia" .
+
+mi:Example_exp_WHG_7_2_3_2 a mi:Example ;
+  skos:prefLabel "the development and enactment of Hitler's \"Final Solution\" policy and the Holocaust major turning points and unique characteristics of the war" ;
+  mi:exampleText "the development and enactment of Hitler's \"Final Solution\" policy and the Holocaust major turning points and unique characteristics of the war" .
+
+mi:Example_exp_WHG_7_2_3_3 a mi:Example ;
+  skos:prefLabel "spatial and political impact of the Allied negotiations on the nations of Eastern Europe and throughout the world" ;
+  mi:exampleText "spatial and political impact of the Allied negotiations on the nations of Eastern Europe and throughout the world" .
+
+mi:Example_exp_WHG_7_2_3_4 a mi:Example ;
+  skos:prefLabel "immediate consequences of the war's end including the devastation effects on population dawn of the atomic age and the occupation of Germany and Japan" ;
+  mi:exampleText "immediate consequences of the war's end including the devastation effects on population dawn of the atomic age and the occupation of Germany and Japan" .
+
+mi:Example_exp_WHG_7_2_4_1 a mi:Example ;
+  skos:prefLabel "investigating economic political and military origins of the Cold War" ;
+  mi:exampleText "investigating economic political and military origins of the Cold War" .
+
+mi:Example_exp_WHG_7_2_4_2 a mi:Example ;
+  skos:prefLabel "arms race and space race" ;
+  mi:exampleText "arms race and space race" .
+
+mi:Example_exp_WHG_7_2_4_3 a mi:Example ;
+  skos:prefLabel "comparing and contrasting conflicts in Asia Africa and Central America" ;
+  mi:exampleText "comparing and contrasting conflicts in Asia Africa and Central America" .
+
+mi:Example_exp_WHG_7_2_4_4 a mi:Example ;
+  skos:prefLabel "the significance of the Cold War as a 20th century event including transitions from bipolar to multipolar center(s) of power" ;
+  mi:exampleText "the significance of the Cold War as a 20th century event including transitions from bipolar to multipolar center(s) of power" .
+
+mi:Example_exp_WHG_7_2_5_1 a mi:Example ;
+  skos:prefLabel "case studies of the Russian Revolution Mexican Revolution and/or Iranian Revolution" ;
+  mi:exampleText "case studies of the Russian Revolution Mexican Revolution and/or Iranian Revolution" .
+
+mi:Example_exp_WHG_7_2_5_2 a mi:Example ;
+  skos:prefLabel "legacy of imperialism in Africa Southeast Asia and Latin America" ;
+  mi:exampleText "legacy of imperialism in Africa Southeast Asia and Latin America" .
+
+mi:Example_exp_WHG_7_2_5_3 a mi:Example ;
+  skos:prefLabel "importance of the massive resistance and non-violent philosophy of Mahatma Gandhi" ;
+  mi:exampleText "importance of the massive resistance and non-violent philosophy of Mahatma Gandhi" .
+
+mi:Example_exp_WHG_7_2_5_4 a mi:Example ;
+  skos:prefLabel "independence movements and formation of new nations in the Indian Subcontinent Africa Eastern Europe and Southeast Asia" ;
+  mi:exampleText "independence movements and formation of new nations in the Indian Subcontinent Africa Eastern Europe and Southeast Asia" .
+
+mi:Example_exp_WHG_7_2_5_5 a mi:Example ;
+  skos:prefLabel "the development of the State of Israel" ;
+  mi:exampleText "the development of the State of Israel" .
+
+mi:Example_exp_WHG_7_2_5_6 a mi:Example ;
+  skos:prefLabel "conflicts such as Arab-Israeli disputes Palestine the Suez Crisis and Sunni-Shi'a conflicts" ;
+  mi:exampleText "conflicts such as Arab-Israeli disputes Palestine the Suez Crisis and Sunni-Shi'a conflicts" .
+
+mi:Example_exp_WHG_7_2_6_1 a mi:Example ;
+  skos:prefLabel "investigating the ideology and policies that led to genocide" ;
+  mi:exampleText "investigating the ideology and policies that led to genocide" .
+
+mi:Example_exp_WHG_7_2_6_2 a mi:Example ;
+  skos:prefLabel "policies to address and prevent genocide" ;
+  mi:exampleText "policies to address and prevent genocide" .
+
+mi:Example_exp_WHG_7_2_6_3 a mi:Example ;
+  skos:prefLabel "cases studies of genocides such as Herero and Namaqua Cambodia Rwanda Ukraine and/or Bosnia" ;
+  mi:exampleText "cases studies of genocides such as Herero and Namaqua Cambodia Rwanda Ukraine and/or Bosnia" .

@@ -1,0 +1,1785 @@
+@prefix mi:     <urn:mi:ss:> .
+@prefix dcterms:<http://purl.org/dc/terms/> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@base <file:///Users/louisjustman/Downloads/C3%20Project/Curriculum-Ontology/michigan/> .
+
+<mi-grade-4.ttl> a owl:Ontology ;
+  owl:versionIRI <urn:mi:ss:grade:4> ;
+  rdfs:label "Michigan Social Studies GLCE - Grade 4" ;
+  dcterms:creator "Michigan Department of Education" ;
+  dcterms:source "Michigan K-12 Social Studies Standards (Michigan Department of Education)" ;
+  owl:imports <mi-base.ttl> .
+
+mi:Grade_4 a mi:Grade ;
+  skos:prefLabel "Grade 4" ;
+  mi:hasCategory
+    mi:Cat_4_C1 ,
+    mi:Cat_4_C2 ,
+    mi:Cat_4_C3 ,
+    mi:Cat_4_C5 ,
+    mi:Cat_4_E1 ,
+    mi:Cat_4_E2 ,
+    mi:Cat_4_E3 ,
+    mi:Cat_4_G1 ,
+    mi:Cat_4_G2 ,
+    mi:Cat_4_G4 ,
+    mi:Cat_4_G5 ,
+    mi:Cat_4_H3 ,
+    mi:Cat_4_P3_1 ,
+    mi:Cat_4_P3_3 ,
+    mi:Cat_4_P4_2 ;
+  mi:isGradeOf mi:MichiganGLCEFramework ;
+  mi:gradeCode "4" ;
+  mi:gradeOrder 4 .
+
+#################################################################
+# Categories
+#################################################################
+mi:Cat_4_C1 a mi:StandardCategory ;
+  mi:categoryCode "C1" ;
+  skos:prefLabel "Purposes of Government C1 Purposes of Government American Democracy" ;
+  mi:categoryDescription "• Role of the Citizen in • Role of the Citizen in" ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExpectation
+    mi:Exp_4_C1_0_1 ,
+    mi:Exp_4_C1_0_2 ,
+    mi:Exp_4_C1_0_3 ;
+  mi:isCategoryOf mi:Grade_4 .
+
+mi:Cat_4_C2 a mi:StandardCategory ;
+  mi:categoryCode "C2" ;
+  skos:prefLabel "Values and Principles of American Democracy" ;
+  mi:categoryDescription "Understand values and principles of American constitutional democracy." ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExpectation
+    mi:Exp_4_C2_0_1 ,
+    mi:Exp_4_C2_0_2 ;
+  mi:isCategoryOf mi:Grade_4 .
+
+mi:Cat_4_C3 a mi:StandardCategory ;
+  mi:categoryCode "C3" ;
+  skos:prefLabel "Structure and Functions of C3 Structure and Functions of" ;
+  mi:categoryDescription "American Democracy American Democracy Government Government" ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExpectation
+    mi:Exp_4_C3_0_1 ,
+    mi:Exp_4_C3_0_2 ,
+    mi:Exp_4_C3_0_3 ,
+    mi:Exp_4_C3_0_4 ,
+    mi:Exp_4_C3_0_5 ,
+    mi:Exp_4_C3_0_6 ,
+    mi:Exp_4_C3_0_7 ;
+  mi:isCategoryOf mi:Grade_4 .
+
+mi:Cat_4_C5 a mi:StandardCategory ;
+  mi:categoryCode "C5" ;
+  skos:prefLabel "Roles of the Citizen in American Democracy" ;
+  mi:categoryDescription "Explain important rights and how, when, and where American citizens demonstrate their responsibilities by participating in government." ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExpectation
+    mi:Exp_4_C5_0_1 ,
+    mi:Exp_4_C5_0_2 ,
+    mi:Exp_4_C5_0_3 ,
+    mi:Exp_4_C5_0_4 ;
+  mi:isCategoryOf mi:Grade_4 .
+
+mi:Cat_4_E1 a mi:StandardCategory ;
+  mi:categoryCode "E1" ;
+  skos:prefLabel "The Market Economy E1 The Market Economy • Prices, Supply, and" ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExpectation
+    mi:Exp_4_E1_0_1 ,
+    mi:Exp_4_E1_0_2 ,
+    mi:Exp_4_E1_0_3 ,
+    mi:Exp_4_E1_0_4 ,
+    mi:Exp_4_E1_0_5 ,
+    mi:Exp_4_E1_0_6 ,
+    mi:Exp_4_E1_0_7 ,
+    mi:Exp_4_E1_0_8 ;
+  mi:isCategoryOf mi:Grade_4 .
+
+mi:Cat_4_E2 a mi:StandardCategory ;
+  mi:categoryCode "E2" ;
+  skos:prefLabel "National Economy" ;
+  mi:categoryDescription "Use fundamental principles and concepts of economics to understand economic activity in the United States." ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExpectation
+    mi:Exp_4_E2_0_1 ;
+  mi:isCategoryOf mi:Grade_4 .
+
+mi:Cat_4_E3 a mi:StandardCategory ;
+  mi:categoryCode "E3" ;
+  skos:prefLabel "International Economy E3 International Economy • Role of Government" ;
+  mi:categoryDescription "Citizen Involvement • Economic" ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExpectation
+    mi:Exp_4_E3_0_1 ;
+  mi:isCategoryOf mi:Grade_4 .
+
+mi:Cat_4_G1 a mi:StandardCategory ;
+  mi:categoryCode "G1" ;
+  skos:prefLabel "The World in Spatial Terms G1 The World in Spatial Terms • Places and Regions" ;
+  mi:categoryDescription "• Environment and Society • Human Systems" ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:hasExpectation
+    mi:Exp_4_G1_0_1 ,
+    mi:Exp_4_G1_0_2 ,
+    mi:Exp_4_G1_0_3 ,
+    mi:Exp_4_G1_0_4 ,
+    mi:Exp_4_G1_0_5 ;
+  mi:isCategoryOf mi:Grade_4 .
+
+mi:Cat_4_G2 a mi:StandardCategory ;
+  mi:categoryCode "G2" ;
+  skos:prefLabel "Places and Regions G2 Places and Regions" ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:hasExpectation
+    mi:Exp_4_G2_0_1 ,
+    mi:Exp_4_G2_0_2 ;
+  mi:isCategoryOf mi:Grade_4 .
+
+mi:Cat_4_G4 a mi:StandardCategory ;
+  mi:categoryCode "G4" ;
+  skos:prefLabel "Human Systems" ;
+  mi:categoryDescription "Understand how human activities help shape the Earth's surface." ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:hasExpectation
+    mi:Exp_4_G4_0_1 ,
+    mi:Exp_4_G4_0_2 ;
+  mi:isCategoryOf mi:Grade_4 .
+
+mi:Cat_4_G5 a mi:StandardCategory ;
+  mi:categoryCode "G5" ;
+  skos:prefLabel "Environment and Society" ;
+  mi:categoryDescription "Understand the effects of human-environment interactions." ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:hasExpectation
+    mi:Exp_4_G5_0_1 ;
+  mi:isCategoryOf mi:Grade_4 .
+
+mi:Cat_4_H3 a mi:StandardCategory ;
+  mi:categoryCode "H3" ;
+  skos:prefLabel "History of Michigan (Beyond Statehood)" ;
+  mi:categoryDescription "Use historical thinking to understand the past." ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_H ;
+  mi:hasExpectation
+    mi:Exp_4_H3_0_1 ,
+    mi:Exp_4_H3_0_2 ,
+    mi:Exp_4_H3_0_3 ,
+    mi:Exp_4_H3_0_4 ,
+    mi:Exp_4_H3_0_5 ,
+    mi:Exp_4_H3_0_6 ,
+    mi:Exp_4_H3_0_7 ,
+    mi:Exp_4_H3_0_8 ,
+    mi:Exp_4_H3_0_9 ;
+  mi:isCategoryOf mi:Grade_4 .
+
+mi:Cat_4_P3_1 a mi:StandardCategory ;
+  mi:categoryCode "P3.1" ;
+  skos:prefLabel "Clearly state an issue as a question of public policy, trace the origins of an issue, analyze various" ;
+  mi:categoryDescription "perspectives, and generate and evaluate possible alternative resolutions." ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_P ;
+  mi:hasExpectation
+    mi:Exp_4_P3_1_1 ,
+    mi:Exp_4_P3_1_2 ,
+    mi:Exp_4_P3_1_3 ;
+  mi:isCategoryOf mi:Grade_4 .
+
+mi:Cat_4_P3_3 a mi:StandardCategory ;
+  mi:categoryCode "P3.3" ;
+  skos:prefLabel "Write persuasive/argumentative essays expressing and justifying decisions on public policy issues." ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_P ;
+  mi:hasExpectation
+    mi:Exp_4_P3_3_1 ;
+  mi:isCategoryOf mi:Grade_4 .
+
+mi:Cat_4_P4_2 a mi:StandardCategory ;
+  mi:categoryCode "P4.2" ;
+  skos:prefLabel "Demonstrate knowledge of how, when, and where individuals would plan and conduct activities" ;
+  mi:categoryDescription "intended to advance views on matters of public policy, report the results, and evaluate effectiveness." ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_P ;
+  mi:hasExpectation
+    mi:Exp_4_P4_2_1 ,
+    mi:Exp_4_P4_2_2 ;
+  mi:isCategoryOf mi:Grade_4 .
+
+#################################################################
+# Expectations
+#################################################################
+mi:Exp_4_C1_0_1 a mi:Expectation ;
+  mi:expectationCode "C1.0.1" ;
+  mi:fullCode "4-C1.0.1" ;
+  mi:officialText "Identify questions political scientists ask in examining the United States." ;
+  skos:prefLabel "Questions Political Scientists Ask in Examining the United States" ;
+  skos:broader mi:Cat_4_C1 ;
+  mi:inCategory mi:Cat_4_C1 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_4_C1_0_1_1 ,
+    mi:Example_exp_4_C1_0_1_2 ,
+    mi:Example_exp_4_C1_0_1_3 ,
+    mi:Example_exp_4_C1_0_1_4 ;
+  mi:isExpectationOf mi:Cat_4_C1 .
+
+mi:Exp_4_C1_0_2 a mi:Expectation ;
+  mi:expectationCode "C1.0.2" ;
+  mi:fullCode "4-C1.0.2" ;
+  mi:officialText "Explain probable consequences of an absence of government and of rules and laws." ;
+  skos:prefLabel "Probable Consequences of an Absence of Government and of Rules and Laws" ;
+  skos:broader mi:Cat_4_C1 ;
+  mi:inCategory mi:Cat_4_C1 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_4_C1 .
+
+mi:Exp_4_C1_0_3 a mi:Expectation ;
+  mi:expectationCode "C1.0.3" ;
+  mi:fullCode "4-C1.0.3" ;
+  mi:officialText "Describe the purposes of government as identified in the Preamble of the Constitution." ;
+  skos:prefLabel "Purposes of Government as Identified in the Preamble of the Constitution" ;
+  skos:broader mi:Cat_4_C1 ;
+  mi:inCategory mi:Cat_4_C1 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_4_C1 .
+
+mi:Exp_4_C2_0_1 a mi:Expectation ;
+  mi:expectationCode "C2.0.1" ;
+  mi:fullCode "4-C2.0.1" ;
+  mi:officialText "Explain how the principles of popular sovereignty, rule of law, checks and balances, separation of powers, and individual rights serve to limit the powers of the federal government as reflected in the Constitution and Bill of Rights." ;
+  skos:prefLabel "The Principles of Popular Sovereignty, Rule of Law, Checks and Balances, Separation of Powers, and..." ;
+  skos:broader mi:Cat_4_C2 ;
+  mi:inCategory mi:Cat_4_C2 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_4_C2_0_1_1 ,
+    mi:Example_exp_4_C2_0_1_2 ,
+    mi:Example_exp_4_C2_0_1_3 ,
+    mi:Example_exp_4_C2_0_1_4 ,
+    mi:Example_exp_4_C2_0_1_5 ;
+  mi:isExpectationOf mi:Cat_4_C2 .
+
+mi:Exp_4_C2_0_2 a mi:Expectation ;
+  mi:expectationCode "C2.0.2" ;
+  mi:fullCode "4-C2.0.2" ;
+  mi:officialText "Identify situations in which specific rights guaranteed by the Constitution and Bill of Rights are involved." ;
+  skos:prefLabel "Situations in Which Specific Rights Guaranteed" ;
+  skos:broader mi:Cat_4_C2 ;
+  mi:inCategory mi:Cat_4_C2 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_4_C2_0_2_1 ,
+    mi:Example_exp_4_C2_0_2_2 ,
+    mi:Example_exp_4_C2_0_2_3 ;
+  mi:isExpectationOf mi:Cat_4_C2 .
+
+mi:Exp_4_C3_0_1 a mi:Expectation ;
+  mi:expectationCode "C3.0.1" ;
+  mi:fullCode "4-C3.0.1" ;
+  mi:officialText "Give examples of ways the Constitution limits the powers of the federal government." ;
+  skos:prefLabel "Give Examples of Ways the Constitution Limits the Powers of the Federal Government" ;
+  skos:broader mi:Cat_4_C3 ;
+  mi:inCategory mi:Cat_4_C3 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_4_C3_0_1_1 ,
+    mi:Example_exp_4_C3_0_1_2 ,
+    mi:Example_exp_4_C3_0_1_3 ,
+    mi:Example_exp_4_C3_0_1_4 ;
+  mi:isExpectationOf mi:Cat_4_C3 .
+
+mi:Exp_4_C3_0_2 a mi:Expectation ;
+  mi:expectationCode "C3.0.2" ;
+  mi:fullCode "4-C3.0.2" ;
+  mi:officialText "Give examples of powers granted to the federal government and those reserved for the states." ;
+  skos:prefLabel "Give Examples of Powers Granted to the Federal Government and Those Reserved for the States" ;
+  skos:broader mi:Cat_4_C3 ;
+  mi:inCategory mi:Cat_4_C3 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_4_C3_0_2_1 ,
+    mi:Example_exp_4_C3_0_2_2 ,
+    mi:Example_exp_4_C3_0_2_3 ,
+    mi:Example_exp_4_C3_0_2_4 ;
+  mi:isExpectationOf mi:Cat_4_C3 .
+
+mi:Exp_4_C3_0_3 a mi:Expectation ;
+  mi:expectationCode "C3.0.3" ;
+  mi:fullCode "4-C3.0.3" ;
+  mi:officialText "Describe the organizational structure of the federal government in the United States (legislative, executive, and judicial branches)." ;
+  skos:prefLabel "Organizational Structure of the Federal Government in the United States" ;
+  skos:broader mi:Cat_4_C3 ;
+  mi:inCategory mi:Cat_4_C3 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_4_C3 .
+
+mi:Exp_4_C3_0_4 a mi:Expectation ;
+  mi:expectationCode "C3.0.4" ;
+  mi:fullCode "4-C3.0.4" ;
+  mi:officialText "Describe how the powers of the federal government are separated among the branches." ;
+  skos:prefLabel "The Powers of the Federal Government Are Separated Among the Branches" ;
+  skos:broader mi:Cat_4_C3 ;
+  mi:inCategory mi:Cat_4_C3 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_4_C3 .
+
+mi:Exp_4_C3_0_5 a mi:Expectation ;
+  mi:expectationCode "C3.0.5" ;
+  mi:fullCode "4-C3.0.5" ;
+  mi:officialText "Give examples of how the system of checks and balances limits the power of the federal government." ;
+  skos:prefLabel "Give Examples of How the System of Checks and Balances Limits the Power of the..." ;
+  skos:broader mi:Cat_4_C3 ;
+  mi:inCategory mi:Cat_4_C3 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_4_C3_0_5_1 ,
+    mi:Example_exp_4_C3_0_5_2 ,
+    mi:Example_exp_4_C3_0_5_3 ;
+  mi:isExpectationOf mi:Cat_4_C3 .
+
+mi:Exp_4_C3_0_6 a mi:Expectation ;
+  mi:expectationCode "C3.0.6" ;
+  mi:fullCode "4-C3.0.6" ;
+  mi:officialText "Describe how the President, members of the Congress, and justices of the Supreme Court come to power." ;
+  skos:prefLabel "The President, Members of the Congress, and Justices of the Supreme Court Come to Power" ;
+  skos:broader mi:Cat_4_C3 ;
+  mi:inCategory mi:Cat_4_C3 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_4_C3_0_6_1 ,
+    mi:Example_exp_4_C3_0_6_2 ;
+  mi:isExpectationOf mi:Cat_4_C3 .
+
+mi:Exp_4_C3_0_7 a mi:Expectation ;
+  mi:expectationCode "C3.0.7" ;
+  mi:fullCode "4-C3.0.7" ;
+  mi:officialText "Explain how the federal government uses taxing and spending to serve the purposes of government." ;
+  skos:prefLabel "The Federal Government Uses Taxing and Spending to Serve the Purposes of Government" ;
+  skos:broader mi:Cat_4_C3 ;
+  mi:inCategory mi:Cat_4_C3 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_4_C3 .
+
+mi:Exp_4_C5_0_1 a mi:Expectation ;
+  mi:expectationCode "C5.0.1" ;
+  mi:fullCode "4-C5.0.1" ;
+  mi:officialText "Explain responsibilities of citizenship." ;
+  skos:prefLabel "Responsibilities of Citizenship" ;
+  skos:broader mi:Cat_4_C5 ;
+  mi:inCategory mi:Cat_4_C5 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_4_C5_0_1_1 ,
+    mi:Example_exp_4_C5_0_1_2 ,
+    mi:Example_exp_4_C5_0_1_3 ,
+    mi:Example_exp_4_C5_0_1_4 ,
+    mi:Example_exp_4_C5_0_1_5 ,
+    mi:Example_exp_4_C5_0_1_6 ,
+    mi:Example_exp_4_C5_0_1_7 ;
+  mi:isExpectationOf mi:Cat_4_C5 .
+
+mi:Exp_4_C5_0_2 a mi:Expectation ;
+  mi:expectationCode "C5.0.2" ;
+  mi:fullCode "4-C5.0.2" ;
+  mi:officialText "Describe the relationship between rights and responsibilities of citizenship." ;
+  skos:prefLabel "Relationship between Rights and Responsibilities of Citizenship" ;
+  skos:broader mi:Cat_4_C5 ;
+  mi:inCategory mi:Cat_4_C5 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_4_C5 .
+
+mi:Exp_4_C5_0_3 a mi:Expectation ;
+  mi:expectationCode "C5.0.3" ;
+  mi:fullCode "4-C5.0.3" ;
+  mi:officialText "Explain why rights have limits." ;
+  skos:prefLabel "Why Rights Have Limits" ;
+  skos:broader mi:Cat_4_C5 ;
+  mi:inCategory mi:Cat_4_C5 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_4_C5 .
+
+mi:Exp_4_C5_0_4 a mi:Expectation ;
+  mi:expectationCode "C5.0.4" ;
+  mi:fullCode "4-C5.0.4" ;
+  mi:officialText "Describe ways citizens can work together to promote the values and principles of American democracy." ;
+  skos:prefLabel "Ways Citizens Can Work Together to Promote the Values and Principles of American Democracy" ;
+  skos:broader mi:Cat_4_C5 ;
+  mi:inCategory mi:Cat_4_C5 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_4_C5 .
+
+mi:Exp_4_E1_0_1 a mi:Expectation ;
+  mi:expectationCode "E1.0.1" ;
+  mi:fullCode "4-E1.0.1" ;
+  mi:officialText "Identify questions economists ask in examining the United States." ;
+  skos:prefLabel "Questions Economists Ask in Examining the United States" ;
+  skos:broader mi:Cat_4_E1 ;
+  mi:inCategory mi:Cat_4_E1 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExample
+    mi:Example_exp_4_E1_0_1_1 ,
+    mi:Example_exp_4_E1_0_1_2 ,
+    mi:Example_exp_4_E1_0_1_3 ,
+    mi:Example_exp_4_E1_0_1_4 ,
+    mi:Example_exp_4_E1_0_1_5 ;
+  mi:isExpectationOf mi:Cat_4_E1 .
+
+mi:Exp_4_E1_0_2 a mi:Expectation ;
+  mi:expectationCode "E1.0.2" ;
+  mi:fullCode "4-E1.0.2" ;
+  mi:officialText "Describe some characteristics of a market economy." ;
+  skos:prefLabel "Some Characteristics of a Market Economy" ;
+  skos:broader mi:Cat_4_E1 ;
+  mi:inCategory mi:Cat_4_E1 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExample
+    mi:Example_exp_4_E1_0_2_1 ,
+    mi:Example_exp_4_E1_0_2_2 ,
+    mi:Example_exp_4_E1_0_2_3 ,
+    mi:Example_exp_4_E1_0_2_4 ,
+    mi:Example_exp_4_E1_0_2_5 ,
+    mi:Example_exp_4_E1_0_2_6 ;
+  mi:isExpectationOf mi:Cat_4_E1 .
+
+mi:Exp_4_E1_0_3 a mi:Expectation ;
+  mi:expectationCode "E1.0.3" ;
+  mi:fullCode "4-E1.0.3" ;
+  mi:officialText "Describe how positive and negative incentives influence behavior in a market economy." ;
+  skos:prefLabel "Positive and Negative Incentives Influence Behavior in a Market Economy" ;
+  skos:broader mi:Cat_4_E1 ;
+  mi:inCategory mi:Cat_4_E1 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_4_E1 .
+
+mi:Exp_4_E1_0_4 a mi:Expectation ;
+  mi:expectationCode "E1.0.4" ;
+  mi:fullCode "4-E1.0.4" ;
+  mi:officialText "Explain how price affects decisions about purchasing goods and services (substitute goods)." ;
+  skos:prefLabel "Price Affects Decisions about Purchasing Goods and Services" ;
+  skos:broader mi:Cat_4_E1 ;
+  mi:inCategory mi:Cat_4_E1 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_4_E1 .
+
+mi:Exp_4_E1_0_5 a mi:Expectation ;
+  mi:expectationCode "E1.0.5" ;
+  mi:fullCode "4-E1.0.5" ;
+  mi:officialText "Explain how specialization and division of labor increase productivity. (H)" ;
+  skos:prefLabel "Specialization and Division of Labor Increase Productivity" ;
+  skos:broader mi:Cat_4_E1 ;
+  mi:inCategory mi:Cat_4_E1 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExample
+    mi:Example_exp_4_E1_0_5_1 ;
+  mi:isExpectationOf mi:Cat_4_E1 .
+
+mi:Exp_4_E1_0_6 a mi:Expectation ;
+  mi:expectationCode "E1.0.6" ;
+  mi:fullCode "4-E1.0.6" ;
+  mi:officialText "Explain how competition among buyers results in higher prices and competition among sellers results in lower prices." ;
+  skos:prefLabel "Competition Among Buyers Results in Higher Prices and Competition Among Sellers Results in Lower Prices" ;
+  skos:broader mi:Cat_4_E1 ;
+  mi:inCategory mi:Cat_4_E1 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExample
+    mi:Example_exp_4_E1_0_6_1 ,
+    mi:Example_exp_4_E1_0_6_2 ;
+  mi:isExpectationOf mi:Cat_4_E1 .
+
+mi:Exp_4_E1_0_7 a mi:Expectation ;
+  mi:expectationCode "E1.0.7" ;
+  mi:fullCode "4-E1.0.7" ;
+  mi:officialText "Demonstrate the circular flow model by engaging in a market simulation, which includes households and businesses and depicts the interactions among them." ;
+  skos:prefLabel "Demonstrate the Circular Flow Model" ;
+  skos:broader mi:Cat_4_E1 ;
+  mi:inCategory mi:Cat_4_E1 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_4_E1 .
+
+mi:Exp_4_E1_0_8 a mi:Expectation ;
+  mi:expectationCode "E1.0.8" ;
+  mi:fullCode "4-E1.0.8" ;
+  mi:officialText "Explain why public goods are not privately owned. (H)" ;
+  skos:prefLabel "Why Public Goods Are Not Privately Owned" ;
+  skos:broader mi:Cat_4_E1 ;
+  mi:inCategory mi:Cat_4_E1 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExample
+    mi:Example_exp_4_E1_0_8_1 ,
+    mi:Example_exp_4_E1_0_8_2 ,
+    mi:Example_exp_4_E1_0_8_3 ,
+    mi:Example_exp_4_E1_0_8_4 ;
+  mi:isExpectationOf mi:Cat_4_E1 .
+
+mi:Exp_4_E2_0_1 a mi:Expectation ;
+  mi:expectationCode "E2.0.1" ;
+  mi:fullCode "4-E2.0.1" ;
+  mi:officialText "Explain how changes in the United States economy impact levels of employment and unemployment. (H)" ;
+  skos:prefLabel "Changes in the United States Economy Impact Levels of Employment and Unemployment" ;
+  skos:broader mi:Cat_4_E2 ;
+  mi:inCategory mi:Cat_4_E2 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExample
+    mi:Example_exp_4_E2_0_1_1 ,
+    mi:Example_exp_4_E2_0_1_2 ,
+    mi:Example_exp_4_E2_0_1_3 ;
+  mi:isExpectationOf mi:Cat_4_E2 .
+
+mi:Exp_4_E3_0_1 a mi:Expectation ;
+  mi:expectationCode "E3.0.1" ;
+  mi:fullCode "4-E3.0.1" ;
+  mi:officialText "Describe how global competition affects the national economy." ;
+  skos:prefLabel "Global Competition Affects the National Economy" ;
+  skos:broader mi:Cat_4_E3 ;
+  mi:inCategory mi:Cat_4_E3 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExample
+    mi:Example_exp_4_E3_0_1_1 ,
+    mi:Example_exp_4_E3_0_1_2 ,
+    mi:Example_exp_4_E3_0_1_3 ,
+    mi:Example_exp_4_E3_0_1_4 ;
+  mi:isExpectationOf mi:Cat_4_E3 .
+
+mi:Exp_4_G1_0_1 a mi:Expectation ;
+  mi:expectationCode "G1.0.1" ;
+  mi:fullCode "4-G1.0.1" ;
+  mi:officialText "Identify questions geographers ask in examining the United States." ;
+  skos:prefLabel "Questions Geographers Ask in Examining the United States" ;
+  skos:broader mi:Cat_4_G1 ;
+  mi:inCategory mi:Cat_4_G1 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:hasExample
+    mi:Example_exp_4_G1_0_1_1 ;
+  mi:isExpectationOf mi:Cat_4_G1 .
+
+mi:Exp_4_G1_0_2 a mi:Expectation ;
+  mi:expectationCode "G1.0.2" ;
+  mi:fullCode "4-G1.0.2" ;
+  mi:officialText "Use cardinal and intermediate directions to describe the relative location of significant places in the United States." ;
+  skos:prefLabel "Cardinal and Intermediate Directions to Describe the Relative Location of Significant Places in the United..." ;
+  skos:broader mi:Cat_4_G1 ;
+  mi:inCategory mi:Cat_4_G1 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:isExpectationOf mi:Cat_4_G1 .
+
+mi:Exp_4_G1_0_3 a mi:Expectation ;
+  mi:expectationCode "G1.0.3" ;
+  mi:fullCode "4-G1.0.3" ;
+  mi:officialText "Identify and describe the characteristics and purposes of a variety of geographic tools and technologies." ;
+  skos:prefLabel "And Describe the Characteristics and Purposes of a Variety of Geographic Tools and Technologies" ;
+  skos:broader mi:Cat_4_G1 ;
+  mi:inCategory mi:Cat_4_G1 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:hasExample
+    mi:Example_exp_4_G1_0_3_1 ,
+    mi:Example_exp_4_G1_0_3_2 ,
+    mi:Example_exp_4_G1_0_3_3 ,
+    mi:Example_exp_4_G1_0_3_4 ,
+    mi:Example_exp_4_G1_0_3_5 ,
+    mi:Example_exp_4_G1_0_3_6 ;
+  mi:isExpectationOf mi:Cat_4_G1 .
+
+mi:Exp_4_G1_0_4 a mi:Expectation ;
+  mi:expectationCode "G1.0.4" ;
+  mi:fullCode "4-G1.0.4" ;
+  mi:officialText "Use geographic tools and technologies, stories, songs, and pictures to answer geographic questions about the United States." ;
+  skos:prefLabel "Geographic Tools and Technologies, Stories, Songs, and Pictures to Answer Geographic Questions about the United..." ;
+  skos:broader mi:Cat_4_G1 ;
+  mi:inCategory mi:Cat_4_G1 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:isExpectationOf mi:Cat_4_G1 .
+
+mi:Exp_4_G1_0_5 a mi:Expectation ;
+  mi:expectationCode "G1.0.5" ;
+  mi:fullCode "4-G1.0.5" ;
+  mi:officialText "Use maps to describe elevation, climate, and patterns of population density in the United States." ;
+  skos:prefLabel "Maps to Describe Elevation, Climate, and Patterns of Population Density in the United States" ;
+  skos:broader mi:Cat_4_G1 ;
+  mi:inCategory mi:Cat_4_G1 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:isExpectationOf mi:Cat_4_G1 .
+
+mi:Exp_4_G2_0_1 a mi:Expectation ;
+  mi:expectationCode "G2.0.1" ;
+  mi:fullCode "4-G2.0.1" ;
+  mi:officialText "Describe ways in which the United States can be divided into different regions." ;
+  skos:prefLabel "Ways" ;
+  skos:broader mi:Cat_4_G2 ;
+  mi:inCategory mi:Cat_4_G2 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:hasExample
+    mi:Example_exp_4_G2_0_1_1 ,
+    mi:Example_exp_4_G2_0_1_2 ,
+    mi:Example_exp_4_G2_0_1_3 ,
+    mi:Example_exp_4_G2_0_1_4 ;
+  mi:isExpectationOf mi:Cat_4_G2 .
+
+mi:Exp_4_G2_0_2 a mi:Expectation ;
+  mi:expectationCode "G2.0.2" ;
+  mi:fullCode "4-G2.0.2" ;
+  mi:officialText "Compare human and physical characteristics of a region to which Michigan belongs with those of another region in the United States." ;
+  skos:prefLabel "Human and Physical Characteristics of a Region to Which Michigan Belongs" ;
+  skos:broader mi:Cat_4_G2 ;
+  mi:inCategory mi:Cat_4_G2 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:hasExample
+    mi:Example_exp_4_G2_0_2_1 ,
+    mi:Example_exp_4_G2_0_2_2 ;
+  mi:isExpectationOf mi:Cat_4_G2 .
+
+mi:Exp_4_G4_0_1 a mi:Expectation ;
+  mi:expectationCode "G4.0.1" ;
+  mi:fullCode "4-G4.0.1" ;
+  mi:officialText "Use a case study or story about migration within or to the United States to identify push and pull factors (why they left, why they came) that influenced the migration. (H)" ;
+  skos:prefLabel "A Case Study or Story about Migration Within or to the United States to Identify..." ;
+  skos:broader mi:Cat_4_G4 ;
+  mi:inCategory mi:Cat_4_G4 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:isExpectationOf mi:Cat_4_G4 .
+
+mi:Exp_4_G4_0_2 a mi:Expectation ;
+  mi:expectationCode "G4.0.2" ;
+  mi:fullCode "4-G4.0.2" ;
+  mi:officialText "Describe the impact of immigration to the United States on the cultural development of different places or regions of the United States. (H)" ;
+  skos:prefLabel "Impact of Immigration to the United States on the Cultural Development of Different Places or..." ;
+  skos:broader mi:Cat_4_G4 ;
+  mi:inCategory mi:Cat_4_G4 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:hasExample
+    mi:Example_exp_4_G4_0_2_1 ,
+    mi:Example_exp_4_G4_0_2_2 ,
+    mi:Example_exp_4_G4_0_2_3 ;
+  mi:isExpectationOf mi:Cat_4_G4 .
+
+mi:Exp_4_G5_0_1 a mi:Expectation ;
+  mi:expectationCode "G5.0.1" ;
+  mi:fullCode "4-G5.0.1" ;
+  mi:officialText "Assess the positive and negative effects of human activities on the physical environment of the United States." ;
+  skos:prefLabel "Positive and Negative Effects of Human Activities on the Physical Environment of the United States" ;
+  skos:broader mi:Cat_4_G5 ;
+  mi:inCategory mi:Cat_4_G5 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:isExpectationOf mi:Cat_4_G5 .
+
+mi:Exp_4_H3_0_1 a mi:Expectation ;
+  mi:expectationCode "H3.0.1" ;
+  mi:fullCode "4-H3.0.1" ;
+  mi:officialText "Use historical inquiry questions to investigate the development of Michigan's major economic activities (agriculture, mining, manufacturing, lumbering, tourism, technology, and research) from statehood to present." ;
+  skos:prefLabel "Historical Inquiry Questions to Investigate the Development of Michigan's Major Economic Activities from Statehood to..." ;
+  skos:broader mi:Cat_4_H3 ;
+  mi:inCategory mi:Cat_4_H3 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_H ;
+  mi:hasExample
+    mi:Example_exp_4_H3_0_1_1 ,
+    mi:Example_exp_4_H3_0_1_2 ,
+    mi:Example_exp_4_H3_0_1_3 ,
+    mi:Example_exp_4_H3_0_1_4 ,
+    mi:Example_exp_4_H3_0_1_5 ,
+    mi:Example_exp_4_H3_0_1_6 ;
+  mi:isExpectationOf mi:Cat_4_H3 .
+
+mi:Exp_4_H3_0_2 a mi:Expectation ;
+  mi:expectationCode "H3.0.2" ;
+  mi:fullCode "4-H3.0.2" ;
+  mi:officialText "Use primary and secondary sources to explain how migration and immigration affected and continue to affect the growth of Michigan. (G)" ;
+  skos:prefLabel "Primary and Secondary Sources to Explain How Migration and Immigration Affected and Continue to Affect..." ;
+  skos:broader mi:Cat_4_H3 ;
+  mi:inCategory mi:Cat_4_H3 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_H ;
+  mi:isExpectationOf mi:Cat_4_H3 .
+
+mi:Exp_4_H3_0_3 a mi:Expectation ;
+  mi:expectationCode "H3.0.3" ;
+  mi:fullCode "4-H3.0.3" ;
+  mi:officialText "Describe how the relationship between the location of natural resources and the location of industries (after 1837) affected and continues to affect the location and growth of Michigan cities. (G, E)" ;
+  skos:prefLabel "The Relationship between the Location of Natural Resources and the Location of Industries Affected and..." ;
+  skos:broader mi:Cat_4_H3 ;
+  mi:inCategory mi:Cat_4_H3 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_H ;
+  mi:isExpectationOf mi:Cat_4_H3 .
+
+mi:Exp_4_H3_0_4 a mi:Expectation ;
+  mi:expectationCode "H3.0.4" ;
+  mi:fullCode "4-H3.0.4" ;
+  mi:officialText "Draw upon stories, photos, artifacts, and other primary sources to compare the life of people in towns and cities in Michigan and in the Great Lakes region during a variety of time periods from 1837 to the present. (G)" ;
+  skos:prefLabel "The Life of People in Towns and Cities in Michigan and in the Great Lakes..." ;
+  skos:broader mi:Cat_4_H3 ;
+  mi:inCategory mi:Cat_4_H3 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_H ;
+  mi:hasExample
+    mi:Example_exp_4_H3_0_4_1 ,
+    mi:Example_exp_4_H3_0_4_2 ,
+    mi:Example_exp_4_H3_0_4_3 ;
+  mi:isExpectationOf mi:Cat_4_H3 .
+
+mi:Exp_4_H3_0_5 a mi:Expectation ;
+  mi:expectationCode "H3.0.5" ;
+  mi:fullCode "4-H3.0.5" ;
+  mi:officialText "Use visual data and informational text or primary accounts to compare a major Michigan economic activity today with that same or a related activity in the past. (E)" ;
+  skos:prefLabel "Visual Data and Informational Text or Primary Accounts to Compare a Major Michigan Economic Activity..." ;
+  skos:broader mi:Cat_4_H3 ;
+  mi:inCategory mi:Cat_4_H3 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_H ;
+  mi:isExpectationOf mi:Cat_4_H3 .
+
+mi:Exp_4_H3_0_6 a mi:Expectation ;
+  mi:expectationCode "H3.0.6" ;
+  mi:fullCode "4-H3.0.6" ;
+  mi:officialText "Use a variety of primary and secondary sources to construct a historical narrative about the beginnings of the automobile industry and the labor movement in Michigan. (G, E)" ;
+  skos:prefLabel "A Variety of Primary and Secondary Sources to Construct a Historical Narrative about the Beginnings..." ;
+  skos:broader mi:Cat_4_H3 ;
+  mi:inCategory mi:Cat_4_H3 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_H ;
+  mi:isExpectationOf mi:Cat_4_H3 .
+
+mi:Exp_4_H3_0_7 a mi:Expectation ;
+  mi:expectationCode "H3.0.7" ;
+  mi:fullCode "4-H3.0.7" ;
+  mi:officialText "Use case studies or stories to describe the ideas and actions of individuals involved in the Underground Railroad in Michigan and in the Great Lakes region. (See 8-U4.2.2; 8-U4.3.2; 8-U5.1.5; USHG 7.2.4) (G, C, E)" ;
+  skos:prefLabel "Case Studies or Stories to Describe the Ideas and Actions of Individuals Involved in the..." ;
+  skos:broader mi:Cat_4_H3 ;
+  mi:inCategory mi:Cat_4_H3 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_H ;
+  mi:isExpectationOf mi:Cat_4_H3 .
+
+mi:Exp_4_H3_0_8 a mi:Expectation ;
+  mi:expectationCode "H3.0.8" ;
+  mi:fullCode "4-H3.0.8" ;
+  mi:officialText "Describe past and current threats to Michigan's natural resources; describe how Michigan worked in the past and continues to work today to protect its natural resources. (G, C, E)" ;
+  skos:prefLabel "Past and Current Threats to Michigan's Natural Resources; Describe How Michigan Worked in the Past..." ;
+  skos:broader mi:Cat_4_H3 ;
+  mi:inCategory mi:Cat_4_H3 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_H ;
+  mi:isExpectationOf mi:Cat_4_H3 .
+
+mi:Exp_4_H3_0_9 a mi:Expectation ;
+  mi:expectationCode "H3.0.9" ;
+  mi:fullCode "4-H3.0.9" ;
+  mi:officialText "Create timelines (using decades after 1930) to sequence and describe important events in Michigan history; annotate with connections to the past and impact on the future." ;
+  skos:prefLabel "Timelines to Sequence and Describe Important Events in Michigan History; Annotate" ;
+  skos:broader mi:Cat_4_H3 ;
+  mi:inCategory mi:Cat_4_H3 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_H ;
+  mi:isExpectationOf mi:Cat_4_H3 .
+
+mi:Exp_4_P3_1_1 a mi:Expectation ;
+  mi:expectationCode "P3.1.1" ;
+  mi:fullCode "4-P3.1.1" ;
+  mi:officialText "Identify public issues in the United States that influence the daily lives of its citizens." ;
+  skos:prefLabel "Public Issues in the United States That Influence the Daily Lives of Its Citizens" ;
+  skos:broader mi:Cat_4_P3_1 ;
+  mi:inCategory mi:Cat_4_P3_1 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_P ;
+  mi:isExpectationOf mi:Cat_4_P3_1 .
+
+mi:Exp_4_P3_1_2 a mi:Expectation ;
+  mi:expectationCode "P3.1.2" ;
+  mi:fullCode "4-P3.1.2" ;
+  mi:officialText "Use graphic data and other sources to analyze information about a public issue in the United States and evaluate alternative resolutions." ;
+  skos:prefLabel "Graphic Data and Other Sources to Analyze Information about a Public Issue in the United..." ;
+  skos:broader mi:Cat_4_P3_1 ;
+  mi:inCategory mi:Cat_4_P3_1 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_P ;
+  mi:isExpectationOf mi:Cat_4_P3_1 .
+
+mi:Exp_4_P3_1_3 a mi:Expectation ;
+  mi:expectationCode "P3.1.3" ;
+  mi:fullCode "4-P3.1.3" ;
+  mi:officialText "Give examples of how conflicts over core democratic values lead people to differ on resolutions to a public policy issue in the United States." ;
+  skos:prefLabel "Give Examples of How Conflicts over Core Democratic Values Lead People to Differ on Resolutions..." ;
+  skos:broader mi:Cat_4_P3_1 ;
+  mi:inCategory mi:Cat_4_P3_1 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_P ;
+  mi:isExpectationOf mi:Cat_4_P3_1 .
+
+mi:Exp_4_P3_3_1 a mi:Expectation ;
+  mi:expectationCode "P3.3.1" ;
+  mi:fullCode "4-P3.3.1" ;
+  mi:officialText "Compose a brief essay expressing a position on a public policy issue in the United States and justify the position with a reasoned argument." ;
+  skos:prefLabel "Compose a Brief Essay Expressing a Position on a Public Policy Issue in the United..." ;
+  skos:broader mi:Cat_4_P3_3 ;
+  mi:inCategory mi:Cat_4_P3_3 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_P ;
+  mi:isExpectationOf mi:Cat_4_P3_3 .
+
+mi:Exp_4_P4_2_1 a mi:Expectation ;
+  mi:expectationCode "P4.2.1" ;
+  mi:fullCode "4-P4.2.1" ;
+  mi:officialText "Develop and implement an action plan and know how, when, and where to address or inform others about a public issue." ;
+  skos:prefLabel "And Implement an Action Plan and Know How, When" ;
+  skos:broader mi:Cat_4_P4_2 ;
+  mi:inCategory mi:Cat_4_P4_2 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_P ;
+  mi:isExpectationOf mi:Cat_4_P4_2 .
+
+mi:Exp_4_P4_2_2 a mi:Expectation ;
+  mi:expectationCode "P4.2.2" ;
+  mi:fullCode "4-P4.2.2" ;
+  mi:officialText "Participate in projects to help or inform others." ;
+  skos:prefLabel "Participate in Projects to Help or Inform Others" ;
+  skos:broader mi:Cat_4_P4_2 ;
+  mi:inCategory mi:Cat_4_P4_2 ;
+  mi:inGrade mi:Grade_4 ;
+  mi:inDiscipline mi:Discipline_P ;
+  mi:isExpectationOf mi:Cat_4_P4_2 .
+
+#################################################################
+# Examples
+#################################################################
+mi:Example_exp_4_C1_0_1_1 a mi:Example ;
+  skos:prefLabel "What does government do?" ;
+  mi:exampleText "What does government do?" .
+
+mi:Example_exp_4_C1_0_1_2 a mi:Example ;
+  skos:prefLabel "What are the basic values and principles of American democracy?" ;
+  mi:exampleText "What are the basic values and principles of American democracy?" .
+
+mi:Example_exp_4_C1_0_1_3 a mi:Example ;
+  skos:prefLabel "What is the relationship of the United States to other nations?" ;
+  mi:exampleText "What is the relationship of the United States to other nations?" .
+
+mi:Example_exp_4_C1_0_1_4 a mi:Example ;
+  skos:prefLabel "What are the roles of the citizen in American democracy?" ;
+  mi:exampleText "What are the roles of the citizen in American democracy?" .
+
+mi:Example_exp_4_C2_0_1_1 a mi:Example ;
+  skos:prefLabel "popular sovereignty" ;
+  mi:exampleText "popular sovereignty" .
+
+mi:Example_exp_4_C2_0_1_2 a mi:Example ;
+  skos:prefLabel "rule of law" ;
+  mi:exampleText "rule of law" .
+
+mi:Example_exp_4_C2_0_1_3 a mi:Example ;
+  skos:prefLabel "checks and balances" ;
+  mi:exampleText "checks and balances" .
+
+mi:Example_exp_4_C2_0_1_4 a mi:Example ;
+  skos:prefLabel "separation of powers" ;
+  mi:exampleText "separation of powers" .
+
+mi:Example_exp_4_C2_0_1_5 a mi:Example ;
+  skos:prefLabel "individual rights" ;
+  mi:exampleText "individual rights" .
+
+mi:Example_exp_4_C2_0_2_1 a mi:Example ;
+  skos:prefLabel "freedom of religion" ;
+  mi:exampleText "freedom of religion" .
+
+mi:Example_exp_4_C2_0_2_2 a mi:Example ;
+  skos:prefLabel "freedom of expression" ;
+  mi:exampleText "freedom of expression" .
+
+mi:Example_exp_4_C2_0_2_3 a mi:Example ;
+  skos:prefLabel "freedom of press" ;
+  mi:exampleText "freedom of press" .
+
+mi:Example_exp_4_C3_0_1_1 a mi:Example ;
+  skos:prefLabel "election of public officers" ;
+  mi:exampleText "election of public officers" .
+
+mi:Example_exp_4_C3_0_1_2 a mi:Example ;
+  skos:prefLabel "separation of powers" ;
+  mi:exampleText "separation of powers" .
+
+mi:Example_exp_4_C3_0_1_3 a mi:Example ;
+  skos:prefLabel "checks and balances" ;
+  mi:exampleText "checks and balances" .
+
+mi:Example_exp_4_C3_0_1_4 a mi:Example ;
+  skos:prefLabel "Bill of Rights" ;
+  mi:exampleText "Bill of Rights" .
+
+mi:Example_exp_4_C3_0_2_1 a mi:Example ;
+  skos:prefLabel "coining of money" ;
+  mi:exampleText "coining of money" .
+
+mi:Example_exp_4_C3_0_2_2 a mi:Example ;
+  skos:prefLabel "driver's license" ;
+  mi:exampleText "driver's license" .
+
+mi:Example_exp_4_C3_0_2_3 a mi:Example ;
+  skos:prefLabel "declaring war" ;
+  mi:exampleText "declaring war" .
+
+mi:Example_exp_4_C3_0_2_4 a mi:Example ;
+  skos:prefLabel "marriage license" ;
+  mi:exampleText "marriage license" .
+
+mi:Example_exp_4_C3_0_5_1 a mi:Example ;
+  skos:prefLabel "presidential veto of legislation" ;
+  mi:exampleText "presidential veto of legislation" .
+
+mi:Example_exp_4_C3_0_5_2 a mi:Example ;
+  skos:prefLabel "courts declaring a law unconstitutional" ;
+  mi:exampleText "courts declaring a law unconstitutional" .
+
+mi:Example_exp_4_C3_0_5_3 a mi:Example ;
+  skos:prefLabel "congressional approval of judicial appointments" ;
+  mi:exampleText "congressional approval of judicial appointments" .
+
+mi:Example_exp_4_C3_0_6_1 a mi:Example ;
+  skos:prefLabel "elections" ;
+  mi:exampleText "elections" .
+
+mi:Example_exp_4_C3_0_6_2 a mi:Example ;
+  skos:prefLabel "appointments" ;
+  mi:exampleText "appointments" .
+
+mi:Example_exp_4_C5_0_1_1 a mi:Example ;
+  skos:prefLabel "initiating changes in laws or policy" ;
+  mi:exampleText "initiating changes in laws or policy" .
+
+mi:Example_exp_4_C5_0_1_2 a mi:Example ;
+  skos:prefLabel "holding public office" ;
+  mi:exampleText "holding public office" .
+
+mi:Example_exp_4_C5_0_1_3 a mi:Example ;
+  skos:prefLabel "respecting the law" ;
+  mi:exampleText "respecting the law" .
+
+mi:Example_exp_4_C5_0_1_4 a mi:Example ;
+  skos:prefLabel "being informed and attentive to public issues" ;
+  mi:exampleText "being informed and attentive to public issues" .
+
+mi:Example_exp_4_C5_0_1_5 a mi:Example ;
+  skos:prefLabel "paying taxes" ;
+  mi:exampleText "paying taxes" .
+
+mi:Example_exp_4_C5_0_1_6 a mi:Example ;
+  skos:prefLabel "registering to vote and voting knowledgeably" ;
+  mi:exampleText "registering to vote and voting knowledgeably" .
+
+mi:Example_exp_4_C5_0_1_7 a mi:Example ;
+  skos:prefLabel "serving as a juror" ;
+  mi:exampleText "serving as a juror" .
+
+mi:Example_exp_4_E1_0_1_1 a mi:Example ;
+  skos:prefLabel "What is produced?" ;
+  mi:exampleText "What is produced?" .
+
+mi:Example_exp_4_E1_0_1_2 a mi:Example ;
+  skos:prefLabel "How is it produced?" ;
+  mi:exampleText "How is it produced?" .
+
+mi:Example_exp_4_E1_0_1_3 a mi:Example ;
+  skos:prefLabel "How much is produced?" ;
+  mi:exampleText "How much is produced?" .
+
+mi:Example_exp_4_E1_0_1_4 a mi:Example ;
+  skos:prefLabel "Who gets what is produced?" ;
+  mi:exampleText "Who gets what is produced?" .
+
+mi:Example_exp_4_E1_0_1_5 a mi:Example ;
+  skos:prefLabel "What role does the government play in the economy?" ;
+  mi:exampleText "What role does the government play in the economy?" .
+
+mi:Example_exp_4_E1_0_2_1 a mi:Example ;
+  skos:prefLabel "private property rights" ;
+  mi:exampleText "private property rights" .
+
+mi:Example_exp_4_E1_0_2_2 a mi:Example ;
+  skos:prefLabel "voluntary exchange" ;
+  mi:exampleText "voluntary exchange" .
+
+mi:Example_exp_4_E1_0_2_3 a mi:Example ;
+  skos:prefLabel "competition" ;
+  mi:exampleText "competition" .
+
+mi:Example_exp_4_E1_0_2_4 a mi:Example ;
+  skos:prefLabel "consumer sovereignty" ;
+  mi:exampleText "consumer sovereignty" .
+
+mi:Example_exp_4_E1_0_2_5 a mi:Example ;
+  skos:prefLabel "incentives" ;
+  mi:exampleText "incentives" .
+
+mi:Example_exp_4_E1_0_2_6 a mi:Example ;
+  skos:prefLabel "specialization" ;
+  mi:exampleText "specialization" .
+
+mi:Example_exp_4_E1_0_5_1 a mi:Example ;
+  skos:prefLabel "assembly line" ;
+  mi:exampleText "assembly line" .
+
+mi:Example_exp_4_E1_0_6_1 a mi:Example ;
+  skos:prefLabel "supply" ;
+  mi:exampleText "supply" .
+
+mi:Example_exp_4_E1_0_6_2 a mi:Example ;
+  skos:prefLabel "demand" ;
+  mi:exampleText "demand" .
+
+mi:Example_exp_4_E1_0_8_1 a mi:Example ;
+  skos:prefLabel "libraries" ;
+  mi:exampleText "libraries" .
+
+mi:Example_exp_4_E1_0_8_2 a mi:Example ;
+  skos:prefLabel "roads" ;
+  mi:exampleText "roads" .
+
+mi:Example_exp_4_E1_0_8_3 a mi:Example ;
+  skos:prefLabel "parks" ;
+  mi:exampleText "parks" .
+
+mi:Example_exp_4_E1_0_8_4 a mi:Example ;
+  skos:prefLabel "the Mackinac Bridge" ;
+  mi:exampleText "the Mackinac Bridge" .
+
+mi:Example_exp_4_E2_0_1_1 a mi:Example ;
+  skos:prefLabel "changing demand for natural resources" ;
+  mi:exampleText "changing demand for natural resources" .
+
+mi:Example_exp_4_E2_0_1_2 a mi:Example ;
+  skos:prefLabel "changes in technology" ;
+  mi:exampleText "changes in technology" .
+
+mi:Example_exp_4_E2_0_1_3 a mi:Example ;
+  skos:prefLabel "changes in competition" ;
+  mi:exampleText "changes in competition" .
+
+mi:Example_exp_4_E3_0_1_1 a mi:Example ;
+  skos:prefLabel "outsourcing of jobs" ;
+  mi:exampleText "outsourcing of jobs" .
+
+mi:Example_exp_4_E3_0_1_2 a mi:Example ;
+  skos:prefLabel "increased supply of goods" ;
+  mi:exampleText "increased supply of goods" .
+
+mi:Example_exp_4_E3_0_1_3 a mi:Example ;
+  skos:prefLabel "opening new markets" ;
+  mi:exampleText "opening new markets" .
+
+mi:Example_exp_4_E3_0_1_4 a mi:Example ;
+  skos:prefLabel "quality controls" ;
+  mi:exampleText "quality controls" .
+
+mi:Example_exp_4_G1_0_1_1 a mi:Example ;
+  skos:prefLabel "Where is it?" ;
+  mi:exampleText "Where is it?" .
+
+mi:Example_exp_4_G1_0_1_2 a mi:Example ;
+  skos:prefLabel "What is it like there?" ;
+  mi:exampleText "What is it like there?" .
+
+mi:Example_exp_4_G1_0_1_3 a mi:Example ;
+  skos:prefLabel "How is it connected to other places?" ;
+  mi:exampleText "How is it connected to other places?" .
+
+mi:Example_exp_4_G1_0_3_1 a mi:Example ;
+  skos:prefLabel "measure distance" ;
+  mi:exampleText "measure distance" .
+
+mi:Example_exp_4_G1_0_3_2 a mi:Example ;
+  skos:prefLabel "globe" ;
+  mi:exampleText "globe" .
+
+mi:Example_exp_4_G1_0_3_3 a mi:Example ;
+  skos:prefLabel "classify a region" ;
+  mi:exampleText "classify a region" .
+
+mi:Example_exp_4_G1_0_3_4 a mi:Example ;
+  skos:prefLabel "determine relative location" ;
+  mi:exampleText "determine relative location" .
+
+mi:Example_exp_4_G1_0_3_5 a mi:Example ;
+  skos:prefLabel "map" ;
+  mi:exampleText "map" .
+
+mi:Example_exp_4_G1_0_3_6 a mi:Example ;
+  skos:prefLabel "satellite image" ;
+  mi:exampleText "satellite image" .
+
+mi:Example_exp_4_G2_0_1_1 a mi:Example ;
+  skos:prefLabel "political regions" ;
+  mi:exampleText "political regions" .
+
+mi:Example_exp_4_G2_0_1_2 a mi:Example ;
+  skos:prefLabel "economic regions" ;
+  mi:exampleText "economic regions" .
+
+mi:Example_exp_4_G2_0_1_3 a mi:Example ;
+  skos:prefLabel "landform regions" ;
+  mi:exampleText "landform regions" .
+
+mi:Example_exp_4_G2_0_1_4 a mi:Example ;
+  skos:prefLabel "vegetation regions" ;
+  mi:exampleText "vegetation regions" .
+
+mi:Example_exp_4_G2_0_2_1 a mi:Example ;
+  skos:prefLabel "Great Lakes Region" ;
+  mi:exampleText "Great Lakes Region" .
+
+mi:Example_exp_4_G2_0_2_2 a mi:Example ;
+  skos:prefLabel "Midwest" ;
+  mi:exampleText "Midwest" .
+
+mi:Example_exp_4_G4_0_2_1 a mi:Example ;
+  skos:prefLabel "forms of shelter" ;
+  mi:exampleText "forms of shelter" .
+
+mi:Example_exp_4_G4_0_2_2 a mi:Example ;
+  skos:prefLabel "language" ;
+  mi:exampleText "language" .
+
+mi:Example_exp_4_G4_0_2_3 a mi:Example ;
+  skos:prefLabel "food" ;
+  mi:exampleText "food" .
+
+mi:Example_exp_4_H3_0_1_1 a mi:Example ;
+  skos:prefLabel "What happened?" ;
+  mi:exampleText "What happened?" .
+
+mi:Example_exp_4_H3_0_1_2 a mi:Example ;
+  skos:prefLabel "When did it happen?" ;
+  mi:exampleText "When did it happen?" .
+
+mi:Example_exp_4_H3_0_1_3 a mi:Example ;
+  skos:prefLabel "Who was involved?" ;
+  mi:exampleText "Who was involved?" .
+
+mi:Example_exp_4_H3_0_1_4 a mi:Example ;
+  skos:prefLabel "How and why did it happen?" ;
+  mi:exampleText "How and why did it happen?" .
+
+mi:Example_exp_4_H3_0_1_5 a mi:Example ;
+  skos:prefLabel "How does it relate to other events or issues in the past, in the present, or in the future?" ;
+  mi:exampleText "How does it relate to other events or issues in the past, in the present, or in the future?" .
+
+mi:Example_exp_4_H3_0_1_6 a mi:Example ;
+  skos:prefLabel "What is its significance?" ;
+  mi:exampleText "What is its significance?" .
+
+mi:Example_exp_4_H3_0_4_1 a mi:Example ;
+  skos:prefLabel "1837-1900" ;
+  mi:exampleText "1837-1900" .
+
+mi:Example_exp_4_H3_0_4_2 a mi:Example ;
+  skos:prefLabel "1900-1950" ;
+  mi:exampleText "1900-1950" .
+
+mi:Example_exp_4_H3_0_4_3 a mi:Example ;
+  skos:prefLabel "1950-2000" ;
+  mi:exampleText "1950-2000" .
+
+#################################################################
+# Vertical Progressions
+#################################################################
+# Progresses To (next grades)
+mi:Exp_4_P3_1_1 mi:progressesTo mi:Exp_6_P3_1_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_P3_1_1 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_6_P3_1_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode P3.1.1 between Grade 4 and Grade 6." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_P3_1_2 mi:progressesTo mi:Exp_5_P3_1_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_P3_1_2 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_5_P3_1_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode P3.1.2 between Grade 4 and Grade 5." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_P3_1_3 mi:progressesTo mi:Exp_5_P3_1_3 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_P3_1_3 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_5_P3_1_3 ;
+  skos:note "Vertical progression inferred from shared expectationCode P3.1.3 between Grade 4 and Grade 5." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_P3_3_1 mi:progressesTo mi:Exp_5_P3_3_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_P3_3_1 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_5_P3_3_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode P3.3.1 between Grade 4 and Grade 5." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_P4_2_1 mi:progressesTo mi:Exp_5_P4_2_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_P4_2_1 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_5_P4_2_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode P4.2.1 between Grade 4 and Grade 5." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_P4_2_2 mi:progressesTo mi:Exp_5_P4_2_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_P4_2_2 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_5_P4_2_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode P4.2.2 between Grade 4 and Grade 5." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+# Progresses From (prior grades)
+mi:Exp_4_C1_0_2 mi:progressesFrom mi:Exp_2_C1_0_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_C1_0_2 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_2_C1_0_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode C1.0.2 between Grade 2 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_C1_0_3 mi:progressesFrom mi:Exp_1_C1_0_3 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_C1_0_3 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_1_C1_0_3 ;
+  skos:note "Vertical progression inferred from shared expectationCode C1.0.3 between Grade 1 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_C2_0_1 mi:progressesFrom mi:Exp_3_C2_0_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_C2_0_1 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_3_C2_0_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode C2.0.1 between Grade 3 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_C2_0_2 mi:progressesFrom mi:Exp_2_C2_0_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_C2_0_2 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_2_C2_0_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode C2.0.2 between Grade 2 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_C3_0_1 mi:progressesFrom mi:Exp_3_C3_0_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_C3_0_1 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_3_C3_0_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode C3.0.1 between Grade 3 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_C3_0_2 mi:progressesFrom mi:Exp_3_C3_0_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_C3_0_2 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_3_C3_0_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode C3.0.2 between Grade 3 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_C3_0_3 mi:progressesFrom mi:Exp_3_C3_0_3 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_C3_0_3 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_3_C3_0_3 ;
+  skos:note "Vertical progression inferred from shared expectationCode C3.0.3 between Grade 3 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_C3_0_4 mi:progressesFrom mi:Exp_3_C3_0_4 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_C3_0_4 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_3_C3_0_4 ;
+  skos:note "Vertical progression inferred from shared expectationCode C3.0.4 between Grade 3 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_C3_0_5 mi:progressesFrom mi:Exp_3_C3_0_5 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_C3_0_5 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_3_C3_0_5 ;
+  skos:note "Vertical progression inferred from shared expectationCode C3.0.5 between Grade 3 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_C5_0_1 mi:progressesFrom mi:Exp_3_C5_0_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_C5_0_1 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_3_C5_0_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode C5.0.1 between Grade 3 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_C5_0_2 mi:progressesFrom mi:Exp_2_C5_0_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_C5_0_2 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_2_C5_0_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode C5.0.2 between Grade 2 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_C5_0_3 mi:progressesFrom mi:Exp_2_C5_0_3 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_C5_0_3 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_2_C5_0_3 ;
+  skos:note "Vertical progression inferred from shared expectationCode C5.0.3 between Grade 2 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_E1_0_1 mi:progressesFrom mi:Exp_3_E1_0_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_E1_0_1 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_3_E1_0_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode E1.0.1 between Grade 3 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_E1_0_2 mi:progressesFrom mi:Exp_3_E1_0_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_E1_0_2 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_3_E1_0_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode E1.0.2 between Grade 3 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_E1_0_3 mi:progressesFrom mi:Exp_3_E1_0_3 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_E1_0_3 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_3_E1_0_3 ;
+  skos:note "Vertical progression inferred from shared expectationCode E1.0.3 between Grade 3 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_E1_0_4 mi:progressesFrom mi:Exp_3_E1_0_4 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_E1_0_4 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_3_E1_0_4 ;
+  skos:note "Vertical progression inferred from shared expectationCode E1.0.4 between Grade 3 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_E1_0_5 mi:progressesFrom mi:Exp_3_E1_0_5 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_E1_0_5 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_3_E1_0_5 ;
+  skos:note "Vertical progression inferred from shared expectationCode E1.0.5 between Grade 3 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_E1_0_6 mi:progressesFrom mi:Exp_1_E1_0_6 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_E1_0_6 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_1_E1_0_6 ;
+  skos:note "Vertical progression inferred from shared expectationCode E1.0.6 between Grade 1 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_E2_0_1 mi:progressesFrom mi:Exp_3_E2_0_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_E2_0_1 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_3_E2_0_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode E2.0.1 between Grade 3 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_E3_0_1 mi:progressesFrom mi:Exp_3_E3_0_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_E3_0_1 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_3_E3_0_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode E3.0.1 between Grade 3 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_G1_0_1 mi:progressesFrom mi:Exp_3_G1_0_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_G1_0_1 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_3_G1_0_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode G1.0.1 between Grade 3 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_G1_0_2 mi:progressesFrom mi:Exp_3_G1_0_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_G1_0_2 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_3_G1_0_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode G1.0.2 between Grade 3 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_G1_0_3 mi:progressesFrom mi:Exp_1_G1_0_3 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_G1_0_3 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_1_G1_0_3 ;
+  skos:note "Vertical progression inferred from shared expectationCode G1.0.3 between Grade 1 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_G1_0_4 mi:progressesFrom mi:Exp_1_G1_0_4 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_G1_0_4 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_1_G1_0_4 ;
+  skos:note "Vertical progression inferred from shared expectationCode G1.0.4 between Grade 1 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_G2_0_1 mi:progressesFrom mi:Exp_3_G2_0_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_G2_0_1 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_3_G2_0_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode G2.0.1 between Grade 3 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_G2_0_2 mi:progressesFrom mi:Exp_3_G2_0_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_G2_0_2 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_3_G2_0_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode G2.0.2 between Grade 3 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_G4_0_1 mi:progressesFrom mi:Exp_3_G4_0_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_G4_0_1 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_3_G4_0_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode G4.0.1 between Grade 3 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_G4_0_2 mi:progressesFrom mi:Exp_3_G4_0_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_G4_0_2 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_3_G4_0_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode G4.0.2 between Grade 3 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_G5_0_1 mi:progressesFrom mi:Exp_3_G5_0_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_G5_0_1 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_3_G5_0_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode G5.0.1 between Grade 3 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_H3_0_1 mi:progressesFrom mi:Exp_3_H3_0_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_H3_0_1 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_3_H3_0_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode H3.0.1 between Grade 3 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_H3_0_2 mi:progressesFrom mi:Exp_3_H3_0_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_H3_0_2 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_3_H3_0_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode H3.0.2 between Grade 3 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_H3_0_3 mi:progressesFrom mi:Exp_3_H3_0_3 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_H3_0_3 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_3_H3_0_3 ;
+  skos:note "Vertical progression inferred from shared expectationCode H3.0.3 between Grade 3 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_H3_0_4 mi:progressesFrom mi:Exp_3_H3_0_4 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_H3_0_4 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_3_H3_0_4 ;
+  skos:note "Vertical progression inferred from shared expectationCode H3.0.4 between Grade 3 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_H3_0_5 mi:progressesFrom mi:Exp_3_H3_0_5 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_H3_0_5 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_3_H3_0_5 ;
+  skos:note "Vertical progression inferred from shared expectationCode H3.0.5 between Grade 3 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_H3_0_6 mi:progressesFrom mi:Exp_3_H3_0_6 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_H3_0_6 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_3_H3_0_6 ;
+  skos:note "Vertical progression inferred from shared expectationCode H3.0.6 between Grade 3 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_H3_0_7 mi:progressesFrom mi:Exp_3_H3_0_7 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_H3_0_7 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_3_H3_0_7 ;
+  skos:note "Vertical progression inferred from shared expectationCode H3.0.7 between Grade 3 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_H3_0_8 mi:progressesFrom mi:Exp_3_H3_0_8 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_H3_0_8 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_3_H3_0_8 ;
+  skos:note "Vertical progression inferred from shared expectationCode H3.0.8 between Grade 3 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_H3_0_9 mi:progressesFrom mi:Exp_3_H3_0_9 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_H3_0_9 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_3_H3_0_9 ;
+  skos:note "Vertical progression inferred from shared expectationCode H3.0.9 between Grade 3 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_P3_1_1 mi:progressesFrom mi:Exp_3_P3_1_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_P3_1_1 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_3_P3_1_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode P3.1.1 between Grade 3 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_P3_1_2 mi:progressesFrom mi:Exp_3_P3_1_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_P3_1_2 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_3_P3_1_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode P3.1.2 between Grade 3 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_P3_1_3 mi:progressesFrom mi:Exp_3_P3_1_3 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_P3_1_3 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_3_P3_1_3 ;
+  skos:note "Vertical progression inferred from shared expectationCode P3.1.3 between Grade 3 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_P3_3_1 mi:progressesFrom mi:Exp_3_P3_3_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_P3_3_1 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_3_P3_3_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode P3.3.1 between Grade 3 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_P4_2_1 mi:progressesFrom mi:Exp_3_P4_2_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_P4_2_1 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_3_P4_2_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode P4.2.1 between Grade 3 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_4_P4_2_2 mi:progressesFrom mi:Exp_3_P4_2_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_4_P4_2_2 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_3_P4_2_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode P4.2.2 between Grade 3 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .

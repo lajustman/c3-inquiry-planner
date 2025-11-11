@@ -1,0 +1,252 @@
+@prefix c3:    <urn:c3:> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+<c3-revised.ttl> a owl:Ontology ;
+  rdfs:label "C3 Framework Ontology" ;
+  rdfs:comment "C3 = College, Career, and Civic Life Framework for Social Studies (NCSS). Dimensions → Domains → Strands → Indicators with grade-band pathways." ;
+  owl:imports
+    <c3-dimension1.ttl> ,
+    <c3-dimension2-core.ttl> ,
+    <c3-dimension2-civics.ttl> ,
+    <c3-dimension2-economics.ttl> ,
+    <c3-dimension2-geography.ttl> ,
+    <c3-dimension2-history.ttl> ,
+    <c3-dimension3.ttl> ,
+    <c3-dimension4.ttl> ,
+    <c3-glossary.ttl> .
+@base <file:///Users/louisjustman/Downloads/C3%20Project/Curriculum-Ontology/c3/> .
+
+#################################################################
+# Classes
+#################################################################
+
+c3:C3Framework        a owl:Class ; rdfs:label "C3 Framework" .
+c3:Dimension          a owl:Class ; rdfs:label "Dimension" .
+c3:DisciplinaryDomain a owl:Class ; rdfs:label "Disciplinary Domain" .
+c3:Strand             a owl:Class ; rdfs:label "Strand" .
+c3:Indicator          a owl:Class ; rdfs:label "Indicator" .
+c3:GradeBand          a owl:Class ; rdfs:label "Grade Band" .
+c3:Concept            a owl:Class ; rdfs:label "Concept" .
+c3:Skill              a owl:Class ; rdfs:label "Skill" .
+c3:InquiryComponent   a owl:Class ; rdfs:label "Inquiry Component" .
+c3:CompellingQuestion a owl:Class ; rdfs:subClassOf c3:InquiryComponent ; rdfs:label "Compelling Question" .
+c3:SupportingQuestion a owl:Class ; rdfs:subClassOf c3:InquiryComponent ; rdfs:label "Supporting Question" .
+c3:AssessmentTask     a owl:Class ; rdfs:label "Assessment Task" .
+c3:GlossaryTerm       a owl:Class ; rdfs:label "Glossary Term" .
+
+#################################################################
+# Object Properties
+#################################################################
+
+c3:hasDimension   a owl:ObjectProperty ; rdfs:domain c3:C3Framework ; rdfs:range c3:Dimension ; rdfs:label "has dimension" .
+c3:hasDomain      a owl:ObjectProperty ; rdfs:domain c3:Dimension ; rdfs:range c3:DisciplinaryDomain ; rdfs:label "has domain" .
+c3:hasStrand      a owl:ObjectProperty ; rdfs:domain c3:DisciplinaryDomain ; rdfs:range c3:Strand ; rdfs:label "has strand" .
+c3:hasIndicator   a owl:ObjectProperty ; rdfs:domain c3:DisciplinaryDomain ; rdfs:range c3:Indicator ; rdfs:label "has indicator" .
+
+c3:inStrand       a owl:ObjectProperty ; rdfs:domain c3:Indicator ; rdfs:range c3:Strand ; rdfs:label "in strand" .
+c3:inDimension    a owl:ObjectProperty ; rdfs:domain c3:Indicator ; rdfs:range c3:Dimension ; rdfs:label "in dimension" .
+
+c3:targetsGradeBand a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:domain c3:Indicator ; rdfs:range c3:GradeBand ; rdfs:label "targets grade band" .
+
+c3:addressesConcept a owl:ObjectProperty ; rdfs:domain c3:Indicator ; rdfs:range c3:Concept ; rdfs:label "addresses concept" .
+c3:requiresSkill    a owl:ObjectProperty ; rdfs:domain c3:Indicator ; rdfs:range c3:Skill ; rdfs:label "requires skill" .
+
+c3:supportsInquiry a owl:ObjectProperty ; rdfs:domain c3:Indicator ; rdfs:range c3:InquiryComponent ; rdfs:label "supports inquiry component" .
+c3:assessedBy      a owl:ObjectProperty ; rdfs:domain c3:Indicator ; rdfs:range c3:AssessmentTask ; rdfs:label "assessed by" .
+
+# Inverses
+c3:isDimensionOf           a owl:ObjectProperty ; owl:inverseOf c3:hasDimension ; rdfs:domain c3:Dimension ; rdfs:range c3:C3Framework ; rdfs:label "is dimension of" .
+c3:isDomainOf              a owl:ObjectProperty ; owl:inverseOf c3:hasDomain ; rdfs:domain c3:DisciplinaryDomain ; rdfs:range c3:Dimension ; rdfs:label "is domain of" .
+c3:isStrandOf              a owl:ObjectProperty ; owl:inverseOf c3:hasStrand ; rdfs:domain c3:Strand ; rdfs:range c3:DisciplinaryDomain ; rdfs:label "is strand of" .
+c3:isIndicatorOf           a owl:ObjectProperty ; owl:inverseOf c3:hasIndicator ; rdfs:domain c3:Indicator ; rdfs:range c3:DisciplinaryDomain ; rdfs:label "is indicator of" .
+c3:hasIndicatorInStrand    a owl:ObjectProperty ; owl:inverseOf c3:inStrand ; rdfs:domain c3:Strand ; rdfs:range c3:Indicator ; rdfs:label "has indicator in strand" .
+c3:hasIndicatorInDimension a owl:ObjectProperty ; owl:inverseOf c3:inDimension ; rdfs:domain c3:Dimension ; rdfs:range c3:Indicator ; rdfs:label "has indicator in dimension" .
+
+#################################################################
+# Datatype & Annotation Properties
+#################################################################
+
+c3:hasCode       a owl:DatatypeProperty ; rdfs:label "indicator code" ; rdfs:domain c3:Indicator ; rdfs:range xsd:string .
+c3:description   a owl:DatatypeProperty ; rdfs:label "description" ; rdfs:range xsd:string .
+
+c3:hasDefinition a owl:DatatypeProperty ; rdfs:label "definition" ; rdfs:domain c3:GlossaryTerm ; rdfs:range xsd:string .
+c3:hasExample    a owl:DatatypeProperty ; rdfs:label "example" ; rdfs:domain c3:GlossaryTerm ; rdfs:range xsd:string .
+
+c3:sourceDoc     a owl:AnnotationProperty ; rdfs:label "Source Document" .
+c3:officialText  a owl:AnnotationProperty ; rdfs:label "Official Text" .
+c3:sourcePage    a owl:AnnotationProperty ; rdfs:label "Source Page/Section" .
+c3:alignmentNote a owl:AnnotationProperty ; rdfs:label "Alignment Note" .
+c3:createdBy     a owl:AnnotationProperty ; rdfs:label "Created By" .
+c3:createdOn     a owl:AnnotationProperty ; rdfs:label "Created On" .
+c3:lastUpdated   a owl:AnnotationProperty ; rdfs:label "Last Updated" .
+c3:status        a owl:AnnotationProperty ; rdfs:label "Editorial Status" .
+
+#################################################################
+# Disjointness (hygiene) & Core Constraints
+#################################################################
+
+c3:C3Framework owl:disjointWith c3:Dimension, c3:DisciplinaryDomain, c3:Strand, c3:Indicator, c3:GradeBand, c3:Concept, c3:Skill, c3:InquiryComponent, c3:AssessmentTask, c3:GlossaryTerm .
+c3:Dimension owl:disjointWith c3:DisciplinaryDomain, c3:Strand, c3:Indicator, c3:GradeBand, c3:Concept, c3:Skill, c3:InquiryComponent, c3:AssessmentTask, c3:GlossaryTerm .
+c3:DisciplinaryDomain owl:disjointWith c3:Strand, c3:Indicator, c3:GradeBand, c3:Concept, c3:Skill, c3:InquiryComponent, c3:AssessmentTask, c3:GlossaryTerm .
+c3:Indicator owl:disjointWith c3:GradeBand, c3:Concept, c3:Skill, c3:InquiryComponent, c3:AssessmentTask, c3:GlossaryTerm .
+c3:GradeBand owl:disjointWith c3:Concept, c3:Skill, c3:InquiryComponent, c3:AssessmentTask, c3:GlossaryTerm .
+c3:Concept owl:disjointWith c3:Skill, c3:InquiryComponent, c3:AssessmentTask, c3:GlossaryTerm .
+c3:Skill owl:disjointWith c3:InquiryComponent, c3:AssessmentTask, c3:GlossaryTerm .
+c3:InquiryComponent owl:disjointWith c3:AssessmentTask, c3:GlossaryTerm .
+
+# Indicator constraints
+c3:Indicator rdfs:subClassOf
+  [ a owl:Restriction ; owl:onProperty c3:targetsGradeBand ; owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ; owl:onClass c3:GradeBand ] ,
+  [ a owl:Restriction ; owl:onProperty c3:addressesConcept ;  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ; owl:onClass c3:Concept ] ,
+  [ a owl:Restriction ; owl:onProperty c3:requiresSkill ;     owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ; owl:onClass c3:Skill ] ,
+  [ a owl:Restriction ; owl:onProperty c3:hasCode ;           owl:minCardinality "1"^^xsd:nonNegativeInteger ] ,
+  [ a owl:Restriction ; owl:onProperty c3:inStrand ;          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ; owl:onClass c3:Strand ] ,
+  [ a owl:Restriction ; owl:onProperty c3:inStrand ;          owl:allValuesFrom c3:Strand ] ,
+  [ a owl:Restriction ; owl:onProperty c3:inDimension ;       owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ; owl:onClass c3:Dimension ] ,
+  [ a owl:Restriction ; owl:onProperty c3:inDimension ;       owl:allValuesFrom c3:Dimension ] .
+
+# Domain constraints
+c3:DisciplinaryDomain rdfs:subClassOf
+  [ a owl:Restriction ; owl:onProperty c3:hasStrand ;    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ; owl:onClass c3:Strand ] ,
+  [ a owl:Restriction ; owl:onProperty c3:hasStrand ;    owl:allValuesFrom c3:Strand ] ,
+  [ a owl:Restriction ; owl:onProperty c3:hasIndicator ; owl:allValuesFrom c3:Indicator ] .
+
+#################################################################
+# Instances — Framework & Dimensions
+#################################################################
+
+c3:Framework a c3:C3Framework ; rdfs:label "C3 Framework (NCSS)" ;
+  c3:hasDimension c3:Dimension1, c3:Dimension2, c3:Dimension3, c3:Dimension4 .
+
+#################################################################
+# Grade Bands
+#################################################################
+
+c3:K_2   a c3:GradeBand ; rdfs:label "K–2" .
+c3:G3_5  a c3:GradeBand ; rdfs:label "Grades 3–5" .
+c3:G6_8  a c3:GradeBand ; rdfs:label "Grades 6–8" .
+c3:G9_12 a c3:GradeBand ; rdfs:label "Grades 9–12" .
+
+#################################################################
+# Concepts & Skills (core set)
+#################################################################
+
+# Inquiry/D1 concepts
+c3:CompellingQs      a c3:Concept ; rdfs:label "Compelling Questions" .
+c3:SupportingQs      a c3:Concept ; rdfs:label "Supporting Questions" .
+c3:DisciplinaryIdeas a c3:Concept ; rdfs:label "Disciplinary Ideas & Concepts" .
+c3:HelpfulSources    a c3:Concept ; rdfs:label "Helpful Sources for Inquiry" .
+
+# Civics
+c3:Institutions         a c3:Concept ; rdfs:label "Institutions" .
+c3:BranchesOfGovt       a c3:Concept ; rdfs:label "Branches of Government" ; skos:broader c3:Institutions .
+c3:Law                  a c3:Concept ; rdfs:label "Law" .
+c3:CivicVirtues         a c3:Concept ; rdfs:label "Civic Virtues" .
+c3:DemocraticPrinciples a c3:Concept ; rdfs:label "Democratic Principles" .
+c3:Policy               a c3:Concept ; rdfs:label "Public Policy" .
+c3:Rights               a c3:Concept ; rdfs:label "Rights" .
+c3:CivicRoles           a c3:Concept ; rdfs:label "Civic Roles & Responsibilities" ; skos:broader c3:Institutions .
+c3:CivicParticipation   a c3:Concept ; rdfs:label "Civic Participation" ; skos:related c3:CivicVirtues .
+c3:CivicCollaboration   a c3:Concept ; rdfs:label "Civic Collaboration" ; skos:related c3:CivicParticipation .
+c3:Deliberation         a c3:Concept ; rdfs:label "Deliberative Processes" ; skos:related c3:CivicParticipation .
+c3:CivicProcesses       a c3:Concept ; rdfs:label "Civic Decision-Making Procedures" ; skos:related c3:Policy .
+
+# Economics
+c3:Scarcity             a c3:Concept ; rdfs:label "Scarcity" .
+c3:Incentives           a c3:Concept ; rdfs:label "Incentives" .
+c3:Markets              a c3:Concept ; rdfs:label "Markets" .
+c3:SupplyDemand         a c3:Concept ; rdfs:label "Supply & Demand" ; skos:broader c3:Markets .
+c3:Competition          a c3:Concept ; rdfs:label "Competition" .
+c3:Money                a c3:Concept ; rdfs:label "Money" .
+c3:PriceMechanism       a c3:Concept ; rdfs:label "Prices & Exchange Mechanisms" ; skos:related c3:Markets .
+c3:GDP                  a c3:Concept ; rdfs:label "GDP & Growth" .
+c3:Inflation            a c3:Concept ; rdfs:label "Inflation" .
+c3:Unemployment         a c3:Concept ; rdfs:label "Unemployment" .
+c3:Income               a c3:Concept ; rdfs:label "Income" .
+c3:Trade                a c3:Concept ; rdfs:label "Trade" .
+c3:Externalities        a c3:Concept ; rdfs:label "Externalities" .
+c3:EconomicDecisionMaking a c3:Concept ; rdfs:label "Economic Decision-Making" .
+c3:CostsBenefits        a c3:Concept ; rdfs:label "Costs & Benefits" .
+c3:EconomicWellBeing    a c3:Concept ; rdfs:label "Economic Well-Being" .
+c3:EconomicResources    a c3:Concept ; rdfs:label "Economic Resources" .
+c3:HumanCapital         a c3:Concept ; rdfs:label "Human Capital" .
+c3:Productivity         a c3:Concept ; rdfs:label "Productivity" ; skos:related c3:HumanCapital .
+c3:ProductionCosts      a c3:Concept ; rdfs:label "Costs of Production" .
+c3:Innovation           a c3:Concept ; rdfs:label "Innovation" .
+c3:Entrepreneurship     a c3:Concept ; rdfs:label "Entrepreneurship" .
+c3:FinancialInstitutions a c3:Concept ; rdfs:label "Financial Institutions" .
+c3:InterestRates        a c3:Concept ; rdfs:label "Interest Rates" .
+c3:EconomicIndicators   a c3:Concept ; rdfs:label "Economic Indicators" .
+c3:MonetaryPolicy       a c3:Concept ; rdfs:label "Monetary Policy" ; skos:related c3:Money .
+c3:FiscalPolicy         a c3:Concept ; rdfs:label "Fiscal Policy" ; skos:related c3:Policy .
+c3:CapitalGoods         a c3:Concept ; rdfs:label "Capital Goods" ; skos:related c3:HumanCapital .
+c3:EconomicInterdependence a c3:Concept ; rdfs:label "Economic Interdependence" ; skos:related c3:Trade .
+c3:ComparativeAdvantage a c3:Concept ; rdfs:label "Comparative Advantage" ; skos:related c3:Trade .
+c3:Globalization        a c3:Concept ; rdfs:label "Economic Globalization" .
+
+# Geography
+c3:Maps                 a c3:Concept ; rdfs:label "Maps & Representations" .
+c3:SpatialPatterns      a c3:Concept ; rdfs:label "Spatial Patterns" .
+c3:HumanEnvironment    a c3:Concept ; rdfs:label "Human–Environment Interaction" .
+c3:Population           a c3:Concept ; rdfs:label "Population" .
+c3:Migration            a c3:Concept ; rdfs:label "Migration" ; skos:broader c3:Population .
+c3:Resources            a c3:Concept ; rdfs:label "Resources & Land Use" .
+c3:GlobalInterconnections a c3:Concept ; rdfs:label "Global Interconnections" .
+c3:GeospatialTools      a c3:Concept ; rdfs:label "Geospatial Tools & Technologies" ; skos:broader c3:Maps .
+c3:Regions              a c3:Concept ; rdfs:label "Regions & Regional Analysis" .
+c3:CulturalInteraction  a c3:Concept ; rdfs:label "Culture & Environment Interaction" ; skos:related c3:HumanEnvironment .
+c3:SettlementPatterns   a c3:Concept ; rdfs:label "Settlement Patterns" ; skos:related c3:Migration .
+c3:TransportationNetworks a c3:Concept ; rdfs:label "Transportation & Communication Networks" ; skos:related c3:GlobalInterconnections .
+c3:NaturalHazards       a c3:Concept ; rdfs:label "Natural & Human-Made Hazards" .
+c3:EnvironmentalChange  a c3:Concept ; rdfs:label "Environmental Change" .
+c3:EconomicActivities   a c3:Concept ; rdfs:label "Economic Activities & Land Use" ; skos:related c3:Resources .
+c3:ClimateVariability   a c3:Concept ; rdfs:label "Climate Variability" ; skos:related c3:EnvironmentalChange .
+
+# History
+c3:Chronology           a c3:Concept ; rdfs:label "Chronology" .
+c3:Context              a c3:Concept ; rdfs:label "Context" .
+c3:Perspectives         a c3:Concept ; rdfs:label "Perspectives" .
+c3:SourcesEvidence      a c3:Concept ; rdfs:label "Sources & Evidence" .
+c3:Causation            a c3:Concept ; rdfs:label "Causation" .
+c3:Argumentation        a c3:Concept ; rdfs:label "Argumentation" .
+c3:Significance         a c3:Concept ; rdfs:label "Historical Significance" .
+
+# Evidence/D3
+c3:SourceCredibility a c3:Concept ; rdfs:label "Source Credibility" .
+c3:SourceRelevance  a c3:Concept ; rdfs:label "Source Relevance" .
+c3:ClaimConcept     a c3:Concept ; rdfs:label "Claims & Counterclaims" .
+
+# D4
+c3:CommunicationModes a c3:Concept ; rdfs:label "Communication Modes & Media" .
+c3:AudiencePurpose    a c3:Concept ; rdfs:label "Audience & Purpose" .
+c3:ReasonedJudgment   a c3:Concept ; rdfs:label "Reasoned Judgment" .
+c3:FeedbackCritique   a c3:Concept ; rdfs:label "Feedback & Critique" .
+c3:CivicAction        a c3:Concept ; rdfs:label "Civic Action" .
+c3:ActionPlan         a c3:Concept ; rdfs:label "Action Planning & Reflection" .
+
+# Core skills
+c3:Identify        a c3:Skill ; rdfs:label "Identify" .
+c3:Describe        a c3:Skill ; rdfs:label "Describe" .
+c3:Explain         a c3:Skill ; rdfs:label "Explain" .
+c3:Analyze         a c3:Skill ; rdfs:label "Analyze" .
+c3:Evaluate        a c3:Skill ; rdfs:label "Evaluate" .
+c3:Synthesize      a c3:Skill ; rdfs:label "Synthesize" .
+c3:ConstructClaim  a c3:Skill ; rdfs:label "Construct Evidence-Based Claim" .
+c3:Communicate     a c3:Skill ; rdfs:label "Communicate Conclusions" .
+c3:TakeAction      a c3:Skill ; rdfs:label "Take Informed Action" .
+c3:Apply           a c3:Skill ; rdfs:label "Apply Concepts & Procedures" .
+c3:Compare         a c3:Skill ; rdfs:label "Compare & Contrast" .
+
+#################################################################
+# Assessment Tasks (examples)
+#################################################################
+
+c3:AT_D1_CompellingPoster a c3:AssessmentTask ; rdfs:label "Compelling Question Poster" .
+c3:AT_D3_SourceAudit      a c3:AssessmentTask ; rdfs:label "Source Credibility Audit" .
+c3:AT_D4_PolicyBrief      a c3:AssessmentTask ; rdfs:label "Policy Brief & Presentation" .
+
+#################################################################

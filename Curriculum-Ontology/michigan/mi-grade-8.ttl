@@ -1,0 +1,1263 @@
+@prefix mi:     <urn:mi:ss:> .
+@prefix dcterms:<http://purl.org/dc/terms/> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@base <file:///Users/louisjustman/Downloads/C3%20Project/Curriculum-Ontology/michigan/> .
+
+<mi-grade-8.ttl> a owl:Ontology ;
+  owl:versionIRI <urn:mi:ss:grade:8> ;
+  rdfs:label "Michigan Social Studies GLCE - Grade 8" ;
+  dcterms:creator "Michigan Department of Education" ;
+  dcterms:source "Michigan K-12 Social Studies Standards (Michigan Department of Education)" ;
+  owl:imports <mi-base.ttl> .
+
+mi:Grade_8 a mi:Grade ;
+  skos:prefLabel "Grade 8" ;
+  mi:hasCategory
+    mi:Cat_8_P3_1 ,
+    mi:Cat_8_P4_2 ,
+    mi:Cat_8_U3_3 ,
+    mi:Cat_8_U4_1 ,
+    mi:Cat_8_U4_2 ,
+    mi:Cat_8_U4_3 ,
+    mi:Cat_8_U5_1 ,
+    mi:Cat_8_U5_2 ,
+    mi:Cat_8_U5_3 ,
+    mi:Cat_8_U6_1 ,
+    mi:Cat_8_U6_2 ;
+  mi:isGradeOf mi:MichiganGLCEFramework ;
+  mi:gradeCode "8" ;
+  mi:gradeOrder 8 .
+
+#################################################################
+# Categories
+#################################################################
+mi:Cat_8_P3_1 a mi:StandardCategory ;
+  mi:categoryCode "P3.1" ;
+  skos:prefLabel "Identifying and Analyzing Issues, Decision Making, Persuasive Communication About a Public Issue, and Citizen Involvement" ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_P ;
+  mi:hasExpectation
+    mi:Exp_8_P3_1_1 ;
+  mi:isCategoryOf mi:Grade_8 .
+
+mi:Cat_8_P4_2 a mi:StandardCategory ;
+  mi:categoryCode "P4.2" ;
+  skos:prefLabel "Citizen Involvement" ;
+  mi:categoryDescription "Act constructively to further the public good." ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_P ;
+  mi:hasExpectation
+    mi:Exp_8_P4_2_1 ,
+    mi:Exp_8_P4_2_2 ,
+    mi:Exp_8_P4_2_3 ;
+  mi:isCategoryOf mi:Grade_8 .
+
+mi:Cat_8_U3_3 a mi:StandardCategory ;
+  mi:categoryCode "U3.3" ;
+  skos:prefLabel "Creating New Government(s) and a New Constitution" ;
+  mi:categoryDescription "Explain the challenges faced by the new nation and analyze the development of the Constitution as a new plan for governing." ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExpectation
+    mi:Exp_8_U3_3_1 ,
+    mi:Exp_8_U3_3_2 ,
+    mi:Exp_8_U3_3_3 ,
+    mi:Exp_8_U3_3_4 ,
+    mi:Exp_8_U3_3_5 ,
+    mi:Exp_8_U3_3_6 ,
+    mi:Exp_8_U3_3_7 ;
+  mi:isCategoryOf mi:Grade_8 .
+
+mi:Cat_8_U4_1 a mi:StandardCategory ;
+  mi:categoryCode "U4.1" ;
+  skos:prefLabel "Challenges to an Emerging Nation" ;
+  mi:categoryDescription "Analyze the challenges the new government faced and the role of political and social leaders in meeting these challenges." ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExpectation
+    mi:Exp_8_U4_1_1 ,
+    mi:Exp_8_U4_1_2 ,
+    mi:Exp_8_U4_1_3 ,
+    mi:Exp_8_U4_1_4 ;
+  mi:isCategoryOf mi:Grade_8 .
+
+mi:Cat_8_U4_2 a mi:StandardCategory ;
+  mi:categoryCode "U4.2" ;
+  skos:prefLabel "Regional and Economic Growth" ;
+  mi:categoryDescription "Describe and analyze the nature and impact of the territorial, demographic, and economic growth in the first three decades of the new nation using maps, charts, and other evidence." ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExpectation
+    mi:Exp_8_U4_2_1 ,
+    mi:Exp_8_U4_2_2 ,
+    mi:Exp_8_U4_2_3 ,
+    mi:Exp_8_U4_2_4 ;
+  mi:isCategoryOf mi:Grade_8 .
+
+mi:Cat_8_U4_3 a mi:StandardCategory ;
+  mi:categoryCode "U4.3" ;
+  skos:prefLabel "Reform Movements" ;
+  mi:categoryDescription "Analyze the growth of antebellum American reform movements." ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExpectation
+    mi:Exp_8_U4_3_1 ,
+    mi:Exp_8_U4_3_2 ,
+    mi:Exp_8_U4_3_3 ,
+    mi:Exp_8_U4_3_4 ,
+    mi:Exp_8_U4_3_5 ;
+  mi:isCategoryOf mi:Grade_8 .
+
+mi:Cat_8_U5_1 a mi:StandardCategory ;
+  mi:categoryCode "U5.1" ;
+  skos:prefLabel "The Coming of the Civil War" ;
+  mi:categoryDescription "Analyze and evaluate the early attempts to abolish or contain slavery and to realize the ideals of the Declaration of Independence." ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExpectation
+    mi:Exp_8_U5_1_1 ,
+    mi:Exp_8_U5_1_2 ,
+    mi:Exp_8_U5_1_3 ,
+    mi:Exp_8_U5_1_4 ,
+    mi:Exp_8_U5_1_5 ,
+    mi:Exp_8_U5_1_6 ;
+  mi:isCategoryOf mi:Grade_8 .
+
+mi:Cat_8_U5_2 a mi:StandardCategory ;
+  mi:categoryCode "U5.2" ;
+  skos:prefLabel "Civil War" ;
+  mi:categoryDescription "Evaluate the multiple causes, key events, and complex consequences of the Civil War." ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExpectation
+    mi:Exp_8_U5_2_1 ,
+    mi:Exp_8_U5_2_2 ,
+    mi:Exp_8_U5_2_3 ,
+    mi:Exp_8_U5_2_4 ,
+    mi:Exp_8_U5_2_5 ;
+  mi:isCategoryOf mi:Grade_8 .
+
+mi:Cat_8_U5_3 a mi:StandardCategory ;
+  mi:categoryCode "U5.3" ;
+  skos:prefLabel "Reconstruction Using evidence, develop an argument regarding the character and consequences of Reconstruction." ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExpectation
+    mi:Exp_8_U5_3_1 ,
+    mi:Exp_8_U5_3_2 ,
+    mi:Exp_8_U5_3_3 ,
+    mi:Exp_8_U5_3_4 ,
+    mi:Exp_8_U5_3_5 ;
+  mi:isCategoryOf mi:Grade_8 .
+
+mi:Cat_8_U6_1 a mi:StandardCategory ;
+  mi:categoryCode "U6.1" ;
+  skos:prefLabel "America in the Last Half of the 19th Century" ;
+  mi:categoryDescription "Analyze the major changes in communication, transportation, demography, and urban centers, including the location and growth of cities linked by industry and trade, in last half of the 19th century." ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_cat_8_U6_1_1 ;
+  mi:hasExpectation
+    mi:Exp_8_U6_1_1 ;
+  mi:isCategoryOf mi:Grade_8 .
+
+mi:Cat_8_U6_2 a mi:StandardCategory ;
+  mi:categoryCode "U6.2" ;
+  skos:prefLabel "Investigation Topics and Issue Analysis (P2)" ;
+  mi:categoryDescription "Use the historical perspective to investigate a significant historical topic from United States History Eras 3-6 that also has significance as an issue or topic in the United States today." ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExpectation
+    mi:Exp_8_U6_2_1 ;
+  mi:isCategoryOf mi:Grade_8 .
+
+#################################################################
+# Expectations
+#################################################################
+mi:Exp_8_P3_1_1 a mi:Expectation ;
+  mi:expectationCode "P3.1.1" ;
+  mi:fullCode "8-P3.1.1" ;
+  mi:officialText "Identify, research, analyze, discuss, and defend a position on a national public policy issue." ;
+  skos:prefLabel "Identify, Research, Analyze, Discuss, and Defend a Position on a National Public Policy Issue" ;
+  skos:broader mi:Cat_8_P3_1 ;
+  mi:inCategory mi:Cat_8_P3_1 ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_P ;
+  mi:hasExample
+    mi:Example_exp_8_P3_1_1_1 ,
+    mi:Example_exp_8_P3_1_1_2 ,
+    mi:Example_exp_8_P3_1_1_3 ,
+    mi:Example_exp_8_P3_1_1_4 ,
+    mi:Example_exp_8_P3_1_1_5 ,
+    mi:Example_exp_8_P3_1_1_6 ,
+    mi:Example_exp_8_P3_1_1_7 ,
+    mi:Example_exp_8_P3_1_1_8 ;
+  mi:isExpectationOf mi:Cat_8_P3_1 .
+
+mi:Exp_8_P4_2_1 a mi:Expectation ;
+  mi:expectationCode "P4.2.1" ;
+  mi:fullCode "8-P4.2.1" ;
+  mi:officialText "Demonstrate knowledge of how, when, and where individuals would plan and conduct activities intended to advance views in matters of public policy, report the results, and evaluate effectiveness." ;
+  skos:prefLabel "Effectiveness" ;
+  skos:broader mi:Cat_8_P4_2 ;
+  mi:inCategory mi:Cat_8_P4_2 ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_P ;
+  mi:isExpectationOf mi:Cat_8_P4_2 .
+
+mi:Exp_8_P4_2_2 a mi:Expectation ;
+  mi:expectationCode "P4.2.2" ;
+  mi:fullCode "8-P4.2.2" ;
+  mi:officialText "Engage in activities intended to contribute to solving a national or international problem studied." ;
+  skos:prefLabel "Engage in Activities Intended to Contribute to Solving a National or International Problem Studied" ;
+  skos:broader mi:Cat_8_P4_2 ;
+  mi:inCategory mi:Cat_8_P4_2 ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_P ;
+  mi:isExpectationOf mi:Cat_8_P4_2 .
+
+mi:Exp_8_P4_2_3 a mi:Expectation ;
+  mi:expectationCode "P4.2.3" ;
+  mi:fullCode "8-P4.2.3" ;
+  mi:officialText "Participate in projects to help or inform others." ;
+  skos:prefLabel "Participate in Projects to Help or Inform Others" ;
+  skos:broader mi:Cat_8_P4_2 ;
+  mi:inCategory mi:Cat_8_P4_2 ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_P ;
+  mi:hasExample
+    mi:Example_exp_8_P4_2_3_1 ;
+  mi:isExpectationOf mi:Cat_8_P4_2 .
+
+mi:Exp_8_U3_3_1 a mi:Expectation ;
+  mi:expectationCode "U3.3.1" ;
+  mi:fullCode "8-U3.3.1" ;
+  mi:officialText "Explain the reasons for the adoption and subsequent failure of the Articles of Confederation. (C2)" ;
+  skos:prefLabel "Reasons for the Adoption and Subsequent Failure of the Articles of Confederation" ;
+  skos:broader mi:Cat_8_U3_3 ;
+  mi:inCategory mi:Cat_8_U3_3 ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_8_U3_3_1_1 ,
+    mi:Example_exp_8_U3_3_1_2 ,
+    mi:Example_exp_8_U3_3_1_3 ,
+    mi:Example_exp_8_U3_3_1_4 ;
+  mi:isExpectationOf mi:Cat_8_U3_3 .
+
+mi:Exp_8_U3_3_2 a mi:Expectation ;
+  mi:expectationCode "U3.3.2" ;
+  mi:fullCode "8-U3.3.2" ;
+  mi:officialText "Identify economic and political questions facing the nation during the period of the Articles of Confederation and the opening of the Constitutional Convention. (E1.4)" ;
+  skos:prefLabel "Economic and Political Questions Facing the Nation During the Period of the Articles of Confederation..." ;
+  skos:broader mi:Cat_8_U3_3 ;
+  mi:inCategory mi:Cat_8_U3_3 ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:isExpectationOf mi:Cat_8_U3_3 .
+
+mi:Exp_8_U3_3_3 a mi:Expectation ;
+  mi:expectationCode "U3.3.3" ;
+  mi:fullCode "8-U3.3.3" ;
+  mi:officialText "Describe the major issues debated at the Constitutional Convention." ;
+  skos:prefLabel "Major Issues Debated at the Constitutional Convention" ;
+  skos:broader mi:Cat_8_U3_3 ;
+  mi:inCategory mi:Cat_8_U3_3 ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_8_U3_3_3_1 ,
+    mi:Example_exp_8_U3_3_3_2 ,
+    mi:Example_exp_8_U3_3_3_3 ,
+    mi:Example_exp_8_U3_3_3_4 ,
+    mi:Example_exp_8_U3_3_3_5 ,
+    mi:Example_exp_8_U3_3_3_6 ;
+  mi:isExpectationOf mi:Cat_8_U3_3 .
+
+mi:Exp_8_U3_3_4 a mi:Expectation ;
+  mi:expectationCode "U3.3.4" ;
+  mi:fullCode "8-U3.3.4" ;
+  mi:officialText "Explain how the new Constitution resolved or compromised the major issues facing the new nation." ;
+  skos:prefLabel "The New Constitution Resolved the Major Issues" ;
+  skos:broader mi:Cat_8_U3_3 ;
+  mi:inCategory mi:Cat_8_U3_3 ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_8_U3_3_4_1 ,
+    mi:Example_exp_8_U3_3_4_2 ,
+    mi:Example_exp_8_U3_3_4_3 ,
+    mi:Example_exp_8_U3_3_4_4 ,
+    mi:Example_exp_8_U3_3_4_5 ,
+    mi:Example_exp_8_U3_3_4_6 ;
+  mi:isExpectationOf mi:Cat_8_U3_3 .
+
+mi:Exp_8_U3_3_5 a mi:Expectation ;
+  mi:expectationCode "U3.3.5" ;
+  mi:fullCode "8-U3.3.5" ;
+  mi:officialText "Analyze the debates over the ratification of the Constitution from the perspectives of Federalists and Anti-Federalists and describe how the states ratified the Constitution." ;
+  skos:prefLabel "Debates over the Ratification of the Constitution from the Perspectives of Federalists and Anti-Federalists and..." ;
+  skos:broader mi:Cat_8_U3_3 ;
+  mi:inCategory mi:Cat_8_U3_3 ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_8_U3_3_5_1 ;
+  mi:isExpectationOf mi:Cat_8_U3_3 .
+
+mi:Exp_8_U3_3_6 a mi:Expectation ;
+  mi:expectationCode "U3.3.6" ;
+  mi:fullCode "8-U3.3.6" ;
+  mi:officialText "Explain how the Bill of Rights reflected the concept of limited government, protections of basic freedoms, and the fear of many Americans of a strong central government. (C3)" ;
+  skos:prefLabel "The Bill of Rights Reflected the Concept of Limited Government, Protections of Basic Freedoms, and..." ;
+  skos:broader mi:Cat_8_U3_3 ;
+  mi:inCategory mi:Cat_8_U3_3 ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:isExpectationOf mi:Cat_8_U3_3 .
+
+mi:Exp_8_U3_3_7 a mi:Expectation ;
+  mi:expectationCode "U3.3.7" ;
+  mi:fullCode "8-U3.3.7" ;
+  mi:officialText "Using important documents, describe the historical and philosophical origins of constitutional government in the United States using the ideas of social compact, limited government, natural rights, right of revolution, separation of powers, bicameralism, republicanism, and popular participation in government. (C2)" ;
+  skos:prefLabel "Historical and Philosophical Origins of Constitutional Government in the United States" ;
+  skos:broader mi:Cat_8_U3_3 ;
+  mi:inCategory mi:Cat_8_U3_3 ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_8_U3_3_7_1 ,
+    mi:Example_exp_8_U3_3_7_2 ,
+    mi:Example_exp_8_U3_3_7_3 ,
+    mi:Example_exp_8_U3_3_7_4 ,
+    mi:Example_exp_8_U3_3_7_5 ,
+    mi:Example_exp_8_U3_3_7_6 ;
+  mi:isExpectationOf mi:Cat_8_U3_3 .
+
+mi:Exp_8_U4_1_1 a mi:Expectation ;
+  mi:expectationCode "U4.1.1" ;
+  mi:fullCode "8-U4.1.1" ;
+  mi:officialText "Washington's Farewell - Use Washington's Farewell Address to analyze the most significant challenges the new nation faced and the extent to which subsequent Presidents heeded Washington's advice. (C4)" ;
+  skos:prefLabel "Washington's Farewell" ;
+  skos:broader mi:Cat_8_U4_1 ;
+  mi:inCategory mi:Cat_8_U4_1 ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:isExpectationOf mi:Cat_8_U4_1 .
+
+mi:Exp_8_U4_1_2 a mi:Expectation ;
+  mi:expectationCode "U4.1.2" ;
+  mi:fullCode "8-U4.1.2" ;
+  mi:officialText "Establishing America's Place in the World - Explain the changes in America's relationships with other nations by analyzing key treaties, conflicts, and diplomatic doctrines of the early republic." ;
+  skos:prefLabel "Establishing America's Place in the World" ;
+  skos:broader mi:Cat_8_U4_1 ;
+  mi:inCategory mi:Cat_8_U4_1 ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_8_U4_1_2_1 ,
+    mi:Example_exp_8_U4_1_2_2 ,
+    mi:Example_exp_8_U4_1_2_3 ,
+    mi:Example_exp_8_U4_1_2_4 ,
+    mi:Example_exp_8_U4_1_2_5 ,
+    mi:Example_exp_8_U4_1_2_6 ,
+    mi:Example_exp_8_U4_1_2_7 ,
+    mi:Example_exp_8_U4_1_2_8 ;
+  mi:isExpectationOf mi:Cat_8_U4_1 .
+
+mi:Exp_8_U4_1_3 a mi:Expectation ;
+  mi:expectationCode "U4.1.3" ;
+  mi:fullCode "8-U4.1.3" ;
+  mi:officialText "Challenge of Political Conflict - Explain how political parties emerged out of the competing ideas, experiences, and fears of Thomas Jefferson and Alexander Hamilton (and their followers), despite the worries the Founders had concerning the dangers of political division, by analyzing disagreements over • relative power of the national government and of the executive branch (C3) (National Geography Standard" ;
+  skos:prefLabel "Challenge of Political Conflict" ;
+  skos:broader mi:Cat_8_U4_1 ;
+  mi:inCategory mi:Cat_8_U4_1 ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_8_U4_1_3_1 ,
+    mi:Example_exp_8_U4_1_3_2 ,
+    mi:Example_exp_8_U4_1_3_3 ;
+  mi:isExpectationOf mi:Cat_8_U4_1 .
+
+mi:Exp_8_U4_1_4 a mi:Expectation ;
+  mi:expectationCode "U4.1.4" ;
+  mi:fullCode "8-U4.1.4" ;
+  mi:officialText "Establishing a National Judiciary and Its Power - Explain the development of the power of the Supreme Court through the doctrine of judicial review as manifested in Marbury v. Madison (1803) and the role of Chief Justice John Marshall and the Supreme Court in interpreting the power of the national government. (C3, E1.4, 2.2)" ;
+  skos:prefLabel "Establishing a National Judiciary and Its Power" ;
+  skos:broader mi:Cat_8_U4_1 ;
+  mi:inCategory mi:Cat_8_U4_1 ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_8_U4_1_4_1 ,
+    mi:Example_exp_8_U4_1_4_2 ,
+    mi:Example_exp_8_U4_1_4_3 ;
+  mi:isExpectationOf mi:Cat_8_U4_1 .
+
+mi:Exp_8_U4_2_1 a mi:Expectation ;
+  mi:expectationCode "U4.2.1" ;
+  mi:fullCode "8-U4.2.1" ;
+  mi:officialText "Comparing Northeast and the South - Compare and contrast the social and economic systems of the Northeast and the South, considering how regional geography and climate shaped key sectors." ;
+  skos:prefLabel "Comparing Northeast and the South" ;
+  skos:broader mi:Cat_8_U4_2 ;
+  mi:inCategory mi:Cat_8_U4_2 ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_8_U4_2_1_1 ;
+  mi:isExpectationOf mi:Cat_8_U4_2 .
+
+mi:Exp_8_U4_2_2 a mi:Expectation ;
+  mi:expectationCode "U4.2.2" ;
+  mi:fullCode "8-U4.2.2" ;
+  mi:officialText "The Institution of Slavery - Explain the ideology of the institution of slavery, its policies, and consequences." ;
+  skos:prefLabel "The Institution of Slavery" ;
+  skos:broader mi:Cat_8_U4_2 ;
+  mi:inCategory mi:Cat_8_U4_2 ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:isExpectationOf mi:Cat_8_U4_2 .
+
+mi:Exp_8_U4_2_3 a mi:Expectation ;
+  mi:expectationCode "U4.2.3" ;
+  mi:fullCode "8-U4.2.3" ;
+  mi:officialText "Westward Expansion - Explain the expansion, conquest, and settlement of the West through the Louisiana Purchase, the removal of American Indians (Trail of Tears) from their native lands, the growth of a system of commercial agriculture, the Mexican-American War, and the idea of Manifest Destiny." ;
+  skos:prefLabel "Westward Expansion" ;
+  skos:broader mi:Cat_8_U4_2 ;
+  mi:inCategory mi:Cat_8_U4_2 ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_8_U4_2_3_1 ;
+  mi:isExpectationOf mi:Cat_8_U4_2 .
+
+mi:Exp_8_U4_2_4 a mi:Expectation ;
+  mi:expectationCode "U4.2.4" ;
+  mi:fullCode "8-U4.2.4" ;
+  mi:officialText "Consequences of Expansion - Develop an argument based on evidence about the positive and negative consequences of territorial and economic expansion on American Indians, the institution of slavery, and the relations between free and slaveholding states." ;
+  skos:prefLabel "Consequences of Expansion" ;
+  skos:broader mi:Cat_8_U4_2 ;
+  mi:inCategory mi:Cat_8_U4_2 ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_8_U4_2_4_1 ;
+  mi:isExpectationOf mi:Cat_8_U4_2 .
+
+mi:Exp_8_U4_3_1 a mi:Expectation ;
+  mi:expectationCode "U4.3.1" ;
+  mi:fullCode "8-U4.3.1" ;
+  mi:officialText "Explain the origins of the American education system and Horace Mann's campaign for free compulsory public education. (C2)" ;
+  skos:prefLabel "Origins of the American Education System and Horace Mann's Campaign for Free Compulsory Public Education" ;
+  skos:broader mi:Cat_8_U4_3 ;
+  mi:inCategory mi:Cat_8_U4_3 ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:isExpectationOf mi:Cat_8_U4_3 .
+
+mi:Exp_8_U4_3_2 a mi:Expectation ;
+  mi:expectationCode "U4.3.2" ;
+  mi:fullCode "8-U4.3.2" ;
+  mi:officialText "Describe the formation and development of the abolitionist movement by considering the roles of key abolitionist leaders, and the response of southerners and northerners to the abolitionist movement." ;
+  skos:prefLabel "Formation and Development of the Abolitionist Movement" ;
+  skos:broader mi:Cat_8_U4_3 ;
+  mi:inCategory mi:Cat_8_U4_3 ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_8_U4_3_2_1 ,
+    mi:Example_exp_8_U4_3_2_2 ,
+    mi:Example_exp_8_U4_3_2_3 ,
+    mi:Example_exp_8_U4_3_2_4 ,
+    mi:Example_exp_8_U4_3_2_5 ;
+  mi:isExpectationOf mi:Cat_8_U4_3 .
+
+mi:Exp_8_U4_3_3 a mi:Expectation ;
+  mi:expectationCode "U4.3.3" ;
+  mi:fullCode "8-U4.3.3" ;
+  mi:officialText "Analyze the antebellum women's rights (and suffrage) movement by discussing the goals of its leaders and comparing the Seneca Falls Resolution with the Declaration of Independence. (C2)" ;
+  skos:prefLabel "Antebellum Women's Rights Movement" ;
+  skos:broader mi:Cat_8_U4_3 ;
+  mi:inCategory mi:Cat_8_U4_3 ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_8_U4_3_3_1 ;
+  mi:isExpectationOf mi:Cat_8_U4_3 .
+
+mi:Exp_8_U4_3_4 a mi:Expectation ;
+  mi:expectationCode "U4.3.4" ;
+  mi:fullCode "8-U4.3.4" ;
+  mi:officialText "Analyze the goals and effects of the antebellum temperance movement. (C2)" ;
+  skos:prefLabel "Goals and Effects of the Antebellum Temperance Movement" ;
+  skos:broader mi:Cat_8_U4_3 ;
+  mi:inCategory mi:Cat_8_U4_3 ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:isExpectationOf mi:Cat_8_U4_3 .
+
+mi:Exp_8_U4_3_5 a mi:Expectation ;
+  mi:expectationCode "U4.3.5" ;
+  mi:fullCode "8-U4.3.5" ;
+  mi:officialText "Evaluate the role of religion in shaping antebellum reform movements. (C2)" ;
+  skos:prefLabel "Role of Religion in Shaping Antebellum Reform Movements" ;
+  skos:broader mi:Cat_8_U4_3 ;
+  mi:inCategory mi:Cat_8_U4_3 ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:isExpectationOf mi:Cat_8_U4_3 .
+
+mi:Exp_8_U5_1_1 a mi:Expectation ;
+  mi:expectationCode "U5.1.1" ;
+  mi:fullCode "8-U5.1.1" ;
+  mi:officialText "Explain the differences in the lives of free blacks, free whites, and enslaved peoples during the antebellum period. (C2)" ;
+  skos:prefLabel "Differences in the Lives of Free Blacks" ;
+  skos:broader mi:Cat_8_U5_1 ;
+  mi:inCategory mi:Cat_8_U5_1 ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_8_U5_1_1_1 ,
+    mi:Example_exp_8_U5_1_1_2 ,
+    mi:Example_exp_8_U5_1_1_3 ;
+  mi:isExpectationOf mi:Cat_8_U5_1 .
+
+mi:Exp_8_U5_1_2 a mi:Expectation ;
+  mi:expectationCode "U5.1.2" ;
+  mi:fullCode "8-U5.1.2" ;
+  mi:officialText "Describe the role of the Northwest Ordinance and its effect on the banning of slavery." ;
+  skos:prefLabel "Role of the Northwest Ordinance and Its Effect on the Banning of Slavery" ;
+  skos:broader mi:Cat_8_U5_1 ;
+  mi:inCategory mi:Cat_8_U5_1 ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_8_U5_1_2_1 ;
+  mi:isExpectationOf mi:Cat_8_U5_1 .
+
+mi:Exp_8_U5_1_3 a mi:Expectation ;
+  mi:expectationCode "U5.1.3" ;
+  mi:fullCode "8-U5.1.3" ;
+  mi:officialText "Describe the competing views of Calhoun,Webster, and Clay on the nature of the union among the states. (C3)" ;
+  skos:prefLabel "Competing Views of Calhoun,webster, and Clay on the Nature of the Union Among the States" ;
+  skos:broader mi:Cat_8_U5_1 ;
+  mi:inCategory mi:Cat_8_U5_1 ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_8_U5_1_3_1 ,
+    mi:Example_exp_8_U5_1_3_2 ,
+    mi:Example_exp_8_U5_1_3_3 ,
+    mi:Example_exp_8_U5_1_3_4 ;
+  mi:isExpectationOf mi:Cat_8_U5_1 .
+
+mi:Exp_8_U5_1_4 a mi:Expectation ;
+  mi:expectationCode "U5.1.4" ;
+  mi:fullCode "8-U5.1.4" ;
+  mi:officialText "Describe how the following increased sectional tensions • the Missouri Compromise (1820) • the Wilmot Proviso (1846) • the Compromise of 1850 including the Fugitive Slave Act • the Kansas-Nebraska Act (1854) and subsequent conflict in Kansas • the Dred Scott v. Sandford decision (1857) • changes in the party system (C2; C3) (National Geography Standard" ;
+  skos:prefLabel "The Following Increased Sectional Tensions • the Missouri Compromise • the Wilmot Proviso • the..." ;
+  skos:broader mi:Cat_8_U5_1 ;
+  mi:inCategory mi:Cat_8_U5_1 ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_8_U5_1_4_1 ,
+    mi:Example_exp_8_U5_1_4_2 ;
+  mi:isExpectationOf mi:Cat_8_U5_1 .
+
+mi:Exp_8_U5_1_5 a mi:Expectation ;
+  mi:expectationCode "U5.1.5" ;
+  mi:fullCode "8-U5.1.5" ;
+  mi:officialText "Describe the resistance of enslaved people and effects of their actions before and during the Civil War. (C2)" ;
+  skos:prefLabel "Resistance of Enslaved People and Effects of Their Actions before and During the Civil War" ;
+  skos:broader mi:Cat_8_U5_1 ;
+  mi:inCategory mi:Cat_8_U5_1 ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_8_U5_1_5_1 ,
+    mi:Example_exp_8_U5_1_5_2 ,
+    mi:Example_exp_8_U5_1_5_3 ,
+    mi:Example_exp_8_U5_1_5_4 ;
+  mi:isExpectationOf mi:Cat_8_U5_1 .
+
+mi:Exp_8_U5_1_6 a mi:Expectation ;
+  mi:expectationCode "U5.1.6" ;
+  mi:fullCode "8-U5.1.6" ;
+  mi:officialText "Describe how major issues debated at the Constitutional Convention such as disagreements over the distribution of political power, rights of individuals (liberty and property), rights of states, election of the executive, and slavery help explain the Civil War." ;
+  skos:prefLabel "Major Issues Debated at the Constitutional Convention" ;
+  skos:broader mi:Cat_8_U5_1 ;
+  mi:inCategory mi:Cat_8_U5_1 ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_8_U5_1_6_1 ;
+  mi:isExpectationOf mi:Cat_8_U5_1 .
+
+mi:Exp_8_U5_2_1 a mi:Expectation ;
+  mi:expectationCode "U5.2.1" ;
+  mi:fullCode "8-U5.2.1" ;
+  mi:officialText "Explain the reasons (political, economic, and social) why Southern states seceded and explain the differences in the timing of secession in the Upper and Lower South." ;
+  skos:prefLabel "Reasons Why Southern States Seceded and Explain the Differences in the Timing of Secession in..." ;
+  skos:broader mi:Cat_8_U5_2 ;
+  mi:inCategory mi:Cat_8_U5_2 ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_8_U5_2_1_1 ;
+  mi:isExpectationOf mi:Cat_8_U5_2 .
+
+mi:Exp_8_U5_2_2 a mi:Expectation ;
+  mi:expectationCode "U5.2.2" ;
+  mi:fullCode "8-U5.2.2" ;
+  mi:officialText "Make an argument to explain the reasons why the North won the Civil War. (E1.4)" ;
+  skos:prefLabel "Reasons Why the North Won the Civil War" ;
+  skos:broader mi:Cat_8_U5_2 ;
+  mi:inCategory mi:Cat_8_U5_2 ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_8_U5_2_2_1 ,
+    mi:Example_exp_8_U5_2_2_2 ,
+    mi:Example_exp_8_U5_2_2_3 ;
+  mi:isExpectationOf mi:Cat_8_U5_2 .
+
+mi:Exp_8_U5_2_3 a mi:Expectation ;
+  mi:expectationCode "U5.2.3" ;
+  mi:fullCode "8-U5.2.3" ;
+  mi:officialText "Examine Abraham Lincoln's presidency and how his leadership, policies, and communication shaped the Union war effort. (C2)" ;
+  skos:prefLabel "Abraham Lincoln's Presidency with Respect to • His Military and Political Leadership • the Evolution..." ;
+  skos:broader mi:Cat_8_U5_2 ;
+  mi:inCategory mi:Cat_8_U5_2 ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_8_U5_2_3_1 ,
+    mi:Example_exp_8_U5_2_3_2 ,
+    mi:Example_exp_8_U5_2_3_3 ;
+  mi:isExpectationOf mi:Cat_8_U5_2 .
+
+mi:Exp_8_U5_2_4 a mi:Expectation ;
+  mi:expectationCode "U5.2.4" ;
+  mi:fullCode "8-U5.2.4" ;
+  mi:officialText "Describe the role of African Americans in the Civil War." ;
+  skos:prefLabel "Role of African Americans in the War" ;
+  skos:broader mi:Cat_8_U5_2 ;
+  mi:inCategory mi:Cat_8_U5_2 ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_8_U5_2_4_1 ,
+    mi:Example_exp_8_U5_2_4_2 ;
+  mi:isExpectationOf mi:Cat_8_U5_2 .
+
+mi:Exp_8_U5_2_5 a mi:Expectation ;
+  mi:expectationCode "U5.2.5" ;
+  mi:fullCode "8-U5.2.5" ;
+  mi:officialText "Construct generalizations about how the war affected combatants, civilians (including the role of women), the physical environment, and the future of warfare, including technological developments." ;
+  skos:prefLabel "Generalizations about How the War Affected Combatants, Civilians , the Physical Environment, and the Future..." ;
+  skos:broader mi:Cat_8_U5_2 ;
+  mi:inCategory mi:Cat_8_U5_2 ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_8_U5_2_5_1 ;
+  mi:isExpectationOf mi:Cat_8_U5_2 .
+
+mi:Exp_8_U5_3_1 a mi:Expectation ;
+  mi:expectationCode "U5.3.1" ;
+  mi:fullCode "8-U5.3.1" ;
+  mi:officialText "Describe the different positions concerning the reconstruction of Southern society and the nation." ;
+  skos:prefLabel "Different Positions Concerning the Reconstruction of Southern Society and the Nation" ;
+  skos:broader mi:Cat_8_U5_3 ;
+  mi:inCategory mi:Cat_8_U5_3 ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_8_U5_3_1_1 ,
+    mi:Example_exp_8_U5_3_1_2 ,
+    mi:Example_exp_8_U5_3_1_3 ,
+    mi:Example_exp_8_U5_3_1_4 ;
+  mi:isExpectationOf mi:Cat_8_U5_3 .
+
+mi:Exp_8_U5_3_2 a mi:Expectation ;
+  mi:expectationCode "U5.3.2" ;
+  mi:fullCode "8-U5.3.2" ;
+  mi:officialText "Describe early responses to the end of the Civil War." ;
+  skos:prefLabel "Early Responses to the End of the Civil War" ;
+  skos:broader mi:Cat_8_U5_3 ;
+  mi:inCategory mi:Cat_8_U5_3 ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_8_U5_3_2_1 ,
+    mi:Example_exp_8_U5_3_2_2 ;
+  mi:isExpectationOf mi:Cat_8_U5_3 .
+
+mi:Exp_8_U5_3_3 a mi:Expectation ;
+  mi:expectationCode "U5.3.3" ;
+  mi:fullCode "8-U5.3.3" ;
+  mi:officialText "Describe the new role of African Americans in local, state and federal government in the years after the Civil War and the resistance of Southern whites to this change, including the Ku Klux Klan." ;
+  skos:prefLabel "New Role of African Americans in Local, State and Federal Government in the Years after..." ;
+  skos:broader mi:Cat_8_U5_3 ;
+  mi:inCategory mi:Cat_8_U5_3 ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_8_U5_3_3_1 ;
+  mi:isExpectationOf mi:Cat_8_U5_3 .
+
+mi:Exp_8_U5_3_4 a mi:Expectation ;
+  mi:expectationCode "U5.3.4" ;
+  mi:fullCode "8-U5.3.4" ;
+  mi:officialText "Analyze the intent and the effect of the Thirteenth, Fourteenth, and Fifteenth Amendments to the Constitution." ;
+  skos:prefLabel "Intent and the Effect of the Thirteenth, Fourteenth, and Fifteenth Amendments to the Constitution" ;
+  skos:broader mi:Cat_8_U5_3 ;
+  mi:inCategory mi:Cat_8_U5_3 ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:isExpectationOf mi:Cat_8_U5_3 .
+
+mi:Exp_8_U5_3_5 a mi:Expectation ;
+  mi:expectationCode "U5.3.5" ;
+  mi:fullCode "8-U5.3.5" ;
+  mi:officialText "Explain the decision to remove Union troops in 1877 and describe its impact on Americans." ;
+  skos:prefLabel "Decision to Remove Union Troops in 1877 and Describe Its Impact on Americans" ;
+  skos:broader mi:Cat_8_U5_3 ;
+  mi:inCategory mi:Cat_8_U5_3 ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:isExpectationOf mi:Cat_8_U5_3 .
+
+mi:Exp_8_U6_1_1 a mi:Expectation ;
+  mi:expectationCode "U6.1.1" ;
+  mi:fullCode "8-U6.1.1" ;
+  mi:officialText "America at Century's End - Compare and contrast the United States in 1800 with the United States in 1898." ;
+  skos:prefLabel "America at Century's End" ;
+  skos:broader mi:Cat_8_U6_1 ;
+  mi:inCategory mi:Cat_8_U6_1 ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_8_U6_1_1_1 ;
+  mi:isExpectationOf mi:Cat_8_U6_1 .
+
+mi:Exp_8_U6_2_1 a mi:Expectation ;
+  mi:expectationCode "U6.2.1" ;
+  mi:fullCode "8-U6.2.1" ;
+  mi:officialText "United States History Investigation Topic and Issue Analysis, Past and Present - Use historical perspectives to analyze issues in the United States from the past and the present; conduct research on a historical issue or topic, identify a connection to a contemporary issue, and present findings; include causes and consequences of the historical action and predict possible consequences of the contemporary action." ;
+  skos:prefLabel "United States History Investigation Topic and Issue Analysis, Past and Present" ;
+  skos:broader mi:Cat_8_U6_2 ;
+  mi:inCategory mi:Cat_8_U6_2 ;
+  mi:inGrade mi:Grade_8 ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_8_U6_2_1_1 ,
+    mi:Example_exp_8_U6_2_1_2 ,
+    mi:Example_exp_8_U6_2_1_3 ,
+    mi:Example_exp_8_U6_2_1_4 ,
+    mi:Example_exp_8_U6_2_1_5 ,
+    mi:Example_exp_8_U6_2_1_6 ;
+  mi:isExpectationOf mi:Cat_8_U6_2 .
+
+#################################################################
+# Examples
+#################################################################
+mi:Example_cat_8_U6_1_1 a mi:Example ;
+  skos:prefLabel "America at Century's End - Compare and contrast the United States in 1800 with the United States in 1898 focusing on similarities and differences in territory, population, systems of transportation, governmental policies promoting economic development, economic change, the treatment of African Americans, and policies toward American Indians." ;
+  mi:exampleText "America at Century's End - Compare and contrast the United States in 1800 with the United States in 1898 focusing on similarities and differences in territory, population, systems of transportation, governmental policies promoting economic development, economic change, the treatment of African Americans, and policies toward American Indians." .
+
+mi:Example_exp_8_P3_1_1_1 a mi:Example ;
+  skos:prefLabel "Identify a national public policy issue." ;
+  mi:exampleText "Identify a national public policy issue." .
+
+mi:Example_exp_8_P3_1_1_2 a mi:Example ;
+  skos:prefLabel "Clearly state the issue as a question of public policy orally or in written form" ;
+  mi:exampleText "Clearly state the issue as a question of public policy orally or in written form" .
+
+mi:Example_exp_8_P3_1_1_3 a mi:Example ;
+  skos:prefLabel "Use inquiry methods to trace the origins of the issue and to acquire data about the issue" ;
+  mi:exampleText "Use inquiry methods to trace the origins of the issue and to acquire data about the issue" .
+
+mi:Example_exp_8_P3_1_1_4 a mi:Example ;
+  skos:prefLabel "Generate and evaluate alternative resolutions to the public issue and analyze various perspectives (causes consequences positive and negative impact) on the issue" ;
+  mi:exampleText "Generate and evaluate alternative resolutions to the public issue and analyze various perspectives (causes consequences positive and negative impact) on the issue" .
+
+mi:Example_exp_8_P3_1_1_5 a mi:Example ;
+  skos:prefLabel "Identify and apply core democratic values or constitutional principles" ;
+  mi:exampleText "Identify and apply core democratic values or constitutional principles" .
+
+mi:Example_exp_8_P3_1_1_6 a mi:Example ;
+  skos:prefLabel "Share and discuss findings of research and issue analysis in group discussions and debates" ;
+  mi:exampleText "Share and discuss findings of research and issue analysis in group discussions and debates" .
+
+mi:Example_exp_8_P3_1_1_7 a mi:Example ;
+  skos:prefLabel "Compose a persuasive essay justifying the position with a reasoned argument" ;
+  mi:exampleText "Compose a persuasive essay justifying the position with a reasoned argument" .
+
+mi:Example_exp_8_P3_1_1_8 a mi:Example ;
+  skos:prefLabel "Develop an action plan to address or inform others about the issue" ;
+  mi:exampleText "Develop an action plan to address or inform others about the issue" .
+
+mi:Example_exp_8_P4_2_3_1 a mi:Example ;
+  skos:prefLabel "service learning projects" ;
+  mi:exampleText "service learning projects" .
+
+mi:Example_exp_8_U3_3_1_1 a mi:Example ;
+  skos:prefLabel "why its drafters created a weak central government" ;
+  mi:exampleText "why its drafters created a weak central government" .
+
+mi:Example_exp_8_U3_3_1_2 a mi:Example ;
+  skos:prefLabel "challenges the nation faced under the Articles" ;
+  mi:exampleText "challenges the nation faced under the Articles" .
+
+mi:Example_exp_8_U3_3_1_3 a mi:Example ;
+  skos:prefLabel "Shays' Rebellion" ;
+  mi:exampleText "Shays' Rebellion" .
+
+mi:Example_exp_8_U3_3_1_4 a mi:Example ;
+  skos:prefLabel "disputes over western lands" ;
+  mi:exampleText "disputes over western lands" .
+
+mi:Example_exp_8_U3_3_5_1 a mi:Example ;
+  skos:prefLabel "Federalists and Anti-Federalists perspectives" ;
+  mi:exampleText "Federalists and Anti-Federalists perspectives" .
+
+mi:Example_exp_8_U3_3_7_1 a mi:Example ;
+  skos:prefLabel "Mayflower Compact" ;
+  mi:exampleText "Mayflower Compact" .
+
+mi:Example_exp_8_U3_3_7_2 a mi:Example ;
+  skos:prefLabel "Iroquois Confederacy" ;
+  mi:exampleText "Iroquois Confederacy" .
+
+mi:Example_exp_8_U3_3_7_3 a mi:Example ;
+  skos:prefLabel "Common Sense" ;
+  mi:exampleText "Common Sense" .
+
+mi:Example_exp_8_U3_3_7_4 a mi:Example ;
+  skos:prefLabel "Declaration of Independence" ;
+  mi:exampleText "Declaration of Independence" .
+
+mi:Example_exp_8_U3_3_7_5 a mi:Example ;
+  skos:prefLabel "Northwest Ordinance" ;
+  mi:exampleText "Northwest Ordinance" .
+
+mi:Example_exp_8_U3_3_7_6 a mi:Example ;
+  skos:prefLabel "Federalist Papers" ;
+  mi:exampleText "Federalist Papers" .
+
+mi:Example_exp_8_U4_1_2_1 a mi:Example ;
+  skos:prefLabel "Treaties with American Indian nations" ;
+  mi:exampleText "Treaties with American Indian nations" .
+
+mi:Example_exp_8_U4_1_2_2 a mi:Example ;
+  skos:prefLabel "Jay's Treaty (1795)" ;
+  mi:exampleText "Jay's Treaty (1795)" .
+
+mi:Example_exp_8_U4_1_2_3 a mi:Example ;
+  skos:prefLabel "French Revolution" ;
+  mi:exampleText "French Revolution" .
+
+mi:Example_exp_8_U4_1_2_4 a mi:Example ;
+  skos:prefLabel "Pinckney's Treaty (1795)" ;
+  mi:exampleText "Pinckney's Treaty (1795)" .
+
+mi:Example_exp_8_U4_1_2_5 a mi:Example ;
+  skos:prefLabel "Louisiana Purchase" ;
+  mi:exampleText "Louisiana Purchase" .
+
+mi:Example_exp_8_U4_1_2_6 a mi:Example ;
+  skos:prefLabel "War of 1812" ;
+  mi:exampleText "War of 1812" .
+
+mi:Example_exp_8_U4_1_2_7 a mi:Example ;
+  skos:prefLabel "Transcontinental Treaty (1819)" ;
+  mi:exampleText "Transcontinental Treaty (1819)" .
+
+mi:Example_exp_8_U4_1_2_8 a mi:Example ;
+  skos:prefLabel "Monroe Doctrine" ;
+  mi:exampleText "Monroe Doctrine" .
+
+mi:Example_exp_8_U3_3_3_1 a mi:Example ;
+  skos:prefLabel "Distribution of political power" ;
+  mi:exampleText "Distribution of political power between national and state governments." .
+
+mi:Example_exp_8_U3_3_3_2 a mi:Example ;
+  skos:prefLabel "Conduct of foreign affairs" ;
+  mi:exampleText "Conduct of foreign affairs under the new constitution." .
+
+mi:Example_exp_8_U3_3_3_3 a mi:Example ;
+  skos:prefLabel "Rights of individuals" ;
+  mi:exampleText "Protection of individual rights in the federal system." .
+
+mi:Example_exp_8_U3_3_3_4 a mi:Example ;
+  skos:prefLabel "Rights of states" ;
+  mi:exampleText "Rights reserved to the individual states." .
+
+mi:Example_exp_8_U3_3_3_5 a mi:Example ;
+  skos:prefLabel "Election of the executive" ;
+  mi:exampleText "Procedures for electing the executive branch." .
+
+mi:Example_exp_8_U3_3_3_6 a mi:Example ;
+  skos:prefLabel "Slavery as a regional and federal issue" ;
+  mi:exampleText "Debates about slavery as both a regional concern and a national policy question." .
+
+mi:Example_exp_8_U3_3_4_1 a mi:Example ;
+  skos:prefLabel "Sharing, separating, and checking power" ;
+  mi:exampleText "Sharing, separating, and checking power among federal institutions." .
+
+mi:Example_exp_8_U3_3_4_2 a mi:Example ;
+  skos:prefLabel "Dual sovereignty" ;
+  mi:exampleText "Dual sovereignty between state and federal governments." .
+
+mi:Example_exp_8_U3_3_4_3 a mi:Example ;
+  skos:prefLabel "Rights of individuals under the Constitution" ;
+  mi:exampleText "Protection of individual rights in the new constitutional framework." .
+
+mi:Example_exp_8_U3_3_4_4 a mi:Example ;
+  skos:prefLabel "Electoral College" ;
+  mi:exampleText "Creation of the Electoral College for choosing the executive." .
+
+mi:Example_exp_8_U3_3_4_5 a mi:Example ;
+  skos:prefLabel "Three-Fifths Compromise" ;
+  mi:exampleText "The Three-Fifths Compromise on representation and taxation." .
+
+mi:Example_exp_8_U3_3_4_6 a mi:Example ;
+  skos:prefLabel "Great Compromise" ;
+  mi:exampleText "The Great Compromise creating a bicameral legislature." .
+
+mi:Example_exp_8_U4_2_1_1 a mi:Example ;
+  skos:prefLabel "Agriculture" ;
+  mi:exampleText "Agriculture, including changes in productivity, technology, supply and demand, and price." .
+
+mi:Example_exp_8_U5_1_1_1 a mi:Example ;
+  skos:prefLabel "Free blacks" ;
+  mi:exampleText "Experiences of free blacks, including those who escaped from slavery." .
+
+mi:Example_exp_8_U5_1_1_2 a mi:Example ;
+  skos:prefLabel "Free whites" ;
+  mi:exampleText "Social and economic conditions of free whites." .
+
+mi:Example_exp_8_U5_1_1_3 a mi:Example ;
+  skos:prefLabel "Enslaved peoples" ;
+  mi:exampleText "Restrictions and daily life of enslaved peoples." .
+
+mi:Example_exp_8_U5_2_2_1 a mi:Example ;
+  skos:prefLabel "Critical events and battles" ;
+  mi:exampleText "Critical events and battles that influenced the Civil War outcome." .
+
+mi:Example_exp_8_U5_2_2_2 a mi:Example ;
+  skos:prefLabel "Political and military leadership" ;
+  mi:exampleText "Political and military leadership of the North and South." .
+
+mi:Example_exp_8_U5_2_2_3 a mi:Example ;
+  skos:prefLabel "Advantages and disadvantages of the regions" ;
+  mi:exampleText "Geographic, demographic, economic, and technological advantages and disadvantages of the Union and Confederacy." .
+
+mi:Example_exp_8_U5_2_3_1 a mi:Example ;
+  skos:prefLabel "Military and political leadership" ;
+  mi:exampleText "Abraham Lincoln's military and political leadership." .
+
+mi:Example_exp_8_U5_2_3_2 a mi:Example ;
+  skos:prefLabel "Evolution of emancipation policy" ;
+  mi:exampleText "Evolution of Lincoln's emancipation policy, including the Emancipation Proclamation." .
+
+mi:Example_exp_8_U5_2_3_3 a mi:Example ;
+  skos:prefLabel "Significant writings and speeches" ;
+  mi:exampleText "Significant writings and speeches such as the Gettysburg Address and their links to the Declaration of Independence." .
+
+mi:Example_exp_8_U5_2_4_1 a mi:Example ;
+  skos:prefLabel "Black soldiers and regiments" ;
+  mi:exampleText "Contributions of black soldiers and regiments to the war effort." .
+
+mi:Example_exp_8_U5_2_4_2 a mi:Example ;
+  skos:prefLabel "Resistance of enslaved peoples" ;
+  mi:exampleText "Increased resistance of enslaved peoples during the Civil War." .
+
+mi:Example_exp_8_U5_3_1_1 a mi:Example ;
+  skos:prefLabel "Abraham Lincoln's position" ;
+  mi:exampleText "President Abraham Lincoln's approach to Reconstruction." .
+
+mi:Example_exp_8_U5_3_1_2 a mi:Example ;
+  skos:prefLabel "Andrew Johnson's position" ;
+  mi:exampleText "President Andrew Johnson's approach to Reconstruction." .
+
+mi:Example_exp_8_U5_3_1_3 a mi:Example ;
+  skos:prefLabel "Republican perspectives" ;
+  mi:exampleText "Reconstruction goals of Congressional Republicans." .
+
+mi:Example_exp_8_U5_3_1_4 a mi:Example ;
+  skos:prefLabel "African American perspectives" ;
+  mi:exampleText "Reconstruction priorities of African Americans in the South." .
+
+mi:Example_exp_8_U5_3_2_1 a mi:Example ;
+  skos:prefLabel "Freedmen's Bureau policies" ;
+  mi:exampleText "Policies of the Freedmen's Bureau in the immediate postwar period." .
+
+mi:Example_exp_8_U5_3_2_2 a mi:Example ;
+  skos:prefLabel "Restrictions on freedmen" ;
+  mi:exampleText "Restrictions on the rights and opportunities of freedmen, including racial segregation and Black Codes." .
+
+mi:Example_exp_8_U6_1_1_1 a mi:Example ;
+  skos:prefLabel "Territory and land use" ;
+  mi:exampleText "Territory and land use patterns in 1800 compared with 1898." .
+mi:Example_exp_8_U4_1_3_1 a mi:Example ;
+  skos:prefLabel "relative power of the national government" ;
+  mi:exampleText "relative power of the national government" .
+
+mi:Example_exp_8_U4_1_3_2 a mi:Example ;
+  skos:prefLabel "Alien and Sedition Acts" ;
+  mi:exampleText "Alien and Sedition Acts" .
+
+mi:Example_exp_8_U4_1_3_3 a mi:Example ;
+  skos:prefLabel "during the Jacksonian era" ;
+  mi:exampleText "during the Jacksonian era" .
+
+mi:Example_exp_8_U4_1_4_1 a mi:Example ;
+  skos:prefLabel "Marbury v. Madison (1803)" ;
+  mi:exampleText "Marbury v. Madison (1803)" .
+
+mi:Example_exp_8_U4_1_4_2 a mi:Example ;
+  skos:prefLabel "Dartmouth College v. Woodward" ;
+  mi:exampleText "Dartmouth College v. Woodward" .
+
+mi:Example_exp_8_U4_1_4_3 a mi:Example ;
+  skos:prefLabel "Gibbons v. Ogden" ;
+  mi:exampleText "Gibbons v. Ogden" .
+
+mi:Example_exp_8_U4_2_3_1 a mi:Example ;
+  skos:prefLabel "Louisiana Purchase, the removal of American Indians (Trail of Tears) from their native lands, the growth of a system of commercial agriculture, the Mexican-American War, and the idea of Manifest Destiny" ;
+  mi:exampleText "Louisiana Purchase, the removal of American Indians (Trail of Tears) from their native lands, the growth of a system of commercial agriculture, the Mexican-American War, and the idea of Manifest Destiny" .
+
+mi:Example_exp_8_U4_2_4_1 a mi:Example ;
+  skos:prefLabel "positive and negative consequences of territorial and economic expansion on American Indians, the institution of slavery, and relations between free and slaveholding states" ;
+  mi:exampleText "positive and negative consequences of territorial and economic expansion on American Indians, the institution of slavery, and relations between free and slaveholding states" .
+
+mi:Example_exp_8_U4_3_2_1 a mi:Example ;
+  skos:prefLabel "John Brown and the armed resistance" ;
+  mi:exampleText "John Brown and the armed resistance" .
+
+mi:Example_exp_8_U4_3_2_2 a mi:Example ;
+  skos:prefLabel "Harriet Tubman and the Underground Railroad" ;
+  mi:exampleText "Harriet Tubman and the Underground Railroad" .
+
+mi:Example_exp_8_U4_3_2_3 a mi:Example ;
+  skos:prefLabel "Sojourner Truth" ;
+  mi:exampleText "Sojourner Truth" .
+
+mi:Example_exp_8_U4_3_2_4 a mi:Example ;
+  skos:prefLabel "William Lloyd Garrison" ;
+  mi:exampleText "William Lloyd Garrison" .
+
+mi:Example_exp_8_U4_3_2_5 a mi:Example ;
+  skos:prefLabel "and Frederick Douglass" ;
+  mi:exampleText "and Frederick Douglass" .
+
+mi:Example_exp_8_U4_3_3_1 a mi:Example ;
+  skos:prefLabel "Susan B. Anthony and Elizabeth Cady Stanton" ;
+  mi:exampleText "Susan B. Anthony and Elizabeth Cady Stanton" .
+
+mi:Example_exp_8_U5_1_2_1 a mi:Example ;
+  skos:prefLabel "the establishment of Michigan as a free state" ;
+  mi:exampleText "the establishment of Michigan as a free state" .
+
+mi:Example_exp_8_U5_1_3_1 a mi:Example ;
+  skos:prefLabel "sectionalism" ;
+  mi:exampleText "sectionalism" .
+
+mi:Example_exp_8_U5_1_3_2 a mi:Example ;
+  skos:prefLabel "nationalism" ;
+  mi:exampleText "nationalism" .
+
+mi:Example_exp_8_U5_1_3_3 a mi:Example ;
+  skos:prefLabel "federalism" ;
+  mi:exampleText "federalism" .
+
+mi:Example_exp_8_U5_1_3_4 a mi:Example ;
+  skos:prefLabel "state rights" ;
+  mi:exampleText "state rights" .
+
+mi:Example_exp_8_U5_1_4_1 a mi:Example ;
+  skos:prefLabel "the Missouri Compromise (1820), the Wilmot Proviso (1846), the Compromise of 1850 including the Fugitive Slave Act, the Kansas-Nebraska Act (1854) and subsequent conflict in Kansas, the Dred Scott v. Sandford decision (1857)" ;
+  mi:exampleText "the Missouri Compromise (1820), the Wilmot Proviso (1846), the Compromise of 1850 including the Fugitive Slave Act, the Kansas-Nebraska Act (1854) and subsequent conflict in Kansas, the Dred Scott v. Sandford decision (1857)" .
+
+mi:Example_exp_8_U5_1_4_2 a mi:Example ;
+  skos:prefLabel "rise of the Republican party and division of the Democratic party" ;
+  mi:exampleText "rise of the Republican party and division of the Democratic party" .
+
+mi:Example_exp_8_U5_1_5_1 a mi:Example ;
+  skos:prefLabel "Nat Turner" ;
+  mi:exampleText "Nat Turner" .
+
+mi:Example_exp_8_U5_1_5_2 a mi:Example ;
+  skos:prefLabel "Harriet Tubman and the Underground Railroad" ;
+  mi:exampleText "Harriet Tubman and the Underground Railroad" .
+
+mi:Example_exp_8_U5_1_5_3 a mi:Example ;
+  skos:prefLabel "John Brown" ;
+  mi:exampleText "John Brown" .
+
+mi:Example_exp_8_U5_1_5_4 a mi:Example ;
+  skos:prefLabel "Michigan's role in the Underground Railroad" ;
+  mi:exampleText "Michigan's role in the Underground Railroad" .
+
+mi:Example_exp_8_U5_1_6_1 a mi:Example ;
+  skos:prefLabel "distribution of political power, rights of individuals, rights of states, election of the executive, slavery" ;
+  mi:exampleText "distribution of political power, rights of individuals, rights of states, election of the executive, slavery" .
+
+mi:Example_exp_8_U5_2_1_1 a mi:Example ;
+  skos:prefLabel "political, economic, and social reasons why Southern states seceded; differences in timing of secession in the Upper and Lower South" ;
+  mi:exampleText "political, economic, and social reasons why Southern states seceded; differences in timing of secession in the Upper and Lower South" .
+
+mi:Example_exp_8_U5_2_5_1 a mi:Example ;
+  skos:prefLabel "effects on combatants, civilians including the role of women, the physical environment, and the future of warfare including technological developments" ;
+  mi:exampleText "effects on combatants, civilians including the role of women, the physical environment, and the future of warfare including technological developments" .
+
+mi:Example_exp_8_U5_3_3_1 a mi:Example ;
+  skos:prefLabel "new role of African Americans in government and resistance of Southern whites including the Ku Klux Klan" ;
+  mi:exampleText "new role of African Americans in government and resistance of Southern whites including the Ku Klux Klan" .
+
+mi:Example_exp_8_U6_2_1_1 a mi:Example ;
+  skos:prefLabel "oral presentation" ;
+  mi:exampleText "oral presentation" .
+
+mi:Example_exp_8_U6_2_1_2 a mi:Example ;
+  skos:prefLabel "visual" ;
+  mi:exampleText "visual" .
+
+mi:Example_exp_8_U6_2_1_3 a mi:Example ;
+  skos:prefLabel "video" ;
+  mi:exampleText "video" .
+
+mi:Example_exp_8_U6_2_1_4 a mi:Example ;
+  skos:prefLabel "or electronic presentation" ;
+  mi:exampleText "or electronic presentation" .
+
+mi:Example_exp_8_U6_2_1_5 a mi:Example ;
+  skos:prefLabel "persuasive essay" ;
+  mi:exampleText "persuasive essay" .
+
+mi:Example_exp_8_U6_2_1_6 a mi:Example ;
+  skos:prefLabel "or research paper" ;
+  mi:exampleText "or research paper" .
+
+#################################################################
+# Vertical Progressions
+#################################################################
+# Progresses From (prior grades)
+mi:Exp_8_P4_2_1 mi:progressesFrom mi:Exp_7_P4_2_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_8_P4_2_1 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_7_P4_2_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode P4.2.1 between Grade 7 and Grade 8." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_8_P4_2_2 mi:progressesFrom mi:Exp_7_P4_2_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_8_P4_2_2 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_7_P4_2_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode P4.2.2 between Grade 7 and Grade 8." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_8_P4_2_3 mi:progressesFrom mi:Exp_7_P4_2_3 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_8_P4_2_3 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_7_P4_2_3 ;
+  skos:note "Vertical progression inferred from shared expectationCode P4.2.3 between Grade 7 and Grade 8." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_8_U3_3_1 mi:progressesFrom mi:Exp_5_U3_3_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_8_U3_3_1 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_5_U3_3_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode U3.3.1 between Grade 5 and Grade 8." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_8_U3_3_2 mi:progressesFrom mi:Exp_5_U3_3_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_8_U3_3_2 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_5_U3_3_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode U3.3.2 between Grade 5 and Grade 8." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_8_U3_3_3 mi:progressesFrom mi:Exp_5_U3_3_3 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_8_U3_3_3 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_5_U3_3_3 ;
+  skos:note "Vertical progression inferred from shared expectationCode U3.3.3 between Grade 5 and Grade 8." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_8_U3_3_4 mi:progressesFrom mi:Exp_5_U3_3_4 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_8_U3_3_4 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_5_U3_3_4 ;
+  skos:note "Vertical progression inferred from shared expectationCode U3.3.4 between Grade 5 and Grade 8." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_8_U3_3_5 mi:progressesFrom mi:Exp_5_U3_3_5 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_8_U3_3_5 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_5_U3_3_5 ;
+  skos:note "Vertical progression inferred from shared expectationCode U3.3.5 between Grade 5 and Grade 8." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_8_U3_3_6 mi:progressesFrom mi:Exp_5_U3_3_6 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_8_U3_3_6 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_5_U3_3_6 ;
+  skos:note "Vertical progression inferred from shared expectationCode U3.3.6 between Grade 5 and Grade 8." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_8_U3_3_7 mi:progressesFrom mi:Exp_5_U3_3_7 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_8_U3_3_7 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_5_U3_3_7 ;
+  skos:note "Vertical progression inferred from shared expectationCode U3.3.7 between Grade 5 and Grade 8." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .

@@ -1,0 +1,545 @@
+@prefix c3:     <urn:c3:> .
+@prefix dcterms:<http://purl.org/dc/terms/> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@base <file:///Users/louisjustman/Downloads/C3%20Project/Curriculum-Ontology/c3/> .
+
+<c3-dimension2-history.ttl> a owl:Ontology ;
+  rdfs:label "C3 Framework — Dimension 2 History" ;
+  dcterms:description "Dimension 2 History indicators with SKOS alignment and provenance." ;
+  dcterms:creator "NCSS — College, Career, and Civic Life (C3) Framework for Social Studies State Standards" ;
+  dcterms:source "C3 Framework, pp. 31–49" .
+
+#################################################################
+# Annotation properties
+#################################################################
+
+c3:status        a owl:AnnotationProperty .
+c3:createdOn     a owl:AnnotationProperty .
+c3:alignmentNote a owl:AnnotationProperty .
+c3:officialText  a owl:AnnotationProperty .
+c3:sourceDoc     a owl:AnnotationProperty .
+c3:sourcePage    a owl:AnnotationProperty .
+
+#################################################################
+# Indicators
+#################################################################
+
+c3:I_D2_His_1_K_2 a c3:Indicator ;
+  c3:hasCode "D2.His.1.K-2" ; rdfs:label "Create a chronological sequence of multiple events." ;
+  skos:prefLabel "Create a chronological sequence of multiple events." ;
+  skos:altLabel "Indicator D2.His.1.K-2" ;
+  c3:officialText "Create a chronological sequence of multiple events." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:Chronology , c3:Context ; c3:requiresSkill c3:Synthesize ;
+  c3:inStrand c3:Str_His_ChangeContinuity ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 20, p. 46" .
+
+c3:I_D2_His_1_3_5 a c3:Indicator ;
+  c3:hasCode "D2.His.1.3-5" ; rdfs:label "Create and use a chronological sequence of related events to compare developments that happened at the same time." ;
+  skos:prefLabel "Create and use a chronological sequence of related events to compare developments that happened at the same time." ;
+  skos:altLabel "Indicator D2.His.1.3-5" ;
+  c3:officialText "Create and use a chronological sequence of related events to compare developments that happened at the same time." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:Chronology , c3:Context ; c3:requiresSkill c3:Synthesize ;
+  c3:inStrand c3:Str_His_ChangeContinuity ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 20, p. 46" .
+
+c3:I_D2_His_1_6_8 a c3:Indicator ;
+  c3:hasCode "D2.His.1.6-8" ; rdfs:label "Analyze connections among events and developments in broader historical contexts." ;
+  skos:prefLabel "Analyze connections among events and developments in broader historical contexts." ;
+  skos:altLabel "Indicator D2.His.1.6-8" ;
+  c3:officialText "Analyze connections among events and developments in broader historical contexts." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:Chronology , c3:Context ; c3:requiresSkill c3:Analyze ;
+  c3:inStrand c3:Str_His_ChangeContinuity ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 20, p. 46" .
+
+c3:I_D2_His_1_9_12 a c3:Indicator ;
+  c3:hasCode "D2.His.1.9-12" ; rdfs:label "Evaluate how historical events and developments were shaped by unique circumstances of time and place as well as broader historical contexts." ;
+  skos:prefLabel "Evaluate how historical events and developments were shaped by unique circumstances of time and place as well as broader historical contexts." ;
+  skos:altLabel "Indicator D2.His.1.9-12" ;
+  c3:officialText "Evaluate how historical events and developments were shaped by unique circumstances of time and place as well as broader historical contexts." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:Chronology , c3:Context ; c3:requiresSkill c3:Evaluate ;
+  c3:inStrand c3:Str_His_ChangeContinuity ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 20, p. 46" .
+
+c3:I_D2_His_2_K_2 a c3:Indicator ;
+  c3:hasCode "D2.His.2.K-2" ; rdfs:label "Compare life in the past to life today." ;
+  skos:prefLabel "Compare life in the past to life today." ;
+  skos:altLabel "Indicator D2.His.2.K-2" ;
+  c3:officialText "Compare life in the past to life today." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:Chronology , c3:Context ; c3:requiresSkill c3:Compare ;
+  c3:inStrand c3:Str_His_ChangeContinuity ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 20, p. 46" .
+
+c3:I_D2_His_2_3_5 a c3:Indicator ;
+  c3:hasCode "D2.His.2.3-5" ; rdfs:label "Compare life in specific historical time periods to life today." ;
+  skos:prefLabel "Compare life in specific historical time periods to life today." ;
+  skos:altLabel "Indicator D2.His.2.3-5" ;
+  c3:officialText "Compare life in specific historical time periods to life today." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:Chronology , c3:Context ; c3:requiresSkill c3:Compare ;
+  c3:inStrand c3:Str_His_ChangeContinuity ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 20, p. 46" .
+
+c3:I_D2_His_2_6_8 a c3:Indicator ;
+  c3:hasCode "D2.His.2.6-8" ; rdfs:label "Classify series of historical events and developments as examples of change and/or continuity." ;
+  skos:prefLabel "Classify series of historical events and developments as examples of change and/or continuity." ;
+  skos:altLabel "Indicator D2.His.2.6-8" ;
+  c3:officialText "Classify series of historical events and developments as examples of change and/or continuity." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:Chronology , c3:Context ; c3:requiresSkill c3:Identify ;
+  c3:inStrand c3:Str_His_ChangeContinuity ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 20, p. 46" .
+
+c3:I_D2_His_2_9_12 a c3:Indicator ;
+  c3:hasCode "D2.His.2.9-12" ; rdfs:label "Analyze change and continuity in historical eras." ;
+  skos:prefLabel "Analyze change and continuity in historical eras." ;
+  skos:altLabel "Indicator D2.His.2.9-12" ;
+  c3:officialText "Analyze change and continuity in historical eras." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:Chronology , c3:Context ; c3:requiresSkill c3:Analyze ;
+  c3:inStrand c3:Str_His_ChangeContinuity ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 20, p. 46" .
+
+c3:I_D2_His_3_K_2 a c3:Indicator ;
+  c3:hasCode "D2.His.3.K-2" ; rdfs:label "Generate questions about individuals and groups who have shaped a significant historical change." ;
+  skos:prefLabel "Generate questions about individuals and groups who have shaped a significant historical change." ;
+  skos:altLabel "Indicator D2.His.3.K-2" ;
+  c3:officialText "Generate questions about individuals and groups who have shaped a significant historical change." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:Significance , c3:Chronology ; c3:requiresSkill c3:Synthesize ;
+  c3:inStrand c3:Str_His_ChangeContinuity ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 20, p. 46" .
+
+c3:I_D2_His_3_3_5 a c3:Indicator ;
+  c3:hasCode "D2.His.3.3-5" ; rdfs:label "Generate questions about individuals and groups who have shaped significant historical changes and continuities." ;
+  skos:prefLabel "Generate questions about individuals and groups who have shaped significant historical changes and continuities." ;
+  skos:altLabel "Indicator D2.His.3.3-5" ;
+  c3:officialText "Generate questions about individuals and groups who have shaped significant historical changes and continuities." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:Significance , c3:Chronology ; c3:requiresSkill c3:Synthesize ;
+  c3:inStrand c3:Str_His_ChangeContinuity ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 20, p. 46" .
+
+c3:I_D2_His_3_6_8 a c3:Indicator ;
+  c3:hasCode "D2.His.3.6-8" ; rdfs:label "Use questions generated about individuals and groups to analyze why they, and the developments they shaped, are seen as historically significant." ;
+  skos:prefLabel "Use questions generated about individuals and groups to analyze why they, and the developments they shaped, are seen as historically significant." ;
+  skos:altLabel "Indicator D2.His.3.6-8" ;
+  c3:officialText "Use questions generated about individuals and groups to analyze why they, and the developments they shaped, are seen as historically significant." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:Significance , c3:Chronology ; c3:requiresSkill c3:Apply ;
+  c3:inStrand c3:Str_His_ChangeContinuity ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 20, p. 46" .
+
+c3:I_D2_His_3_9_12 a c3:Indicator ;
+  c3:hasCode "D2.His.3.9-12" ; rdfs:label "Use questions generated about individuals and groups to assess how the significance of their actions changes over time and is shaped by the historical context." ;
+  skos:prefLabel "Use questions generated about individuals and groups to assess how the significance of their actions changes over time and is shaped by the historical context." ;
+  skos:altLabel "Indicator D2.His.3.9-12" ;
+  c3:officialText "Use questions generated about individuals and groups to assess how the significance of their actions changes over time and is shaped by the historical context." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:Significance , c3:Chronology ; c3:requiresSkill c3:Apply ;
+  c3:inStrand c3:Str_His_ChangeContinuity ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 20, p. 46" .
+
+c3:I_D2_His_4_K_2 a c3:Indicator ;
+  c3:hasCode "D2.His.4.K-2" ; rdfs:label "Compare perspectives of people in the past to those of people in the present." ;
+  skos:prefLabel "Compare perspectives of people in the past to those of people in the present." ;
+  skos:altLabel "Indicator D2.His.4.K-2" ;
+  c3:officialText "Compare perspectives of people in the past to those of people in the present." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:Perspectives ; c3:requiresSkill c3:Compare ;
+  c3:inStrand c3:Str_His_Perspectives ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 21, p. 47" .
+
+c3:I_D2_His_4_3_5 a c3:Indicator ;
+  c3:hasCode "D2.His.4.3-5" ; rdfs:label "Explain why individuals and groups during the same historical period differed in their perspectives." ;
+  skos:prefLabel "Explain why individuals and groups during the same historical period differed in their perspectives." ;
+  skos:altLabel "Indicator D2.His.4.3-5" ;
+  c3:officialText "Explain why individuals and groups during the same historical period differed in their perspectives." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:Perspectives ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_His_Perspectives ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 21, p. 47" .
+
+c3:I_D2_His_4_6_8 a c3:Indicator ;
+  c3:hasCode "D2.His.4.6-8" ; rdfs:label "Analyze multiple factors that influenced the perspectives of people during different historical eras." ;
+  skos:prefLabel "Analyze multiple factors that influenced the perspectives of people during different historical eras." ;
+  skos:altLabel "Indicator D2.His.4.6-8" ;
+  c3:officialText "Analyze multiple factors that influenced the perspectives of people during different historical eras." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:Perspectives ; c3:requiresSkill c3:Analyze ;
+  c3:inStrand c3:Str_His_Perspectives ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 21, p. 47" .
+
+c3:I_D2_His_4_9_12 a c3:Indicator ;
+  c3:hasCode "D2.His.4.9-12" ; rdfs:label "Analyze complex and interacting factors that influenced the perspectives of people during different historical eras." ;
+  skos:prefLabel "Analyze complex and interacting factors that influenced the perspectives of people during different historical eras." ;
+  skos:altLabel "Indicator D2.His.4.9-12" ;
+  c3:officialText "Analyze complex and interacting factors that influenced the perspectives of people during different historical eras." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:Perspectives ; c3:requiresSkill c3:Analyze ;
+  c3:inStrand c3:Str_His_Perspectives ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 21, p. 47" .
+
+c3:I_D2_His_5_3_5 a c3:Indicator ;
+  c3:hasCode "D2.His.5.3-5" ; rdfs:label "Explain connections among historical contexts and people’s perspectives at the time." ;
+  skos:prefLabel "Explain connections among historical contexts and people’s perspectives at the time." ;
+  skos:altLabel "Indicator D2.His.5.3-5" ;
+  c3:officialText "Explain connections among historical contexts and people’s perspectives at the time." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:Perspectives , c3:Context ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_His_Perspectives ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 21, p. 47" .
+
+c3:I_D2_His_5_6_8 a c3:Indicator ;
+  c3:hasCode "D2.His.5.6-8" ; rdfs:label "Explain how and why perspectives of people have changed over time." ;
+  skos:prefLabel "Explain how and why perspectives of people have changed over time." ;
+  skos:altLabel "Indicator D2.His.5.6-8" ;
+  c3:officialText "Explain how and why perspectives of people have changed over time." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:Perspectives , c3:Context ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_His_Perspectives ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 21, p. 47" .
+
+c3:I_D2_His_5_9_12 a c3:Indicator ;
+  c3:hasCode "D2.His.5.9-12" ; rdfs:label "Analyze how historical contexts shaped and continue to shape people’s perspectives." ;
+  skos:prefLabel "Analyze how historical contexts shaped and continue to shape people’s perspectives." ;
+  skos:altLabel "Indicator D2.His.5.9-12" ;
+  c3:officialText "Analyze how historical contexts shaped and continue to shape people’s perspectives." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:Perspectives , c3:Context ; c3:requiresSkill c3:Analyze ;
+  c3:inStrand c3:Str_His_Perspectives ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 21, p. 47" .
+
+c3:I_D2_His_6_K_2 a c3:Indicator ;
+  c3:hasCode "D2.His.6.K-2" ; rdfs:label "Compare different accounts of the same historical event." ;
+  skos:prefLabel "Compare different accounts of the same historical event." ;
+  skos:altLabel "Indicator D2.His.6.K-2" ;
+  c3:officialText "Compare different accounts of the same historical event." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:SourcesEvidence , c3:Perspectives ; c3:requiresSkill c3:Compare ;
+  c3:inStrand c3:Str_His_Perspectives ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 21, p. 47" .
+
+c3:I_D2_His_6_3_5 a c3:Indicator ;
+  c3:hasCode "D2.His.6.3-5" ; rdfs:label "Describe how people’s perspectives shaped the historical sources they created." ;
+  skos:prefLabel "Describe how people’s perspectives shaped the historical sources they created." ;
+  skos:altLabel "Indicator D2.His.6.3-5" ;
+  c3:officialText "Describe how people’s perspectives shaped the historical sources they created." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:SourcesEvidence , c3:Perspectives ; c3:requiresSkill c3:Describe ;
+  c3:inStrand c3:Str_His_Perspectives ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 21, p. 47" .
+
+c3:I_D2_His_6_6_8 a c3:Indicator ;
+  c3:hasCode "D2.His.6.6-8" ; rdfs:label "Analyze how people’s perspectives influenced what information is available in the historical sources they created." ;
+  skos:prefLabel "Analyze how people’s perspectives influenced what information is available in the historical sources they created." ;
+  skos:altLabel "Indicator D2.His.6.6-8" ;
+  c3:officialText "Analyze how people’s perspectives influenced what information is available in the historical sources they created." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:SourcesEvidence , c3:Perspectives ; c3:requiresSkill c3:Analyze ;
+  c3:inStrand c3:Str_His_Perspectives ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 21, p. 47" .
+
+c3:I_D2_His_6_9_12 a c3:Indicator ;
+  c3:hasCode "D2.His.6.9-12" ; rdfs:label "Analyze the ways in which the perspectives of those writing history shaped the history that they produced." ;
+  skos:prefLabel "Analyze the ways in which the perspectives of those writing history shaped the history that they produced." ;
+  skos:altLabel "Indicator D2.His.6.9-12" ;
+  c3:officialText "Analyze the ways in which the perspectives of those writing history shaped the history that they produced." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:SourcesEvidence , c3:Perspectives ; c3:requiresSkill c3:Analyze ;
+  c3:inStrand c3:Str_His_Perspectives ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 21, p. 47" .
+
+c3:I_D2_His_7_9_12 a c3:Indicator ;
+  c3:hasCode "D2.His.7.9-12" ; rdfs:label "Explain how the perspectives of people in the present shape interpretations of the past." ;
+  skos:prefLabel "Explain how the perspectives of people in the present shape interpretations of the past." ;
+  skos:altLabel "Indicator D2.His.7.9-12" ;
+  c3:officialText "Explain how the perspectives of people in the present shape interpretations of the past." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:Perspectives ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_His_Perspectives ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 21, p. 47" .
+
+c3:I_D2_His_8_9_12 a c3:Indicator ;
+  c3:hasCode "D2.His.8.9-12" ; rdfs:label "Analyze how current interpretations of the past are limited by the extent to which available historical sources represent perspectives of people at the time." ;
+  skos:prefLabel "Analyze how current interpretations of the past are limited by the extent to which available historical sources represent perspectives of people at the time." ;
+  skos:altLabel "Indicator D2.His.8.9-12" ;
+  c3:officialText "Analyze how current interpretations of the past are limited by the extent to which available historical sources represent perspectives of people at the time." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:SourcesEvidence , c3:Perspectives ; c3:requiresSkill c3:Analyze ;
+  c3:inStrand c3:Str_His_Perspectives ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 21, p. 47" .
+
+c3:I_D2_His_9_K_2 a c3:Indicator ;
+  c3:hasCode "D2.His.9.K-2" ; rdfs:label "Identify different kinds of historical sources." ;
+  skos:prefLabel "Identify different kinds of historical sources." ;
+  skos:altLabel "Indicator D2.His.9.K-2" ;
+  c3:officialText "Identify different kinds of historical sources." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:SourcesEvidence ; c3:requiresSkill c3:Identify ;
+  c3:inStrand c3:Str_His_SourcesEvidence ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 22, p. 48" .
+
+c3:I_D2_His_9_3_5 a c3:Indicator ;
+  c3:hasCode "D2.His.9.3-5" ; rdfs:label "Summarize how different kinds of historical sources are used to explain events in the past." ;
+  skos:prefLabel "Summarize how different kinds of historical sources are used to explain events in the past." ;
+  skos:altLabel "Indicator D2.His.9.3-5" ;
+  c3:officialText "Summarize how different kinds of historical sources are used to explain events in the past." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:SourcesEvidence ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_His_SourcesEvidence ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 22, p. 48" .
+
+c3:I_D2_His_9_6_8 a c3:Indicator ;
+  c3:hasCode "D2.His.9.6-8" ; rdfs:label "Classify the kinds of historical sources used in a secondary interpretation." ;
+  skos:prefLabel "Classify the kinds of historical sources used in a secondary interpretation." ;
+  skos:altLabel "Indicator D2.His.9.6-8" ;
+  c3:officialText "Classify the kinds of historical sources used in a secondary interpretation." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:SourcesEvidence ; c3:requiresSkill c3:Identify ;
+  c3:inStrand c3:Str_His_SourcesEvidence ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 22, p. 48" .
+
+c3:I_D2_His_9_9_12 a c3:Indicator ;
+  c3:hasCode "D2.His.9.9-12" ; rdfs:label "Analyze the relationship between historical sources and the secondary interpretations made from them." ;
+  skos:prefLabel "Analyze the relationship between historical sources and the secondary interpretations made from them." ;
+  skos:altLabel "Indicator D2.His.9.9-12" ;
+  c3:officialText "Analyze the relationship between historical sources and the secondary interpretations made from them." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:SourcesEvidence ; c3:requiresSkill c3:Analyze ;
+  c3:inStrand c3:Str_His_SourcesEvidence ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 22, p. 48" .
+
+c3:I_D2_His_10_K_2 a c3:Indicator ;
+  c3:hasCode "D2.His.10.K-2" ; rdfs:label "Explain how historical sources can be used to study the past." ;
+  skos:prefLabel "Explain how historical sources can be used to study the past." ;
+  skos:altLabel "Indicator D2.His.10.K-2" ;
+  c3:officialText "Explain how historical sources can be used to study the past." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:SourcesEvidence ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_His_SourcesEvidence ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 22, p. 48" .
+
+c3:I_D2_His_10_3_5 a c3:Indicator ;
+  c3:hasCode "D2.His.10.3-5" ; rdfs:label "Compare information provided by different historical sources about the past." ;
+  skos:prefLabel "Compare information provided by different historical sources about the past." ;
+  skos:altLabel "Indicator D2.His.10.3-5" ;
+  c3:officialText "Compare information provided by different historical sources about the past." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:SourcesEvidence ; c3:requiresSkill c3:Compare ;
+  c3:inStrand c3:Str_His_SourcesEvidence ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 22, p. 48" .
+
+c3:I_D2_His_10_6_8 a c3:Indicator ;
+  c3:hasCode "D2.His.10.6-8" ; rdfs:label "Detect possible limitations in the historical record based on evidence collected from different kinds of historical sources." ;
+  skos:prefLabel "Detect possible limitations in the historical record based on evidence collected from different kinds of historical sources." ;
+  skos:altLabel "Indicator D2.His.10.6-8" ;
+  c3:officialText "Detect possible limitations in the historical record based on evidence collected from different kinds of historical sources." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:SourcesEvidence ; c3:requiresSkill c3:Analyze ;
+  c3:inStrand c3:Str_His_SourcesEvidence ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 22, p. 48" .
+
+c3:I_D2_His_10_9_12 a c3:Indicator ;
+  c3:hasCode "D2.His.10.9-12" ; rdfs:label "Detect possible limitations in various kinds of historical evidence and differing secondary interpretations." ;
+  skos:prefLabel "Detect possible limitations in various kinds of historical evidence and differing secondary interpretations." ;
+  skos:altLabel "Indicator D2.His.10.9-12" ;
+  c3:officialText "Detect possible limitations in various kinds of historical evidence and differing secondary interpretations." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:SourcesEvidence ; c3:requiresSkill c3:Analyze ;
+  c3:inStrand c3:Str_His_SourcesEvidence ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 22, p. 48" .
+
+c3:I_D2_His_11_K_2 a c3:Indicator ;
+  c3:hasCode "D2.His.11.K-2" ; rdfs:label "Identify the maker, date, and place of origin for a historical source from information within the source itself." ;
+  skos:prefLabel "Identify the maker, date, and place of origin for a historical source from information within the source itself." ;
+  skos:altLabel "Indicator D2.His.11.K-2" ;
+  c3:officialText "Identify the maker, date, and place of origin for a historical source from information within the source itself." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:SourcesEvidence ; c3:requiresSkill c3:Identify ;
+  c3:inStrand c3:Str_His_SourcesEvidence ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 22, p. 48" .
+
+c3:I_D2_His_11_3_5 a c3:Indicator ;
+  c3:hasCode "D2.His.11.3-5" ; rdfs:label "Infer the intended audience and purpose of a historical source from information within the source itself." ;
+  skos:prefLabel "Infer the intended audience and purpose of a historical source from information within the source itself." ;
+  skos:altLabel "Indicator D2.His.11.3-5" ;
+  c3:officialText "Infer the intended audience and purpose of a historical source from information within the source itself." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:SourcesEvidence ; c3:requiresSkill c3:Analyze ;
+  c3:inStrand c3:Str_His_SourcesEvidence ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 22, p. 48" .
+
+c3:I_D2_His_11_6_8 a c3:Indicator ;
+  c3:hasCode "D2.His.11.6-8" ; rdfs:label "Use other historical sources to infer a plausible maker, date, place of origin, and intended audience for historical sources where this information is not easily identified." ;
+  skos:prefLabel "Use other historical sources to infer a plausible maker, date, place of origin, and intended audience for historical sources where this information is not easily identified." ;
+  skos:altLabel "Indicator D2.His.11.6-8" ;
+  c3:officialText "Use other historical sources to infer a plausible maker, date, place of origin, and intended audience for historical sources where this information is not easily identified." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:SourcesEvidence ; c3:requiresSkill c3:Apply ;
+  c3:inStrand c3:Str_His_SourcesEvidence ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 22, p. 48" .
+
+c3:I_D2_His_11_9_12 a c3:Indicator ;
+  c3:hasCode "D2.His.11.9-12" ; rdfs:label "Critique the usefulness of historical sources for a specific historical inquiry based on their maker, date, place of origin, intended audience, and purpose." ;
+  skos:prefLabel "Critique the usefulness of historical sources for a specific historical inquiry based on their maker, date, place of origin, intended audience, and purpose." ;
+  skos:altLabel "Indicator D2.His.11.9-12" ;
+  c3:officialText "Critique the usefulness of historical sources for a specific historical inquiry based on their maker, date, place of origin, intended audience, and purpose." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:SourcesEvidence ; c3:requiresSkill c3:Evaluate ;
+  c3:inStrand c3:Str_His_SourcesEvidence ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 22, p. 48" .
+
+c3:I_D2_His_12_K_2 a c3:Indicator ;
+  c3:hasCode "D2.His.12.K-2" ; rdfs:label "Generate questions about a particular historical source as it relates to a particular historical event or development." ;
+  skos:prefLabel "Generate questions about a particular historical source as it relates to a particular historical event or development." ;
+  skos:altLabel "Indicator D2.His.12.K-2" ;
+  c3:officialText "Generate questions about a particular historical source as it relates to a particular historical event or development." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:SourcesEvidence ; c3:requiresSkill c3:Synthesize ;
+  c3:inStrand c3:Str_His_SourcesEvidence ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 22, p. 48" .
+
+c3:I_D2_His_12_3_5 a c3:Indicator ;
+  c3:hasCode "D2.His.12.3-5" ; rdfs:label "Generate questions about multiple historical sources and their relationships to particular historical events and developments." ;
+  skos:prefLabel "Generate questions about multiple historical sources and their relationships to particular historical events and developments." ;
+  skos:altLabel "Indicator D2.His.12.3-5" ;
+  c3:officialText "Generate questions about multiple historical sources and their relationships to particular historical events and developments." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:SourcesEvidence ; c3:requiresSkill c3:Synthesize ;
+  c3:inStrand c3:Str_His_SourcesEvidence ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 22, p. 48" .
+
+c3:I_D2_His_12_6_8 a c3:Indicator ;
+  c3:hasCode "D2.His.12.6-8" ; rdfs:label "Use questions generated about multiple historical sources to identify further areas of inquiry and additional sources." ;
+  skos:prefLabel "Use questions generated about multiple historical sources to identify further areas of inquiry and additional sources." ;
+  skos:altLabel "Indicator D2.His.12.6-8" ;
+  c3:officialText "Use questions generated about multiple historical sources to identify further areas of inquiry and additional sources." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:SourcesEvidence ; c3:requiresSkill c3:Apply ;
+  c3:inStrand c3:Str_His_SourcesEvidence ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 22, p. 48" .
+
+c3:I_D2_His_12_9_12 a c3:Indicator ;
+  c3:hasCode "D2.His.12.9-12" ; rdfs:label "Use questions generated about multiple historical sources to pursue further inquiry and investigate additional sources." ;
+  skos:prefLabel "Use questions generated about multiple historical sources to pursue further inquiry and investigate additional sources." ;
+  skos:altLabel "Indicator D2.His.12.9-12" ;
+  c3:officialText "Use questions generated about multiple historical sources to pursue further inquiry and investigate additional sources." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:SourcesEvidence ; c3:requiresSkill c3:Apply ;
+  c3:inStrand c3:Str_His_SourcesEvidence ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 22, p. 48" .
+
+c3:I_D2_His_13_3_5 a c3:Indicator ;
+  c3:hasCode "D2.His.13.3-5" ; rdfs:label "Use information about a historical source, including the maker, date, place of origin, intended audience, and purpose to judge the extent to which the source is useful for studying a particular topic." ;
+  skos:prefLabel "Use information about a historical source, including the maker, date, place of origin, intended audience, and purpose to judge the extent to which the source is useful for studying a particular topic." ;
+  skos:altLabel "Indicator D2.His.13.3-5" ;
+  c3:officialText "Use information about a historical source, including the maker, date, place of origin, intended audience, and purpose to judge the extent to which the source is useful for studying a particular topic." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:SourcesEvidence , c3:Argumentation ; c3:requiresSkill c3:Apply ;
+  c3:inStrand c3:Str_His_SourcesEvidence ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 22, p. 48" .
+
+c3:I_D2_His_13_6_8 a c3:Indicator ;
+  c3:hasCode "D2.His.13.6-8" ; rdfs:label "Evaluate the relevancy and utility of a historical source based on information such as maker, date, place of origin, intended audience, and purpose." ;
+  skos:prefLabel "Evaluate the relevancy and utility of a historical source based on information such as maker, date, place of origin, intended audience, and purpose." ;
+  skos:altLabel "Indicator D2.His.13.6-8" ;
+  c3:officialText "Evaluate the relevancy and utility of a historical source based on information such as maker, date, place of origin, intended audience, and purpose." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:SourcesEvidence , c3:Argumentation ; c3:requiresSkill c3:Evaluate ;
+  c3:inStrand c3:Str_His_SourcesEvidence ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 22, p. 48" .
+
+c3:I_D2_His_13_9_12 a c3:Indicator ;
+  c3:hasCode "D2.His.13.9-12" ; rdfs:label "Critique the appropriateness of the historical sources used in a secondary interpretation." ;
+  skos:prefLabel "Critique the appropriateness of the historical sources used in a secondary interpretation." ;
+  skos:altLabel "Indicator D2.His.13.9-12" ;
+  c3:officialText "Critique the appropriateness of the historical sources used in a secondary interpretation." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:SourcesEvidence , c3:Argumentation ; c3:requiresSkill c3:Evaluate ;
+  c3:inStrand c3:Str_His_SourcesEvidence ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 22, p. 48" .
+
+c3:I_D2_His_14_K_2 a c3:Indicator ;
+  c3:hasCode "D2.His.14.K-2" ; rdfs:label "Generate possible reasons for an event or development in the past." ;
+  skos:prefLabel "Generate possible reasons for an event or development in the past." ;
+  skos:altLabel "Indicator D2.His.14.K-2" ;
+  c3:officialText "Generate possible reasons for an event or development in the past." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:Causation ; c3:requiresSkill c3:Synthesize ;
+  c3:inStrand c3:Str_His_CausationArgument ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 23, p. 49" .
+
+c3:I_D2_His_14_3_5 a c3:Indicator ;
+  c3:hasCode "D2.His.14.3-5" ; rdfs:label "Explain probable causes and effects of events and developments." ;
+  skos:prefLabel "Explain probable causes and effects of events and developments." ;
+  skos:altLabel "Indicator D2.His.14.3-5" ;
+  c3:officialText "Explain probable causes and effects of events and developments." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:Causation ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_His_CausationArgument ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 23, p. 49" .
+
+c3:I_D2_His_14_6_8 a c3:Indicator ;
+  c3:hasCode "D2.His.14.6-8" ; rdfs:label "Explain multiple causes and effects of events and developments in the past." ;
+  skos:prefLabel "Explain multiple causes and effects of events and developments in the past." ;
+  skos:altLabel "Indicator D2.His.14.6-8" ;
+  c3:officialText "Explain multiple causes and effects of events and developments in the past." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:Causation ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_His_CausationArgument ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 23, p. 49" .
+
+c3:I_D2_His_14_9_12 a c3:Indicator ;
+  c3:hasCode "D2.His.14.9-12" ; rdfs:label "Analyze multiple and complex causes and effects of events in the past." ;
+  skos:prefLabel "Analyze multiple and complex causes and effects of events in the past." ;
+  skos:altLabel "Indicator D2.His.14.9-12" ;
+  c3:officialText "Analyze multiple and complex causes and effects of events in the past." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:Causation ; c3:requiresSkill c3:Analyze ;
+  c3:inStrand c3:Str_His_CausationArgument ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 23, p. 49" .
+
+c3:I_D2_His_15_6_8 a c3:Indicator ;
+  c3:hasCode "D2.His.15.6-8" ; rdfs:label "Evaluate the relative influence of various causes of events and developments in the past." ;
+  skos:prefLabel "Evaluate the relative influence of various causes of events and developments in the past." ;
+  skos:altLabel "Indicator D2.His.15.6-8" ;
+  c3:officialText "Evaluate the relative influence of various causes of events and developments in the past." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:Causation ; c3:requiresSkill c3:Evaluate ;
+  c3:inStrand c3:Str_His_CausationArgument ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 23, p. 49" .
+
+c3:I_D2_His_15_9_12 a c3:Indicator ;
+  c3:hasCode "D2.His.15.9-12" ; rdfs:label "Distinguish between long-term causes and triggering events in developing a historical argument." ;
+  skos:prefLabel "Distinguish between long-term causes and triggering events in developing a historical argument." ;
+  skos:altLabel "Indicator D2.His.15.9-12" ;
+  c3:officialText "Distinguish between long-term causes and triggering events in developing a historical argument." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:Causation ; c3:requiresSkill c3:Analyze ;
+  c3:inStrand c3:Str_His_CausationArgument ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 23, p. 49" .
+
+c3:I_D2_His_16_K_2 a c3:Indicator ;
+  c3:hasCode "D2.His.16.K-2" ; rdfs:label "Select which reasons might be more likely than others to explain a historical event or development." ;
+  skos:prefLabel "Select which reasons might be more likely than others to explain a historical event or development." ;
+  skos:altLabel "Indicator D2.His.16.K-2" ;
+  c3:officialText "Select which reasons might be more likely than others to explain a historical event or development." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:Argumentation , c3:Causation ; c3:requiresSkill c3:Evaluate ;
+  c3:inStrand c3:Str_His_CausationArgument ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 23, p. 49" .
+
+c3:I_D2_His_16_3_5 a c3:Indicator ;
+  c3:hasCode "D2.His.16.3-5" ; rdfs:label "Use evidence to develop a claim about the past." ;
+  skos:prefLabel "Use evidence to develop a claim about the past." ;
+  skos:altLabel "Indicator D2.His.16.3-5" ;
+  c3:officialText "Use evidence to develop a claim about the past." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:Argumentation , c3:Causation ; c3:requiresSkill c3:Apply ;
+  c3:inStrand c3:Str_His_CausationArgument ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 23, p. 49" .
+
+c3:I_D2_His_16_6_8 a c3:Indicator ;
+  c3:hasCode "D2.His.16.6-8" ; rdfs:label "Organize applicable evidence into a coherent argument about the past." ;
+  skos:prefLabel "Organize applicable evidence into a coherent argument about the past." ;
+  skos:altLabel "Indicator D2.His.16.6-8" ;
+  c3:officialText "Organize applicable evidence into a coherent argument about the past." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:Argumentation , c3:Causation ; c3:requiresSkill c3:Synthesize ;
+  c3:inStrand c3:Str_His_CausationArgument ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 23, p. 49" .
+
+c3:I_D2_His_16_9_12 a c3:Indicator ;
+  c3:hasCode "D2.His.16.9-12" ; rdfs:label "Integrate evidence from multiple relevant historical sources and interpretations into a reasoned argument about the past." ;
+  skos:prefLabel "Integrate evidence from multiple relevant historical sources and interpretations into a reasoned argument about the past." ;
+  skos:altLabel "Indicator D2.His.16.9-12" ;
+  c3:officialText "Integrate evidence from multiple relevant historical sources and interpretations into a reasoned argument about the past." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:Argumentation , c3:Causation ; c3:requiresSkill c3:Synthesize ;
+  c3:inStrand c3:Str_His_CausationArgument ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 23, p. 49" .
+
+c3:I_D2_His_17_3_5 a c3:Indicator ;
+  c3:hasCode "D2.His.17.3-5" ; rdfs:label "Summarize the central claim in a secondary work of history." ;
+  skos:prefLabel "Summarize the central claim in a secondary work of history." ;
+  skos:altLabel "Indicator D2.His.17.3-5" ;
+  c3:officialText "Summarize the central claim in a secondary work of history." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:Argumentation , c3:SourcesEvidence ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_His_CausationArgument ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 23, p. 49" .
+
+c3:I_D2_His_17_6_8 a c3:Indicator ;
+  c3:hasCode "D2.His.17.6-8" ; rdfs:label "Compare the central arguments in secondary works of history on related topics in multiple media." ;
+  skos:prefLabel "Compare the central arguments in secondary works of history on related topics in multiple media." ;
+  skos:altLabel "Indicator D2.His.17.6-8" ;
+  c3:officialText "Compare the central arguments in secondary works of history on related topics in multiple media." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:Argumentation , c3:SourcesEvidence ; c3:requiresSkill c3:Compare ;
+  c3:inStrand c3:Str_His_CausationArgument ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 23, p. 49" .
+
+c3:I_D2_His_17_9_12 a c3:Indicator ;
+  c3:hasCode "D2.His.17.9-12" ; rdfs:label "Critique the central arguments in secondary works of history on related topics in multiple media in terms of their historical accuracy." ;
+  skos:prefLabel "Critique the central arguments in secondary works of history on related topics in multiple media in terms of their historical accuracy." ;
+  skos:altLabel "Indicator D2.His.17.9-12" ;
+  c3:officialText "Critique the central arguments in secondary works of history on related topics in multiple media in terms of their historical accuracy." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:Argumentation , c3:SourcesEvidence ; c3:requiresSkill c3:Evaluate ;
+  c3:inStrand c3:Str_His_CausationArgument ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:History ;
+  dcterms:source "C3 Framework, Table 23, p. 49" .
+
+c3:Dimension2
+  c3:alignmentNote "Module extracted for reuse of Dimension 2 History indicators." .

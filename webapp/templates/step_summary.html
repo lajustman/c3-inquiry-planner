@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="panel">
+  <h2>Summary</h2>
+  <p>You've explored the lesson objectives, set your own questions, personalized the learning path, and reviewed the mastery loop.</p>
+  <h3>Your questions</h3>
+  {% if student_state.questions %}
+  <ul>
+    {% for question in student_state.questions %}
+    <li>{{ question }}</li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p>No questions saved yet.</p>
+  {% endif %}
+
+  <h3>Your interest profile</h3>
+  {% if student_state.interests %}
+  <pre class="block">{{ student_state.interests | tojson(indent=2) }}</pre>
+  {% else %}
+  <p>No interests selected.</p>
+  {% endif %}
+
+  <div class="actions">
+    <a class="button" href="{{ url_for('objectives') }}">Back to objectives</a>
+    <a class="button secondary" href="{{ url_for('reset') }}">Start over</a>
+  </div>
+</section>
+{% endblock %}

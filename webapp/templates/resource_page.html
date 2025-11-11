@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="panel learning-panel">
+  <a class="back-link" href="{{ url_for('learning_path') }}">&laquo; Back to your learning path</a>
+  <h2>{{ page.title }}</h2>
+  {% if page.summary %}
+  <p class="panel-intro">{{ page.summary }}</p>
+  {% endif %}
+
+  {% if page.featured_resources %}
+  <h3>Featured resources</h3>
+  <ul class="learning-stage__resources">
+    {% for item in page.featured_resources %}
+    <li>
+      <div class="resource-title-row">
+        {% if item.url %}
+        <a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.title }}</a>
+        {% else %}
+        <strong>{{ item.title }}</strong>
+        {% endif %}
+        {% if item.format %}
+        <span class="resource-format resource-format--{{ item.format|lower }}">{{ item.format|upper }}</span>
+        {% endif %}
+      </div>
+      {% if item.duration %}
+      <span class="resource-meta">{{ item.duration }}</span>
+      {% endif %}
+      {% if item.description %}
+      <p>{{ item.description }}</p>
+      {% endif %}
+      {% if item.embed %}
+      <div class="resource-embed">
+        <iframe
+          src="{{ item.embed }}"
+          title="{{ item.title }}"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  {% if page.key_points %}
+  <h3>Key moments</h3>
+  <ul class="learning-stage__activities">
+    {% for point in page.key_points %}
+    <li>{{ point }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  {% if page.reflection_questions %}
+  <h3>Questions to consider</h3>
+  <ul class="learning-stage__activities">
+    {% for question in page.reflection_questions %}
+    <li>{{ question }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  {% if page.further_reading %}
+  <div class="learning-summary learning-summary--tip">
+    <strong>Dig deeper</strong>
+    <ul class="learning-stage__resources">
+      {% for item in page.further_reading %}
+      <li>
+        <a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.label }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+</section>
+{% endblock %}

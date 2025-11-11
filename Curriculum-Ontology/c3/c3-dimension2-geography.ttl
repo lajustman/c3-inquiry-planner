@@ -1,0 +1,463 @@
+@prefix c3:     <urn:c3:> .
+@prefix dcterms:<http://purl.org/dc/terms/> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@base <file:///Users/louisjustman/Downloads/C3%20Project/Curriculum-Ontology/c3/> .
+
+<c3-dimension2-geography.ttl> a owl:Ontology ;
+  rdfs:label "C3 Framework — Dimension 2 Geography" ;
+  dcterms:description "Dimension 2 Geography indicators with SKOS alignment and provenance." ;
+  dcterms:creator "NCSS — College, Career, and Civic Life (C3) Framework for Social Studies State Standards" ;
+  dcterms:source "C3 Framework, pp. 31–49" .
+
+#################################################################
+# Annotation properties
+#################################################################
+
+c3:status        a owl:AnnotationProperty .
+c3:createdOn     a owl:AnnotationProperty .
+c3:alignmentNote a owl:AnnotationProperty .
+c3:officialText  a owl:AnnotationProperty .
+c3:sourceDoc     a owl:AnnotationProperty .
+c3:sourcePage    a owl:AnnotationProperty .
+
+#################################################################
+# Indicators
+#################################################################
+
+c3:I_D2_Geo_1_K_2 a c3:Indicator ;
+  c3:hasCode "D2.Geo.1.K-2" ; rdfs:label "Construct maps, graphs, and other representations of familiar places." ;
+  skos:prefLabel "Construct maps, graphs, and other representations of familiar places." ;
+  skos:altLabel "Indicator D2.Geo.1.K-2" ;
+  c3:officialText "Construct maps, graphs, and other representations of familiar places." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:Maps , c3:GeospatialTools ; c3:requiresSkill c3:ConstructClaim ;
+  c3:inStrand c3:Str_Geo_Representations ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 16, p. 40" .
+
+c3:I_D2_Geo_1_3_5 a c3:Indicator ;
+  c3:hasCode "D2.Geo.1.3-5" ; rdfs:label "Construct maps and other graphic representations of both familiar and unfamiliar places." ;
+  skos:prefLabel "Construct maps and other graphic representations of both familiar and unfamiliar places." ;
+  skos:altLabel "Indicator D2.Geo.1.3-5" ;
+  c3:officialText "Construct maps and other graphic representations of both familiar and unfamiliar places." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:Maps , c3:GeospatialTools ; c3:requiresSkill c3:ConstructClaim ;
+  c3:inStrand c3:Str_Geo_Representations ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 16, p. 40" .
+
+c3:I_D2_Geo_1_6_8 a c3:Indicator ;
+  c3:hasCode "D2.Geo.1.6-8" ; rdfs:label "Construct maps to represent and explain the spatial patterns of cultural and environmental characteristics." ;
+  skos:prefLabel "Construct maps to represent and explain the spatial patterns of cultural and environmental characteristics." ;
+  skos:altLabel "Indicator D2.Geo.1.6-8" ;
+  c3:officialText "Construct maps to represent and explain the spatial patterns of cultural and environmental characteristics." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:Maps , c3:GeospatialTools ; c3:requiresSkill c3:ConstructClaim ;
+  c3:inStrand c3:Str_Geo_Representations ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 16, p. 40" .
+
+c3:I_D2_Geo_1_9_12 a c3:Indicator ;
+  c3:hasCode "D2.Geo.1.9-12" ; rdfs:label "Use geospatial and related technologies to create maps to display and explain the spatial patterns of cultural and environmental characteristics." ;
+  skos:prefLabel "Use geospatial and related technologies to create maps to display and explain the spatial patterns of cultural and environmental characteristics." ;
+  skos:altLabel "Indicator D2.Geo.1.9-12" ;
+  c3:officialText "Use geospatial and related technologies to create maps to display and explain the spatial patterns of cultural and environmental characteristics." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:Maps , c3:GeospatialTools ; c3:requiresSkill c3:Apply ;
+  c3:inStrand c3:Str_Geo_Representations ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 16, p. 40" .
+
+c3:I_D2_Geo_2_K_2 a c3:Indicator ;
+  c3:hasCode "D2.Geo.2.K-2" ; rdfs:label "Use maps, graphs, photographs, and other representations to describe places and the relationships and interactions that shape them." ;
+  skos:prefLabel "Use maps, graphs, photographs, and other representations to describe places and the relationships and interactions that shape them." ;
+  skos:altLabel "Indicator D2.Geo.2.K-2" ;
+  c3:officialText "Use maps, graphs, photographs, and other representations to describe places and the relationships and interactions that shape them." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:Maps , c3:SpatialPatterns , c3:HumanEnvironment ; c3:requiresSkill c3:Apply ;
+  c3:inStrand c3:Str_Geo_Representations ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 16, p. 40" .
+
+c3:I_D2_Geo_2_3_5 a c3:Indicator ;
+  c3:hasCode "D2.Geo.2.3-5" ; rdfs:label "Use maps, satellite images, photographs, and other representations to explain relationships between the locations of places and regions and their environmental characteristics." ;
+  skos:prefLabel "Use maps, satellite images, photographs, and other representations to explain relationships between the locations of places and regions and their environmental characteristics." ;
+  skos:altLabel "Indicator D2.Geo.2.3-5" ;
+  c3:officialText "Use maps, satellite images, photographs, and other representations to explain relationships between the locations of places and regions and their environmental characteristics." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:Maps , c3:SpatialPatterns , c3:HumanEnvironment ; c3:requiresSkill c3:Apply ;
+  c3:inStrand c3:Str_Geo_Representations ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 16, p. 40" .
+
+c3:I_D2_Geo_2_6_8 a c3:Indicator ;
+  c3:hasCode "D2.Geo.2.6-8" ; rdfs:label "Use maps, satellite images, photographs, and other representations to explain relationships between the locations of places and regions, and changes in their environmental characteristics." ;
+  skos:prefLabel "Use maps, satellite images, photographs, and other representations to explain relationships between the locations of places and regions, and changes in their environmental characteristics." ;
+  skos:altLabel "Indicator D2.Geo.2.6-8" ;
+  c3:officialText "Use maps, satellite images, photographs, and other representations to explain relationships between the locations of places and regions, and changes in their environmental characteristics." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:Maps , c3:SpatialPatterns , c3:HumanEnvironment ; c3:requiresSkill c3:Apply ;
+  c3:inStrand c3:Str_Geo_Representations ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 16, p. 40" .
+
+c3:I_D2_Geo_2_9_12 a c3:Indicator ;
+  c3:hasCode "D2.Geo.2.9-12" ; rdfs:label "Use maps, satellite images, photographs, and other representations to explain relationships between the locations of places and regions and their political, cultural, and economic dynamics." ;
+  skos:prefLabel "Use maps, satellite images, photographs, and other representations to explain relationships between the locations of places and regions and their political, cultural, and economic dynamics." ;
+  skos:altLabel "Indicator D2.Geo.2.9-12" ;
+  c3:officialText "Use maps, satellite images, photographs, and other representations to explain relationships between the locations of places and regions and their political, cultural, and economic dynamics." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:Maps , c3:SpatialPatterns , c3:HumanEnvironment ; c3:requiresSkill c3:Apply ;
+  c3:inStrand c3:Str_Geo_Representations ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 16, p. 40" .
+
+c3:I_D2_Geo_3_K_2 a c3:Indicator ;
+  c3:hasCode "D2.Geo.3.K-2" ; rdfs:label "Use maps, globes, and other simple geographic models to identify cultural and environmental characteristics of places." ;
+  skos:prefLabel "Use maps, globes, and other simple geographic models to identify cultural and environmental characteristics of places." ;
+  skos:altLabel "Indicator D2.Geo.3.K-2" ;
+  c3:officialText "Use maps, globes, and other simple geographic models to identify cultural and environmental characteristics of places." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:Maps , c3:SpatialPatterns , c3:GeospatialTools ; c3:requiresSkill c3:Apply ;
+  c3:inStrand c3:Str_Geo_Representations ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 16, p. 40" .
+
+c3:I_D2_Geo_3_3_5 a c3:Indicator ;
+  c3:hasCode "D2.Geo.3.3-5" ; rdfs:label "Use maps of different scales to describe the locations of cultural and environmental characteristics." ;
+  skos:prefLabel "Use maps of different scales to describe the locations of cultural and environmental characteristics." ;
+  skos:altLabel "Indicator D2.Geo.3.3-5" ;
+  c3:officialText "Use maps of different scales to describe the locations of cultural and environmental characteristics." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:Maps , c3:SpatialPatterns , c3:GeospatialTools ; c3:requiresSkill c3:Apply ;
+  c3:inStrand c3:Str_Geo_Representations ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 16, p. 40" .
+
+c3:I_D2_Geo_3_6_8 a c3:Indicator ;
+  c3:hasCode "D2.Geo.3.6-8" ; rdfs:label "Use paper based and electronic mapping and graphing techniques to represent and analyze spatial patterns of different environmental and cultural characteristics." ;
+  skos:prefLabel "Use paper based and electronic mapping and graphing techniques to represent and analyze spatial patterns of different environmental and cultural characteristics." ;
+  skos:altLabel "Indicator D2.Geo.3.6-8" ;
+  c3:officialText "Use paper based and electronic mapping and graphing techniques to represent and analyze spatial patterns of different environmental and cultural characteristics." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:Maps , c3:SpatialPatterns , c3:GeospatialTools ; c3:requiresSkill c3:Apply ;
+  c3:inStrand c3:Str_Geo_Representations ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 16, p. 40" .
+
+c3:I_D2_Geo_3_9_12 a c3:Indicator ;
+  c3:hasCode "D2.Geo.3.9-12" ; rdfs:label "Use geographic data to analyze variations in the spatial patterns of cultural and environmental characteristics at multiple scales." ;
+  skos:prefLabel "Use geographic data to analyze variations in the spatial patterns of cultural and environmental characteristics at multiple scales." ;
+  skos:altLabel "Indicator D2.Geo.3.9-12" ;
+  c3:officialText "Use geographic data to analyze variations in the spatial patterns of cultural and environmental characteristics at multiple scales." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:Maps , c3:SpatialPatterns , c3:GeospatialTools ; c3:requiresSkill c3:Apply ;
+  c3:inStrand c3:Str_Geo_Representations ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 16, p. 40" .
+
+c3:I_D2_Geo_4_K_2 a c3:Indicator ;
+  c3:hasCode "D2.Geo.4.K-2" ; rdfs:label "Explain how weather, climate, and other environmental characteristics affect people’s lives in a place or region." ;
+  skos:prefLabel "Explain how weather, climate, and other environmental characteristics affect people’s lives in a place or region." ;
+  skos:altLabel "Indicator D2.Geo.4.K-2" ;
+  c3:officialText "Explain how weather, climate, and other environmental characteristics affect people’s lives in a place or region." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:HumanEnvironment , c3:CulturalInteraction ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Geo_HumanEnvironment ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 17, p. 41" .
+
+c3:I_D2_Geo_4_3_5 a c3:Indicator ;
+  c3:hasCode "D2.Geo.4.3-5" ; rdfs:label "Explain how culture influences the way people modify and adapt to their environments." ;
+  skos:prefLabel "Explain how culture influences the way people modify and adapt to their environments." ;
+  skos:altLabel "Indicator D2.Geo.4.3-5" ;
+  c3:officialText "Explain how culture influences the way people modify and adapt to their environments." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:HumanEnvironment , c3:CulturalInteraction ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Geo_HumanEnvironment ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 17, p. 41" .
+
+c3:I_D2_Geo_4_6_8 a c3:Indicator ;
+  c3:hasCode "D2.Geo.4.6-8" ; rdfs:label "Explain how cultural patterns and economic decisions influence environments and the daily lives of people in both nearby and distant places." ;
+  skos:prefLabel "Explain how cultural patterns and economic decisions influence environments and the daily lives of people in both nearby and distant places." ;
+  skos:altLabel "Indicator D2.Geo.4.6-8" ;
+  c3:officialText "Explain how cultural patterns and economic decisions influence environments and the daily lives of people in both nearby and distant places." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:HumanEnvironment , c3:CulturalInteraction ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Geo_HumanEnvironment ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 17, p. 41" .
+
+c3:I_D2_Geo_4_9_12 a c3:Indicator ;
+  c3:hasCode "D2.Geo.4.9-12" ; rdfs:label "Analyze relationships and interactions within and between human and physical systems to explain reciprocal influences that occur among them." ;
+  skos:prefLabel "Analyze relationships and interactions within and between human and physical systems to explain reciprocal influences that occur among them." ;
+  skos:altLabel "Indicator D2.Geo.4.9-12" ;
+  c3:officialText "Analyze relationships and interactions within and between human and physical systems to explain reciprocal influences that occur among them." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:HumanEnvironment , c3:CulturalInteraction ; c3:requiresSkill c3:Analyze ;
+  c3:inStrand c3:Str_Geo_HumanEnvironment ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 17, p. 41" .
+
+c3:I_D2_Geo_5_K_2 a c3:Indicator ;
+  c3:hasCode "D2.Geo.5.K-2" ; rdfs:label "Describe how human activities affect the cultural and environmental characteristics of places or regions." ;
+  skos:prefLabel "Describe how human activities affect the cultural and environmental characteristics of places or regions." ;
+  skos:altLabel "Indicator D2.Geo.5.K-2" ;
+  c3:officialText "Describe how human activities affect the cultural and environmental characteristics of places or regions." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:EnvironmentalChange , c3:CulturalInteraction ; c3:requiresSkill c3:Describe ;
+  c3:inStrand c3:Str_Geo_HumanEnvironment ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 17, p. 41" .
+
+c3:I_D2_Geo_5_3_5 a c3:Indicator ;
+  c3:hasCode "D2.Geo.5.3-5" ; rdfs:label "Explain how the cultural and environmental characteristics of places change over time." ;
+  skos:prefLabel "Explain how the cultural and environmental characteristics of places change over time." ;
+  skos:altLabel "Indicator D2.Geo.5.3-5" ;
+  c3:officialText "Explain how the cultural and environmental characteristics of places change over time." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:EnvironmentalChange , c3:CulturalInteraction ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Geo_HumanEnvironment ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 17, p. 41" .
+
+c3:I_D2_Geo_5_6_8 a c3:Indicator ;
+  c3:hasCode "D2.Geo.5.6-8" ; rdfs:label "Analyze the combinations of cultural and environmental characteristics that make places both similar to and different from other places." ;
+  skos:prefLabel "Analyze the combinations of cultural and environmental characteristics that make places both similar to and different from other places." ;
+  skos:altLabel "Indicator D2.Geo.5.6-8" ;
+  c3:officialText "Analyze the combinations of cultural and environmental characteristics that make places both similar to and different from other places." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:EnvironmentalChange , c3:CulturalInteraction ; c3:requiresSkill c3:Analyze ;
+  c3:inStrand c3:Str_Geo_HumanEnvironment ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 17, p. 41" .
+
+c3:I_D2_Geo_5_9_12 a c3:Indicator ;
+  c3:hasCode "D2.Geo.5.9-12" ; rdfs:label "Evaluate how political and economic decisions throughout time have influenced cultural and environmental characteristics of various places and regions." ;
+  skos:prefLabel "Evaluate how political and economic decisions throughout time have influenced cultural and environmental characteristics of various places and regions." ;
+  skos:altLabel "Indicator D2.Geo.5.9-12" ;
+  c3:officialText "Evaluate how political and economic decisions throughout time have influenced cultural and environmental characteristics of various places and regions." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:EnvironmentalChange , c3:CulturalInteraction ; c3:requiresSkill c3:Evaluate ;
+  c3:inStrand c3:Str_Geo_HumanEnvironment ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 17, p. 41" .
+
+c3:I_D2_Geo_6_K_2 a c3:Indicator ;
+  c3:hasCode "D2.Geo.6.K-2" ; rdfs:label "Identify some cultural and environmental characteristics of specific places." ;
+  skos:prefLabel "Identify some cultural and environmental characteristics of specific places." ;
+  skos:altLabel "Indicator D2.Geo.6.K-2" ;
+  c3:officialText "Identify some cultural and environmental characteristics of specific places." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:SettlementPatterns , c3:HumanEnvironment ; c3:requiresSkill c3:Identify ;
+  c3:inStrand c3:Str_Geo_HumanEnvironment ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 17, p. 41" .
+
+c3:I_D2_Geo_6_3_5 a c3:Indicator ;
+  c3:hasCode "D2.Geo.6.3-5" ; rdfs:label "Describe how environmental and cultural characteristics influence population distribution in specific places or regions." ;
+  skos:prefLabel "Describe how environmental and cultural characteristics influence population distribution in specific places or regions." ;
+  skos:altLabel "Indicator D2.Geo.6.3-5" ;
+  c3:officialText "Describe how environmental and cultural characteristics influence population distribution in specific places or regions." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:SettlementPatterns , c3:HumanEnvironment ; c3:requiresSkill c3:Describe ;
+  c3:inStrand c3:Str_Geo_HumanEnvironment ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 17, p. 41" .
+
+c3:I_D2_Geo_6_6_8 a c3:Indicator ;
+  c3:hasCode "D2.Geo.6.6-8" ; rdfs:label "Explain how the physical and human characteristics of places and regions are connected to human identities and cultures." ;
+  skos:prefLabel "Explain how the physical and human characteristics of places and regions are connected to human identities and cultures." ;
+  skos:altLabel "Indicator D2.Geo.6.6-8" ;
+  c3:officialText "Explain how the physical and human characteristics of places and regions are connected to human identities and cultures." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:SettlementPatterns , c3:HumanEnvironment ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Geo_HumanEnvironment ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 17, p. 41" .
+
+c3:I_D2_Geo_6_9_12 a c3:Indicator ;
+  c3:hasCode "D2.Geo.6.9-12" ; rdfs:label "Evaluate the impact of human settlement activities on the environmental and cultural characteristics of specific places and regions." ;
+  skos:prefLabel "Evaluate the impact of human settlement activities on the environmental and cultural characteristics of specific places and regions." ;
+  skos:altLabel "Indicator D2.Geo.6.9-12" ;
+  c3:officialText "Evaluate the impact of human settlement activities on the environmental and cultural characteristics of specific places and regions." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:SettlementPatterns , c3:HumanEnvironment ; c3:requiresSkill c3:Evaluate ;
+  c3:inStrand c3:Str_Geo_HumanEnvironment ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 17, p. 41" .
+
+c3:I_D2_Geo_7_K_2 a c3:Indicator ;
+  c3:hasCode "D2.Geo.7.K-2" ; rdfs:label "Explain why and how people, goods, and ideas move from place to place." ;
+  skos:prefLabel "Explain why and how people, goods, and ideas move from place to place." ;
+  skos:altLabel "Indicator D2.Geo.7.K-2" ;
+  c3:officialText "Explain why and how people, goods, and ideas move from place to place." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:Migration , c3:TransportationNetworks , c3:GlobalInterconnections ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Geo_HumanPopulation ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 18, p. 43" .
+
+c3:I_D2_Geo_7_3_5 a c3:Indicator ;
+  c3:hasCode "D2.Geo.7.3-5" ; rdfs:label "Explain how cultural and environmental characteristics affect the distribution and movement of people, goods, and ideas." ;
+  skos:prefLabel "Explain how cultural and environmental characteristics affect the distribution and movement of people, goods, and ideas." ;
+  skos:altLabel "Indicator D2.Geo.7.3-5" ;
+  c3:officialText "Explain how cultural and environmental characteristics affect the distribution and movement of people, goods, and ideas." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:Migration , c3:TransportationNetworks , c3:GlobalInterconnections ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Geo_HumanPopulation ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 18, p. 43" .
+
+c3:I_D2_Geo_7_6_8 a c3:Indicator ;
+  c3:hasCode "D2.Geo.7.6-8" ; rdfs:label "Explain how changes in transportation and communication technology influence the spatial connections among human settlements and affect the diffusion of ideas and cultural practices." ;
+  skos:prefLabel "Explain how changes in transportation and communication technology influence the spatial connections among human settlements and affect the diffusion of ideas and cultural practices." ;
+  skos:altLabel "Indicator D2.Geo.7.6-8" ;
+  c3:officialText "Explain how changes in transportation and communication technology influence the spatial connections among human settlements and affect the diffusion of ideas and cultural practices." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:Migration , c3:TransportationNetworks , c3:GlobalInterconnections ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Geo_HumanPopulation ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 18, p. 43" .
+
+c3:I_D2_Geo_7_9_12 a c3:Indicator ;
+  c3:hasCode "D2.Geo.7.9-12" ; rdfs:label "Analyze the reciprocal nature of how historical events and the spatial diffusion of ideas, technologies, and cultural practices have influenced migration patterns and the distribution of human population." ;
+  skos:prefLabel "Analyze the reciprocal nature of how historical events and the spatial diffusion of ideas, technologies, and cultural practices have influenced migration patterns and the distribution of human population." ;
+  skos:altLabel "Indicator D2.Geo.7.9-12" ;
+  c3:officialText "Analyze the reciprocal nature of how historical events and the spatial diffusion of ideas, technologies, and cultural practices have influenced migration patterns and the distribution of human population." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:Migration , c3:TransportationNetworks , c3:GlobalInterconnections ; c3:requiresSkill c3:Analyze ;
+  c3:inStrand c3:Str_Geo_HumanPopulation ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 18, p. 43" .
+
+c3:I_D2_Geo_8_K_2 a c3:Indicator ;
+  c3:hasCode "D2.Geo.8.K-2" ; rdfs:label "Compare how people in different types of communities use local and distant environments to meet their daily needs." ;
+  skos:prefLabel "Compare how people in different types of communities use local and distant environments to meet their daily needs." ;
+  skos:altLabel "Indicator D2.Geo.8.K-2" ;
+  c3:officialText "Compare how people in different types of communities use local and distant environments to meet their daily needs." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:Resources , c3:SettlementPatterns , c3:EconomicActivities ; c3:requiresSkill c3:Compare ;
+  c3:inStrand c3:Str_Geo_HumanPopulation ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 18, p. 43" .
+
+c3:I_D2_Geo_8_3_5 a c3:Indicator ;
+  c3:hasCode "D2.Geo.8.3-5" ; rdfs:label "Explain how human settlements and movements relate to the locations and use of various natural resources." ;
+  skos:prefLabel "Explain how human settlements and movements relate to the locations and use of various natural resources." ;
+  skos:altLabel "Indicator D2.Geo.8.3-5" ;
+  c3:officialText "Explain how human settlements and movements relate to the locations and use of various natural resources." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:Resources , c3:SettlementPatterns , c3:EconomicActivities ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Geo_HumanPopulation ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 18, p. 43" .
+
+c3:I_D2_Geo_8_6_8 a c3:Indicator ;
+  c3:hasCode "D2.Geo.8.6-8" ; rdfs:label "Analyze how relationships between humans and environments extend or contract spatial patterns of settlement and movement." ;
+  skos:prefLabel "Analyze how relationships between humans and environments extend or contract spatial patterns of settlement and movement." ;
+  skos:altLabel "Indicator D2.Geo.8.6-8" ;
+  c3:officialText "Analyze how relationships between humans and environments extend or contract spatial patterns of settlement and movement." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:Resources , c3:SettlementPatterns , c3:EconomicActivities ; c3:requiresSkill c3:Analyze ;
+  c3:inStrand c3:Str_Geo_HumanPopulation ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 18, p. 43" .
+
+c3:I_D2_Geo_8_9_12 a c3:Indicator ;
+  c3:hasCode "D2.Geo.8.9-12" ; rdfs:label "Evaluate the impact of economic activities and political decisions on spatial patterns within and among urban, suburban, and rural regions." ;
+  skos:prefLabel "Evaluate the impact of economic activities and political decisions on spatial patterns within and among urban, suburban, and rural regions." ;
+  skos:altLabel "Indicator D2.Geo.8.9-12" ;
+  c3:officialText "Evaluate the impact of economic activities and political decisions on spatial patterns within and among urban, suburban, and rural regions." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:Resources , c3:SettlementPatterns , c3:EconomicActivities ; c3:requiresSkill c3:Evaluate ;
+  c3:inStrand c3:Str_Geo_HumanPopulation ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 18, p. 43" .
+
+c3:I_D2_Geo_9_K_2 a c3:Indicator ;
+  c3:hasCode "D2.Geo.9.K-2" ; rdfs:label "Describe the connections between the physical environment of a place and the economic activities found there." ;
+  skos:prefLabel "Describe the connections between the physical environment of a place and the economic activities found there." ;
+  skos:altLabel "Indicator D2.Geo.9.K-2" ;
+  c3:officialText "Describe the connections between the physical environment of a place and the economic activities found there." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:NaturalHazards , c3:EnvironmentalChange , c3:EconomicActivities ; c3:requiresSkill c3:Describe ;
+  c3:inStrand c3:Str_Geo_HumanPopulation ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 18, p. 43" .
+
+c3:I_D2_Geo_9_3_5 a c3:Indicator ;
+  c3:hasCode "D2.Geo.9.3-5" ; rdfs:label "Analyze the effects of catastrophic environmental and technological events on human settlements and migration." ;
+  skos:prefLabel "Analyze the effects of catastrophic environmental and technological events on human settlements and migration." ;
+  skos:altLabel "Indicator D2.Geo.9.3-5" ;
+  c3:officialText "Analyze the effects of catastrophic environmental and technological events on human settlements and migration." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:NaturalHazards , c3:EnvironmentalChange , c3:EconomicActivities ; c3:requiresSkill c3:Analyze ;
+  c3:inStrand c3:Str_Geo_HumanPopulation ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 18, p. 43" .
+
+c3:I_D2_Geo_9_6_8 a c3:Indicator ;
+  c3:hasCode "D2.Geo.9.6-8" ; rdfs:label "Evaluate the influences of long-term human-induced environmental change on spatial patterns of conflict and cooperation." ;
+  skos:prefLabel "Evaluate the influences of long-term human-induced environmental change on spatial patterns of conflict and cooperation." ;
+  skos:altLabel "Indicator D2.Geo.9.6-8" ;
+  c3:officialText "Evaluate the influences of long-term human-induced environmental change on spatial patterns of conflict and cooperation." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:NaturalHazards , c3:EnvironmentalChange , c3:EconomicActivities ; c3:requiresSkill c3:Evaluate ;
+  c3:inStrand c3:Str_Geo_HumanPopulation ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 18, p. 43" .
+
+c3:I_D2_Geo_9_9_12 a c3:Indicator ;
+  c3:hasCode "D2.Geo.9.9-12" ; rdfs:label "Evaluate the influence of long-term climate variability on human migration and settlement patterns, resource use, and land uses at local-to-global scales." ;
+  skos:prefLabel "Evaluate the influence of long-term climate variability on human migration and settlement patterns, resource use, and land uses at local-to-global scales." ;
+  skos:altLabel "Indicator D2.Geo.9.9-12" ;
+  c3:officialText "Evaluate the influence of long-term climate variability on human migration and settlement patterns, resource use, and land uses at local-to-global scales." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:NaturalHazards , c3:EnvironmentalChange , c3:EconomicActivities ; c3:requiresSkill c3:Evaluate ;
+  c3:inStrand c3:Str_Geo_HumanPopulation ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 18, p. 43" .
+
+c3:I_D2_Geo_10_K_2 a c3:Indicator ;
+  c3:hasCode "D2.Geo.10.K-2" ; rdfs:label "Describe changes in the physical and cultural characteristics of various world regions." ;
+  skos:prefLabel "Describe changes in the physical and cultural characteristics of various world regions." ;
+  skos:altLabel "Indicator D2.Geo.10.K-2" ;
+  c3:officialText "Describe changes in the physical and cultural characteristics of various world regions." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:Regions , c3:EnvironmentalChange , c3:GlobalInterconnections ; c3:requiresSkill c3:Describe ;
+  c3:inStrand c3:Str_Geo_GlobalInterconn ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 19, p. 44" .
+
+c3:I_D2_Geo_10_3_5 a c3:Indicator ;
+  c3:hasCode "D2.Geo.10.3-5" ; rdfs:label "Explain why environmental characteristics vary among different world regions." ;
+  skos:prefLabel "Explain why environmental characteristics vary among different world regions." ;
+  skos:altLabel "Indicator D2.Geo.10.3-5" ;
+  c3:officialText "Explain why environmental characteristics vary among different world regions." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:Regions , c3:EnvironmentalChange , c3:GlobalInterconnections ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Geo_GlobalInterconn ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 19, p. 44" .
+
+c3:I_D2_Geo_10_6_8 a c3:Indicator ;
+  c3:hasCode "D2.Geo.10.6-8" ; rdfs:label "Analyze the ways in which cultural and environmental characteristics vary among various regions of the world." ;
+  skos:prefLabel "Analyze the ways in which cultural and environmental characteristics vary among various regions of the world." ;
+  skos:altLabel "Indicator D2.Geo.10.6-8" ;
+  c3:officialText "Analyze the ways in which cultural and environmental characteristics vary among various regions of the world." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:Regions , c3:EnvironmentalChange , c3:GlobalInterconnections ; c3:requiresSkill c3:Analyze ;
+  c3:inStrand c3:Str_Geo_GlobalInterconn ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 19, p. 44" .
+
+c3:I_D2_Geo_10_9_12 a c3:Indicator ;
+  c3:hasCode "D2.Geo.10.9-12" ; rdfs:label "Evaluate how changes in the environmental and cultural characteristics of a place or region influence spatial patterns of trade and land use." ;
+  skos:prefLabel "Evaluate how changes in the environmental and cultural characteristics of a place or region influence spatial patterns of trade and land use." ;
+  skos:altLabel "Indicator D2.Geo.10.9-12" ;
+  c3:officialText "Evaluate how changes in the environmental and cultural characteristics of a place or region influence spatial patterns of trade and land use." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:Regions , c3:EnvironmentalChange , c3:GlobalInterconnections ; c3:requiresSkill c3:Evaluate ;
+  c3:inStrand c3:Str_Geo_GlobalInterconn ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 19, p. 44" .
+
+c3:I_D2_Geo_11_K_2 a c3:Indicator ;
+  c3:hasCode "D2.Geo.11.K-2" ; rdfs:label "Explain how the consumption of products connects people to distant places." ;
+  skos:prefLabel "Explain how the consumption of products connects people to distant places." ;
+  skos:altLabel "Indicator D2.Geo.11.K-2" ;
+  c3:officialText "Explain how the consumption of products connects people to distant places." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:GlobalInterconnections , c3:EconomicActivities , c3:Resources ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Geo_GlobalInterconn ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 19, p. 44" .
+
+c3:I_D2_Geo_11_3_5 a c3:Indicator ;
+  c3:hasCode "D2.Geo.11.3-5" ; rdfs:label "Describe how the spatial patterns of economic activities in a place change over time because of interactions with nearby and distant places." ;
+  skos:prefLabel "Describe how the spatial patterns of economic activities in a place change over time because of interactions with nearby and distant places." ;
+  skos:altLabel "Indicator D2.Geo.11.3-5" ;
+  c3:officialText "Describe how the spatial patterns of economic activities in a place change over time because of interactions with nearby and distant places." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:GlobalInterconnections , c3:EconomicActivities , c3:Resources ; c3:requiresSkill c3:Describe ;
+  c3:inStrand c3:Str_Geo_GlobalInterconn ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 19, p. 44" .
+
+c3:I_D2_Geo_11_6_8 a c3:Indicator ;
+  c3:hasCode "D2.Geo.11.6-8" ; rdfs:label "Explain how the relationship between the environmental characteristics of places and production of goods influences the spatial patterns of world trade." ;
+  skos:prefLabel "Explain how the relationship between the environmental characteristics of places and production of goods influences the spatial patterns of world trade." ;
+  skos:altLabel "Indicator D2.Geo.11.6-8" ;
+  c3:officialText "Explain how the relationship between the environmental characteristics of places and production of goods influences the spatial patterns of world trade." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:GlobalInterconnections , c3:EconomicActivities , c3:Resources ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Geo_GlobalInterconn ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 19, p. 44" .
+
+c3:I_D2_Geo_11_9_12 a c3:Indicator ;
+  c3:hasCode "D2.Geo.11.9-12" ; rdfs:label "Evaluate how economic globalization and the expanding use of scarce resources contribute to conflict and cooperation within and among countries." ;
+  skos:prefLabel "Evaluate how economic globalization and the expanding use of scarce resources contribute to conflict and cooperation within and among countries." ;
+  skos:altLabel "Indicator D2.Geo.11.9-12" ;
+  c3:officialText "Evaluate how economic globalization and the expanding use of scarce resources contribute to conflict and cooperation within and among countries." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:GlobalInterconnections , c3:EconomicActivities , c3:Resources ; c3:requiresSkill c3:Evaluate ;
+  c3:inStrand c3:Str_Geo_GlobalInterconn ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 19, p. 44" .
+
+c3:I_D2_Geo_12_K_2 a c3:Indicator ;
+  c3:hasCode "D2.Geo.12.K-2" ; rdfs:label "Identify ways that a catastrophic disaster may affect people living in a place." ;
+  skos:prefLabel "Identify ways that a catastrophic disaster may affect people living in a place." ;
+  skos:altLabel "Indicator D2.Geo.12.K-2" ;
+  c3:officialText "Identify ways that a catastrophic disaster may affect people living in a place." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:NaturalHazards , c3:ClimateVariability , c3:GlobalInterconnections ; c3:requiresSkill c3:Identify ;
+  c3:inStrand c3:Str_Geo_GlobalInterconn ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 19, p. 44" .
+
+c3:I_D2_Geo_12_3_5 a c3:Indicator ;
+  c3:hasCode "D2.Geo.12.3-5" ; rdfs:label "Explain how natural and human-made catastrophic events in one place affect people living in other places." ;
+  skos:prefLabel "Explain how natural and human-made catastrophic events in one place affect people living in other places." ;
+  skos:altLabel "Indicator D2.Geo.12.3-5" ;
+  c3:officialText "Explain how natural and human-made catastrophic events in one place affect people living in other places." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:NaturalHazards , c3:ClimateVariability , c3:GlobalInterconnections ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Geo_GlobalInterconn ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 19, p. 44" .
+
+c3:I_D2_Geo_12_6_8 a c3:Indicator ;
+  c3:hasCode "D2.Geo.12.6-8" ; rdfs:label "Explain how global changes in population distribution patterns affect changes in land use in particular places." ;
+  skos:prefLabel "Explain how global changes in population distribution patterns affect changes in land use in particular places." ;
+  skos:altLabel "Indicator D2.Geo.12.6-8" ;
+  c3:officialText "Explain how global changes in population distribution patterns affect changes in land use in particular places." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:NaturalHazards , c3:ClimateVariability , c3:GlobalInterconnections ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Geo_GlobalInterconn ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 19, p. 44" .
+
+c3:I_D2_Geo_12_9_12 a c3:Indicator ;
+  c3:hasCode "D2.Geo.12.9-12" ; rdfs:label "Evaluate the consequences of human-made and natural catastrophes on global trade, politics, and human migration." ;
+  skos:prefLabel "Evaluate the consequences of human-made and natural catastrophes on global trade, politics, and human migration." ;
+  skos:altLabel "Indicator D2.Geo.12.9-12" ;
+  c3:officialText "Evaluate the consequences of human-made and natural catastrophes on global trade, politics, and human migration." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:NaturalHazards , c3:ClimateVariability , c3:GlobalInterconnections ; c3:requiresSkill c3:Evaluate ;
+  c3:inStrand c3:Str_Geo_GlobalInterconn ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Geography ;
+  dcterms:source "C3 Framework, Table 19, p. 44" .
+
+c3:Dimension2
+  c3:alignmentNote "Module extracted for reuse of Dimension 2 Geography indicators." .

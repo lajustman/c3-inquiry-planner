@@ -1,0 +1,1589 @@
+@prefix mi:     <urn:mi:ss:> .
+@prefix dcterms:<http://purl.org/dc/terms/> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@base <file:///Users/louisjustman/Downloads/C3%20Project/Curriculum-Ontology/michigan/> .
+
+<mi-course-ushg.ttl> a owl:Ontology ;
+  owl:versionIRI <urn:mi:ss:course:USHG> ;
+  rdfs:label "Michigan Social Studies GLCE - United States History and Geography" ;
+  dcterms:creator "Michigan Department of Education" ;
+  dcterms:source "Michigan K-12 Social Studies Standards (Michigan Department of Education)" ;
+  owl:imports <mi-base.ttl> .
+
+mi:Course_USHG a mi:Course ;
+  skos:prefLabel "United States History and Geography" ;
+  mi:hasCategory
+    mi:Cat_USHG_6_1 ,
+    mi:Cat_USHG_6_2 ,
+    mi:Cat_USHG_6_3 ,
+    mi:Cat_USHG_7_1 ,
+    mi:Cat_USHG_7_2 ,
+    mi:Cat_USHG_8_1 ,
+    mi:Cat_USHG_8_2 ,
+    mi:Cat_USHG_8_3 ,
+    mi:Cat_USHG_9_1 ,
+    mi:Cat_USHG_9_2 ,
+    mi:Cat_USHG_9_3 ,
+    mi:Cat_USHG_F1 ,
+    mi:Cat_USHG_P1 ,
+    mi:Cat_USHG_P2 ,
+    mi:Cat_USHG_P3 ,
+    mi:Cat_USHG_P4 ;
+  mi:isCourseOf mi:MichiganGLCEFramework ;
+  mi:courseCode "USHG" .
+
+#################################################################
+# Categories
+#################################################################
+mi:Cat_USHG_6_1 a mi:StandardCategory ;
+  mi:categoryCode "6.1" ;
+  skos:prefLabel "Growth of an Industrial and Urban America (included in Grade 8; begins SS-HSCE)" ;
+  mi:categoryDescription "Explain the causes and consequences - both positive and negative - of the Industrial Revolution and America's growth from a predominantly agricultural, commercial, and rural nation to a more industrial and urban nation between 1870 and 1930." ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExpectation
+    mi:Exp_USHG_6_1_1 ,
+    mi:Exp_USHG_6_1_2 ,
+    mi:Exp_USHG_6_1_3 ,
+    mi:Exp_USHG_6_1_4 ;
+  mi:isCategoryOf mi:Course_USHG .
+
+mi:Cat_USHG_6_2 a mi:StandardCategory ;
+  mi:categoryCode "6.2" ;
+  skos:prefLabel "Becoming a World Power" ;
+  mi:categoryDescription "Describe and analyze the major changes - both positive and negative - in the role the United States played in world affairs after the Civil War, and explain the causes and consequences of this changing role." ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExpectation
+    mi:Exp_USHG_6_2_1 ,
+    mi:Exp_USHG_6_2_2 ,
+    mi:Exp_USHG_6_2_3 ,
+    mi:Exp_USHG_6_2_4 ;
+  mi:isCategoryOf mi:Course_USHG .
+
+mi:Cat_USHG_6_3 a mi:StandardCategory ;
+  mi:categoryCode "6.3" ;
+  skos:prefLabel "Progressive Era" ;
+  mi:categoryDescription "USHG ERA 7 - THE GREAT DEPRESSION AND WORLD WAR II (1920-1945) Select and evaluate major public and social issues emerging from the changes in industrial, urban, and global America during this period; analyze the solutions or resolutions developed by America and their consequences (positive/negative - anticipated/unanticipated)." ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExpectation
+    mi:Exp_USHG_6_3_1 ,
+    mi:Exp_USHG_6_3_2 ,
+    mi:Exp_USHG_6_3_3 ,
+    mi:Exp_USHG_6_3_4 ;
+  mi:isCategoryOf mi:Course_USHG .
+
+mi:Cat_USHG_7_1 a mi:StandardCategory ;
+  mi:categoryCode "7.1" ;
+  skos:prefLabel "Growing Crisis of Industrial Capitalism and Responses" ;
+  mi:categoryDescription "Evaluate the key events and decisions surrounding the causes and consequences of the global depression of the 1930s and World War II." ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExpectation
+    mi:Exp_USHG_7_1_1 ,
+    mi:Exp_USHG_7_1_2 ,
+    mi:Exp_USHG_7_1_3 ;
+  mi:isCategoryOf mi:Course_USHG .
+
+mi:Cat_USHG_7_2 a mi:StandardCategory ;
+  mi:categoryCode "7.2" ;
+  skos:prefLabel "World War II" ;
+  mi:categoryDescription "USHG ERA 8 - POST-WORLD WAR II UNITED STATES (1945-1989) Draw conclusions about the causes and the course of World War II, and the effects of the war on U.S." ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_cat_USHG_7_2_1 ;
+  mi:hasExpectation
+    mi:Exp_USHG_7_2_1 ,
+    mi:Exp_USHG_7_2_2 ,
+    mi:Exp_USHG_7_2_3 ,
+    mi:Exp_USHG_7_2_4 ;
+  mi:isCategoryOf mi:Course_USHG .
+
+mi:Cat_USHG_8_1 a mi:StandardCategory ;
+  mi:categoryCode "8.1" ;
+  skos:prefLabel "Cold War and the United States" ;
+  mi:categoryDescription "Individually and collaboratively, students will engage in planned inquiries to investigate the social transformation of post-war United States, how the Cold War and conflicts in Korea and Vietnam influenced domestic and international politics, and how the struggle for racial and gender equality and the extension of civil liberties impacted the United States." ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExpectation
+    mi:Exp_USHG_8_1_1 ,
+    mi:Exp_USHG_8_1_2 ,
+    mi:Exp_USHG_8_1_3 ;
+  mi:isCategoryOf mi:Course_USHG .
+
+mi:Cat_USHG_8_2 a mi:StandardCategory ;
+  mi:categoryCode "8.2" ;
+  skos:prefLabel "Domestic Changes and Policies" ;
+  mi:categoryDescription "Investigate demographic changes, domestic policies, conflicts, and tensions in post-World War II America." ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExpectation
+    mi:Exp_USHG_8_2_1 ,
+    mi:Exp_USHG_8_2_2 ,
+    mi:Exp_USHG_8_2_3 ,
+    mi:Exp_USHG_8_2_4 ;
+  mi:isCategoryOf mi:Course_USHG .
+
+mi:Cat_USHG_8_3 a mi:StandardCategory ;
+  mi:categoryCode "8.3" ;
+  skos:prefLabel "Civil Rights in the Post-World War II Era" ;
+  mi:categoryDescription "USHG ERA 9 - AMERICA IN A NEW GLOBAL AGE Examine and analyze the Civil Rights Movement using key events, people, and organizations." ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExpectation
+    mi:Exp_USHG_8_3_1 ,
+    mi:Exp_USHG_8_3_2 ,
+    mi:Exp_USHG_8_3_3 ,
+    mi:Exp_USHG_8_3_4 ,
+    mi:Exp_USHG_8_3_5 ;
+  mi:isCategoryOf mi:Course_USHG .
+
+mi:Cat_USHG_9_1 a mi:StandardCategory ;
+  mi:categoryCode "9.1" ;
+  skos:prefLabel "Impact of Globalization on the United States" ;
+  mi:categoryDescription "Explain the impact of globalization on the U.S." ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_cat_USHG_9_1_1 ;
+  mi:hasExpectation
+    mi:Exp_USHG_9_1_1 ,
+    mi:Exp_USHG_9_1_2 ;
+  mi:isCategoryOf mi:Course_USHG .
+
+mi:Cat_USHG_9_2 a mi:StandardCategory ;
+  mi:categoryCode "9.2" ;
+  skos:prefLabel "Changes in America's Role in the World" ;
+  mi:categoryDescription "Examine the shifting role of the United States on the world stage from 1980 to the present." ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExpectation
+    mi:Exp_USHG_9_2_1 ,
+    mi:Exp_USHG_9_2_2 ;
+  mi:isCategoryOf mi:Course_USHG .
+
+mi:Cat_USHG_9_3 a mi:StandardCategory ;
+  mi:categoryCode "9.3" ;
+  skos:prefLabel "Policy Debates" ;
+  mi:categoryDescription "U.S." ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_cat_USHG_9_3_1 ;
+  mi:hasExpectation
+    mi:Exp_USHG_9_3_1 ;
+  mi:isCategoryOf mi:Course_USHG .
+
+mi:Cat_USHG_F1 a mi:StandardCategory ;
+  mi:categoryCode "F1" ;
+  skos:prefLabel "Foundational Issues in USHG - Eras 1-5 (review of content taught in Grades 5 and" ;
+  mi:categoryDescription "8) USHG ERA 6 - THE DEVELOPMENT OF AN INDUSTRIAL, URBAN, AND GLOBAL UNITED STATES (1870-1930)" ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExpectation
+    mi:Exp_USHG_F1_1 ,
+    mi:Exp_USHG_F1_2 ,
+    mi:Exp_USHG_F1_3 ;
+  mi:isCategoryOf mi:Course_USHG .
+
+mi:Cat_USHG_P1 a mi:StandardCategory ;
+  mi:categoryCode "P1" ;
+  skos:prefLabel "Reading and Communication" ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExpectation
+    mi:Exp_USHG_P1_1 ,
+    mi:Exp_USHG_P1_2 ,
+    mi:Exp_USHG_P1_3 ,
+    mi:Exp_USHG_P1_4 ,
+    mi:Exp_USHG_P1_5 ;
+  mi:isCategoryOf mi:Course_USHG .
+
+mi:Cat_USHG_P2 a mi:StandardCategory ;
+  mi:categoryCode "P2" ;
+  skos:prefLabel "Inquiry, Research, and Analysis" ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExpectation
+    mi:Exp_USHG_P2_1 ,
+    mi:Exp_USHG_P2_2 ,
+    mi:Exp_USHG_P2_3 ,
+    mi:Exp_USHG_P2_4 ;
+  mi:isCategoryOf mi:Course_USHG .
+
+mi:Cat_USHG_P3 a mi:StandardCategory ;
+  mi:categoryCode "P3" ;
+  skos:prefLabel "Public Discourse and Decision Making" ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExpectation
+    mi:Exp_USHG_P3_1 ,
+    mi:Exp_USHG_P3_2 ,
+    mi:Exp_USHG_P3_3 ,
+    mi:Exp_USHG_P3_4 ;
+  mi:isCategoryOf mi:Course_USHG .
+
+mi:Cat_USHG_P4 a mi:StandardCategory ;
+  mi:categoryCode "P4" ;
+  skos:prefLabel "Civic Participation" ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExpectation
+    mi:Exp_USHG_P4_1 ,
+    mi:Exp_USHG_P4_2 ,
+    mi:Exp_USHG_P4_3 ;
+  mi:isCategoryOf mi:Course_USHG .
+
+#################################################################
+# Expectations
+#################################################################
+mi:Exp_USHG_6_1_1 a mi:Expectation ;
+  mi:expectationCode "6.1.1" ;
+  mi:fullCode "USHG-6.1.1" ;
+  mi:officialText "Factors in the American Second Industrial Revolution - analyze the factors that enabled the United States to become a major industrial power, including: • the organizational revolution." ;
+  skos:prefLabel "Factors in the American Second Industrial Revolution" ;
+  skos:broader mi:Cat_USHG_6_1 ;
+  mi:inCategory mi:Cat_USHG_6_1 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_USHG_6_1_1_1 ,
+    mi:Example_exp_USHG_6_1_1_2 ,
+    mi:Example_exp_USHG_6_1_1_3 ,
+    mi:Example_exp_USHG_6_1_1_4 ,
+    mi:Example_exp_USHG_6_1_1_5 ,
+    mi:Example_exp_USHG_6_1_1_6 ;
+  mi:isExpectationOf mi:Cat_USHG_6_1 .
+
+mi:Exp_USHG_6_1_2 a mi:Expectation ;
+  mi:expectationCode "6.1.2" ;
+  mi:fullCode "USHG-6.1.2" ;
+  mi:officialText "Labor's Response to Industrial Growth - evaluate the different responses of labor to industrial change, including the development of organized labor and the growth of populism and the populist movement." ;
+  skos:prefLabel "Labor's Response to Industrial Growth" ;
+  skos:broader mi:Cat_USHG_6_1 ;
+  mi:inCategory mi:Cat_USHG_6_1 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_USHG_6_1_2_1 ,
+    mi:Example_exp_USHG_6_1_2_2 ;
+  mi:isExpectationOf mi:Cat_USHG_6_1 .
+
+mi:Exp_USHG_6_1_3 a mi:Expectation ;
+  mi:expectationCode "6.1.3" ;
+  mi:fullCode "USHG-6.1.3" ;
+  mi:officialText "Urbanization - explain the causes and consequences of urbanization, including: • the location and expansion of major urban centers and their link to industry and trade." ;
+  skos:prefLabel "Urbanization" ;
+  skos:broader mi:Cat_USHG_6_1 ;
+  mi:inCategory mi:Cat_USHG_6_1 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_USHG_6_1_3_1 ,
+    mi:Example_exp_USHG_6_1_3_2 ,
+    mi:Example_exp_USHG_6_1_3_3 ;
+  mi:isExpectationOf mi:Cat_USHG_6_1 .
+
+mi:Exp_USHG_6_1_4 a mi:Expectation ;
+  mi:expectationCode "6.1.4" ;
+  mi:fullCode "USHG-6.1.4" ;
+  mi:officialText "Growth and Change - explain the social, political, economic, and cultural shifts taking place in the United States at the end of the 19th century and beginning of the 20th century, by: • describing the developing systems of transportation (canals and railroads, including the Transcontinental Railroad), and their impact on the economy and society." ;
+  skos:prefLabel "Growth and Change" ;
+  skos:broader mi:Cat_USHG_6_1 ;
+  mi:inCategory mi:Cat_USHG_6_1 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_USHG_6_1_4_1 ,
+    mi:Example_exp_USHG_6_1_4_2 ,
+    mi:Example_exp_USHG_6_1_4_3 ,
+    mi:Example_exp_USHG_6_1_4_4 ;
+  mi:isExpectationOf mi:Cat_USHG_6_1 .
+
+mi:Exp_USHG_6_2_1 a mi:Expectation ;
+  mi:expectationCode "6.2.1" ;
+  mi:fullCode "USHG-6.2.1" ;
+  mi:officialText "Growth of U.S." ;
+  skos:prefLabel "Growth of U.S" ;
+  skos:broader mi:Cat_USHG_6_2 ;
+  mi:inCategory mi:Cat_USHG_6_2 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_USHG_6_2_1_1 ,
+    mi:Example_exp_USHG_6_2_1_2 ,
+    mi:Example_exp_USHG_6_2_1_3 ;
+  mi:isExpectationOf mi:Cat_USHG_6_2 .
+
+mi:Exp_USHG_6_2_2 a mi:Expectation ;
+  mi:expectationCode "6.2.2" ;
+  mi:fullCode "USHG-6.2.2" ;
+  mi:officialText "World War I - explain the causes of World War I, the reasons for American neutrality and eventual entry into the war, and America's role in shaping the course of the war." ;
+  skos:prefLabel "World War I" ;
+  skos:broader mi:Cat_USHG_6_2 ;
+  mi:inCategory mi:Cat_USHG_6_2 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:isExpectationOf mi:Cat_USHG_6_2 .
+
+mi:Exp_USHG_6_2_3 a mi:Expectation ;
+  mi:expectationCode "6.2.3" ;
+  mi:fullCode "USHG-6.2.3" ;
+  mi:officialText "Domestic Impact of World War I - analyze the domestic impact of World War I on the growth of the government, the expansion of the economy, the restrictions on civil liberties, the expansion of women's suffrage, and on internal migration." ;
+  skos:prefLabel "Domestic Impact of World War I" ;
+  skos:broader mi:Cat_USHG_6_2 ;
+  mi:inCategory mi:Cat_USHG_6_2 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_USHG_6_2_3_1 ;
+  mi:isExpectationOf mi:Cat_USHG_6_2 .
+
+mi:Exp_USHG_6_2_4 a mi:Expectation ;
+  mi:expectationCode "6.2.4" ;
+  mi:fullCode "USHG-6.2.4" ;
+  mi:officialText "Wilson and His Opponents - explain how President Woodrow Wilson's \"Fourteen Points\" differed from proposals by others, including French and British leaders and domestic opponents, in the debate over: • the Treaty of Versailles." ;
+  skos:prefLabel "Wilson and His Opponents" ;
+  skos:broader mi:Cat_USHG_6_2 ;
+  mi:inCategory mi:Cat_USHG_6_2 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_USHG_6_2_4_1 ,
+    mi:Example_exp_USHG_6_2_4_2 ,
+    mi:Example_exp_USHG_6_2_4_3 ;
+  mi:isExpectationOf mi:Cat_USHG_6_2 .
+
+mi:Exp_USHG_6_3_1 a mi:Expectation ;
+  mi:expectationCode "6.3.1" ;
+  mi:fullCode "USHG-6.3.1" ;
+  mi:officialText "Describe the extent to which industrialization and urbanization between 1895 and 1930 created the need for progressive reform." ;
+  skos:prefLabel "Extent to Which Industrialization and Urbanization between 1895 and 1930 Created the Need for Progressive..." ;
+  skos:broader mi:Cat_USHG_6_3 ;
+  mi:inCategory mi:Cat_USHG_6_3 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_USHG_6_3_1_1 ;
+  mi:isExpectationOf mi:Cat_USHG_6_3 .
+
+mi:Exp_USHG_6_3_2 a mi:Expectation ;
+  mi:expectationCode "6.3.2" ;
+  mi:fullCode "USHG-6.3.2" ;
+  mi:officialText "Analyze the social, political, economic, and cultural changes that occurred during the Progressive Era." ;
+  skos:prefLabel "Social, Political, Economic, and Cultural Changes That Occurred During the Progressive Era" ;
+  skos:broader mi:Cat_USHG_6_3 ;
+  mi:inCategory mi:Cat_USHG_6_3 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_USHG_6_3_2_1 ,
+    mi:Example_exp_USHG_6_3_2_2 ,
+    mi:Example_exp_USHG_6_3_2_3 ,
+    mi:Example_exp_USHG_6_3_2_4 ,
+    mi:Example_exp_USHG_6_3_2_5 ,
+    mi:Example_exp_USHG_6_3_2_6 ,
+    mi:Example_exp_USHG_6_3_2_7 ,
+    mi:Example_exp_USHG_6_3_2_8 ,
+    mi:Example_exp_USHG_6_3_2_9 ,
+    mi:Example_exp_USHG_6_3_2_10 ,
+    mi:Example_exp_USHG_6_3_2_11 ,
+    mi:Example_exp_USHG_6_3_2_12 ,
+    mi:Example_exp_USHG_6_3_2_13 ,
+    mi:Example_exp_USHG_6_3_2_14 ,
+    mi:Example_exp_USHG_6_3_2_15 ,
+    mi:Example_exp_USHG_6_3_2_16 ,
+    mi:Example_exp_USHG_6_3_2_17 ;
+  mi:isExpectationOf mi:Cat_USHG_6_3 .
+
+mi:Exp_USHG_6_3_3 a mi:Expectation ;
+  mi:expectationCode "6.3.3" ;
+  mi:fullCode "USHG-6.3.3" ;
+  mi:officialText "Evaluate the historical impact of the Progressive Era with regard to governmental and industrial reforms." ;
+  skos:prefLabel "Historical Impact of the Progressive Era" ;
+  skos:broader mi:Cat_USHG_6_3 ;
+  mi:inCategory mi:Cat_USHG_6_3 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:isExpectationOf mi:Cat_USHG_6_3 .
+
+mi:Exp_USHG_6_3_4 a mi:Expectation ;
+  mi:expectationCode "6.3.4" ;
+  mi:fullCode "USHG-6.3.4" ;
+  mi:officialText "Women's Suffrage - Analyze the successes and failures of efforts to expand women's rights, including the work of important leaders and the eventual ratification of the Nineteenth Amendment." ;
+  skos:prefLabel "Women's Suffrage" ;
+  skos:broader mi:Cat_USHG_6_3 ;
+  mi:inCategory mi:Cat_USHG_6_3 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_USHG_6_3_4_1 ,
+    mi:Example_exp_USHG_6_3_4_2 ;
+  mi:isExpectationOf mi:Cat_USHG_6_3 .
+
+mi:Exp_USHG_7_1_1 a mi:Expectation ;
+  mi:expectationCode "7.1.1" ;
+  mi:fullCode "USHG-7.1.1" ;
+  mi:officialText "The Twenties - explain and evaluate the significance of the social, cultural, and political changes and tensions in the \"Roaring Twenties\" including: • cultural movements such as the Jazz Age, the Harlem Renaissance, and the \"Lost Generation.\" • the increasing role of advertising and its impact on consumer purchases." ;
+  skos:prefLabel "The Twenties" ;
+  skos:broader mi:Cat_USHG_7_1 ;
+  mi:inCategory mi:Cat_USHG_7_1 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_USHG_7_1_1_1 ,
+    mi:Example_exp_USHG_7_1_1_2 ;
+  mi:isExpectationOf mi:Cat_USHG_7_1 .
+
+mi:Exp_USHG_7_1_2 a mi:Expectation ;
+  mi:expectationCode "7.1.2" ;
+  mi:fullCode "USHG-7.1.2" ;
+  mi:officialText "Causes and Consequences of the Great Depression - explain and evaluate the multiple causes and consequences of the Great Depression by analyzing: • the political, economic, environmental, and social causes of the Great Depression, including fiscal policy, overproduction, underconsumption, speculation, the 1929 crash, and the Dust Bowl." ;
+  skos:prefLabel "Causes and Consequences of the Great Depression" ;
+  skos:broader mi:Cat_USHG_7_1 ;
+  mi:inCategory mi:Cat_USHG_7_1 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_USHG_7_1_2_1 ,
+    mi:Example_exp_USHG_7_1_2_2 ;
+  mi:isExpectationOf mi:Cat_USHG_7_1 .
+
+mi:Exp_USHG_7_1_3 a mi:Expectation ;
+  mi:expectationCode "7.1.3" ;
+  mi:fullCode "USHG-7.1.3" ;
+  mi:officialText "The New Deal Era - explain and evaluate President Franklin Roosevelt's policies and tactics during the New Deal era, including: • the changing role of the federal government's responsibilities to protect the environment, meet challenges of unemployment, and to address the needs of workers, farmers, Indigenous Peoples, the poor, and the elderly." ;
+  skos:prefLabel "The New Deal Era" ;
+  skos:broader mi:Cat_USHG_7_1 ;
+  mi:inCategory mi:Cat_USHG_7_1 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_USHG_7_1_3_1 ,
+    mi:Example_exp_USHG_7_1_3_2 ,
+    mi:Example_exp_USHG_7_1_3_3 ;
+  mi:isExpectationOf mi:Cat_USHG_7_1 .
+
+mi:Exp_USHG_7_2_1 a mi:Expectation ;
+  mi:expectationCode "7.2.1" ;
+  mi:fullCode "USHG-7.2.1" ;
+  mi:officialText "Causes of World War II - analyze the factors contributing to World War II in Europe and in the Pacific region, and America's entry into war, including: • political and economic disputes over territory." ;
+  skos:prefLabel "Causes of World War II" ;
+  skos:broader mi:Cat_USHG_7_2 ;
+  mi:inCategory mi:Cat_USHG_7_2 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_USHG_7_2_1_1 ,
+    mi:Example_exp_USHG_7_2_1_2 ,
+    mi:Example_exp_USHG_7_2_1_3 ,
+    mi:Example_exp_USHG_7_2_1_4 ,
+    mi:Example_exp_USHG_7_2_1_5 ,
+    mi:Example_exp_USHG_7_2_1_6 ,
+    mi:Example_exp_USHG_7_2_1_7 ,
+    mi:Example_exp_USHG_7_2_1_8 ,
+    mi:Example_exp_USHG_7_2_1_9 ,
+    mi:Example_exp_USHG_7_2_1_10 ,
+    mi:Example_exp_USHG_7_2_1_11 ,
+    mi:Example_exp_USHG_7_2_1_12 ,
+    mi:Example_exp_USHG_7_2_1_13 ;
+  mi:isExpectationOf mi:Cat_USHG_7_2 .
+
+mi:Exp_USHG_7_2_2 a mi:Expectation ;
+  mi:expectationCode "7.2.2" ;
+  mi:fullCode "USHG-7.2.2" ;
+  mi:officialText "United States and the Course of World War II - evaluate the role of the United States in fighting the war militarily, diplomatically, and technologically across the world." ;
+  skos:prefLabel "United States and the Course of World War II" ;
+  skos:broader mi:Cat_USHG_7_2 ;
+  mi:inCategory mi:Cat_USHG_7_2 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_USHG_7_2_2_1 ;
+  mi:isExpectationOf mi:Cat_USHG_7_2 .
+
+mi:Exp_USHG_7_2_3 a mi:Expectation ;
+  mi:expectationCode "7.2.3" ;
+  mi:fullCode "USHG-7.2.3" ;
+  mi:officialText "Impact of World War II on American Life - analyze the changes in American life brought about by U.S." ;
+  skos:prefLabel "Impact of World War II on American Life" ;
+  skos:broader mi:Cat_USHG_7_2 ;
+  mi:inCategory mi:Cat_USHG_7_2 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_USHG_7_2_3_1 ,
+    mi:Example_exp_USHG_7_2_3_2 ,
+    mi:Example_exp_USHG_7_2_3_3 ,
+    mi:Example_exp_USHG_7_2_3_4 ,
+    mi:Example_exp_USHG_7_2_3_5 ,
+    mi:Example_exp_USHG_7_2_3_6 ;
+  mi:isExpectationOf mi:Cat_USHG_7_2 .
+
+mi:Exp_USHG_7_2_4 a mi:Expectation ;
+  mi:expectationCode "7.2.4" ;
+  mi:fullCode "USHG-7.2.4" ;
+  mi:officialText "Responses to Genocide - investigate the responses to Hitler's \"Final Solution\" policy by the Allies, the U.S." ;
+  skos:prefLabel "Responses to Genocide" ;
+  skos:broader mi:Cat_USHG_7_2 ;
+  mi:inCategory mi:Cat_USHG_7_2 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_USHG_7_2_4_1 ,
+    mi:Example_exp_USHG_7_2_4_2 ,
+    mi:Example_exp_USHG_7_2_4_3 ;
+  mi:isExpectationOf mi:Cat_USHG_7_2 .
+
+mi:Exp_USHG_8_1_1 a mi:Expectation ;
+  mi:expectationCode "8.1.1" ;
+  mi:fullCode "USHG-8.1.1" ;
+  mi:officialText "Origins and Beginnings of the Cold War - analyze the factors that contributed to the Cold War, including: • differences in the civic, ideological, and political values, and in the economic and governmental institutions, of the United States and the Soviet Union (U.S.S.R.)." ;
+  skos:prefLabel "Origins and Beginnings of the Cold War" ;
+  skos:broader mi:Cat_USHG_8_1 ;
+  mi:inCategory mi:Cat_USHG_8_1 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_USHG_8_1_1_1 ,
+    mi:Example_exp_USHG_8_1_1_2 ,
+    mi:Example_exp_USHG_8_1_1_3 ;
+  mi:isExpectationOf mi:Cat_USHG_8_1 .
+
+mi:Exp_USHG_8_1_2 a mi:Expectation ;
+  mi:expectationCode "8.1.2" ;
+  mi:fullCode "USHG-8.1.2" ;
+  mi:officialText "Foreign Policy During the Cold War - compare the causes and consequences of the American policy of containment including: • the development and growth of a U.S." ;
+  skos:prefLabel "Foreign Policy During the Cold War" ;
+  skos:broader mi:Cat_USHG_8_1 ;
+  mi:inCategory mi:Cat_USHG_8_1 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_USHG_8_1_2_1 ,
+    mi:Example_exp_USHG_8_1_2_2 ,
+    mi:Example_exp_USHG_8_1_2_3 ,
+    mi:Example_exp_USHG_8_1_2_4 ,
+    mi:Example_exp_USHG_8_1_2_5 ,
+    mi:Example_exp_USHG_8_1_2_6 ,
+    mi:Example_exp_USHG_8_1_2_7 ,
+    mi:Example_exp_USHG_8_1_2_8 ,
+    mi:Example_exp_USHG_8_1_2_9 ,
+    mi:Example_exp_USHG_8_1_2_10 ,
+    mi:Example_exp_USHG_8_1_2_11 ,
+    mi:Example_exp_USHG_8_1_2_12 ,
+    mi:Example_exp_USHG_8_1_2_13 ,
+    mi:Example_exp_USHG_8_1_2_14 ,
+    mi:Example_exp_USHG_8_1_2_15 ,
+    mi:Example_exp_USHG_8_1_2_16 ;
+  mi:isExpectationOf mi:Cat_USHG_8_1 .
+
+mi:Exp_USHG_8_1_3 a mi:Expectation ;
+  mi:expectationCode "8.1.3" ;
+  mi:fullCode "USHG-8.1.3" ;
+  mi:officialText "End of the Cold War - describe the factors that led to the end of the Cold War." ;
+  skos:prefLabel "End of the Cold War" ;
+  skos:broader mi:Cat_USHG_8_1 ;
+  mi:inCategory mi:Cat_USHG_8_1 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_USHG_8_1_3_1 ,
+    mi:Example_exp_USHG_8_1_3_2 ,
+    mi:Example_exp_USHG_8_1_3_3 ;
+  mi:isExpectationOf mi:Cat_USHG_8_1 .
+
+mi:Exp_USHG_8_2_1 a mi:Expectation ;
+  mi:expectationCode "8.2.1" ;
+  mi:fullCode "USHG-8.2.1" ;
+  mi:officialText "Demographic Changes - use population data to produce and analyze maps that show the major changes in population distribution and spatial patterns and density, including the Baby Boom, new immigration, suburbanization, reverse migration of African-Americans to the South, the Indian Relocation Act of 1956, and the flow of population to the Sunbelt." ;
+  skos:prefLabel "Demographic Changes" ;
+  skos:broader mi:Cat_USHG_8_2 ;
+  mi:inCategory mi:Cat_USHG_8_2 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:isExpectationOf mi:Cat_USHG_8_2 .
+
+mi:Exp_USHG_8_2_2 a mi:Expectation ;
+  mi:expectationCode "8.2.2" ;
+  mi:fullCode "USHG-8.2.2" ;
+  mi:officialText "Policy Concerning Domestic Issues - analyze major domestic issues in the post-World War II era and the policies designed to meet the challenges by: • describing issues challenging Americans, such as domestic anticommunism (McCarthyism), labor, poverty, health care, infrastructure, immigration, and the environment." ;
+  skos:prefLabel "Policy Concerning Domestic Issues" ;
+  skos:broader mi:Cat_USHG_8_2 ;
+  mi:inCategory mi:Cat_USHG_8_2 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_USHG_8_2_2_1 ;
+  mi:isExpectationOf mi:Cat_USHG_8_2 .
+
+mi:Exp_USHG_8_2_3 a mi:Expectation ;
+  mi:expectationCode "8.2.3" ;
+  mi:fullCode "USHG-8.2.3" ;
+  mi:officialText "Comparing Domestic Policies - focusing on causes, programs, and impacts, compare and contrast President Franklin Roosevelt's New Deal initiatives, President Lyndon Johnson's Great Society programs, and President Ronald Reagan's market-based domestic policies." ;
+  skos:prefLabel "Comparing Domestic Policies" ;
+  skos:broader mi:Cat_USHG_8_2 ;
+  mi:inCategory mi:Cat_USHG_8_2 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:isExpectationOf mi:Cat_USHG_8_2 .
+
+mi:Exp_USHG_8_2_4 a mi:Expectation ;
+  mi:expectationCode "8.2.4" ;
+  mi:fullCode "USHG-8.2.4" ;
+  mi:officialText "Domestic Conflicts and Tensions - analyze and evaluate the competing perspectives and controversies among Americans generated by U.S." ;
+  skos:prefLabel "Domestic Conflicts and Tensions" ;
+  skos:broader mi:Cat_USHG_8_2 ;
+  mi:inCategory mi:Cat_USHG_8_2 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_USHG_8_2_4_1 ,
+    mi:Example_exp_USHG_8_2_4_2 ,
+    mi:Example_exp_USHG_8_2_4_3 ,
+    mi:Example_exp_USHG_8_2_4_4 ,
+    mi:Example_exp_USHG_8_2_4_5 ,
+    mi:Example_exp_USHG_8_2_4_6 ,
+    mi:Example_exp_USHG_8_2_4_7 ;
+  mi:isExpectationOf mi:Cat_USHG_8_2 .
+
+mi:Exp_USHG_8_3_1 a mi:Expectation ;
+  mi:expectationCode "8.3.1" ;
+  mi:fullCode "USHG-8.3.1" ;
+  mi:officialText "Civil Rights Movement - analyze key events, ideals, documents, and organizations in the struggle for African-American civil rights including: • the impact of World War II and the Cold War." ;
+  skos:prefLabel "Civil Rights Movement" ;
+  skos:broader mi:Cat_USHG_8_3 ;
+  mi:inCategory mi:Cat_USHG_8_3 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_USHG_8_3_1_1 ,
+    mi:Example_exp_USHG_8_3_1_2 ,
+    mi:Example_exp_USHG_8_3_1_3 ,
+    mi:Example_exp_USHG_8_3_1_4 ,
+    mi:Example_exp_USHG_8_3_1_5 ,
+    mi:Example_exp_USHG_8_3_1_6 ;
+  mi:isExpectationOf mi:Cat_USHG_8_3 .
+
+mi:Exp_USHG_8_3_2 a mi:Expectation ;
+  mi:expectationCode "8.3.2" ;
+  mi:fullCode "USHG-8.3.2" ;
+  mi:officialText "Ideals of the Civil Rights Movement - compare and contrast the ideas in Martin Luther King's March on Washington speech to the ideas expressed in the Declaration of Independence, the Seneca Falls Resolution, and the Gettysburg Address." ;
+  skos:prefLabel "Ideals of the Civil Rights Movement" ;
+  skos:broader mi:Cat_USHG_8_3 ;
+  mi:inCategory mi:Cat_USHG_8_3 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:isExpectationOf mi:Cat_USHG_8_3 .
+
+mi:Exp_USHG_8_3_3 a mi:Expectation ;
+  mi:expectationCode "8.3.3" ;
+  mi:fullCode "USHG-8.3.3" ;
+  mi:officialText "Women's Rights - analyze the causes, course, and reaction to the women's rights movement in the 1960s and 1970s." ;
+  skos:prefLabel "Women's Rights" ;
+  skos:broader mi:Cat_USHG_8_3 ;
+  mi:inCategory mi:Cat_USHG_8_3 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_USHG_8_3_3_1 ,
+    mi:Example_exp_USHG_8_3_3_2 ,
+    mi:Example_exp_USHG_8_3_3_3 ,
+    mi:Example_exp_USHG_8_3_3_4 ,
+    mi:Example_exp_USHG_8_3_3_5 ,
+    mi:Example_exp_USHG_8_3_3_6 ,
+    mi:Example_exp_USHG_8_3_3_7 ;
+  mi:isExpectationOf mi:Cat_USHG_8_3 .
+
+mi:Exp_USHG_8_3_4 a mi:Expectation ;
+  mi:expectationCode "8.3.4" ;
+  mi:fullCode "USHG-8.3.4" ;
+  mi:officialText "Civil Rights Expanded - evaluate the major accomplishments and setbacks in securing civil rights and liberties for all Americans over the 20th century." ;
+  skos:prefLabel "Civil Rights Expanded" ;
+  skos:broader mi:Cat_USHG_8_3 ;
+  mi:inCategory mi:Cat_USHG_8_3 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_USHG_8_3_4_1 ,
+    mi:Example_exp_USHG_8_3_4_2 ,
+    mi:Example_exp_USHG_8_3_4_3 ,
+    mi:Example_exp_USHG_8_3_4_4 ,
+    mi:Example_exp_USHG_8_3_4_5 ,
+    mi:Example_exp_USHG_8_3_4_6 ,
+    mi:Example_exp_USHG_8_3_4_7 ,
+    mi:Example_exp_USHG_8_3_4_8 ,
+    mi:Example_exp_USHG_8_3_4_9 ,
+    mi:Example_exp_USHG_8_3_4_10 ,
+    mi:Example_exp_USHG_8_3_4_11 ,
+    mi:Example_exp_USHG_8_3_4_12 ,
+    mi:Example_exp_USHG_8_3_4_13 ;
+  mi:isExpectationOf mi:Cat_USHG_8_3 .
+
+mi:Exp_USHG_8_3_5 a mi:Expectation ;
+  mi:expectationCode "8.3.5" ;
+  mi:fullCode "USHG-8.3.5" ;
+  mi:officialText "Tensions and Reactions to Poverty and Civil Rights - analyze the causes and consequences of the civil unrest that occurred in American cities, by comparing civil unrest in Detroit with at least one other American city." ;
+  skos:prefLabel "Tensions and Reactions to Poverty and Civil Rights" ;
+  skos:broader mi:Cat_USHG_8_3 ;
+  mi:inCategory mi:Cat_USHG_8_3 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_USHG_8_3_5_1 ;
+  mi:isExpectationOf mi:Cat_USHG_8_3 .
+
+mi:Exp_USHG_9_1_1 a mi:Expectation ;
+  mi:expectationCode "9.1.1" ;
+  mi:fullCode "USHG-9.1.1" ;
+  mi:officialText "Economic Changes - using the changing nature of the American automobile industry as a case study, evaluate changes in the American economy created by new markets, natural resources, technologies, corporate structures, international competition, new sources/methods of production, energy issues, and mass communication." ;
+  skos:prefLabel "Economic Changes" ;
+  skos:broader mi:Cat_USHG_9_1 ;
+  mi:inCategory mi:Cat_USHG_9_1 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:isExpectationOf mi:Cat_USHG_9_1 .
+
+mi:Exp_USHG_9_1_2 a mi:Expectation ;
+  mi:expectationCode "9.1.2" ;
+  mi:fullCode "USHG-9.1.2" ;
+  mi:officialText "Transformation of American Politics - analyze the transformation of American politics in the late 20th and early 21st centuries, including: • the growth of the conservative movement in national politics, including the role of Ronald Reagan." ;
+  skos:prefLabel "Transformation of American Politics" ;
+  skos:broader mi:Cat_USHG_9_1 ;
+  mi:inCategory mi:Cat_USHG_9_1 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_USHG_9_1_2_1 ,
+    mi:Example_exp_USHG_9_1_2_2 ,
+    mi:Example_exp_USHG_9_1_2_3 ,
+    mi:Example_exp_USHG_9_1_2_4 ;
+  mi:isExpectationOf mi:Cat_USHG_9_1 .
+
+mi:Exp_USHG_9_2_1 a mi:Expectation ;
+  mi:expectationCode "9.2.1" ;
+  mi:fullCode "USHG-9.2.1" ;
+  mi:officialText "United States in the Post-Cold War World - explain the role of the United States as a superpower in the post-Cold War world, including advantages, disadvantages, and new challenges." ;
+  skos:prefLabel "United States in the Post-Cold War World" ;
+  skos:broader mi:Cat_USHG_9_2 ;
+  mi:inCategory mi:Cat_USHG_9_2 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_USHG_9_2_1_1 ;
+  mi:isExpectationOf mi:Cat_USHG_9_2 .
+
+mi:Exp_USHG_9_2_2 a mi:Expectation ;
+  mi:expectationCode "9.2.2" ;
+  mi:fullCode "USHG-9.2.2" ;
+  mi:officialText "9/11 and Responses to Terrorism - analyze how the attacks on 9/11 and the response to terrorism have altered American domestic and international policies." ;
+  skos:prefLabel "9/11 and Responses to Terrorism" ;
+  skos:broader mi:Cat_USHG_9_2 ;
+  mi:inCategory mi:Cat_USHG_9_2 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_USHG_9_2_2_1 ;
+  mi:isExpectationOf mi:Cat_USHG_9_2 .
+
+mi:Exp_USHG_9_3_1 a mi:Expectation ;
+  mi:expectationCode "9.3.1" ;
+  mi:fullCode "USHG-9.3.1" ;
+  mi:officialText "Make a persuasive argument on a public policy issue, and justify the position with evidence from historical antecedents and precedents, and Democratic Values or Constitutional Principles." ;
+  skos:prefLabel "Make a Persuasive Argument on a Public Policy Issue, and Justify the Position" ;
+  skos:broader mi:Cat_USHG_9_3 ;
+  mi:inCategory mi:Cat_USHG_9_3 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:isExpectationOf mi:Cat_USHG_9_3 .
+
+mi:Exp_USHG_F1_1 a mi:Expectation ;
+  mi:expectationCode "F1.1" ;
+  mi:fullCode "USHG-F1.1" ;
+  mi:officialText "Identify the core ideals of American society as reflected in the documents below, and analyze the ways that American society moved toward and/or away from its core ideals: • the Declaration of Independence." ;
+  skos:prefLabel "Core Ideals of American Society as Reflected in the Documents Below, and Analyze the Ways..." ;
+  skos:broader mi:Cat_USHG_F1 ;
+  mi:inCategory mi:Cat_USHG_F1 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:hasExample
+    mi:Example_exp_USHG_F1_1_1 ,
+    mi:Example_exp_USHG_F1_1_2 ,
+    mi:Example_exp_USHG_F1_1_3 ,
+    mi:Example_exp_USHG_F1_1_4 ;
+  mi:isExpectationOf mi:Cat_USHG_F1 .
+
+mi:Exp_USHG_F1_2 a mi:Expectation ;
+  mi:expectationCode "F1.2" ;
+  mi:fullCode "USHG-F1.2" ;
+  mi:officialText "Using the American Revolution, the creation and adoption of the Constitution, and the Civil War as touchstones, develop an argument about the changing character of American political society and the roles of key individuals across cultures in prompting/supporting the change." ;
+  skos:prefLabel "The Changing Character of American Political Society and the Roles of Key Individuals" ;
+  skos:broader mi:Cat_USHG_F1 ;
+  mi:inCategory mi:Cat_USHG_F1 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:isExpectationOf mi:Cat_USHG_F1 .
+
+mi:Exp_USHG_F1_3 a mi:Expectation ;
+  mi:expectationCode "F1.3" ;
+  mi:fullCode "USHG-F1.3" ;
+  mi:officialText "Analyze how the changing character of American political society from 1791 to 1877 had significant impact on the responsibilities of governments through the principle of federalism." ;
+  skos:prefLabel "The Changing Character of American Political Society from 1791 to 1877 Had Significant Impact on..." ;
+  skos:broader mi:Cat_USHG_F1 ;
+  mi:inCategory mi:Cat_USHG_F1 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:isExpectationOf mi:Cat_USHG_F1 .
+
+mi:Exp_USHG_P1_1 a mi:Expectation ;
+  mi:expectationCode "P1.1" ;
+  mi:fullCode "USHG-P1.1" ;
+  mi:officialText "Use appropriate strategies to read and analyze social science tables, graphs, graphics, maps, and texts." ;
+  skos:prefLabel "Appropriate Strategies to Read and Analyze Social Science Tables, Graphs, Graphics, Maps, and Texts" ;
+  skos:broader mi:Cat_USHG_P1 ;
+  mi:inCategory mi:Cat_USHG_P1 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:isExpectationOf mi:Cat_USHG_P1 .
+
+mi:Exp_USHG_P1_2 a mi:Expectation ;
+  mi:expectationCode "P1.2" ;
+  mi:fullCode "USHG-P1.2" ;
+  mi:officialText "Interpret primary and secondary source documents for point of view, context, bias, and frame of reference or perspective." ;
+  skos:prefLabel "Primary and Secondary Source Documents for Point of View, Context, Bias, and Frame of Reference..." ;
+  skos:broader mi:Cat_USHG_P1 ;
+  mi:inCategory mi:Cat_USHG_P1 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:isExpectationOf mi:Cat_USHG_P1 .
+
+mi:Exp_USHG_P1_3 a mi:Expectation ;
+  mi:expectationCode "P1.3" ;
+  mi:fullCode "USHG-P1.3" ;
+  mi:officialText "Explain points of agreement and disagreement experts have about the interpretation of sources and the application of disciplinary concepts." ;
+  skos:prefLabel "Points of Agreement and Disagreement Experts Have about the Interpretation of Sources and the Application..." ;
+  skos:broader mi:Cat_USHG_P1 ;
+  mi:inCategory mi:Cat_USHG_P1 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:isExpectationOf mi:Cat_USHG_P1 .
+
+mi:Exp_USHG_P1_4 a mi:Expectation ;
+  mi:expectationCode "P1.4" ;
+  mi:fullCode "USHG-P1.4" ;
+  mi:officialText "Express social science ideas clearly in written, spoken, and graphic forms." ;
+  skos:prefLabel "Express Social Science Ideas Clearly in Written, Spoken, and Graphic Forms" ;
+  skos:broader mi:Cat_USHG_P1 ;
+  mi:inCategory mi:Cat_USHG_P1 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:isExpectationOf mi:Cat_USHG_P1 .
+
+mi:Exp_USHG_P1_5 a mi:Expectation ;
+  mi:expectationCode "P1.5" ;
+  mi:fullCode "USHG-P1.5" ;
+  mi:officialText "Construct and present an argument supported with evidence." ;
+  skos:prefLabel "And Present an Argument Supported" ;
+  skos:broader mi:Cat_USHG_P1 ;
+  mi:inCategory mi:Cat_USHG_P1 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:isExpectationOf mi:Cat_USHG_P1 .
+
+mi:Exp_USHG_P2_1 a mi:Expectation ;
+  mi:expectationCode "P2.1" ;
+  mi:fullCode "USHG-P2.1" ;
+  mi:officialText "Apply methods of inquiry, including asking and answering compelling and supporting questions, to investigate social science problems." ;
+  skos:prefLabel "Methods of Inquiry" ;
+  skos:broader mi:Cat_USHG_P2 ;
+  mi:inCategory mi:Cat_USHG_P2 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:isExpectationOf mi:Cat_USHG_P2 .
+
+mi:Exp_USHG_P2_2 a mi:Expectation ;
+  mi:expectationCode "P2.2" ;
+  mi:fullCode "USHG-P2.2" ;
+  mi:officialText "Evaluate data presented in social science tables, graphs, graphics, maps, and texts for credibility, considering the origin, authority, structure, and context of the information." ;
+  skos:prefLabel "Data Presented in Social Science Tables, Graphs, Graphics, Maps, and Texts for Credibility, Considering the..." ;
+  skos:broader mi:Cat_USHG_P2 ;
+  mi:inCategory mi:Cat_USHG_P2 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:isExpectationOf mi:Cat_USHG_P2 .
+
+mi:Exp_USHG_P2_3 a mi:Expectation ;
+  mi:expectationCode "P2.3" ;
+  mi:fullCode "USHG-P2.3" ;
+  mi:officialText "Know how to find, organize, evaluate, and interpret information from a variety of credible sources." ;
+  skos:prefLabel "Evaluate, and Interpret Information from a Variety of Credible Sources" ;
+  skos:broader mi:Cat_USHG_P2 ;
+  mi:inCategory mi:Cat_USHG_P2 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:isExpectationOf mi:Cat_USHG_P2 .
+
+mi:Exp_USHG_P2_4 a mi:Expectation ;
+  mi:expectationCode "P2.4" ;
+  mi:fullCode "USHG-P2.4" ;
+  mi:officialText "Use relevant information from multiple credible sources representing a wide range of views considering the origin, authority, structure, and context to answer a compelling or supporting question." ;
+  skos:prefLabel "Relevant Information from Multiple Credible Sources Representing a Wide Range of Views Considering the Origin,..." ;
+  skos:broader mi:Cat_USHG_P2 ;
+  mi:inCategory mi:Cat_USHG_P2 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:isExpectationOf mi:Cat_USHG_P2 .
+
+mi:Exp_USHG_P3_1 a mi:Expectation ;
+  mi:expectationCode "P3.1" ;
+  mi:fullCode "USHG-P3.1" ;
+  mi:officialText "Clearly state an issue as a question of public policy, gather and interpret information about that issue, analyze various perspectives, and generate and evaluate possible alternative resolutions." ;
+  skos:prefLabel "Information about That Issue, Analyze Various Perspectives, and Generate and Evaluate Possible Alternative Resolutions" ;
+  skos:broader mi:Cat_USHG_P3 ;
+  mi:inCategory mi:Cat_USHG_P3 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:isExpectationOf mi:Cat_USHG_P3 .
+
+mi:Exp_USHG_P3_2 a mi:Expectation ;
+  mi:expectationCode "P3.2" ;
+  mi:fullCode "USHG-P3.2" ;
+  mi:officialText "Discuss public policy issues, by clarifying position, considering opposing views, and applying core values or Constitutional Principles to develop and refine claims." ;
+  skos:prefLabel "Public Policy Issues" ;
+  skos:broader mi:Cat_USHG_P3 ;
+  mi:inCategory mi:Cat_USHG_P3 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:isExpectationOf mi:Cat_USHG_P3 .
+
+mi:Exp_USHG_P3_3 a mi:Expectation ;
+  mi:expectationCode "P3.3" ;
+  mi:fullCode "USHG-P3.3" ;
+  mi:officialText "Construct claims and refine counter-claims that express and justify decisions on public policy issues." ;
+  skos:prefLabel "Claims and Refine Counter-Claims That Express and Justify Decisions on Public Policy Issues" ;
+  skos:broader mi:Cat_USHG_P3 ;
+  mi:inCategory mi:Cat_USHG_P3 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:isExpectationOf mi:Cat_USHG_P3 .
+
+mi:Exp_USHG_P3_4 a mi:Expectation ;
+  mi:expectationCode "P3.4" ;
+  mi:fullCode "USHG-P3.4" ;
+  mi:officialText "Critique the use of reasoning, sequence, and supporting details in creating a claim and the subsequent evidence used to support a claim for credibility." ;
+  skos:prefLabel "Of Reasoning, Sequence, and Supporting Details in Creating a Claim and the Subsequent Evidence Used..." ;
+  skos:broader mi:Cat_USHG_P3 ;
+  mi:inCategory mi:Cat_USHG_P3 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:isExpectationOf mi:Cat_USHG_P3 .
+
+mi:Exp_USHG_P4_1 a mi:Expectation ;
+  mi:expectationCode "P4.1" ;
+  mi:fullCode "USHG-P4.1" ;
+  mi:officialText "Act within the rule of law and hold others to the same standard." ;
+  skos:prefLabel "Act Within the Rule of Law and Hold Others to the Same Standard" ;
+  skos:broader mi:Cat_USHG_P4 ;
+  mi:inCategory mi:Cat_USHG_P4 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:isExpectationOf mi:Cat_USHG_P4 .
+
+mi:Exp_USHG_P4_2 a mi:Expectation ;
+  mi:expectationCode "P4.2" ;
+  mi:fullCode "USHG-P4.2" ;
+  mi:officialText "Assess options for individual and collective action to advance views on matters of public policy and to address local, regional, or global problems." ;
+  skos:prefLabel "Options for Individual and Collective Action to Advance Views on Matters of Public Policy and..." ;
+  skos:broader mi:Cat_USHG_P4 ;
+  mi:inCategory mi:Cat_USHG_P4 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:isExpectationOf mi:Cat_USHG_P4 .
+
+mi:Exp_USHG_P4_3 a mi:Expectation ;
+  mi:expectationCode "P4.3" ;
+  mi:fullCode "USHG-P4.3" ;
+  mi:officialText "Plan, conduct, and evaluate the effectiveness of activities intended to advance views on matters of public policy and to address local, regional, or global problems." ;
+  skos:prefLabel "Effectiveness of Activities Intended to Advance Views on Matters of Public Policy and to Address..." ;
+  skos:broader mi:Cat_USHG_P4 ;
+  mi:inCategory mi:Cat_USHG_P4 ;
+  mi:inCourse mi:Course_USHG ;
+  mi:inDiscipline mi:Discipline_U ;
+  mi:isExpectationOf mi:Cat_USHG_P4 .
+
+#################################################################
+# Examples
+#################################################################
+mi:Example_cat_USHG_7_2_1 a mi:Example ;
+  skos:prefLabel "society and culture and its role in world affairs" ;
+  mi:exampleText "society and culture and its role in world affairs" .
+
+mi:Example_cat_USHG_9_1_1 a mi:Example ;
+  skos:prefLabel "economy politics society and role in the world" ;
+  mi:exampleText "economy politics society and role in the world" .
+
+mi:Example_cat_USHG_9_3_1 a mi:Example ;
+  skos:prefLabel "HISTORY AND GEOGRAPHY FOUNDATIONS IN UNITED STATES HISTORY AND GEOGRAPHY" ;
+  mi:exampleText "HISTORY AND GEOGRAPHY FOUNDATIONS IN UNITED STATES HISTORY AND GEOGRAPHY" .
+
+mi:Example_exp_USHG_6_1_1_1 a mi:Example ;
+  skos:prefLabel "the economic policies of government and industrial leaders" ;
+  mi:exampleText "the economic policies of government and industrial leaders" .
+
+mi:Example_exp_USHG_6_1_1_2 a mi:Example ;
+  skos:prefLabel "the advantages of physical geography" ;
+  mi:exampleText "the advantages of physical geography" .
+
+mi:Example_exp_USHG_6_1_1_3 a mi:Example ;
+  skos:prefLabel "the increase in labor through immigration and migration" ;
+  mi:exampleText "the increase in labor through immigration and migration" .
+
+mi:Example_exp_USHG_6_1_1_4 a mi:Example ;
+  skos:prefLabel "the growing importance of the automobile industry" ;
+  mi:exampleText "the growing importance of the automobile industry" .
+
+mi:Example_exp_USHG_6_1_1_5 a mi:Example ;
+  skos:prefLabel "the development of corporations and organized labor movements" ;
+  mi:exampleText "the development of corporations and organized labor movements" .
+
+mi:Example_exp_USHG_6_1_1_6 a mi:Example ;
+  skos:prefLabel "A. Phillip Randolph Andrew Carnegie and John D. Rockefeller" ;
+  mi:exampleText "A. Phillip Randolph Andrew Carnegie and John D. Rockefeller" .
+
+mi:Example_exp_USHG_6_1_2_1 a mi:Example ;
+  skos:prefLabel "the Knights of Labor American Federation of Labor the United Mine Workers" ;
+  mi:exampleText "the Knights of Labor American Federation of Labor the United Mine Workers" .
+
+mi:Example_exp_USHG_6_1_2_2 a mi:Example ;
+  skos:prefLabel "Farmer's Alliance Grange Platform for the Populist Party Bryan's \"Cross of Gold\" speech" ;
+  mi:exampleText "Farmer's Alliance Grange Platform for the Populist Party Bryan's \"Cross of Gold\" speech" .
+
+mi:Example_exp_USHG_6_1_3_1 a mi:Example ;
+  skos:prefLabel "internal migration including the Great Migration" ;
+  mi:exampleText "internal migration including the Great Migration" .
+
+mi:Example_exp_USHG_6_1_3_2 a mi:Example ;
+  skos:prefLabel "the development of cities divided by race ethnicity and class as well as the resulting tensions among and within groups" ;
+  mi:exampleText "the development of cities divided by race ethnicity and class as well as the resulting tensions among and within groups" .
+
+mi:Example_exp_USHG_6_1_3_3 a mi:Example ;
+  skos:prefLabel "different perspectives about the immigrant experience" ;
+  mi:exampleText "different perspectives about the immigrant experience" .
+
+mi:Example_exp_USHG_6_1_4_1 a mi:Example ;
+  skos:prefLabel "Plessy v. Ferguson" ;
+  mi:exampleText "Plessy v. Ferguson" .
+
+mi:Example_exp_USHG_6_1_4_2 a mi:Example ;
+  skos:prefLabel "describing governmental policies promoting economic development" ;
+  mi:exampleText "describing governmental policies promoting economic development" .
+
+mi:Example_exp_USHG_6_1_4_3 a mi:Example ;
+  skos:prefLabel "evaluating the treatment of African Americans including the rise of segregation in the South as endorsed by the Supreme Court's decision in and describing the response of African-Americans to this inequality" ;
+  mi:exampleText "evaluating the treatment of African Americans including the rise of segregation in the South as endorsed by the Supreme Court's decision in and describing the response of African-Americans to this inequality" .
+
+mi:Example_exp_USHG_6_1_4_4 a mi:Example ;
+  skos:prefLabel "describing the policies toward Indigenous Peoples including removal reservations the Dawes Act of 1887 and the response of Indigenous Peoples to these policies" ;
+  mi:exampleText "describing the policies toward Indigenous Peoples including removal reservations the Dawes Act of 1887 and the response of Indigenous Peoples to these policies" .
+
+mi:Example_exp_USHG_6_2_1_1 a mi:Example ;
+  skos:prefLabel "Global Power" ;
+  mi:exampleText "Global Power" .
+
+mi:Example_exp_USHG_6_2_1_2 a mi:Example ;
+  skos:prefLabel "describe how America redefined its foreign policy between 1890 and 1914 and analyze the causes and consequences of the U.S" ;
+  mi:exampleText "describe how America redefined its foreign policy between 1890 and 1914 and analyze the causes and consequences of the U.S" .
+
+mi:Example_exp_USHG_6_2_1_3 a mi:Example ;
+  skos:prefLabel "emergence as an imperial power in this time period using relevant examples of territorial expansion and involvement in foreign conflicts" ;
+  mi:exampleText "emergence as an imperial power in this time period using relevant examples of territorial expansion and involvement in foreign conflicts" .
+
+mi:Example_exp_USHG_6_2_3_1 a mi:Example ;
+  skos:prefLabel "War Industries Board the growth of anti-immigrant sentiments the Sedition Act the Red Scare the Palmer Raids" ;
+  mi:exampleText "War Industries Board the growth of anti-immigrant sentiments the Sedition Act the Red Scare the Palmer Raids" .
+
+mi:Example_exp_USHG_6_2_4_1 a mi:Example ;
+  skos:prefLabel "U.S" ;
+  mi:exampleText "U.S" .
+
+mi:Example_exp_USHG_6_2_4_2 a mi:Example ;
+  skos:prefLabel "participation in the League of Nations" ;
+  mi:exampleText "participation in the League of Nations" .
+
+mi:Example_exp_USHG_6_2_4_3 a mi:Example ;
+  skos:prefLabel "the redrawing of European political boundaries and the resulting geopolitical tensions that continued to affect Europe" ;
+  mi:exampleText "the redrawing of European political boundaries and the resulting geopolitical tensions that continued to affect Europe" .
+
+mi:Example_exp_USHG_6_3_1_1 a mi:Example ;
+  skos:prefLabel "urban and rural poverty child labor immigration political corruption racial and gender discrimination public health unsafe living conditions poor working conditions monopolies unfair labor practices" ;
+  mi:exampleText "urban and rural poverty child labor immigration political corruption racial and gender discrimination public health unsafe living conditions poor working conditions monopolies unfair labor practices" .
+
+mi:Example_exp_USHG_6_3_2_1 a mi:Example ;
+  skos:prefLabel "the successes and failures of efforts to expand women's rights including the work of important leaders such as Susan B. Anthony Elizabeth Cady Stanton Alice Paul" ;
+  mi:exampleText "the successes and failures of efforts to expand women's rights including the work of important leaders such as Susan B. Anthony Elizabeth Cady Stanton Alice Paul" .
+
+mi:Example_exp_USHG_6_3_2_2 a mi:Example ;
+  skos:prefLabel "the role of reform organizations and movements and individuals in promoting change" ;
+  mi:exampleText "the role of reform organizations and movements and individuals in promoting change" .
+
+mi:Example_exp_USHG_6_3_2_3 a mi:Example ;
+  skos:prefLabel "the Women's Christian Temperance Union" ;
+  mi:exampleText "the Women's Christian Temperance Union" .
+
+mi:Example_exp_USHG_6_3_2_4 a mi:Example ;
+  skos:prefLabel "settlement house movement" ;
+  mi:exampleText "settlement house movement" .
+
+mi:Example_exp_USHG_6_3_2_5 a mi:Example ;
+  skos:prefLabel "conservation movement" ;
+  mi:exampleText "conservation movement" .
+
+mi:Example_exp_USHG_6_3_2_6 a mi:Example ;
+  skos:prefLabel "the National Association for the Advancement of Colored People" ;
+  mi:exampleText "the National Association for the Advancement of Colored People" .
+
+mi:Example_exp_USHG_6_3_2_7 a mi:Example ;
+  skos:prefLabel "Carrie Chapman Catt" ;
+  mi:exampleText "Carrie Chapman Catt" .
+
+mi:Example_exp_USHG_6_3_2_8 a mi:Example ;
+  skos:prefLabel "Eugene Debs" ;
+  mi:exampleText "Eugene Debs" .
+
+mi:Example_exp_USHG_6_3_2_9 a mi:Example ;
+  skos:prefLabel "W.E.B. DuBois" ;
+  mi:exampleText "W.E.B. DuBois" .
+
+mi:Example_exp_USHG_6_3_2_10 a mi:Example ;
+  skos:prefLabel "Upton Sinclair" ;
+  mi:exampleText "Upton Sinclair" .
+
+mi:Example_exp_USHG_6_3_2_11 a mi:Example ;
+  skos:prefLabel "Ida Tarbell" ;
+  mi:exampleText "Ida Tarbell" .
+
+mi:Example_exp_USHG_6_3_2_12 a mi:Example ;
+  skos:prefLabel "major changes in the Constitution including Sixteenth Seventeenth Eighteenth and Nineteenth Amendments" ;
+  mi:exampleText "major changes in the Constitution including Sixteenth Seventeenth Eighteenth and Nineteenth Amendments" .
+
+mi:Example_exp_USHG_6_3_2_13 a mi:Example ;
+  skos:prefLabel "the Supreme Court's role in supporting or slowing reform" ;
+  mi:exampleText "the Supreme Court's role in supporting or slowing reform" .
+
+mi:Example_exp_USHG_6_3_2_14 a mi:Example ;
+  skos:prefLabel "new regulatory legislation" ;
+  mi:exampleText "new regulatory legislation" .
+
+mi:Example_exp_USHG_6_3_2_15 a mi:Example ;
+  skos:prefLabel "the Pure Food and Drug Act" ;
+  mi:exampleText "the Pure Food and Drug Act" .
+
+mi:Example_exp_USHG_6_3_2_16 a mi:Example ;
+  skos:prefLabel "the Sherman and Clayton Antitrust Acts" ;
+  mi:exampleText "the Sherman and Clayton Antitrust Acts" .
+
+mi:Example_exp_USHG_6_3_2_17 a mi:Example ;
+  skos:prefLabel "the successes and failures of the Indian Citizenship Act of 1924" ;
+  mi:exampleText "the successes and failures of the Indian Citizenship Act of 1924" .
+
+mi:Example_exp_USHG_6_3_4_1 a mi:Example ;
+  skos:prefLabel "USHG ERA 7" ;
+  mi:exampleText "USHG ERA 7" .
+
+mi:Example_exp_USHG_6_3_4_2 a mi:Example ;
+  skos:prefLabel "THE GREAT DEPRESSION AND WORLD WAR II (1920-1945) Individually and collaboratively students will engage in planned inquiries to understand the changing role of the United States in world affairs through World War II investigate the causes of the Great Depression and how it affected American society and how the New Deal addressed the Great Depression transformed American federalism and initiated the welfare state" ;
+  mi:exampleText "THE GREAT DEPRESSION AND WORLD WAR II (1920-1945) Individually and collaboratively students will engage in planned inquiries to understand the changing role of the United States in world affairs through World War II investigate the causes of the Great Depression and how it affected American society and how the New Deal addressed the Great Depression transformed American federalism and initiated the welfare state" .
+
+mi:Example_exp_USHG_7_1_1_1 a mi:Example ;
+  skos:prefLabel "the NAACP legal strategy to attack segregation" ;
+  mi:exampleText "the NAACP legal strategy to attack segregation" .
+
+mi:Example_exp_USHG_7_1_1_2 a mi:Example ;
+  skos:prefLabel "the Scopes trial views on and restrictions to immigration Prohibition roles of women mass consumption fundamentalism modernism the Indian Citizenship Act of 1924 the Carlisle Indian Industrial School the Mount Pleasant Indian Industrial Boarding School Harbor Springs Indian Boarding School the resurgence of the Ku Klux Klan and nativism" ;
+  mi:exampleText "the Scopes trial views on and restrictions to immigration Prohibition roles of women mass consumption fundamentalism modernism the Indian Citizenship Act of 1924 the Carlisle Indian Industrial School the Mount Pleasant Indian Industrial Boarding School Harbor Springs Indian Boarding School the resurgence of the Ku Klux Klan and nativism" .
+
+mi:Example_exp_USHG_7_1_2_1 a mi:Example ;
+  skos:prefLabel "the economic and social toll of the Great Depression including unemployment and environmental conditions that affected farmers industrial workers and families" ;
+  mi:exampleText "the economic and social toll of the Great Depression including unemployment and environmental conditions that affected farmers industrial workers and families" .
+
+mi:Example_exp_USHG_7_1_2_2 a mi:Example ;
+  skos:prefLabel "President Herbert Hoover's policies and their impact including the Reconstruction Finance Corporation" ;
+  mi:exampleText "President Herbert Hoover's policies and their impact including the Reconstruction Finance Corporation" .
+
+mi:Example_exp_USHG_7_1_3_1 a mi:Example ;
+  skos:prefLabel "opposition to the New Deal and the impact of the Supreme Court in striking down and then accepting New Deal laws" ;
+  mi:exampleText "opposition to the New Deal and the impact of the Supreme Court in striking down and then accepting New Deal laws" .
+
+mi:Example_exp_USHG_7_1_3_2 a mi:Example ;
+  skos:prefLabel "the impact of the Supreme Court on evaluating the constitutionality of various New Deal policies" ;
+  mi:exampleText "the impact of the Supreme Court on evaluating the constitutionality of various New Deal policies" .
+
+mi:Example_exp_USHG_7_1_3_3 a mi:Example ;
+  skos:prefLabel "consequences of New Deal policies. Frances Perkins the Dust Bowl and the Tennessee Valley promoting workers' rights development of a Social Security program banking and financial regulation conservation practices crop subsidies the Indian Reorganization Act (IRA) the Termination Policy the Deportation Act of 1929 Federal housing policies and agricultural efforts (AAA) and impacts on housing for marginalized groups Charles Coughlin Huey Long" ;
+  mi:exampleText "consequences of New Deal policies. Frances Perkins the Dust Bowl and the Tennessee Valley promoting workers' rights development of a Social Security program banking and financial regulation conservation practices crop subsidies the Indian Reorganization Act (IRA) the Termination Policy the Deportation Act of 1929 Federal housing policies and agricultural efforts (AAA) and impacts on housing for marginalized groups Charles Coughlin Huey Long" .
+
+mi:Example_exp_USHG_7_2_1_1 a mi:Example ;
+  skos:prefLabel "the differences in the civic and political values of the United States and those of Nazi Germany and Imperial Japan" ;
+  mi:exampleText "the differences in the civic and political values of the United States and those of Nazi Germany and Imperial Japan" .
+
+mi:Example_exp_USHG_7_2_1_2 a mi:Example ;
+  skos:prefLabel "U.S" ;
+  mi:exampleText "U.S" .
+
+mi:Example_exp_USHG_7_2_1_3 a mi:Example ;
+  skos:prefLabel "neutrality" ;
+  mi:exampleText "neutrality" .
+
+mi:Example_exp_USHG_7_2_1_4 a mi:Example ;
+  skos:prefLabel "the bombing of Pearl Harbor" ;
+  mi:exampleText "the bombing of Pearl Harbor" .
+
+mi:Example_exp_USHG_7_2_1_5 a mi:Example ;
+  skos:prefLabel "failure of the Treaty of Versailles" ;
+  mi:exampleText "failure of the Treaty of Versailles" .
+
+mi:Example_exp_USHG_7_2_1_6 a mi:Example ;
+  skos:prefLabel "the League of Nations" ;
+  mi:exampleText "the League of Nations" .
+
+mi:Example_exp_USHG_7_2_1_7 a mi:Example ;
+  skos:prefLabel "the Munich Agreement" ;
+  mi:exampleText "the Munich Agreement" .
+
+mi:Example_exp_USHG_7_2_1_8 a mi:Example ;
+  skos:prefLabel "the Neutrality Acts" ;
+  mi:exampleText "the Neutrality Acts" .
+
+mi:Example_exp_USHG_7_2_1_9 a mi:Example ;
+  skos:prefLabel "the Lend Lease Act" ;
+  mi:exampleText "the Lend Lease Act" .
+
+mi:Example_exp_USHG_7_2_1_10 a mi:Example ;
+  skos:prefLabel "oil embargo" ;
+  mi:exampleText "oil embargo" .
+
+mi:Example_exp_USHG_7_2_1_11 a mi:Example ;
+  skos:prefLabel "fascism" ;
+  mi:exampleText "fascism" .
+
+mi:Example_exp_USHG_7_2_1_12 a mi:Example ;
+  skos:prefLabel "militarism nationalism" ;
+  mi:exampleText "militarism nationalism" .
+
+mi:Example_exp_USHG_7_2_1_13 a mi:Example ;
+  skos:prefLabel "imperialism" ;
+  mi:exampleText "imperialism" .
+
+mi:Example_exp_USHG_7_2_2_1 a mi:Example ;
+  skos:prefLabel "Germany-First strategy the Big Three Alliance and the development of atomic weapons" ;
+  mi:exampleText "Germany-First strategy the Big Three Alliance and the development of atomic weapons" .
+
+mi:Example_exp_USHG_7_2_3_1 a mi:Example ;
+  skos:prefLabel "participation in World War II including" ;
+  mi:exampleText "participation in World War II including" .
+
+mi:Example_exp_USHG_7_2_3_2 a mi:Example ;
+  skos:prefLabel "the mobilization of economic military and social resources" ;
+  mi:exampleText "the mobilization of economic military and social resources" .
+
+mi:Example_exp_USHG_7_2_3_3 a mi:Example ;
+  skos:prefLabel "the role of women African Americans and ethnic minority groups in the war effort including the work of A. Philip Randolph and the integration of U.S" ;
+  mi:exampleText "the role of women African Americans and ethnic minority groups in the war effort including the work of A. Philip Randolph and the integration of U.S" .
+
+mi:Example_exp_USHG_7_2_3_4 a mi:Example ;
+  skos:prefLabel "military forces" ;
+  mi:exampleText "military forces" .
+
+mi:Example_exp_USHG_7_2_3_5 a mi:Example ;
+  skos:prefLabel "the role of the home front in supporting the war effort" ;
+  mi:exampleText "the role of the home front in supporting the war effort" .
+
+mi:Example_exp_USHG_7_2_3_6 a mi:Example ;
+  skos:prefLabel "the conflict and consequences around the internment of Japanese-Americans" ;
+  mi:exampleText "the conflict and consequences around the internment of Japanese-Americans" .
+
+mi:Example_exp_USHG_7_2_4_1 a mi:Example ;
+  skos:prefLabel "government international organizations and individuals" ;
+  mi:exampleText "government international organizations and individuals" .
+
+mi:Example_exp_USHG_7_2_4_2 a mi:Example ;
+  skos:prefLabel "concentration camp liberation Nuremberg war crimes tribunals and actions by individuals such as Oskar Schindler and Irena Sendler as examples of the \"righteous among the nations\". USHG ERA 8" ;
+  mi:exampleText "concentration camp liberation Nuremberg war crimes tribunals and actions by individuals such as Oskar Schindler and Irena Sendler as examples of the \"righteous among the nations\". USHG ERA 8" .
+
+mi:Example_exp_USHG_7_2_4_3 a mi:Example ;
+  skos:prefLabel "POST-WORLD WAR II UNITED STATES (1945-1989)" ;
+  mi:exampleText "POST-WORLD WAR II UNITED STATES (1945-1989)" .
+
+mi:Example_exp_USHG_8_1_1_1 a mi:Example ;
+  skos:prefLabel "diplomatic and political actions by both the United States and the U.S.S.R" ;
+  mi:exampleText "diplomatic and political actions by both the United States and the U.S.S.R" .
+
+mi:Example_exp_USHG_8_1_1_2 a mi:Example ;
+  skos:prefLabel "in the last years of World War II and the years afterward" ;
+  mi:exampleText "in the last years of World War II and the years afterward" .
+
+mi:Example_exp_USHG_8_1_1_3 a mi:Example ;
+  skos:prefLabel "the differences between Communism and Capitalism diplomatic decisions made at the Yalta and Potsdam conferences the use of the atomic bomb the Marshall Plan Truman Doctrine United Nations North American Treaty Organization (NATO) and the Warsaw Pact" ;
+  mi:exampleText "the differences between Communism and Capitalism diplomatic decisions made at the Yalta and Potsdam conferences the use of the atomic bomb the Marshall Plan Truman Doctrine United Nations North American Treaty Organization (NATO) and the Warsaw Pact" .
+
+mi:Example_exp_USHG_8_1_2_1 a mi:Example ;
+  skos:prefLabel "national security establishment and intelligence community" ;
+  mi:exampleText "national security establishment and intelligence community" .
+
+mi:Example_exp_USHG_8_1_2_2 a mi:Example ;
+  skos:prefLabel "the direct and/or armed conflicts with Communism (for example but not limited to" ;
+  mi:exampleText "the direct and/or armed conflicts with Communism (for example but not limited to" .
+
+mi:Example_exp_USHG_8_1_2_3 a mi:Example ;
+  skos:prefLabel "Berlin Korea Cuba)" ;
+  mi:exampleText "Berlin Korea Cuba)" .
+
+mi:Example_exp_USHG_8_1_2_4 a mi:Example ;
+  skos:prefLabel "U.S" ;
+  mi:exampleText "U.S" .
+
+mi:Example_exp_USHG_8_1_2_5 a mi:Example ;
+  skos:prefLabel "involvement in Vietnam and the foreign and domestic consequences of the war" ;
+  mi:exampleText "involvement in Vietnam and the foreign and domestic consequences of the war" .
+
+mi:Example_exp_USHG_8_1_2_6 a mi:Example ;
+  skos:prefLabel "indirect (or proxy) confrontations within specific world regions" ;
+  mi:exampleText "indirect (or proxy) confrontations within specific world regions" .
+
+mi:Example_exp_USHG_8_1_2_7 a mi:Example ;
+  skos:prefLabel "the arms race and its implications on science technology and education" ;
+  mi:exampleText "the arms race and its implications on science technology and education" .
+
+mi:Example_exp_USHG_8_1_2_8 a mi:Example ;
+  skos:prefLabel "the Department of Defense" ;
+  mi:exampleText "the Department of Defense" .
+
+mi:Example_exp_USHG_8_1_2_9 a mi:Example ;
+  skos:prefLabel "the Department of State" ;
+  mi:exampleText "the Department of State" .
+
+mi:Example_exp_USHG_8_1_2_10 a mi:Example ;
+  skos:prefLabel "the Central Intelligence Agency" ;
+  mi:exampleText "the Central Intelligence Agency" .
+
+mi:Example_exp_USHG_8_1_2_11 a mi:Example ;
+  skos:prefLabel "direct conflicts within specific world regions such as Chile Angola Iran Guatemala and Afghanistan" ;
+  mi:exampleText "direct conflicts within specific world regions such as Chile Angola Iran Guatemala and Afghanistan" .
+
+mi:Example_exp_USHG_8_1_2_12 a mi:Example ;
+  skos:prefLabel "the relationship and conflicts with the Soviet Union and China" ;
+  mi:exampleText "the relationship and conflicts with the Soviet Union and China" .
+
+mi:Example_exp_USHG_8_1_2_13 a mi:Example ;
+  skos:prefLabel "U.S" ;
+  mi:exampleText "U.S" .
+
+mi:Example_exp_USHG_8_1_2_14 a mi:Example ;
+  skos:prefLabel "military policies and practices special operations and teams" ;
+  mi:exampleText "military policies and practices special operations and teams" .
+
+mi:Example_exp_USHG_8_1_2_15 a mi:Example ;
+  skos:prefLabel "the launch of Sputnik and the beginning of the space race" ;
+  mi:exampleText "the launch of Sputnik and the beginning of the space race" .
+
+mi:Example_exp_USHG_8_1_2_16 a mi:Example ;
+  skos:prefLabel "the National Defense Education Act (NDEA)" ;
+  mi:exampleText "the National Defense Education Act (NDEA)" .
+
+mi:Example_exp_USHG_8_1_3_1 a mi:Example ;
+  skos:prefLabel "detente policies of the U.S" ;
+  mi:exampleText "detente policies of the U.S" .
+
+mi:Example_exp_USHG_8_1_3_2 a mi:Example ;
+  skos:prefLabel "U.S.S.R" ;
+  mi:exampleText "U.S.S.R" .
+
+mi:Example_exp_USHG_8_1_3_3 a mi:Example ;
+  skos:prefLabel "their leaders President Reagan and Premier Gorbachev the political breakup of the Soviet Union and the Warsaw Pact" ;
+  mi:exampleText "their leaders President Reagan and Premier Gorbachev the political breakup of the Soviet Union and the Warsaw Pact" .
+
+mi:Example_exp_USHG_8_2_2_1 a mi:Example ;
+  skos:prefLabel "evaluating policy decisions and legislative actions to meet these challenges. G.I. Bill of Rights (1944) Taft-Hartley Act (1947) Twenty-Second Amendment to the U.S. Constitution (1951) Federal Highways Act (1956) National Defense Act (1957) EPA (1970)" ;
+  mi:exampleText "evaluating policy decisions and legislative actions to meet these challenges. G.I. Bill of Rights (1944) Taft-Hartley Act (1947) Twenty-Second Amendment to the U.S. Constitution (1951) Federal Highways Act (1956) National Defense Act (1957) EPA (1970)" .
+
+mi:Example_exp_USHG_8_2_4_1 a mi:Example ;
+  skos:prefLabel "Civil Rights (See U.S. History Standards 8.3) and the constitutional crisis generated by the Watergate scandal. Roe v. Wade" ;
+  mi:exampleText "Civil Rights (See U.S. History Standards 8.3) and the constitutional crisis generated by the Watergate scandal. Roe v. Wade" .
+
+mi:Example_exp_USHG_8_2_4_2 a mi:Example ;
+  skos:prefLabel "Gideon v. Wain" ;
+  mi:exampleText "Gideon v. Wain" .
+
+mi:Example_exp_USHG_8_2_4_3 a mi:Example ;
+  skos:prefLabel "Miranda v. Arizona" ;
+  mi:exampleText "Miranda v. Arizona" .
+
+mi:Example_exp_USHG_8_2_4_4 a mi:Example ;
+  skos:prefLabel "Tinker v. Des Moines" ;
+  mi:exampleText "Tinker v. Des Moines" .
+
+mi:Example_exp_USHG_8_2_4_5 a mi:Example ;
+  skos:prefLabel "Hazelwood v. Kuhlmeier" ;
+  mi:exampleText "Hazelwood v. Kuhlmeier" .
+
+mi:Example_exp_USHG_8_2_4_6 a mi:Example ;
+  skos:prefLabel "Supreme Court decisions the Vietnam War the environmental movement the movement for" ;
+  mi:exampleText "Supreme Court decisions the Vietnam War the environmental movement the movement for" .
+
+mi:Example_exp_USHG_8_2_4_7 a mi:Example ;
+  skos:prefLabel "wright Kent State Students for a Democratic Society (SDS) Robert McNamara Martin Luther King Jr. Muhammad Ali \"flower power \" hippies beatniks Rachel Carson Winona LaDuke the American Indian Movement (AIM) the occupation of Alcatraz Ralph Nader" ;
+  mi:exampleText "wright Kent State Students for a Democratic Society (SDS) Robert McNamara Martin Luther King Jr. Muhammad Ali \"flower power \" hippies beatniks Rachel Carson Winona LaDuke the American Indian Movement (AIM) the occupation of Alcatraz Ralph Nader" .
+
+mi:Example_exp_USHG_8_3_1_1 a mi:Example ;
+  skos:prefLabel "Responses to Supreme Court decisions and governmental actions" ;
+  mi:exampleText "Responses to Supreme Court decisions and governmental actions" .
+
+mi:Example_exp_USHG_8_3_1_2 a mi:Example ;
+  skos:prefLabel "the Civil Rights Act (1964)" ;
+  mi:exampleText "the Civil Rights Act (1964)" .
+
+mi:Example_exp_USHG_8_3_1_3 a mi:Example ;
+  skos:prefLabel "protest movements" ;
+  mi:exampleText "protest movements" .
+
+mi:Example_exp_USHG_8_3_1_4 a mi:Example ;
+  skos:prefLabel "rights" ;
+  mi:exampleText "rights" .
+
+mi:Example_exp_USHG_8_3_1_5 a mi:Example ;
+  skos:prefLabel "organizations" ;
+  mi:exampleText "organizations" .
+
+mi:Example_exp_USHG_8_3_1_6 a mi:Example ;
+  skos:prefLabel "civil actions" ;
+  mi:exampleText "civil actions" .
+
+mi:Example_exp_USHG_8_3_3_1 a mi:Example ;
+  skos:prefLabel "the role of population shifts" ;
+  mi:exampleText "the role of population shifts" .
+
+mi:Example_exp_USHG_8_3_3_2 a mi:Example ;
+  skos:prefLabel "birth control" ;
+  mi:exampleText "birth control" .
+
+mi:Example_exp_USHG_8_3_3_3 a mi:Example ;
+  skos:prefLabel "increasing number of women in the work force" ;
+  mi:exampleText "increasing number of women in the work force" .
+
+mi:Example_exp_USHG_8_3_3_4 a mi:Example ;
+  skos:prefLabel "National Organization for Women (NOW)" ;
+  mi:exampleText "National Organization for Women (NOW)" .
+
+mi:Example_exp_USHG_8_3_3_5 a mi:Example ;
+  skos:prefLabel "Equal Rights Amendment (ERA)" ;
+  mi:exampleText "Equal Rights Amendment (ERA)" .
+
+mi:Example_exp_USHG_8_3_3_6 a mi:Example ;
+  skos:prefLabel "Betty Friedan" ;
+  mi:exampleText "Betty Friedan" .
+
+mi:Example_exp_USHG_8_3_3_7 a mi:Example ;
+  skos:prefLabel "Phyllis Schlafly" ;
+  mi:exampleText "Phyllis Schlafly" .
+
+mi:Example_exp_USHG_8_3_4_1 a mi:Example ;
+  skos:prefLabel "Indigenous Peoples" ;
+  mi:exampleText "Indigenous Peoples" .
+
+mi:Example_exp_USHG_8_3_4_2 a mi:Example ;
+  skos:prefLabel "Latinos/ Latinas" ;
+  mi:exampleText "Latinos/ Latinas" .
+
+mi:Example_exp_USHG_8_3_4_3 a mi:Example ;
+  skos:prefLabel "new immigrants" ;
+  mi:exampleText "new immigrants" .
+
+mi:Example_exp_USHG_8_3_4_4 a mi:Example ;
+  skos:prefLabel "people with disabilities" ;
+  mi:exampleText "people with disabilities" .
+
+mi:Example_exp_USHG_8_3_4_5 a mi:Example ;
+  skos:prefLabel "the gay and lesbian community" ;
+  mi:exampleText "the gay and lesbian community" .
+
+mi:Example_exp_USHG_8_3_4_6 a mi:Example ;
+  skos:prefLabel "the Stonewall riots" ;
+  mi:exampleText "the Stonewall riots" .
+
+mi:Example_exp_USHG_8_3_4_7 a mi:Example ;
+  skos:prefLabel "the Rehab Act (1973)" ;
+  mi:exampleText "the Rehab Act (1973)" .
+
+mi:Example_exp_USHG_8_3_4_8 a mi:Example ;
+  skos:prefLabel "ADA (1990)" ;
+  mi:exampleText "ADA (1990)" .
+
+mi:Example_exp_USHG_8_3_4_9 a mi:Example ;
+  skos:prefLabel "American Indian Religious Freedom Act (1978)" ;
+  mi:exampleText "American Indian Religious Freedom Act (1978)" .
+
+mi:Example_exp_USHG_8_3_4_10 a mi:Example ;
+  skos:prefLabel "United Farmworkers" ;
+  mi:exampleText "United Farmworkers" .
+
+mi:Example_exp_USHG_8_3_4_11 a mi:Example ;
+  skos:prefLabel "Harvey Milk (1978)" ;
+  mi:exampleText "Harvey Milk (1978)" .
+
+mi:Example_exp_USHG_8_3_4_12 a mi:Example ;
+  skos:prefLabel "Ruth Ellis" ;
+  mi:exampleText "Ruth Ellis" .
+
+mi:Example_exp_USHG_8_3_4_13 a mi:Example ;
+  skos:prefLabel "the Indian Civil Rights Act (1968)" ;
+  mi:exampleText "the Indian Civil Rights Act (1968)" .
+
+mi:Example_exp_USHG_8_3_5_1 a mi:Example ;
+  skos:prefLabel "Los Angeles Cleveland Chicago Atlanta Newark" ;
+  mi:exampleText "Los Angeles Cleveland Chicago Atlanta Newark" .
+
+mi:Example_exp_USHG_9_1_2_1 a mi:Example ;
+  skos:prefLabel "the role of evangelical religion in national politics" ;
+  mi:exampleText "the role of evangelical religion in national politics" .
+
+mi:Example_exp_USHG_9_1_2_2 a mi:Example ;
+  skos:prefLabel "the intensification of partisanship" ;
+  mi:exampleText "the intensification of partisanship" .
+
+mi:Example_exp_USHG_9_1_2_3 a mi:Example ;
+  skos:prefLabel "the partisan conflict over the role of government in American life" ;
+  mi:exampleText "the partisan conflict over the role of government in American life" .
+
+mi:Example_exp_USHG_9_1_2_4 a mi:Example ;
+  skos:prefLabel "the role of regional differences in national politics" ;
+  mi:exampleText "the role of regional differences in national politics" .
+
+mi:Example_exp_USHG_9_2_1_1 a mi:Example ;
+  skos:prefLabel "military missions in Lebanon Somalia Haiti Bosnia Kosovo and the Gulf War" ;
+  mi:exampleText "military missions in Lebanon Somalia Haiti Bosnia Kosovo and the Gulf War" .
+
+mi:Example_exp_USHG_9_2_2_1 a mi:Example ;
+  skos:prefLabel "the Office of Homeland Security Patriot Act wars in Afghanistan and Iraq role of the United States in the United Nations NATO" ;
+  mi:exampleText "the Office of Homeland Security Patriot Act wars in Afghanistan and Iraq role of the United States in the United Nations NATO" .
+
+mi:Example_exp_USHG_F1_1_1 a mi:Example ;
+  skos:prefLabel "the original United States Constitution (including the Preamble)" ;
+  mi:exampleText "the original United States Constitution (including the Preamble)" .
+
+mi:Example_exp_USHG_F1_1_2 a mi:Example ;
+  skos:prefLabel "the Bill of Rights" ;
+  mi:exampleText "the Bill of Rights" .
+
+mi:Example_exp_USHG_F1_1_3 a mi:Example ;
+  skos:prefLabel "the Gettysburg Address" ;
+  mi:exampleText "the Gettysburg Address" .
+
+mi:Example_exp_USHG_F1_1_4 a mi:Example ;
+  skos:prefLabel "the Thirteenth Fourteenth and Fifteenth Amendments" ;
+  mi:exampleText "the Thirteenth Fourteenth and Fifteenth Amendments" .

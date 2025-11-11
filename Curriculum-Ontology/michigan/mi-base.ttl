@@ -1,0 +1,82 @@
+@prefix mi:     <urn:mi:ss:> .
+@prefix dcterms:<http://purl.org/dc/terms/> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@base <file:///Users/louisjustman/Downloads/C3%20Project/Curriculum-Ontology/michigan/> .
+
+<mi-base.ttl> a owl:Ontology ;
+  owl:versionIRI <urn:mi:ss:ontology> ;
+  rdfs:label "Michigan K-12 Social Studies GLCE Ontology" ;
+  dcterms:creator "Michigan Department of Education" ;
+  dcterms:source "Michigan K-12 Social Studies Standards" ;
+  dcterms:issued "2007-12"^^xsd:gYearMonth .
+
+#################################################################
+# Classes
+#################################################################
+
+mi:MichiganGLCE     a owl:Class ; rdfs:label "Michigan GLCE Framework" .
+mi:LearningUnit     a owl:Class ; rdfs:label "Learning Unit" .
+mi:Grade            a owl:Class ; rdfs:subClassOf mi:LearningUnit ; rdfs:label "Grade Level" .
+mi:Course           a owl:Class ; rdfs:subClassOf mi:LearningUnit ; rdfs:label "Course" .
+mi:Discipline       a owl:Class ; rdfs:label "Discipline" .
+mi:StandardCategory a owl:Class ; rdfs:label "Standard Category" .
+mi:Expectation      a owl:Class ; rdfs:label "Expectation" .
+mi:Example          a owl:Class ; rdfs:label "Example" .
+
+#################################################################
+# Object Properties
+#################################################################
+
+mi:hasGrade      a owl:ObjectProperty ; rdfs:domain mi:MichiganGLCE ; rdfs:range mi:Grade ; rdfs:label "has grade" .
+mi:hasCourse     a owl:ObjectProperty ; rdfs:domain mi:MichiganGLCE ; rdfs:range mi:Course ; rdfs:label "has course" .
+mi:hasCategory   a owl:ObjectProperty ; rdfs:domain mi:LearningUnit ; rdfs:range mi:StandardCategory ; rdfs:label "has category" .
+mi:hasExpectation a owl:ObjectProperty ; rdfs:domain mi:StandardCategory ; rdfs:range mi:Expectation ; rdfs:label "has expectation" .
+mi:hasExample    a owl:ObjectProperty ; rdfs:range mi:Example ; rdfs:label "has example" .
+
+mi:inGrade      a owl:ObjectProperty ; rdfs:range mi:Grade ; rdfs:label "in grade" .
+mi:inCourse     a owl:ObjectProperty ; rdfs:range mi:Course ; rdfs:label "in course" .
+mi:inDiscipline a owl:ObjectProperty ; rdfs:range mi:Discipline ; rdfs:label "in discipline" .
+
+mi:progressesTo a owl:ObjectProperty ;
+  rdfs:domain mi:Expectation ;
+  rdfs:range mi:Expectation ;
+  rdfs:label "progresses to" ;
+  rdfs:subPropertyOf skos:narrower ;
+  owl:inverseOf mi:progressesFrom ;
+  rdfs:comment "Connects an expectation to the next occurrence of the same expectationCode in a subsequent grade." ;
+  skos:editorialNote "Progression links are established when two expectations share the same expectationCode and appear in sequential grade levels within the Michigan GLCE sequence." .
+
+mi:progressesFrom a owl:ObjectProperty ;
+  rdfs:domain mi:Expectation ;
+  rdfs:range mi:Expectation ;
+  rdfs:label "progresses from" ;
+  rdfs:subPropertyOf skos:broader ;
+  owl:inverseOf mi:progressesTo ;
+  rdfs:comment "Connects an expectation to the prior occurrence of the same expectationCode in an earlier grade." .
+
+mi:isGradeOf       a owl:ObjectProperty ; owl:inverseOf mi:hasGrade ; rdfs:label "is grade of" .
+mi:isCourseOf      a owl:ObjectProperty ; owl:inverseOf mi:hasCourse ; rdfs:label "is course of" .
+mi:isCategoryOf    a owl:ObjectProperty ; owl:inverseOf mi:hasCategory ; rdfs:label "is category of" .
+mi:isExpectationOf a owl:ObjectProperty ;
+  owl:inverseOf mi:hasExpectation ;
+  rdfs:label "is expectation of" .
+
+#################################################################
+# Datatype Properties
+#################################################################
+
+mi:gradeCode           a owl:DatatypeProperty ; rdfs:domain mi:Grade ; rdfs:range xsd:string ; rdfs:label "grade code" .
+mi:gradeOrder          a owl:DatatypeProperty ; rdfs:domain mi:Grade ; rdfs:range xsd:integer ; rdfs:label "grade order" .
+mi:courseCode         a owl:DatatypeProperty ; rdfs:domain mi:Course ; rdfs:range xsd:string ; rdfs:label "course code" .
+mi:disciplineCode      a owl:DatatypeProperty ; rdfs:domain mi:Discipline ; rdfs:range xsd:string ; rdfs:label "discipline code" .
+mi:categoryCode        a owl:DatatypeProperty ; rdfs:domain mi:StandardCategory ; rdfs:range xsd:string ; rdfs:label "category code" .
+mi:categoryDescription a owl:DatatypeProperty ; rdfs:domain mi:StandardCategory ; rdfs:range xsd:string ; rdfs:label "category description" .
+mi:expectationCode     a owl:DatatypeProperty ; rdfs:domain mi:Expectation ; rdfs:range xsd:string ; rdfs:label "expectation code" .
+mi:fullCode            a owl:DatatypeProperty ; rdfs:domain mi:Expectation ; rdfs:range xsd:string ; rdfs:label "full code" .
+mi:officialText        a owl:DatatypeProperty ; rdfs:domain mi:Expectation ; rdfs:range xsd:string ; rdfs:label "official text" .
+mi:exampleText         a owl:DatatypeProperty ; rdfs:domain mi:Example ; rdfs:range xsd:string ; rdfs:label "example text" .
+mi:sourceDocument      a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "source document" .

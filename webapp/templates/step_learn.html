@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="panel learning-panel">
+  <h2>Design Your Learning Path</h2>
+  <p class="panel-intro">We’re building a sequence that connects your interests, questions, and exemplar choices to the lesson’s objectives.</p>
+  <div class="learning-status" id="learning-status" aria-live="polite">
+    <div class="loading-spinner" aria-hidden="true"></div>
+    <p>Generating your personalised path…</p>
+  </div>
+  <button class="link-button learning-refresh" id="learning-refresh" type="button" hidden>Regenerate learning path</button>
+  <div class="learning-error" id="learning-error" role="alert" hidden></div>
+  <div class="learning-content" id="learning-content" hidden></div>
+  <div class="proceed" id="learning-next" hidden>
+    <a class="button" href="{{ url_for('mastery') }}">Ready for the mastery check &raquo;</a>
+  </div>
+</section>
+{% endblock %}

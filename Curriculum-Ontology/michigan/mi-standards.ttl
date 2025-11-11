@@ -1,0 +1,73 @@
+@prefix mi:     <urn:mi:ss:> .
+@prefix dcterms:<http://purl.org/dc/terms/> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@base <file:///Users/louisjustman/Downloads/C3%20Project/Curriculum-Ontology/michigan/> .
+
+<mi-standards.ttl> a owl:Ontology ;
+  owl:versionIRI <urn:mi:ss:data> ;
+  rdfs:label "Michigan Social Studies GLCE Dataset" ;
+  dcterms:creator "Michigan Department of Education" ;
+  dcterms:source "Michigan K-12 Social Studies Standards (Michigan Department of Education)" ;
+  owl:imports
+    <mi-base.ttl> ,
+    <mi-grade-K.ttl> ,
+    <mi-grade-1.ttl> ,
+    <mi-grade-2.ttl> ,
+    <mi-grade-3.ttl> ,
+    <mi-grade-4.ttl> ,
+    <mi-grade-5.ttl> ,
+    <mi-grade-6.ttl> ,
+    <mi-grade-7.ttl> ,
+    <mi-grade-8.ttl> ,
+    <mi-course-whg.ttl> ,
+    <mi-course-ushg.ttl> ,
+    <mi-course-civics.ttl> ,
+    <mi-course-econ.ttl> ,
+    <mi-course-cg.ttl> .
+mi:MichiganGLCEFramework a mi:MichiganGLCE ;
+  rdfs:label "Michigan Social Studies GLCE" ;
+  dcterms:source "Michigan K-12 Social Studies Standards (Michigan Department of Education)" ;
+  mi:hasGrade
+    mi:Grade_K ,
+    mi:Grade_1 ,
+    mi:Grade_2 ,
+    mi:Grade_3 ,
+    mi:Grade_4 ,
+    mi:Grade_5 ,
+    mi:Grade_6 ,
+    mi:Grade_7 ,
+    mi:Grade_8 ;
+  mi:hasCourse
+    mi:Course_WHG ,
+    mi:Course_USHG ,
+    mi:Course_CIVICS ,
+    mi:Course_ECON ,
+    mi:Course_CG .
+#################################################################
+# Disciplines
+#################################################################
+mi:Discipline_C a mi:Discipline ;
+  skos:prefLabel "Civics and Government" ;
+  mi:disciplineCode "C" .
+mi:Discipline_E a mi:Discipline ;
+  skos:prefLabel "Economics" ;
+  mi:disciplineCode "E" .
+mi:Discipline_G a mi:Discipline ;
+  skos:prefLabel "Geography" ;
+  mi:disciplineCode "G" .
+mi:Discipline_H a mi:Discipline ;
+  skos:prefLabel "History" ;
+  mi:disciplineCode "H" .
+mi:Discipline_P a mi:Discipline ;
+  skos:prefLabel "Public Discourse, Decision Making, and Citizen Involvement" ;
+  mi:disciplineCode "P" .
+mi:Discipline_U a mi:Discipline ;
+  skos:prefLabel "U.S. History and Geography" ;
+  mi:disciplineCode "U" .
+mi:Discipline_W a mi:Discipline ;
+  skos:prefLabel "World History and Geography" ;
+  mi:disciplineCode "W" .

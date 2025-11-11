@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="public">
+  <uri id="MI Standards Data" name="urn:mi:ss:data" uri="mi-standards.ttl"/>
+  <uri id="MI Base Ontology" name="urn:mi:ss:ontology" uri="mi-base.ttl"/>
+  <uri id="MI Grade K" name="urn:mi:ss:grade:K" uri="mi-grade-K.ttl"/>
+  <uri id="MI Grade 1" name="urn:mi:ss:grade:1" uri="mi-grade-1.ttl"/>
+  <uri id="MI Grade 2" name="urn:mi:ss:grade:2" uri="mi-grade-2.ttl"/>
+  <uri id="MI Grade 3" name="urn:mi:ss:grade:3" uri="mi-grade-3.ttl"/>
+  <uri id="MI Grade 4" name="urn:mi:ss:grade:4" uri="mi-grade-4.ttl"/>
+  <uri id="MI Grade 5" name="urn:mi:ss:grade:5" uri="mi-grade-5.ttl"/>
+  <uri id="MI Grade 6" name="urn:mi:ss:grade:6" uri="mi-grade-6.ttl"/>
+  <uri id="MI Grade 7" name="urn:mi:ss:grade:7" uri="mi-grade-7.ttl"/>
+  <uri id="MI Grade 8" name="urn:mi:ss:grade:8" uri="mi-grade-8.ttl"/>
+  <uri id="MI Course WHG" name="urn:mi:ss:course:WHG" uri="mi-course-whg.ttl"/>
+  <uri id="MI Course USHG" name="urn:mi:ss:course:USHG" uri="mi-course-ushg.ttl"/>
+  <uri id="MI Course CIVICS" name="urn:mi:ss:course:CIVICS" uri="mi-course-civics.ttl"/>
+  <uri id="MI Course ECON" name="urn:mi:ss:course:ECON" uri="mi-course-econ.ttl"/>
+  <uri id="MI Course CG" name="urn:mi:ss:course:CG" uri="mi-course-cg.ttl"/>
+</catalog>

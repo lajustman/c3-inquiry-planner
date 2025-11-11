@@ -1,0 +1,121 @@
+{
+  "title": "Youth Activism and Change: Birmingham to Today",
+  "grade_band": "6-8",
+  "time_box_minutes": 55,
+  "disciplines": [
+    "History",
+    "Civics"
+  ],
+  "focus_concepts": [
+    "Causation",
+    "Civic Participation"
+  ],
+  "anchor_context": "the 1963 Birmingham Children's Crusade",
+  "transfer_context": "recent youth-led climate justice campaigns",
+  "reading_range": "6-8",
+  "teacher_intent": "Highlight how youth-led civic action can shift public policy and public opinion.",
+  "required_standards": [
+    "C3 Framework indicators for D1\u2013D4"
+  ],
+  "student_needs": {
+    "language": "Offer bilingual glossaries for key civic vocabulary.",
+    "processing": "Embed movement breaks between source rotations."
+  },
+  "compelling_question": "How do young people force change when adults resist it?",
+  "supporting_questions": [
+    "What conditions in Birmingham pushed youth to join the Children's Crusade?",
+    "How did different stakeholders react to the student marches?",
+    "Which evidence shows that youth activism shifted national responses?",
+    "Where do we see similar civic strategies in today's climate justice movements?"
+  ],
+  "sources": [
+    {
+      "id": "src.letter",
+      "title": "\"Letter from Birmingham Jail\" (excerpt)",
+      "type": "primary",
+      "origin": "Martin Luther King Jr., April 1963, open letter to local clergy",
+      "value": "Explains strategic nonviolent direct action and moral justification for youth marches.",
+      "citation": "King, Martin Luther Jr. (1963). Letter from Birmingham Jail.",
+      "url": "https://www.africa.upenn.edu/Articles_Gen/Letter_Birmingham.html"
+    },
+    {
+      "id": "src.photos",
+      "title": "Photograph set: Children's Crusade and firehoses",
+      "type": "primary",
+      "origin": "Bill Hudson, Associated Press, May 1963, Birmingham, Alabama",
+      "value": "Documents state response to youth activists and sways national public opinion.",
+      "url": "https://www.apimages.com/Collections/History/1960s/Children-March"
+    },
+    {
+      "id": "src.article",
+      "title": "\"Youth Lead the Climate Strike\" (news analysis)",
+      "type": "secondary",
+      "origin": "National news outlet, 2019 feature article",
+      "value": "Provides contemporary comparison showing youth strategies and policy impact.",
+      "citation": "Doe, J. (2019). Youth Lead the Climate Strike. National News."
+    }
+  ],
+  "extend_move": "Plan a brief testimony for a local school board meeting proposing a student-led civic action that draws lessons from Birmingham.",
+  "exemplars": [
+    {
+      "id": "exemplar.chicago",
+      "title": "1968 Chicago Student Walkouts",
+      "description": "Students demanded better school conditions and curriculum relevance during the civil rights era.",
+      "era_or_setting": "1968, Chicago, IL",
+      "discipline_emphasis": "Civics, History"
+    },
+    {
+      "id": "exemplar.mexico",
+      "title": "Ayotzinapa Student Protests",
+      "description": "Families and students organized to demand government accountability after the 2014 disappearances.",
+      "era_or_setting": "2014, Guerrero, Mexico",
+      "discipline_emphasis": "Civics, Global Studies"
+    }
+  ],
+  "interest_prompts": [
+    "What problems in your community make you want to speak up?",
+    "Which movements or leaders inspire you to take action?",
+    "How do you prefer to share your ideas\u2014art, speeches, social media, meetings?"
+  ],
+  "iteration_focus": "Support each learner in independently applying causation analysis when designing civic action pathways.",
+  "dok_overrides": {
+    "Level 1": "List two cause-and-effect links from the Children's Crusade that show why youth were central to the movement.",
+    "Level 3": "Analyze two sources that disagree about the impact of youth arrests in Birmingham. Decide whose reasoning is stronger and justify with evidence."
+  },
+  "selected_exemplars": [
+    "exemplar.chicago"
+  ],
+  "interest_responses": [
+    {
+      "prompt": "Student-generated question",
+      "response": "How can youth organize safely?"
+    },
+    {
+      "prompt": "Choose a type of situation where causation, civic participation might appear. Pick a number or describe your idea (connect it to the concept).",
+      "response": "Environmental or climate challenge that needs collective response"
+    },
+    {
+      "prompt": "Who should hear what you discover? Choose an audience or add your own.",
+      "response": "Local civic leaders (school board, city council, youth commission)"
+    },
+    {
+      "prompt": "How would you most like to share your findings?",
+      "response": "Visual or multimedia story (poster, video, digital exhibit)"
+    },
+    {
+      "prompt": "What problems in your community make you want to speak up?",
+      "response": "Environmental justice advocacy"
+    },
+    {
+      "prompt": "Which movements or leaders inspire you to take action?",
+      "response": "Spoken word performances"
+    },
+    {
+      "prompt": "How do you prefer to share your ideas\u2014art, speeches, social media, meetings?",
+      "response": "City council youth"
+    }
+  ],
+  "student_questions": [
+    "How can youth organize safely?"
+  ]
+}

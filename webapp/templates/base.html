@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ lesson_title }} | Inquiry Planner</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script defer src="{{ url_for('static', filename='suggest.js') }}"></script>
+    <script defer src="{{ url_for('static', filename='interests.js') }}"></script>
+    <script defer src="{{ url_for('static', filename='learn.js') }}"></script>
+    <script defer src="{{ url_for('static', filename='drawers.js') }}"></script>
+  </head>
+  <body>
+    <button class="drawer-tab vocab-tab" id="vocab-toggle" aria-expanded="false">Key Vocabulary</button>
+    <aside class="drawer-panel drawer-panel--vocab" id="vocab-drawer" aria-hidden="true">
+      <div class="drawer-header">
+        <h2>Key Vocabulary</h2>
+        <button class="close-drawer" id="close-vocab" aria-label="Close vocabulary panel">×</button>
+      </div>
+      <dl class="drawer-list">
+        {% for item in plan.vocabulary %}
+        <div>
+          <dt>
+            <a href="{{ item.url }}" target="_blank" rel="noopener">
+              <strong>{{ highlight(item.term) }}</strong>
+            </a>
+          </dt>
+          <dd>{{ item.definition }}</dd>
+        </div>
+        {% endfor %}
+      </dl>
+    </aside>
+    <button class="drawer-tab standards-tab" id="standards-toggle" aria-expanded="false">C3 Standards</button>
+    <aside class="drawer-panel drawer-panel--standards" id="standards-drawer" aria-hidden="true">
+      <div class="drawer-header">
+        <h2>Relevant C3 Standards</h2>
+        <button class="close-drawer" id="close-standards" aria-label="Close standards panel">×</button>
+      </div>
+      <div class="drawer-content">
+          {% set dimension_labels = {
+            'D1': 'Dimension 1: Developing Questions and Planning Inquiries',
+            'D2': 'Dimension 2: Applying Disciplinary Concepts and Tools',
+            'D3': 'Dimension 3: Evaluating Sources and Using Evidence',
+            'D4': 'Dimension 4: Communicating Conclusions and Taking Informed Action'
+          } %}
+          {% for dimension, standards in plan.indicators.items() %}
+          <section class="drawer-section">
+            <h3>{{ dimension_labels.get(dimension, dimension) }}</h3>
+            <ul>
+              {% for standard in standards %}
+              <li><strong>{{ standard.code }}</strong> — {{ highlight(standard.label) }}</li>
+              {% endfor %}
+            </ul>
+          </section>
+        {% endfor %}
+      </div>
+    </aside>
+    {% set header_objective = plan.objectives[0] if plan.objectives else plan.questions.compelling %}
+    <header class="app-header navbar navbar-expand-lg navbar-dark sticky-top">
+      <div class="container-fluid">
+        <div class="header-primary">
+          <a class="navbar-brand mb-0 h1" href="{{ url_for('catalog') }}">C3 Inquiry Planner</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+            aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <nav class="collapse navbar-collapse" id="mainNav">
+            <div class="navbar-nav ms-auto">
+              <a class="nav-link {% if request.endpoint == 'catalog' %}active{% endif %}" href="{{ url_for('catalog') }}">Topics</a>
+              <a class="nav-link {% if request.endpoint == 'overview' %}active{% endif %}" href="{{ url_for('overview') }}">Overview</a>
+              <a class="nav-link {% if request.endpoint == 'objectives' %}active{% endif %}" href="{{ url_for('objectives') }}">Objectives</a>
+              <a class="nav-link {% if request.endpoint == 'interest_check' %}active{% endif %}" href="{{ url_for('interest_check') }}">Interests</a>
+              <a class="nav-link {% if request.endpoint == 'learning_path' %}active{% endif %}" href="{{ url_for('learning_path') }}">Learn</a>
+              <a class="nav-link {% if request.endpoint == 'mastery' %}active{% endif %}" href="{{ url_for('mastery') }}">Mastery</a>
+              <a class="nav-link {% if request.endpoint == 'summary' %}active{% endif %}" href="{{ url_for('summary') }}">Summary</a>
+            </div>
+          </nav>
+        </div>
+        {% if header_objective %}
+        <div class="app-header__subtitle">
+          {{ header_objective }}
+        </div>
+        {% endif %}
+      </div>
+    </header>
+    <main class="content">
+      {% block content %}{% endblock %}
+    </main>
+    <footer class="app-footer">
+      <p>Powered by the C3 Concept-Ontology Inquiry Planner</p>
+    </footer>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>

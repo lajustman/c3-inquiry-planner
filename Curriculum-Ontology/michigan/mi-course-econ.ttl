@@ -1,0 +1,976 @@
+@prefix mi:     <urn:mi:ss:> .
+@prefix dcterms:<http://purl.org/dc/terms/> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@base <file:///Users/louisjustman/Downloads/C3%20Project/Curriculum-Ontology/michigan/> .
+
+<mi-course-econ.ttl> a owl:Ontology ;
+  owl:versionIRI <urn:mi:ss:course:ECON> ;
+  rdfs:label "Michigan Social Studies GLCE - Economics" ;
+  dcterms:creator "Michigan Department of Education" ;
+  dcterms:source "Michigan K-12 Social Studies Standards (Michigan Department of Education)" ;
+  owl:imports <mi-base.ttl> .
+
+mi:Course_ECON a mi:Course ;
+  skos:prefLabel "Economics" ;
+  mi:hasCategory
+    mi:Cat_ECON_1_1 ,
+    mi:Cat_ECON_1_2 ,
+    mi:Cat_ECON_1_3 ,
+    mi:Cat_ECON_1_4 ,
+    mi:Cat_ECON_2_1 ,
+    mi:Cat_ECON_2_2 ,
+    mi:Cat_ECON_3_1 ,
+    mi:Cat_ECON_3_2 ,
+    mi:Cat_ECON_4_1 ,
+    mi:Cat_ECON_E1 ,
+    mi:Cat_ECON_E2 ,
+    mi:Cat_ECON_E3 ,
+    mi:Cat_ECON_E4 ,
+    mi:Cat_ECON_F1 ,
+    mi:Cat_ECON_P1 ,
+    mi:Cat_ECON_P2 ,
+    mi:Cat_ECON_P3 ,
+    mi:Cat_ECON_P4 ,
+    mi:Cat_ECON_U6 ,
+    mi:Cat_ECON_U7 ,
+    mi:Cat_ECON_U8 ,
+    mi:Cat_ECON_U9 ,
+    mi:Cat_ECON_W4 ,
+    mi:Cat_ECON_W5 ,
+    mi:Cat_ECON_W6 ,
+    mi:Cat_ECON_W7 ;
+  mi:isCourseOf mi:MichiganGLCEFramework ;
+  mi:courseCode "ECON" .
+
+#################################################################
+# Categories
+#################################################################
+mi:Cat_ECON_1_1 a mi:StandardCategory ;
+  mi:categoryCode "1.1" ;
+  skos:prefLabel "Individual and Business Decision Making" ;
+  mi:categoryDescription "Individually and collaboratively, students will engage in planned inquiries to explain and demonstrate how individuals confront scarcity, and how market forces influence how they organize, produce, use, and allocate resources in its presence." ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExpectation
+    mi:Exp_ECON_1_1_1 ,
+    mi:Exp_ECON_1_1_2 ,
+    mi:Exp_ECON_1_1_3 ;
+  mi:isCategoryOf mi:Course_ECON .
+
+mi:Cat_ECON_1_2 a mi:StandardCategory ;
+  mi:categoryCode "1.2" ;
+  skos:prefLabel "Competitive Markets" ;
+  mi:categoryDescription "Individually and collaboratively, students will engage in planned inquiries to analyze how the functions and constraints of business structures, the role of price in the market, and relationships of investment to productivity and growth, impact competitive markets." ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExpectation
+    mi:Exp_ECON_1_2_1 ,
+    mi:Exp_ECON_1_2_2 ;
+  mi:isCategoryOf mi:Course_ECON .
+
+mi:Cat_ECON_1_3 a mi:StandardCategory ;
+  mi:categoryCode "1.3" ;
+  skos:prefLabel "Prices, Supply, and Demand" ;
+  mi:categoryDescription "Compare how supply, demand, price, equilibrium, elasticity, and incentives affect the workings of a market." ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExpectation
+    mi:Exp_ECON_1_3_1 ,
+    mi:Exp_ECON_1_3_2 ;
+  mi:isCategoryOf mi:Course_ECON .
+
+mi:Cat_ECON_1_4 a mi:StandardCategory ;
+  mi:categoryCode "1.4" ;
+  skos:prefLabel "Government Impact on Households and Businesses" ;
+  mi:categoryDescription "Individually and collaboratively, students will engage in planned inquiries to describe the varied ways in which government impacts households and businesses through policy decisions, regulatory laws, and ordinances, as well as apply key economic elements to how governments and markets allocate resources differently and explain why these differences matter in terms of growth and prosperity across the mass population." ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExpectation
+    mi:Exp_ECON_1_4_1 ,
+    mi:Exp_ECON_1_4_2 ,
+    mi:Exp_ECON_1_4_3 ,
+    mi:Exp_ECON_1_4_4 ,
+    mi:Exp_ECON_1_4_5 ,
+    mi:Exp_ECON_1_4_6 ;
+  mi:isCategoryOf mi:Course_ECON .
+
+mi:Cat_ECON_2_1 a mi:StandardCategory ;
+  mi:categoryCode "2.1" ;
+  skos:prefLabel "Economic indicators in the Economy" ;
+  mi:categoryDescription "Individually and collaboratively, students will engage in planned inquiries to explain why inflation, unemployment, output, and growth in potential output matter to consumers and producers, as well as associate stable money and interest rates with economic prosperity." ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExpectation
+    mi:Exp_ECON_2_1_1 ,
+    mi:Exp_ECON_2_1_2 ;
+  mi:isCategoryOf mi:Course_ECON .
+
+mi:Cat_ECON_2_2 a mi:StandardCategory ;
+  mi:categoryCode "2.2" ;
+  skos:prefLabel "Role of Government in the U.S. Economy" ;
+  mi:categoryDescription "Individually and collaboratively, students will engage in planned inquiries to analyze the role of government in the economy of the United States by identifying macroeconomic goals, comparing perspectives on government roles, analyzing fiscal and monetary policy, assessing the protective role of government, and describing the role of government as a producer and consumer of public goods and services." ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExample
+    mi:Example_cat_ECON_2_2_1 ;
+  mi:hasExpectation
+    mi:Exp_ECON_2_2_1 ,
+    mi:Exp_ECON_2_2_2 ,
+    mi:Exp_ECON_2_2_3 ,
+    mi:Exp_ECON_2_2_4 ;
+  mi:isCategoryOf mi:Course_ECON .
+
+mi:Cat_ECON_3_1 a mi:StandardCategory ;
+  mi:categoryCode "3.1" ;
+  skos:prefLabel "Economic Systems" ;
+  mi:categoryDescription "Individually and collaboratively, students will engage in planned inquiries to explain how different economic systems, including free market, command, and mixed systems, coordinate and facilitate the exchange, production, distribution, and consumption of goods and services." ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExpectation
+    mi:Exp_ECON_3_1_1 ,
+    mi:Exp_ECON_3_1_2 ,
+    mi:Exp_ECON_3_1_3 ,
+    mi:Exp_ECON_3_1_4 ;
+  mi:isCategoryOf mi:Course_ECON .
+
+mi:Cat_ECON_3_2 a mi:StandardCategory ;
+  mi:categoryCode "3.2" ;
+  skos:prefLabel "Economic Interdependence - Trade" ;
+  mi:categoryDescription "Individually and collaboratively, students will engage in planned inquiries to describe how trade generates economic development and interdependence, and analyze the benefits and costs for individuals, producers, and governments." ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExpectation
+    mi:Exp_ECON_3_2_1 ,
+    mi:Exp_ECON_3_2_2 ,
+    mi:Exp_ECON_3_2_3 ,
+    mi:Exp_ECON_3_2_4 ;
+  mi:isCategoryOf mi:Course_ECON .
+
+mi:Cat_ECON_4_1 a mi:StandardCategory ;
+  mi:categoryCode "4.1" ;
+  skos:prefLabel "Decision Making" ;
+  mi:categoryDescription "Sample Economics Compelling and Supporting Question HS Do taxes help 1) In what ways does the government of the United States collect taxes, and how ECONOMICS or hurt U.S. Individually and collaboratively, students will engage in planned inquiries to describe and demonstrate how the economic forces of scarcity and opportunity costs impact individual and household choices." ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExample
+    mi:Example_cat_ECON_4_1_1 ,
+    mi:Example_cat_ECON_4_1_2 ,
+    mi:Example_cat_ECON_4_1_3 ;
+  mi:hasExpectation
+    mi:Exp_ECON_4_1_1 ,
+    mi:Exp_ECON_4_1_2 ,
+    mi:Exp_ECON_4_1_3 ,
+    mi:Exp_ECON_4_1_4 ,
+    mi:Exp_ECON_4_1_5 ,
+    mi:Exp_ECON_4_1_6 ;
+  mi:isCategoryOf mi:Course_ECON .
+
+mi:Cat_ECON_E1 a mi:StandardCategory ;
+  mi:categoryCode "E1" ;
+  skos:prefLabel "The Market Economy" ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExpectation
+    mi:Exp_ECON_E1 ;
+  mi:isCategoryOf mi:Course_ECON .
+
+mi:Cat_ECON_E2 a mi:StandardCategory ;
+  mi:categoryCode "E2" ;
+  skos:prefLabel "The National Economy" ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExpectation
+    mi:Exp_ECON_E2 ;
+  mi:isCategoryOf mi:Course_ECON .
+
+mi:Cat_ECON_E3 a mi:StandardCategory ;
+  mi:categoryCode "E3" ;
+  skos:prefLabel "The International Economy" ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExpectation
+    mi:Exp_ECON_E3 ;
+  mi:isCategoryOf mi:Course_ECON .
+
+mi:Cat_ECON_E4 a mi:StandardCategory ;
+  mi:categoryCode "E4" ;
+  skos:prefLabel "Personal Finance" ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExpectation
+    mi:Exp_ECON_E4 ;
+  mi:isCategoryOf mi:Course_ECON .
+
+mi:Cat_ECON_F1 a mi:StandardCategory ;
+  mi:categoryCode "F1" ;
+  skos:prefLabel "World Historical and Historical and Geographical Civics Knowledge Economics Knowledge" ;
+  mi:categoryDescription "Geographical Inquiry and Knowledge and Perspective Intellectual Skills Intellectual Skills Literacy Practices Historical and Geographical Participatory Skills Economic Literacy Global Analysis of World Analysis and Interpretation History Eras 4-7 from Two Civics Dispositions E1 The Market Economy Thematic Analysis of U.S." ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExample
+    mi:Example_cat_ECON_F1_1 ,
+    mi:Example_cat_ECON_F1_2 ;
+  mi:hasExpectation
+    mi:Exp_ECON_F1 ;
+  mi:isCategoryOf mi:Course_ECON .
+
+mi:Cat_ECON_P1 a mi:StandardCategory ;
+  mi:categoryCode "P1" ;
+  skos:prefLabel "Reading and Communication Skills" ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExpectation
+    mi:Exp_ECON_P1 ;
+  mi:isCategoryOf mi:Course_ECON .
+
+mi:Cat_ECON_P2 a mi:StandardCategory ;
+  mi:categoryCode "P2" ;
+  skos:prefLabel "Inquiry, Research, and Analysis Skills" ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExpectation
+    mi:Exp_ECON_P2 ;
+  mi:isCategoryOf mi:Course_ECON .
+
+mi:Cat_ECON_P3 a mi:StandardCategory ;
+  mi:categoryCode "P3" ;
+  skos:prefLabel "Public Discourse and Decision-Making Skills" ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExpectation
+    mi:Exp_ECON_P3 ;
+  mi:isCategoryOf mi:Course_ECON .
+
+mi:Cat_ECON_P4 a mi:StandardCategory ;
+  mi:categoryCode "P4" ;
+  skos:prefLabel "Civic Participation" ;
+  mi:categoryDescription "ECONOMICS SECONDARY CONTENT STATEMENT OUTLINE" ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExpectation
+    mi:Exp_ECON_P4 ;
+  mi:isCategoryOf mi:Course_ECON .
+
+mi:Cat_ECON_U6 a mi:StandardCategory ;
+  mi:categoryCode "U6" ;
+  skos:prefLabel "USHG - Era 6" ;
+  mi:categoryDescription "Intensified Hemispheric C2 Origins and Foundations Interactions," ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExpectation
+    mi:Exp_ECON_U6 ;
+  mi:isCategoryOf mi:Course_ECON .
+
+mi:Cat_ECON_U7 a mi:StandardCategory ;
+  mi:categoryCode "U7" ;
+  skos:prefLabel "USHG - Era 7 United States" ;
+  mi:categoryDescription "First Global Age, 15th-18th Centuries The Great Depression C4 Rights and Liberties in and World War II, the United States of" ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExpectation
+    mi:Exp_ECON_U7 ;
+  mi:isCategoryOf mi:Course_ECON .
+
+mi:Cat_ECON_U8 a mi:StandardCategory ;
+  mi:categoryCode "U8" ;
+  skos:prefLabel "USHG - Era 8 C5 The United States of" ;
+  mi:categoryDescription "Revolutions, America and World 18th Century-1914 Post-World War II United Affairs States," ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExpectation
+    mi:Exp_ECON_U8 ;
+  mi:isCategoryOf mi:Course_ECON .
+
+mi:Cat_ECON_U9 a mi:StandardCategory ;
+  mi:categoryCode "U9" ;
+  skos:prefLabel "USHG - Era 9" ;
+  mi:categoryDescription "Achievement, United States of 1900-Present America in a New America Global Age, Global Issues 1980-Present Sample World History and Geography Compelling and Supporting Question HSWHG Have 1) What were the social, political, economic, and cultural motives for imperialism increased in the 19th century? migration and 2) Why were European powers able to spread imperialism through Africa, the cross-cultural Middle East, and Asia so quickly? interactions made 3) How did native people respond to and/or resist imperialism? humans more 4) What were long-term social, political, economic, and cultural consequences of connected? imperialism? Standards Connection: 5.1.1, 5.1.2, 5.2.1, 5.2.2, 5.2.3, 6.2.1, 6.2.4" ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExpectation
+    mi:Exp_ECON_U9 ;
+  mi:isCategoryOf mi:Course_ECON .
+
+mi:Cat_ECON_W4 a mi:StandardCategory ;
+  mi:categoryCode "W4" ;
+  skos:prefLabel "WHG - Era 4 Civic Society and" ;
+  mi:categoryDescription "USHG ERAS 1-5 Government Expanding and" ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExpectation
+    mi:Exp_ECON_W4 ;
+  mi:isCategoryOf mi:Course_ECON .
+
+mi:Cat_ECON_W5 a mi:StandardCategory ;
+  mi:categoryCode "W5" ;
+  skos:prefLabel "WHG - Era 5 C3 Structure and Function" ;
+  mi:categoryDescription "1870-1930 of Governments in the The Emergence of the" ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExpectation
+    mi:Exp_ECON_W5 ;
+  mi:isCategoryOf mi:Course_ECON .
+
+mi:Cat_ECON_W6 a mi:StandardCategory ;
+  mi:categoryCode "W6" ;
+  skos:prefLabel "WHG - Era 6" ;
+  mi:categoryDescription "1920-1945 America An Age of Global" ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExpectation
+    mi:Exp_ECON_W6 ;
+  mi:isCategoryOf mi:Course_ECON .
+
+mi:Cat_ECON_W7 a mi:StandardCategory ;
+  mi:categoryCode "W7" ;
+  skos:prefLabel "WHG - Era 7" ;
+  mi:categoryDescription "1945-1989 C6 Citizenship and Civic Global Crisis and Participation in the" ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExpectation
+    mi:Exp_ECON_W7 ;
+  mi:isCategoryOf mi:Course_ECON .
+
+#################################################################
+# Expectations
+#################################################################
+mi:Exp_ECON_1_1_1 a mi:Expectation ;
+  mi:expectationCode "1.1.1" ;
+  mi:fullCode "ECON-1.1.1" ;
+  mi:officialText "Scarcity, Choice, Opportunity Costs, Incentives - using examples, explain how scarcity, choice, opportunity costs, and incentives affect decisions made by households, businesses, and governments." ;
+  skos:prefLabel "Scarcity, Choice, Opportunity Costs, Incentives" ;
+  skos:broader mi:Cat_ECON_1_1 ;
+  mi:inCategory mi:Cat_ECON_1_1 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_ECON_1_1 .
+
+mi:Exp_ECON_1_1_2 a mi:Expectation ;
+  mi:expectationCode "1.1.2" ;
+  mi:fullCode "ECON-1.1.2" ;
+  mi:officialText "Entrepreneurship - analyze the risks and rewards of entrepreneurship and associate the functions of entrepreneurs with alleviating problems associated with scarcity." ;
+  skos:prefLabel "Entrepreneurship" ;
+  skos:broader mi:Cat_ECON_1_1 ;
+  mi:inCategory mi:Cat_ECON_1_1 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_ECON_1_1 .
+
+mi:Exp_ECON_1_1_3 a mi:Expectation ;
+  mi:expectationCode "1.1.3" ;
+  mi:fullCode "ECON-1.1.3" ;
+  mi:officialText "Marginal Analysis - weigh marginal benefits and marginal costs in decision making." ;
+  skos:prefLabel "Marginal Analysis" ;
+  skos:broader mi:Cat_ECON_1_1 ;
+  mi:inCategory mi:Cat_ECON_1_1 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_ECON_1_1 .
+
+mi:Exp_ECON_1_2_1 a mi:Expectation ;
+  mi:expectationCode "1.2.1" ;
+  mi:fullCode "ECON-1.2.1" ;
+  mi:officialText "Institutions - describe the roles of various economic institutions and purposes they serve in a market economy." ;
+  skos:prefLabel "Institutions" ;
+  skos:broader mi:Cat_ECON_1_2 ;
+  mi:inCategory mi:Cat_ECON_1_2 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExample
+    mi:Example_exp_ECON_1_2_1_1 ;
+  mi:isExpectationOf mi:Cat_ECON_1_2 .
+
+mi:Exp_ECON_1_2_2 a mi:Expectation ;
+  mi:expectationCode "1.2.2" ;
+  mi:fullCode "ECON-1.2.2" ;
+  mi:officialText "Market Structures - identify the characteristics of perfect competition,monopolistic competition, oligopoly, and monopoly market structures." ;
+  skos:prefLabel "Market Structures" ;
+  skos:broader mi:Cat_ECON_1_2 ;
+  mi:inCategory mi:Cat_ECON_1_2 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExample
+    mi:Example_exp_ECON_1_2_2_1 ;
+  mi:isExpectationOf mi:Cat_ECON_1_2 .
+
+mi:Exp_ECON_1_3_1 a mi:Expectation ;
+  mi:expectationCode "1.3.1" ;
+  mi:fullCode "ECON-1.3.1" ;
+  mi:officialText "Supply And Demand - use the laws of supply and demand to explain household and business behavior." ;
+  skos:prefLabel "Supply and Demand" ;
+  skos:broader mi:Cat_ECON_1_3 ;
+  mi:inCategory mi:Cat_ECON_1_3 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExample
+    mi:Example_exp_ECON_1_3_1_1 ;
+  mi:isExpectationOf mi:Cat_ECON_1_3 .
+
+mi:Exp_ECON_1_3_2 a mi:Expectation ;
+  mi:expectationCode "1.3.2" ;
+  mi:fullCode "ECON-1.3.2" ;
+  mi:officialText "Price, Equilibrium, Elasticity, and Incentives - analyze how prices change through the interaction of buyers and sellers in a market, including the role of supply, demand, equilibrium, and elasticity, and explain how incentives (monetary and non-monetary) affect choices of households and economic organizations." ;
+  skos:prefLabel "Price, Equilibrium, Elasticity, and Incentives" ;
+  skos:broader mi:Cat_ECON_1_3 ;
+  mi:inCategory mi:Cat_ECON_1_3 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_ECON_1_3 .
+
+mi:Exp_ECON_1_4_1 a mi:Expectation ;
+  mi:expectationCode "1.4.1" ;
+  mi:fullCode "ECON-1.4.1" ;
+  mi:officialText "Public Policy and the Market - analyze the impact of a change in public policy on consumers, producers, workers, savers, and investors." ;
+  skos:prefLabel "Public Policy and the Market" ;
+  skos:broader mi:Cat_ECON_1_4 ;
+  mi:inCategory mi:Cat_ECON_1_4 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExample
+    mi:Example_exp_ECON_1_4_1_1 ;
+  mi:isExpectationOf mi:Cat_ECON_1_4 .
+
+mi:Exp_ECON_1_4_2 a mi:Expectation ;
+  mi:expectationCode "1.4.2" ;
+  mi:fullCode "ECON-1.4.2" ;
+  mi:officialText "Government and Consumers - analyze the role of government in protecting consumers and enforcing contracts (including property rights), and explain how this role influences the incentives (or disincentives) for people to produce and exchange goods and services." ;
+  skos:prefLabel "Government and Consumers" ;
+  skos:broader mi:Cat_ECON_1_4 ;
+  mi:inCategory mi:Cat_ECON_1_4 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_ECON_1_4 .
+
+mi:Exp_ECON_1_4_3 a mi:Expectation ;
+  mi:expectationCode "1.4.3" ;
+  mi:fullCode "ECON-1.4.3" ;
+  mi:officialText "Government Revenue and Services - analyze the ways in which local and state governments generate revenue and use that revenue to supply public services." ;
+  skos:prefLabel "Government Revenue and Services" ;
+  skos:broader mi:Cat_ECON_1_4 ;
+  mi:inCategory mi:Cat_ECON_1_4 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_ECON_1_4 .
+
+mi:Exp_ECON_1_4_4 a mi:Expectation ;
+  mi:expectationCode "1.4.4" ;
+  mi:fullCode "ECON-1.4.4" ;
+  mi:officialText "Market Failure - explain the role for government in addressing both negative and positive externalities." ;
+  skos:prefLabel "Market Failure" ;
+  skos:broader mi:Cat_ECON_1_4 ;
+  mi:inCategory mi:Cat_ECON_1_4 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExample
+    mi:Example_exp_ECON_1_4_4_1 ;
+  mi:isExpectationOf mi:Cat_ECON_1_4 .
+
+mi:Exp_ECON_1_4_5 a mi:Expectation ;
+  mi:expectationCode "1.4.5" ;
+  mi:fullCode "ECON-1.4.5" ;
+  mi:officialText "Consequences of Governmental Policy - assess the incentives for political leaders to implement policies that disperse costs widely over large groups of people and benefit small and politically powerful groups." ;
+  skos:prefLabel "Consequences of Governmental Policy" ;
+  skos:broader mi:Cat_ECON_1_4 ;
+  mi:inCategory mi:Cat_ECON_1_4 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExample
+    mi:Example_exp_ECON_1_4_5_1 ;
+  mi:isExpectationOf mi:Cat_ECON_1_4 .
+
+mi:Exp_ECON_1_4_6 a mi:Expectation ;
+  mi:expectationCode "1.4.6" ;
+  mi:fullCode "ECON-1.4.6" ;
+  mi:officialText "Price Controls - analyze the impact of price ceilings and price floors on the quantity of a good or service supplied and demanded in a market." ;
+  skos:prefLabel "Price Controls" ;
+  skos:broader mi:Cat_ECON_1_4 ;
+  mi:inCategory mi:Cat_ECON_1_4 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_ECON_1_4 .
+
+mi:Exp_ECON_2_1_1 a mi:Expectation ;
+  mi:expectationCode "2.1.1" ;
+  mi:fullCode "ECON-2.1.1" ;
+  mi:officialText "Circular Flow and the National Economy - using the concept of circular flow, analyze the roles of and relationship between households, business firms, and government in the economy of the United States." ;
+  skos:prefLabel "Circular Flow and the National Economy" ;
+  skos:broader mi:Cat_ECON_2_1 ;
+  mi:inCategory mi:Cat_ECON_2_1 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_ECON_2_1 .
+
+mi:Exp_ECON_2_1_2 a mi:Expectation ;
+  mi:expectationCode "2.1.2" ;
+  mi:fullCode "ECON-2.1.2" ;
+  mi:officialText "Economic Indicators - using a number of indicators, such as gross domestic product (GDP), per capita GDP, unemployment rates, and consumer price index, analyze the current and future state of an economy." ;
+  skos:prefLabel "Economic Indicators" ;
+  skos:broader mi:Cat_ECON_2_1 ;
+  mi:inCategory mi:Cat_ECON_2_1 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_ECON_2_1 .
+
+mi:Exp_ECON_2_2_1 a mi:Expectation ;
+  mi:expectationCode "2.2.1" ;
+  mi:fullCode "ECON-2.2.1" ;
+  mi:officialText "Government Involvement in the Economy - evaluate the three macroeconomic goals of an economic system (stable prices, low unemployment, and economic growth)." ;
+  skos:prefLabel "Government Involvement in the Economy" ;
+  skos:broader mi:Cat_ECON_2_2 ;
+  mi:inCategory mi:Cat_ECON_2_2 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_ECON_2_2 .
+
+mi:Exp_ECON_2_2_2 a mi:Expectation ;
+  mi:expectationCode "2.2.2" ;
+  mi:fullCode "ECON-2.2.2" ;
+  mi:officialText "Government Revenue and Services - evaluate the ways in which the federal government generates revenue on consumption, income, and wealth, and uses that revenue to supply government services and public goods, and protect property rights." ;
+  skos:prefLabel "Government Revenue and Services" ;
+  skos:broader mi:Cat_ECON_2_2 ;
+  mi:inCategory mi:Cat_ECON_2_2 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExample
+    mi:Example_exp_ECON_2_2_2_1 ;
+  mi:isExpectationOf mi:Cat_ECON_2_2 .
+
+mi:Exp_ECON_2_2_3 a mi:Expectation ;
+  mi:expectationCode "2.2.3" ;
+  mi:fullCode "ECON-2.2.3" ;
+  mi:officialText "Fiscal Policy and its Consequences - analyze the consequences (intended and unintended) of using various tax and spending policies to achieve macroeconomic goals of stable prices, low unemployment, and economic growth." ;
+  skos:prefLabel "Fiscal Policy and Its Consequences" ;
+  skos:broader mi:Cat_ECON_2_2 ;
+  mi:inCategory mi:Cat_ECON_2_2 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_ECON_2_2 .
+
+mi:Exp_ECON_2_2_4 a mi:Expectation ;
+  mi:expectationCode "2.2.4" ;
+  mi:fullCode "ECON-2.2.4" ;
+  mi:officialText "Federal Reserve and Monetary Policy - explain the roles and responsibilities of the Federal Reserve system and compare and contrast the consequences (intended and unintended) of different monetary policy actions of the Federal Reserve Board as a means to achieve macroeconomic goals of stable prices, low unemployment, and economic growth." ;
+  skos:prefLabel "Federal Reserve and Monetary Policy" ;
+  skos:broader mi:Cat_ECON_2_2 ;
+  mi:inCategory mi:Cat_ECON_2_2 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_ECON_2_2 .
+
+mi:Exp_ECON_3_1_1 a mi:Expectation ;
+  mi:expectationCode "3.1.1" ;
+  mi:fullCode "ECON-3.1.1" ;
+  mi:officialText "Developing Nations - assess how factors such as availability of natural resources, investments in human and physical capital, technical assistance, public attitudes and beliefs, property rights, and free trade can affect economic growth in developing nations." ;
+  skos:prefLabel "Developing Nations" ;
+  skos:broader mi:Cat_ECON_3_1 ;
+  mi:inCategory mi:Cat_ECON_3_1 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_ECON_3_1 .
+
+mi:Exp_ECON_3_1_2 a mi:Expectation ;
+  mi:expectationCode "3.1.2" ;
+  mi:fullCode "ECON-3.1.2" ;
+  mi:officialText "International Organizations and the World Economy - evaluate the diverse impact of trade policies of the World Trade Organization, World Bank, or International Monetary Fund on developing economies of Africa, Central America, or Asia, and on the developed economies of the United States and Western Europe." ;
+  skos:prefLabel "International Organizations and the World Economy" ;
+  skos:broader mi:Cat_ECON_3_1 ;
+  mi:inCategory mi:Cat_ECON_3_1 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_ECON_3_1 .
+
+mi:Exp_ECON_3_1_3 a mi:Expectation ;
+  mi:expectationCode "3.1.3" ;
+  mi:fullCode "ECON-3.1.3" ;
+  mi:officialText "Comparing Economic Systems - compare and contrast the characteristics, advantages, and disadvantages of traditional, command, market, and mixed economic systems." ;
+  skos:prefLabel "Comparing Economic Systems" ;
+  skos:broader mi:Cat_ECON_3_1 ;
+  mi:inCategory mi:Cat_ECON_3_1 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExample
+    mi:Example_exp_ECON_3_1_3_1 ;
+  mi:isExpectationOf mi:Cat_ECON_3_1 .
+
+mi:Exp_ECON_3_1_4 a mi:Expectation ;
+  mi:expectationCode "3.1.4" ;
+  mi:fullCode "ECON-3.1.4" ;
+  mi:officialText "Impact of Transitional Economies - analyze the impact of transitional economies, such as in China and India, on the global economy in general and the American economy in particular." ;
+  skos:prefLabel "Impact of Transitional Economies" ;
+  skos:broader mi:Cat_ECON_3_1 ;
+  mi:inCategory mi:Cat_ECON_3_1 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_ECON_3_1 .
+
+mi:Exp_ECON_3_2_1 a mi:Expectation ;
+  mi:expectationCode "3.2.1" ;
+  mi:fullCode "ECON-3.2.1" ;
+  mi:officialText "Absolute and Comparative Advantage - use the concepts of absolute and comparative advantages to explain why goods and services are produced in one nation or locale versus another." ;
+  skos:prefLabel "Absolute and Comparative Advantage" ;
+  skos:broader mi:Cat_ECON_3_2 ;
+  mi:inCategory mi:Cat_ECON_3_2 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_ECON_3_2 .
+
+mi:Exp_ECON_3_2_2 a mi:Expectation ;
+  mi:expectationCode "3.2.2" ;
+  mi:fullCode "ECON-3.2.2" ;
+  mi:officialText "Domestic Activity and World Trade - assess the impact of trade policies, monetary policy, exchange rates, and interest rates on domestic activity and world trade." ;
+  skos:prefLabel "Domestic Activity and World Trade" ;
+  skos:broader mi:Cat_ECON_3_2 ;
+  mi:inCategory mi:Cat_ECON_3_2 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExample
+    mi:Example_exp_ECON_3_2_2_1 ;
+  mi:isExpectationOf mi:Cat_ECON_3_2 .
+
+mi:Exp_ECON_3_2_3 a mi:Expectation ;
+  mi:expectationCode "3.2.3" ;
+  mi:fullCode "ECON-3.2.3" ;
+  mi:officialText "Exchange Rate and World Trade - analyze the effects on trade from a change in an exchange rate between two currencies." ;
+  skos:prefLabel "Exchange Rate and World Trade" ;
+  skos:broader mi:Cat_ECON_3_2 ;
+  mi:inCategory mi:Cat_ECON_3_2 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_ECON_3_2 .
+
+mi:Exp_ECON_3_2_4 a mi:Expectation ;
+  mi:expectationCode "3.2.4" ;
+  mi:fullCode "ECON-3.2.4" ;
+  mi:officialText "The Global Economy and the Marketplace - analyze and describe how the global economy has changed the interaction of buyers and sellers." ;
+  skos:prefLabel "The Global Economy and the Marketplace" ;
+  skos:broader mi:Cat_ECON_3_2 ;
+  mi:inCategory mi:Cat_ECON_3_2 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_ECON_3_2 .
+
+mi:Exp_ECON_4_1_1 a mi:Expectation ;
+  mi:expectationCode "4.1.1" ;
+  mi:fullCode "ECON-4.1.1" ;
+  mi:officialText "Earning Income - conduct research regarding potential income and employee benefit packages, non-income factors that may influence career choice, benefits and costs of obtaining the necessary education or technical skills, taxes a person is likely to pay, and other possible sources of income." ;
+  skos:prefLabel "Earning Income" ;
+  skos:broader mi:Cat_ECON_4_1 ;
+  mi:inCategory mi:Cat_ECON_4_1 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExample
+    mi:Example_exp_ECON_4_1_1_1 ;
+  mi:isExpectationOf mi:Cat_ECON_4_1 .
+
+mi:Exp_ECON_4_1_2 a mi:Expectation ;
+  mi:expectationCode "4.1.2" ;
+  mi:fullCode "ECON-4.1.2" ;
+  mi:officialText "Buying Goods And Services - describe the factors that consumers may consider when purchasing a good or service, including the costs, benefits, and the role of government in obtaining the information." ;
+  skos:prefLabel "Buying Goods and Services" ;
+  skos:broader mi:Cat_ECON_4_1 ;
+  mi:inCategory mi:Cat_ECON_4_1 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_ECON_4_1 .
+
+mi:Exp_ECON_4_1_3 a mi:Expectation ;
+  mi:expectationCode "4.1.3" ;
+  mi:fullCode "ECON-4.1.3" ;
+  mi:officialText "Saving - identify the incentives people have to set aside income for future consumption, and evaluate the impact of time, interest rates, and inflation upon the value of savings." ;
+  skos:prefLabel "Saving" ;
+  skos:broader mi:Cat_ECON_4_1 ;
+  mi:inCategory mi:Cat_ECON_4_1 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_ECON_4_1 .
+
+mi:Exp_ECON_4_1_4 a mi:Expectation ;
+  mi:expectationCode "4.1.4" ;
+  mi:fullCode "ECON-4.1.4" ;
+  mi:officialText "Using Credit - evaluate the benefits, costs, and potential impacts of using credit to purchase goods and services." ;
+  skos:prefLabel "Using Credit" ;
+  skos:broader mi:Cat_ECON_4_1 ;
+  mi:inCategory mi:Cat_ECON_4_1 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_ECON_4_1 .
+
+mi:Exp_ECON_4_1_5 a mi:Expectation ;
+  mi:expectationCode "4.1.5" ;
+  mi:fullCode "ECON-4.1.5" ;
+  mi:officialText "Financial Investing - analyze the risks, expected rate of return, tax benefits, impact of inflation, role of government agencies, and importance of diversification when investing in financial assets." ;
+  skos:prefLabel "Financial Investing" ;
+  skos:broader mi:Cat_ECON_4_1 ;
+  mi:inCategory mi:Cat_ECON_4_1 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_ECON_4_1 .
+
+mi:Exp_ECON_4_1_6 a mi:Expectation ;
+  mi:expectationCode "4.1.6" ;
+  mi:fullCode "ECON-4.1.6" ;
+  mi:officialText "Protecting and Insuring - assess the financial risk of lost income, assets, health, or identity, and determine if a person should accept the risk exposure, reduce risk, or transfer the risk to others by paying a fee now to avoid the possibility of a larger loss later." ;
+  skos:prefLabel "Protecting and Insuring" ;
+  skos:broader mi:Cat_ECON_4_1 ;
+  mi:inCategory mi:Cat_ECON_4_1 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_ECON_4_1 .
+
+mi:Exp_ECON_E1 a mi:Expectation ;
+  mi:expectationCode "E1" ;
+  mi:fullCode "ECON-E1" ;
+  mi:officialText "- THE MARKET ECONOMY" ;
+  skos:prefLabel "THE MARKET ECONOMY" ;
+  skos:broader mi:Cat_ECON_E1 ;
+  mi:inCategory mi:Cat_ECON_E1 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_ECON_E1 .
+
+mi:Exp_ECON_E2 a mi:Expectation ;
+  mi:expectationCode "E2" ;
+  mi:fullCode "ECON-E2" ;
+  mi:officialText "- THE NATIONAL ECONOMY" ;
+  skos:prefLabel "THE NATIONAL ECONOMY" ;
+  skos:broader mi:Cat_ECON_E2 ;
+  mi:inCategory mi:Cat_ECON_E2 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_ECON_E2 .
+
+mi:Exp_ECON_E3 a mi:Expectation ;
+  mi:expectationCode "E3" ;
+  mi:fullCode "ECON-E3" ;
+  mi:officialText "- THE INTERNATIONAL ECONOMY" ;
+  skos:prefLabel "THE INTERNATIONAL ECONOMY" ;
+  skos:broader mi:Cat_ECON_E3 ;
+  mi:inCategory mi:Cat_ECON_E3 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_ECON_E3 .
+
+mi:Exp_ECON_E4 a mi:Expectation ;
+  mi:expectationCode "E4" ;
+  mi:fullCode "ECON-E4" ;
+  mi:officialText "- PERSONAL FINANCE" ;
+  skos:prefLabel "PERSONAL FINANCE" ;
+  skos:broader mi:Cat_ECON_E4 ;
+  mi:inCategory mi:Cat_ECON_E4 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_ECON_E4 .
+
+mi:Exp_ECON_F1 a mi:Expectation ;
+  mi:expectationCode "F1" ;
+  mi:fullCode "ECON-F1" ;
+  mi:officialText "Geographical Inquiry and Knowledge and Perspective Intellectual Skills Intellectual Skills Literacy Practices Historical and Geographical Participatory Skills Economic Literacy Global Analysis of World Analysis and Interpretation History Eras 4-7 from Two Civics Dispositions E1 The Market Economy Thematic Analysis of U.S." ;
+  skos:prefLabel "Geographical Inquiry and Knowledge and Perspective Intellectual Skills Intellectual Skills Literacy Practices Historical and Geographical..." ;
+  skos:broader mi:Cat_ECON_F1 ;
+  mi:inCategory mi:Cat_ECON_F1 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_ECON_F1 .
+
+mi:Exp_ECON_P1 a mi:Expectation ;
+  mi:expectationCode "P1" ;
+  mi:fullCode "ECON-P1" ;
+  mi:officialText "Reading and Communication" ;
+  skos:prefLabel "Reading and Communication" ;
+  skos:broader mi:Cat_ECON_P1 ;
+  mi:inCategory mi:Cat_ECON_P1 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_ECON_P1 .
+
+mi:Exp_ECON_P2 a mi:Expectation ;
+  mi:expectationCode "P2" ;
+  mi:fullCode "ECON-P2" ;
+  mi:officialText "Inquiry, Research, and Analysis" ;
+  skos:prefLabel "Inquiry, Research, and Analysis" ;
+  skos:broader mi:Cat_ECON_P2 ;
+  mi:inCategory mi:Cat_ECON_P2 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_ECON_P2 .
+
+mi:Exp_ECON_P3 a mi:Expectation ;
+  mi:expectationCode "P3" ;
+  mi:fullCode "ECON-P3" ;
+  mi:officialText "Public Discourse and Decision Making" ;
+  skos:prefLabel "Public Discourse and Decision Making" ;
+  skos:broader mi:Cat_ECON_P3 ;
+  mi:inCategory mi:Cat_ECON_P3 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_ECON_P3 .
+
+mi:Exp_ECON_P4 a mi:Expectation ;
+  mi:expectationCode "P4" ;
+  mi:fullCode "ECON-P4" ;
+  mi:officialText "ECONOMICS SECONDARY CONTENT STATEMENT OUTLINE" ;
+  skos:prefLabel "ECONOMICS SECONDARY CONTENT STATEMENT OUTLINE" ;
+  skos:broader mi:Cat_ECON_P4 ;
+  mi:inCategory mi:Cat_ECON_P4 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_ECON_P4 .
+
+mi:Exp_ECON_U6 a mi:Expectation ;
+  mi:expectationCode "U6" ;
+  mi:fullCode "ECON-U6" ;
+  mi:officialText "Intensified Hemispheric C2 Origins and Foundations Interactions," ;
+  skos:prefLabel "Intensified Hemispheric C2 Origins and Foundations Interactions" ;
+  skos:broader mi:Cat_ECON_U6 ;
+  mi:inCategory mi:Cat_ECON_U6 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_ECON_U6 .
+
+mi:Exp_ECON_U7 a mi:Expectation ;
+  mi:expectationCode "U7" ;
+  mi:fullCode "ECON-U7" ;
+  mi:officialText "First Global Age, 15th-18th Centuries The Great Depression C4 Rights and Liberties in and World War II, the United States of" ;
+  skos:prefLabel "First Global Age, 15th-18th Centuries the Great Depression C4 Rights and Liberties in and World..." ;
+  skos:broader mi:Cat_ECON_U7 ;
+  mi:inCategory mi:Cat_ECON_U7 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_ECON_U7 .
+
+mi:Exp_ECON_U8 a mi:Expectation ;
+  mi:expectationCode "U8" ;
+  mi:fullCode "ECON-U8" ;
+  mi:officialText "Revolutions, America and World 18th Century-1914 Post-World War II United Affairs States," ;
+  skos:prefLabel "Revolutions, America and World 18th Century-1914 Post-World War II United Affairs States" ;
+  skos:broader mi:Cat_ECON_U8 ;
+  mi:inCategory mi:Cat_ECON_U8 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_ECON_U8 .
+
+mi:Exp_ECON_U9 a mi:Expectation ;
+  mi:expectationCode "U9" ;
+  mi:fullCode "ECON-U9" ;
+  mi:officialText "Achievement, United States of 1900-Present America in a New America Global Age, Global Issues 1980-Present Sample World History and Geography Compelling and Supporting Question HSWHG Have 1) What were the social, political, economic, and cultural motives for imperialism increased in the 19th century? migration and 2) Why were European powers able to spread imperialism through Africa, the cross-cultural Middle East, and Asia so quickly? interactions made 3) How did native people respond to and/or resist imperialism? humans more 4) What were long-term social, political, economic, and cultural consequences of connected? imperialism? Standards Connection: 5.1.1, 5.1.2, 5.2.1, 5.2.2, 5.2.3, 6.2.1, 6.2.4" ;
+  skos:prefLabel "Achievement, United States of 1900-Present America in a New America Global Age, Global Issues 1980-Present..." ;
+  skos:broader mi:Cat_ECON_U9 ;
+  mi:inCategory mi:Cat_ECON_U9 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_ECON_U9 .
+
+mi:Exp_ECON_W4 a mi:Expectation ;
+  mi:expectationCode "W4" ;
+  mi:fullCode "ECON-W4" ;
+  mi:officialText "USHG ERAS 1-5 Government Expanding and" ;
+  skos:prefLabel "USHG ERAS 1-5 Government Expanding and" ;
+  skos:broader mi:Cat_ECON_W4 ;
+  mi:inCategory mi:Cat_ECON_W4 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_ECON_W4 .
+
+mi:Exp_ECON_W5 a mi:Expectation ;
+  mi:expectationCode "W5" ;
+  mi:fullCode "ECON-W5" ;
+  mi:officialText "1870-1930 of Governments in the The Emergence of the" ;
+  skos:prefLabel "1870-1930 of Governments in the the Emergence of the" ;
+  skos:broader mi:Cat_ECON_W5 ;
+  mi:inCategory mi:Cat_ECON_W5 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_ECON_W5 .
+
+mi:Exp_ECON_W6 a mi:Expectation ;
+  mi:expectationCode "W6" ;
+  mi:fullCode "ECON-W6" ;
+  mi:officialText "1920-1945 America An Age of Global" ;
+  skos:prefLabel "1920-1945 America an Age of Global" ;
+  skos:broader mi:Cat_ECON_W6 ;
+  mi:inCategory mi:Cat_ECON_W6 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_ECON_W6 .
+
+mi:Exp_ECON_W7 a mi:Expectation ;
+  mi:expectationCode "W7" ;
+  mi:fullCode "ECON-W7" ;
+  mi:officialText "1945-1989 C6 Citizenship and Civic Global Crisis and Participation in the" ;
+  skos:prefLabel "1945-1989 C6 Citizenship and Civic Global Crisis and Participation in the" ;
+  skos:broader mi:Cat_ECON_W7 ;
+  mi:inCategory mi:Cat_ECON_W7 ;
+  mi:inCourse mi:Course_ECON ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_ECON_W7 .
+
+#################################################################
+# Examples
+#################################################################
+mi:Example_cat_ECON_2_2_1 a mi:Example ;
+  skos:prefLabel "Students will also analyze how governmental decisions on taxation spending protections and regulations impact macroeconomic goals" ;
+  mi:exampleText "Students will also analyze how governmental decisions on taxation spending protections and regulations impact macroeconomic goals" .
+
+mi:Example_cat_ECON_4_1_1 a mi:Example ;
+  skos:prefLabel "is that money spent? citizens? 2) What are the seven different income tax brackets and four categories that U.S" ;
+  mi:exampleText "is that money spent? citizens? 2) What are the seven different income tax brackets and four categories that U.S" .
+
+mi:Example_cat_ECON_4_1_2 a mi:Example ;
+  skos:prefLabel "citizens must file under with the United States Internal Revenue Service? 3) How do taxes affect people from different socio-economic backgrounds? Standards Connection" ;
+  mi:exampleText "citizens must file under with the United States Internal Revenue Service? 3) How do taxes affect people from different socio-economic backgrounds? Standards Connection" .
+
+mi:Example_cat_ECON_4_1_3 a mi:Example ;
+  skos:prefLabel "1.4.3 1.4.4 4.1.1" ;
+  mi:exampleText "1.4.3 1.4.4 4.1.1" .
+
+mi:Example_cat_ECON_F1_1 a mi:Example ;
+  skos:prefLabel "Perspectives" ;
+  mi:exampleText "Perspectives" .
+
+mi:Example_cat_ECON_F1_2 a mi:Example ;
+  skos:prefLabel "Global and C1 Philosophical History Eras 6-9 E2 The National Economy Interregional Foundations of F Foundations E3 International Economy" ;
+  mi:exampleText "Global and C1 Philosophical History Eras 6-9 E2 The National Economy Interregional Foundations of F Foundations E3 International Economy" .
+
+mi:Example_exp_ECON_1_2_1_1 a mi:Example ;
+  skos:prefLabel "banks labor unions markets corporations co-operatives sole proprietorships partnerships and not-for-profit organizations" ;
+  mi:exampleText "banks labor unions markets corporations co-operatives sole proprietorships partnerships and not-for-profit organizations" .
+
+mi:Example_exp_ECON_1_2_2_1 a mi:Example ;
+  skos:prefLabel "number of producers similarity of products barriers to entry control over prices" ;
+  mi:exampleText "number of producers similarity of products barriers to entry control over prices" .
+
+mi:Example_exp_ECON_1_3_1_1 a mi:Example ;
+  skos:prefLabel "determinants of demand and determinants of supply" ;
+  mi:exampleText "determinants of demand and determinants of supply" .
+
+mi:Example_exp_ECON_1_4_1_1 a mi:Example ;
+  skos:prefLabel "an increase in the minimum wage a new tax policy a change in interest rates or price controls on the quantity of a good or service" ;
+  mi:exampleText "an increase in the minimum wage a new tax policy a change in interest rates or price controls on the quantity of a good or service" .
+
+mi:Example_exp_ECON_1_4_4_1 a mi:Example ;
+  skos:prefLabel "pollution vaccinations education medical research government/private partnerships" ;
+  mi:exampleText "pollution vaccinations education medical research government/private partnerships" .
+
+mi:Example_exp_ECON_1_4_5_1 a mi:Example ;
+  skos:prefLabel "subsidies tariffs import quotas" ;
+  mi:exampleText "subsidies tariffs import quotas" .
+
+mi:Example_exp_ECON_2_2_2_1 a mi:Example ;
+  skos:prefLabel "parks and highways national defense social security Medicaid Medicare" ;
+  mi:exampleText "parks and highways national defense social security Medicaid Medicare" .
+
+mi:Example_exp_ECON_3_1_3_1 a mi:Example ;
+  skos:prefLabel "GDP inflation unemployment" ;
+  mi:exampleText "GDP inflation unemployment" .
+
+mi:Example_exp_ECON_3_2_2_1 a mi:Example ;
+  skos:prefLabel "tariffs quotas export subsidies product standards other barriers" ;
+  mi:exampleText "tariffs quotas export subsidies product standards other barriers" .
+
+mi:Example_exp_ECON_4_1_1_1 a mi:Example ;
+  skos:prefLabel "interest dividends capital appreciation income support from the government social security" ;
+  mi:exampleText "interest dividends capital appreciation income support from the government social security" .

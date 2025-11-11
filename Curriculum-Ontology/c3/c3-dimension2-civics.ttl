@@ -1,0 +1,518 @@
+@prefix c3:     <urn:c3:> .
+@prefix dcterms:<http://purl.org/dc/terms/> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@base <file:///Users/louisjustman/Downloads/C3%20Project/Curriculum-Ontology/c3/> .
+
+<c3-dimension2-civics.ttl> a owl:Ontology ;
+  rdfs:label "C3 Framework — Dimension 2 Civics" ;
+  dcterms:description "Dimension 2 Civics indicators with SKOS alignment and provenance." ;
+  dcterms:creator "NCSS — College, Career, and Civic Life (C3) Framework for Social Studies State Standards" ;
+  dcterms:source "C3 Framework, pp. 31–49" .
+
+#################################################################
+# Annotation properties
+#################################################################
+
+c3:status        a owl:AnnotationProperty .
+c3:createdOn     a owl:AnnotationProperty .
+c3:alignmentNote a owl:AnnotationProperty .
+c3:officialText  a owl:AnnotationProperty .
+c3:sourceDoc     a owl:AnnotationProperty .
+c3:sourcePage    a owl:AnnotationProperty .
+
+#################################################################
+# Indicators
+#################################################################
+
+c3:I_D2_Civ_1_K_2 a c3:Indicator ;
+  c3:hasCode "D2.Civ.1.K-2" ; rdfs:label "Describe roles and responsibilities of people in authority." ;
+  skos:prefLabel "Describe roles and responsibilities of people in authority." ;
+  skos:altLabel "Indicator D2.Civ.1.K-2" ;
+  c3:officialText "Describe roles and responsibilities of people in authority." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:Institutions , c3:CivicRoles ; c3:requiresSkill c3:Describe ;
+  c3:inStrand c3:Str_Civ_CivicInstitutions ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 9, p. 32" .
+
+c3:I_D2_Civ_1_3_5 a c3:Indicator ;
+  c3:hasCode "D2.Civ.1.3-5" ; rdfs:label "Distinguish the responsibilities and powers of government officials at various levels and branches of government and in different times and places." ;
+  skos:prefLabel "Distinguish the responsibilities and powers of government officials at various levels and branches of government and in different times and places." ;
+  skos:altLabel "Indicator D2.Civ.1.3-5" ;
+  c3:officialText "Distinguish the responsibilities and powers of government officials at various levels and branches of government and in different times and places." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:Institutions , c3:CivicRoles ; c3:requiresSkill c3:Analyze ;
+  c3:inStrand c3:Str_Civ_CivicInstitutions ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 9, p. 32" .
+
+c3:I_D2_Civ_1_6_8 a c3:Indicator ;
+  c3:hasCode "D2.Civ.1.6-8" ; rdfs:label "Distinguish the powers and responsibilities of citizens, political parties, interest groups, and the media in a variety of governmental and nongovernmental contexts." ;
+  skos:prefLabel "Distinguish the powers and responsibilities of citizens, political parties, interest groups, and the media in a variety of governmental and nongovernmental contexts." ;
+  skos:altLabel "Indicator D2.Civ.1.6-8" ;
+  c3:officialText "Distinguish the powers and responsibilities of citizens, political parties, interest groups, and the media in a variety of governmental and nongovernmental contexts." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:Institutions , c3:CivicRoles ; c3:requiresSkill c3:Analyze ;
+  c3:inStrand c3:Str_Civ_CivicInstitutions ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 9, p. 32" .
+
+c3:I_D2_Civ_1_9_12 a c3:Indicator ;
+  c3:hasCode "D2.Civ.1.9-12" ; rdfs:label "Distinguish the powers and responsibilities of local, state, tribal, national, and international civic and political institutions." ;
+  skos:prefLabel "Distinguish the powers and responsibilities of local, state, tribal, national, and international civic and political institutions." ;
+  skos:altLabel "Indicator D2.Civ.1.9-12" ;
+  c3:officialText "Distinguish the powers and responsibilities of local, state, tribal, national, and international civic and political institutions." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:Institutions , c3:CivicRoles ; c3:requiresSkill c3:Analyze ;
+  c3:inStrand c3:Str_Civ_CivicInstitutions ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 9, p. 32" .
+
+c3:I_D2_Civ_2_K_2 a c3:Indicator ;
+  c3:hasCode "D2.Civ.2.K-2" ; rdfs:label "Explain how all people, not just official leaders, play important roles in a community." ;
+  skos:prefLabel "Explain how all people, not just official leaders, play important roles in a community." ;
+  skos:altLabel "Indicator D2.Civ.2.K-2" ;
+  c3:officialText "Explain how all people, not just official leaders, play important roles in a community." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:CivicParticipation , c3:CivicRoles ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Civ_CivicInstitutions ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 9, p. 32" .
+
+c3:I_D2_Civ_2_3_5 a c3:Indicator ;
+  c3:hasCode "D2.Civ.2.3-5" ; rdfs:label "Explain how a democracy relies on people’s responsible participation, and draw implications for how individuals should participate." ;
+  skos:prefLabel "Explain how a democracy relies on people’s responsible participation, and draw implications for how individuals should participate." ;
+  skos:altLabel "Indicator D2.Civ.2.3-5" ;
+  c3:officialText "Explain how a democracy relies on people’s responsible participation, and draw implications for how individuals should participate." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:CivicParticipation , c3:CivicRoles ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Civ_CivicInstitutions ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 9, p. 32" .
+
+c3:I_D2_Civ_2_6_8 a c3:Indicator ;
+  c3:hasCode "D2.Civ.2.6-8" ; rdfs:label "Explain specific roles played by citizens (such as voters, jurors, taxpayers, members of the armed forces, petitioners, protesters, and office-holders)." ;
+  skos:prefLabel "Explain specific roles played by citizens (such as voters, jurors, taxpayers, members of the armed forces, petitioners, protesters, and office-holders)." ;
+  skos:altLabel "Indicator D2.Civ.2.6-8" ;
+  c3:officialText "Explain specific roles played by citizens (such as voters, jurors, taxpayers, members of the armed forces, petitioners, protesters, and office-holders)." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:CivicParticipation , c3:CivicRoles ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Civ_CivicInstitutions ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 9, p. 32" .
+
+c3:I_D2_Civ_2_9_12 a c3:Indicator ;
+  c3:hasCode "D2.Civ.2.9-12" ; rdfs:label "Analyze the role of citizens in the U.S. political system, with attention to various theories of democracy, changes in Americans’ participation over time, and alternative models from other countries, past and present." ;
+  skos:prefLabel "Analyze the role of citizens in the U.S. political system, with attention to various theories of democracy, changes in Americans’ participation over time, and alternative models from other countries, past and present." ;
+  skos:altLabel "Indicator D2.Civ.2.9-12" ;
+  c3:officialText "Analyze the role of citizens in the U.S. political system, with attention to various theories of democracy, changes in Americans’ participation over time, and alternative models from other countries, past and present." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:CivicParticipation , c3:CivicRoles ; c3:requiresSkill c3:Analyze ;
+  c3:inStrand c3:Str_Civ_CivicInstitutions ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 9, p. 32" .
+
+c3:I_D2_Civ_3_K_2 a c3:Indicator ;
+  c3:hasCode "D2.Civ.3.K-2" ; rdfs:label "Explain the need for and purposes of rules in various settings inside and outside of school." ;
+  skos:prefLabel "Explain the need for and purposes of rules in various settings inside and outside of school." ;
+  skos:altLabel "Indicator D2.Civ.3.K-2" ;
+  c3:officialText "Explain the need for and purposes of rules in various settings inside and outside of school." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:Law ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Civ_CivicInstitutions ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 9, p. 32" .
+
+c3:I_D2_Civ_3_3_5 a c3:Indicator ;
+  c3:hasCode "D2.Civ.3.3-5" ; rdfs:label "Examine the origins and purposes of rules, laws, and key U.S. constitutional provisions." ;
+  skos:prefLabel "Examine the origins and purposes of rules, laws, and key U.S. constitutional provisions." ;
+  skos:altLabel "Indicator D2.Civ.3.3-5" ;
+  c3:officialText "Examine the origins and purposes of rules, laws, and key U.S. constitutional provisions." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:Law ; c3:requiresSkill c3:Analyze ;
+  c3:inStrand c3:Str_Civ_CivicInstitutions ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 9, p. 32" .
+
+c3:I_D2_Civ_3_6_8 a c3:Indicator ;
+  c3:hasCode "D2.Civ.3.6-8" ; rdfs:label "Examine the origins, purposes, and impact of constitutions, laws, treaties, and international agreements." ;
+  skos:prefLabel "Examine the origins, purposes, and impact of constitutions, laws, treaties, and international agreements." ;
+  skos:altLabel "Indicator D2.Civ.3.6-8" ;
+  c3:officialText "Examine the origins, purposes, and impact of constitutions, laws, treaties, and international agreements." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:Law ; c3:requiresSkill c3:Analyze ;
+  c3:inStrand c3:Str_Civ_CivicInstitutions ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 9, p. 32" .
+
+c3:I_D2_Civ_3_9_12 a c3:Indicator ;
+  c3:hasCode "D2.Civ.3.9-12" ; rdfs:label "Analyze the impact of constitutions, laws, treaties, and international agreements on the maintenance of national and international order." ;
+  skos:prefLabel "Analyze the impact of constitutions, laws, treaties, and international agreements on the maintenance of national and international order." ;
+  skos:altLabel "Indicator D2.Civ.3.9-12" ;
+  c3:officialText "Analyze the impact of constitutions, laws, treaties, and international agreements on the maintenance of national and international order." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:Law ; c3:requiresSkill c3:Analyze ;
+  c3:inStrand c3:Str_Civ_CivicInstitutions ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 9, p. 32" .
+
+c3:I_D2_Civ_4_3_5 a c3:Indicator ;
+  c3:hasCode "D2.Civ.4.3-5" ; rdfs:label "Explain how groups of people make rules to create responsibilities and protect freedoms." ;
+  skos:prefLabel "Explain how groups of people make rules to create responsibilities and protect freedoms." ;
+  skos:altLabel "Indicator D2.Civ.4.3-5" ;
+  c3:officialText "Explain how groups of people make rules to create responsibilities and protect freedoms." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:Institutions , c3:Law ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Civ_CivicInstitutions ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 9, p. 32" .
+
+c3:I_D2_Civ_4_6_8 a c3:Indicator ;
+  c3:hasCode "D2.Civ.4.6-8" ; rdfs:label "Explain the powers and limits of the three branches of government, public officials, and bureaucracies at different levels in the United States and in other countries." ;
+  skos:prefLabel "Explain the powers and limits of the three branches of government, public officials, and bureaucracies at different levels in the United States and in other countries." ;
+  skos:altLabel "Indicator D2.Civ.4.6-8" ;
+  c3:officialText "Explain the powers and limits of the three branches of government, public officials, and bureaucracies at different levels in the United States and in other countries." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:Institutions , c3:Law ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Civ_CivicInstitutions ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 9, p. 32" .
+
+c3:I_D2_Civ_4_9_12 a c3:Indicator ;
+  c3:hasCode "D2.Civ.4.9-12" ; rdfs:label "Explain how the U.S. Constitution establishes a system of government that has powers, responsibilities, and limits that have changed over time and that are still contested." ;
+  skos:prefLabel "Explain how the U.S. Constitution establishes a system of government that has powers, responsibilities, and limits that have changed over time and that are still contested." ;
+  skos:altLabel "Indicator D2.Civ.4.9-12" ;
+  c3:officialText "Explain how the U.S. Constitution establishes a system of government that has powers, responsibilities, and limits that have changed over time and that are still contested." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:Institutions , c3:Law ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Civ_CivicInstitutions ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 9, p. 32" .
+
+c3:I_D2_Civ_5_K_2 a c3:Indicator ;
+  c3:hasCode "D2.Civ.5.K-2" ; rdfs:label "Explain what governments are and some of their functions." ;
+  skos:prefLabel "Explain what governments are and some of their functions." ;
+  skos:altLabel "Indicator D2.Civ.5.K-2" ;
+  c3:officialText "Explain what governments are and some of their functions." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:Institutions , c3:Policy ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Civ_CivicInstitutions ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 9, p. 32" .
+
+c3:I_D2_Civ_5_3_5 a c3:Indicator ;
+  c3:hasCode "D2.Civ.5.3-5" ; rdfs:label "Explain the origins, functions, and structure of different systems of government, including those created by the U.S. and state constitutions." ;
+  skos:prefLabel "Explain the origins, functions, and structure of different systems of government, including those created by the U.S. and state constitutions." ;
+  skos:altLabel "Indicator D2.Civ.5.3-5" ;
+  c3:officialText "Explain the origins, functions, and structure of different systems of government, including those created by the U.S. and state constitutions." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:Institutions , c3:Policy ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Civ_CivicInstitutions ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 9, p. 32" .
+
+c3:I_D2_Civ_5_6_8 a c3:Indicator ;
+  c3:hasCode "D2.Civ.5.6-8" ; rdfs:label "Explain the origins, functions, and structure of government with reference to the U.S. Constitution, state constitutions, and selected other systems of government." ;
+  skos:prefLabel "Explain the origins, functions, and structure of government with reference to the U.S. Constitution, state constitutions, and selected other systems of government." ;
+  skos:altLabel "Indicator D2.Civ.5.6-8" ;
+  c3:officialText "Explain the origins, functions, and structure of government with reference to the U.S. Constitution, state constitutions, and selected other systems of government." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:Institutions , c3:Policy ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Civ_CivicInstitutions ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 9, p. 32" .
+
+c3:I_D2_Civ_5_9_12 a c3:Indicator ;
+  c3:hasCode "D2.Civ.5.9-12" ; rdfs:label "Evaluate citizens’ and institutions’ effectiveness in addressing social and political problems at the local, state, tribal, national, and/or international level." ;
+  skos:prefLabel "Evaluate citizens’ and institutions’ effectiveness in addressing social and political problems at the local, state, tribal, national, and/or international level." ;
+  skos:altLabel "Indicator D2.Civ.5.9-12" ;
+  c3:officialText "Evaluate citizens’ and institutions’ effectiveness in addressing social and political problems at the local, state, tribal, national, and/or international level." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:Institutions , c3:Policy ; c3:requiresSkill c3:Evaluate ;
+  c3:inStrand c3:Str_Civ_CivicInstitutions ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 9, p. 32" .
+
+c3:I_D2_Civ_6_K_2 a c3:Indicator ;
+  c3:hasCode "D2.Civ.6.K-2" ; rdfs:label "Describe how communities work to accomplish common tasks, establish responsibilities, and fulfill roles of authority." ;
+  skos:prefLabel "Describe how communities work to accomplish common tasks, establish responsibilities, and fulfill roles of authority." ;
+  skos:altLabel "Indicator D2.Civ.6.K-2" ;
+  c3:officialText "Describe how communities work to accomplish common tasks, establish responsibilities, and fulfill roles of authority." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:CivicCollaboration ; c3:requiresSkill c3:Describe ;
+  c3:inStrand c3:Str_Civ_CivicInstitutions ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 9, p. 32" .
+
+c3:I_D2_Civ_6_3_5 a c3:Indicator ;
+  c3:hasCode "D2.Civ.6.3-5" ; rdfs:label "Describe ways in which people benefit from and are challenged by working together, including through government, workplaces, voluntary organizations, and families." ;
+  skos:prefLabel "Describe ways in which people benefit from and are challenged by working together, including through government, workplaces, voluntary organizations, and families." ;
+  skos:altLabel "Indicator D2.Civ.6.3-5" ;
+  c3:officialText "Describe ways in which people benefit from and are challenged by working together, including through government, workplaces, voluntary organizations, and families." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:CivicCollaboration ; c3:requiresSkill c3:Describe ;
+  c3:inStrand c3:Str_Civ_CivicInstitutions ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 9, p. 32" .
+
+c3:I_D2_Civ_6_6_8 a c3:Indicator ;
+  c3:hasCode "D2.Civ.6.6-8" ; rdfs:label "Describe the roles of political, civil, and economic organizations in shaping people’s lives." ;
+  skos:prefLabel "Describe the roles of political, civil, and economic organizations in shaping people’s lives." ;
+  skos:altLabel "Indicator D2.Civ.6.6-8" ;
+  c3:officialText "Describe the roles of political, civil, and economic organizations in shaping people’s lives." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:CivicCollaboration ; c3:requiresSkill c3:Describe ;
+  c3:inStrand c3:Str_Civ_CivicInstitutions ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 9, p. 32" .
+
+c3:I_D2_Civ_6_9_12 a c3:Indicator ;
+  c3:hasCode "D2.Civ.6.9-12" ; rdfs:label "Critique relationships among governments, civil societies, and economic markets." ;
+  skos:prefLabel "Critique relationships among governments, civil societies, and economic markets." ;
+  skos:altLabel "Indicator D2.Civ.6.9-12" ;
+  c3:officialText "Critique relationships among governments, civil societies, and economic markets." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:CivicCollaboration ; c3:requiresSkill c3:Evaluate ;
+  c3:inStrand c3:Str_Civ_CivicInstitutions ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 9, p. 32" .
+
+c3:I_D2_Civ_7_K_2 a c3:Indicator ;
+  c3:hasCode "D2.Civ.7.K-2" ; rdfs:label "Apply civic virtues when participating in school settings." ;
+  skos:prefLabel "Apply civic virtues when participating in school settings." ;
+  skos:altLabel "Indicator D2.Civ.7.K-2" ;
+  c3:officialText "Apply civic virtues when participating in school settings." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:CivicVirtues ; c3:requiresSkill c3:Apply ;
+  c3:inStrand c3:Str_Civ_Participation ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 10, p. 33" .
+
+c3:I_D2_Civ_7_3_5 a c3:Indicator ;
+  c3:hasCode "D2.Civ.7.3-5" ; rdfs:label "Apply civic virtues and democratic principles in school settings." ;
+  skos:prefLabel "Apply civic virtues and democratic principles in school settings." ;
+  skos:altLabel "Indicator D2.Civ.7.3-5" ;
+  c3:officialText "Apply civic virtues and democratic principles in school settings." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:CivicVirtues ; c3:requiresSkill c3:Apply ;
+  c3:inStrand c3:Str_Civ_Participation ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 10, p. 33" .
+
+c3:I_D2_Civ_7_6_8 a c3:Indicator ;
+  c3:hasCode "D2.Civ.7.6-8" ; rdfs:label "Apply civic virtues and democratic principles in school and community settings." ;
+  skos:prefLabel "Apply civic virtues and democratic principles in school and community settings." ;
+  skos:altLabel "Indicator D2.Civ.7.6-8" ;
+  c3:officialText "Apply civic virtues and democratic principles in school and community settings." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:CivicVirtues ; c3:requiresSkill c3:Apply ;
+  c3:inStrand c3:Str_Civ_Participation ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 10, p. 33" .
+
+c3:I_D2_Civ_7_9_12 a c3:Indicator ;
+  c3:hasCode "D2.Civ.7.9-12" ; rdfs:label "Apply civic virtues and democratic principles when working with others." ;
+  skos:prefLabel "Apply civic virtues and democratic principles when working with others." ;
+  skos:altLabel "Indicator D2.Civ.7.9-12" ;
+  c3:officialText "Apply civic virtues and democratic principles when working with others." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:CivicVirtues ; c3:requiresSkill c3:Apply ;
+  c3:inStrand c3:Str_Civ_Participation ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 10, p. 33" .
+
+c3:I_D2_Civ_8_K_2 a c3:Indicator ;
+  c3:hasCode "D2.Civ.8.K-2" ; rdfs:label "Describe democratic principles such as equality, fairness, and respect for legitimate authority and rules." ;
+  skos:prefLabel "Describe democratic principles such as equality, fairness, and respect for legitimate authority and rules." ;
+  skos:altLabel "Indicator D2.Civ.8.K-2" ;
+  c3:officialText "Describe democratic principles such as equality, fairness, and respect for legitimate authority and rules." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:DemocraticPrinciples ; c3:requiresSkill c3:Describe ;
+  c3:inStrand c3:Str_Civ_Participation ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 10, p. 33" .
+
+c3:I_D2_Civ_8_3_5 a c3:Indicator ;
+  c3:hasCode "D2.Civ.8.3-5" ; rdfs:label "Identify core civic virtues and democratic principles that guide government, society, and communities." ;
+  skos:prefLabel "Identify core civic virtues and democratic principles that guide government, society, and communities." ;
+  skos:altLabel "Indicator D2.Civ.8.3-5" ;
+  c3:officialText "Identify core civic virtues and democratic principles that guide government, society, and communities." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:DemocraticPrinciples ; c3:requiresSkill c3:Identify ;
+  c3:inStrand c3:Str_Civ_Participation ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 10, p. 33" .
+
+c3:I_D2_Civ_8_6_8 a c3:Indicator ;
+  c3:hasCode "D2.Civ.8.6-8" ; rdfs:label "Analyze ideas and principles contained in the founding documents of the United States, and explain how they influence the social and political system." ;
+  skos:prefLabel "Analyze ideas and principles contained in the founding documents of the United States, and explain how they influence the social and political system." ;
+  skos:altLabel "Indicator D2.Civ.8.6-8" ;
+  c3:officialText "Analyze ideas and principles contained in the founding documents of the United States, and explain how they influence the social and political system." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:DemocraticPrinciples ; c3:requiresSkill c3:Analyze ;
+  c3:inStrand c3:Str_Civ_Participation ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 10, p. 33" .
+
+c3:I_D2_Civ_8_9_12 a c3:Indicator ;
+  c3:hasCode "D2.Civ.8.9-12" ; rdfs:label "Evaluate social and political systems in different contexts, times, and places, that promote civic virtues and enact democratic principles." ;
+  skos:prefLabel "Evaluate social and political systems in different contexts, times, and places, that promote civic virtues and enact democratic principles." ;
+  skos:altLabel "Indicator D2.Civ.8.9-12" ;
+  c3:officialText "Evaluate social and political systems in different contexts, times, and places, that promote civic virtues and enact democratic principles." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:DemocraticPrinciples ; c3:requiresSkill c3:Evaluate ;
+  c3:inStrand c3:Str_Civ_Participation ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 10, p. 33" .
+
+c3:I_D2_Civ_9_K_2 a c3:Indicator ;
+  c3:hasCode "D2.Civ.9.K-2" ; rdfs:label "Follow agreed-upon rules for discussions while responding attentively to others when addressing ideas and making decisions as a group." ;
+  skos:prefLabel "Follow agreed-upon rules for discussions while responding attentively to others when addressing ideas and making decisions as a group." ;
+  skos:altLabel "Indicator D2.Civ.9.K-2" ;
+  c3:officialText "Follow agreed-upon rules for discussions while responding attentively to others when addressing ideas and making decisions as a group." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:Deliberation ; c3:requiresSkill c3:Apply ;
+  c3:inStrand c3:Str_Civ_Participation ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 10, p. 33" .
+
+c3:I_D2_Civ_9_3_5 a c3:Indicator ;
+  c3:hasCode "D2.Civ.9.3-5" ; rdfs:label "Use deliberative processes when making decisions or reaching judgments as a group." ;
+  skos:prefLabel "Use deliberative processes when making decisions or reaching judgments as a group." ;
+  skos:altLabel "Indicator D2.Civ.9.3-5" ;
+  c3:officialText "Use deliberative processes when making decisions or reaching judgments as a group." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:Deliberation ; c3:requiresSkill c3:Apply ;
+  c3:inStrand c3:Str_Civ_Participation ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 10, p. 33" .
+
+c3:I_D2_Civ_9_6_8 a c3:Indicator ;
+  c3:hasCode "D2.Civ.9.6-8" ; rdfs:label "Compare deliberative processes used by a wide variety of groups in various settings." ;
+  skos:prefLabel "Compare deliberative processes used by a wide variety of groups in various settings." ;
+  skos:altLabel "Indicator D2.Civ.9.6-8" ;
+  c3:officialText "Compare deliberative processes used by a wide variety of groups in various settings." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:Deliberation ; c3:requiresSkill c3:Compare ;
+  c3:inStrand c3:Str_Civ_Participation ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 10, p. 33" .
+
+c3:I_D2_Civ_9_9_12 a c3:Indicator ;
+  c3:hasCode "D2.Civ.9.9-12" ; rdfs:label "Use appropriate deliberative processes in multiple settings." ;
+  skos:prefLabel "Use appropriate deliberative processes in multiple settings." ;
+  skos:altLabel "Indicator D2.Civ.9.9-12" ;
+  c3:officialText "Use appropriate deliberative processes in multiple settings." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:Deliberation ; c3:requiresSkill c3:Apply ;
+  c3:inStrand c3:Str_Civ_Participation ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 10, p. 33" .
+
+c3:I_D2_Civ_10_K_2 a c3:Indicator ;
+  c3:hasCode "D2.Civ.10.K-2" ; rdfs:label "Compare their own point of view with others’ perspectives." ;
+  skos:prefLabel "Compare their own point of view with others’ perspectives." ;
+  skos:altLabel "Indicator D2.Civ.10.K-2" ;
+  c3:officialText "Compare their own point of view with others’ perspectives." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:Perspectives ; c3:requiresSkill c3:Compare ;
+  c3:inStrand c3:Str_Civ_Participation ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 10, p. 33" .
+
+c3:I_D2_Civ_10_3_5 a c3:Indicator ;
+  c3:hasCode "D2.Civ.10.3-5" ; rdfs:label "Identify the beliefs, experiences, perspectives, and values that underlie their own and others’ points of view about civic issues." ;
+  skos:prefLabel "Identify the beliefs, experiences, perspectives, and values that underlie their own and others’ points of view about civic issues." ;
+  skos:altLabel "Indicator D2.Civ.10.3-5" ;
+  c3:officialText "Identify the beliefs, experiences, perspectives, and values that underlie their own and others’ points of view about civic issues." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:Perspectives ; c3:requiresSkill c3:Identify ;
+  c3:inStrand c3:Str_Civ_Participation ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 10, p. 33" .
+
+c3:I_D2_Civ_10_6_8 a c3:Indicator ;
+  c3:hasCode "D2.Civ.10.6-8" ; rdfs:label "Explain the relevance of personal interests and perspectives, civic virtues, and democratic principles when people address issues and problems in government and civil society." ;
+  skos:prefLabel "Explain the relevance of personal interests and perspectives, civic virtues, and democratic principles when people address issues and problems in government and civil society." ;
+  skos:altLabel "Indicator D2.Civ.10.6-8" ;
+  c3:officialText "Explain the relevance of personal interests and perspectives, civic virtues, and democratic principles when people address issues and problems in government and civil society." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:Perspectives ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Civ_Participation ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 10, p. 33" .
+
+c3:I_D2_Civ_10_9_12 a c3:Indicator ;
+  c3:hasCode "D2.Civ.10.9-12" ; rdfs:label "Analyze the impact and the appropriate roles of personal interests and perspectives on the application of civic virtues, democratic principles, constitutional rights, and human rights." ;
+  skos:prefLabel "Analyze the impact and the appropriate roles of personal interests and perspectives on the application of civic virtues, democratic principles, constitutional rights, and human rights." ;
+  skos:altLabel "Indicator D2.Civ.10.9-12" ;
+  c3:officialText "Analyze the impact and the appropriate roles of personal interests and perspectives on the application of civic virtues, democratic principles, constitutional rights, and human rights." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:Perspectives ; c3:requiresSkill c3:Analyze ;
+  c3:inStrand c3:Str_Civ_Participation ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 10, p. 33" .
+
+c3:I_D2_Civ_11_K_2 a c3:Indicator ;
+  c3:hasCode "D2.Civ.11.K-2" ; rdfs:label "Explain how people can work together to make decisions in the classroom." ;
+  skos:prefLabel "Explain how people can work together to make decisions in the classroom." ;
+  skos:altLabel "Indicator D2.Civ.11.K-2" ;
+  c3:officialText "Explain how people can work together to make decisions in the classroom." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:CivicProcesses ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Civ_ProcessesRules ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 11, p. 34" .
+
+c3:I_D2_Civ_11_3_5 a c3:Indicator ;
+  c3:hasCode "D2.Civ.11.3-5" ; rdfs:label "Compare procedures for making decisions in a variety of settings, including classroom, school, government, and/or society." ;
+  skos:prefLabel "Compare procedures for making decisions in a variety of settings, including classroom, school, government, and/or society." ;
+  skos:altLabel "Indicator D2.Civ.11.3-5" ;
+  c3:officialText "Compare procedures for making decisions in a variety of settings, including classroom, school, government, and/or society." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:CivicProcesses ; c3:requiresSkill c3:Compare ;
+  c3:inStrand c3:Str_Civ_ProcessesRules ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 11, p. 34" .
+
+c3:I_D2_Civ_11_6_8 a c3:Indicator ;
+  c3:hasCode "D2.Civ.11.6-8" ; rdfs:label "Differentiate among procedures for making decisions in the classroom, school, civil society, and local, state, and national government in terms of how civic purposes are intended." ;
+  skos:prefLabel "Differentiate among procedures for making decisions in the classroom, school, civil society, and local, state, and national government in terms of how civic purposes are intended." ;
+  skos:altLabel "Indicator D2.Civ.11.6-8" ;
+  c3:officialText "Differentiate among procedures for making decisions in the classroom, school, civil society, and local, state, and national government in terms of how civic purposes are intended." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:CivicProcesses ; c3:requiresSkill c3:Analyze ;
+  c3:inStrand c3:Str_Civ_ProcessesRules ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 11, p. 34" .
+
+c3:I_D2_Civ_11_9_12 a c3:Indicator ;
+  c3:hasCode "D2.Civ.11.9-12" ; rdfs:label "Evaluate multiple procedures for making governmental decisions at the local, state, national, and international levels in terms of the civic purposes achieved." ;
+  skos:prefLabel "Evaluate multiple procedures for making governmental decisions at the local, state, national, and international levels in terms of the civic purposes achieved." ;
+  skos:altLabel "Indicator D2.Civ.11.9-12" ;
+  c3:officialText "Evaluate multiple procedures for making governmental decisions at the local, state, national, and international levels in terms of the civic purposes achieved." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:CivicProcesses ; c3:requiresSkill c3:Evaluate ;
+  c3:inStrand c3:Str_Civ_ProcessesRules ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 11, p. 34" .
+
+c3:I_D2_Civ_12_K_2 a c3:Indicator ;
+  c3:hasCode "D2.Civ.12.K-2" ; rdfs:label "Identify and explain how rules function in public (classroom and school) settings." ;
+  skos:prefLabel "Identify and explain how rules function in public (classroom and school) settings." ;
+  skos:altLabel "Indicator D2.Civ.12.K-2" ;
+  c3:officialText "Identify and explain how rules function in public (classroom and school) settings." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:Law , c3:Policy ; c3:requiresSkill c3:Identify ;
+  c3:inStrand c3:Str_Civ_ProcessesRules ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 11, p. 34" .
+
+c3:I_D2_Civ_12_3_5 a c3:Indicator ;
+  c3:hasCode "D2.Civ.12.3-5" ; rdfs:label "Explain how rules and laws change society and how people change rules and laws." ;
+  skos:prefLabel "Explain how rules and laws change society and how people change rules and laws." ;
+  skos:altLabel "Indicator D2.Civ.12.3-5" ;
+  c3:officialText "Explain how rules and laws change society and how people change rules and laws." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:Law , c3:Policy ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Civ_ProcessesRules ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 11, p. 34" .
+
+c3:I_D2_Civ_12_6_8 a c3:Indicator ;
+  c3:hasCode "D2.Civ.12.6-8" ; rdfs:label "Assess specific rules and laws (both actual and proposed) as means of addressing public problems." ;
+  skos:prefLabel "Assess specific rules and laws (both actual and proposed) as means of addressing public problems." ;
+  skos:altLabel "Indicator D2.Civ.12.6-8" ;
+  c3:officialText "Assess specific rules and laws (both actual and proposed) as means of addressing public problems." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:Law , c3:Policy ; c3:requiresSkill c3:Evaluate ;
+  c3:inStrand c3:Str_Civ_ProcessesRules ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 11, p. 34" .
+
+c3:I_D2_Civ_12_9_12 a c3:Indicator ;
+  c3:hasCode "D2.Civ.12.9-12" ; rdfs:label "Analyze how people use and challenge local, state, national, and international laws to address a variety of public issues." ;
+  skos:prefLabel "Analyze how people use and challenge local, state, national, and international laws to address a variety of public issues." ;
+  skos:altLabel "Indicator D2.Civ.12.9-12" ;
+  c3:officialText "Analyze how people use and challenge local, state, national, and international laws to address a variety of public issues." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:Law , c3:Policy ; c3:requiresSkill c3:Analyze ;
+  c3:inStrand c3:Str_Civ_ProcessesRules ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 11, p. 34" .
+
+c3:I_D2_Civ_13_3_5 a c3:Indicator ;
+  c3:hasCode "D2.Civ.13.3-5" ; rdfs:label "Explain how policies are developed to address public problems." ;
+  skos:prefLabel "Explain how policies are developed to address public problems." ;
+  skos:altLabel "Indicator D2.Civ.13.3-5" ;
+  c3:officialText "Explain how policies are developed to address public problems." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:Policy ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Civ_ProcessesRules ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 11, p. 34" .
+
+c3:I_D2_Civ_13_6_8 a c3:Indicator ;
+  c3:hasCode "D2.Civ.13.6-8" ; rdfs:label "Analyze the purposes, implementation, and consequences of public policies in multiple settings." ;
+  skos:prefLabel "Analyze the purposes, implementation, and consequences of public policies in multiple settings." ;
+  skos:altLabel "Indicator D2.Civ.13.6-8" ;
+  c3:officialText "Analyze the purposes, implementation, and consequences of public policies in multiple settings." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:Policy ; c3:requiresSkill c3:Analyze ;
+  c3:inStrand c3:Str_Civ_ProcessesRules ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 11, p. 34" .
+
+c3:I_D2_Civ_13_9_12 a c3:Indicator ;
+  c3:hasCode "D2.Civ.13.9-12" ; rdfs:label "Evaluate public policies in terms of intended and unintended outcomes, and related consequences." ;
+  skos:prefLabel "Evaluate public policies in terms of intended and unintended outcomes, and related consequences." ;
+  skos:altLabel "Indicator D2.Civ.13.9-12" ;
+  c3:officialText "Evaluate public policies in terms of intended and unintended outcomes, and related consequences." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:Policy ; c3:requiresSkill c3:Evaluate ;
+  c3:inStrand c3:Str_Civ_ProcessesRules ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 11, p. 34" .
+
+c3:I_D2_Civ_14_K_2 a c3:Indicator ;
+  c3:hasCode "D2.Civ.14.K-2" ; rdfs:label "Describe how people have tried to improve their communities over time." ;
+  skos:prefLabel "Describe how people have tried to improve their communities over time." ;
+  skos:altLabel "Indicator D2.Civ.14.K-2" ;
+  c3:officialText "Describe how people have tried to improve their communities over time." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:CivicAction , c3:DemocraticPrinciples ; c3:requiresSkill c3:Describe ;
+  c3:inStrand c3:Str_Civ_ProcessesRules ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 11, p. 34" .
+
+c3:I_D2_Civ_14_3_5 a c3:Indicator ;
+  c3:hasCode "D2.Civ.14.3-5" ; rdfs:label "Illustrate historical and contemporary means of changing society." ;
+  skos:prefLabel "Illustrate historical and contemporary means of changing society." ;
+  skos:altLabel "Indicator D2.Civ.14.3-5" ;
+  c3:officialText "Illustrate historical and contemporary means of changing society." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:CivicAction , c3:DemocraticPrinciples ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Civ_ProcessesRules ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 11, p. 34" .
+
+c3:I_D2_Civ_14_6_8 a c3:Indicator ;
+  c3:hasCode "D2.Civ.14.6-8" ; rdfs:label "Compare historical and contemporary means of changing societies, and promoting the common good." ;
+  skos:prefLabel "Compare historical and contemporary means of changing societies, and promoting the common good." ;
+  skos:altLabel "Indicator D2.Civ.14.6-8" ;
+  c3:officialText "Compare historical and contemporary means of changing societies, and promoting the common good." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:CivicAction , c3:DemocraticPrinciples ; c3:requiresSkill c3:Compare ;
+  c3:inStrand c3:Str_Civ_ProcessesRules ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 11, p. 34" .
+
+c3:I_D2_Civ_14_9_12 a c3:Indicator ;
+  c3:hasCode "D2.Civ.14.9-12" ; rdfs:label "Analyze historical, contemporary, and emerging means of changing societies, promoting the common good, and protecting rights." ;
+  skos:prefLabel "Analyze historical, contemporary, and emerging means of changing societies, promoting the common good, and protecting rights." ;
+  skos:altLabel "Indicator D2.Civ.14.9-12" ;
+  c3:officialText "Analyze historical, contemporary, and emerging means of changing societies, promoting the common good, and protecting rights." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:CivicAction , c3:DemocraticPrinciples ; c3:requiresSkill c3:Analyze ;
+  c3:inStrand c3:Str_Civ_ProcessesRules ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Civics ;
+  dcterms:source "C3 Framework, Table 11, p. 34" .
+
+c3:Dimension2
+  c3:alignmentNote "Module extracted for reuse of Dimension 2 Civics indicators." .

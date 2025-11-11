@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="public">
+  <uri id="C3 Root Ontology" name="urn:c3:root" uri="c3-revised.ttl"/>
+  <uri id="C3 Dimension 1" name="urn:c3:dimension1" uri="c3-dimension1.ttl"/>
+  <uri id="C3 Dimension 2 Core" name="urn:c3:dimension2-core" uri="c3-dimension2-core.ttl"/>
+  <uri id="C3 Dimension 2 Civics" name="urn:c3:dimension2-civics" uri="c3-dimension2-civics.ttl"/>
+  <uri id="C3 Dimension 2 Economics" name="urn:c3:dimension2-economics" uri="c3-dimension2-economics.ttl"/>
+  <uri id="C3 Dimension 2 Geography" name="urn:c3:dimension2-geography" uri="c3-dimension2-geography.ttl"/>
+  <uri id="C3 Dimension 2 History" name="urn:c3:dimension2-history" uri="c3-dimension2-history.ttl"/>
+  <uri id="C3 Dimension 3" name="urn:c3:dimension3" uri="c3-dimension3.ttl"/>
+  <uri id="C3 Dimension 4" name="urn:c3:dimension4" uri="c3-dimension4.ttl"/>
+  <uri id="C3 Glossary" name="urn:c3:glossary" uri="c3-glossary.ttl"/>
+</catalog>

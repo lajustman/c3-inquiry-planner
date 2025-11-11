@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+{% block content %}
+{% set can_generate_examples = can_generate_examples if can_generate_examples is defined else false %}
+{% set selected_modes = student_state.interests.get('interest_modes', student_state.interests.get('preferences', [])) %}
+{% set selected_learning = student_state.interests.get('learning_mode', student_state.interests.get('format')) %}
+{% if selected_learning is none %}
+  {% set selected_learning = [] %}
+{% elif selected_learning is string %}
+  {% set selected_learning = [selected_learning] %}
+{% endif %}
+{% set support_choice = student_state.interests.get('support_preference') %}
+{% set topic_focus = student_state.interests.get('topic_focus', student_state.interests.get('interest_topics', student_state.interests.get('scenario', ''))) %}
+{% set saved_exemplars = saved_exemplars if saved_exemplars is defined else student_state.interests.get('selected_exemplars', []) %}
+{% if saved_exemplars is string %}
+  {% set saved_exemplars = [saved_exemplars] %}
+{% endif %}
+{% set ai_suggestions = interest_suggestions if interest_suggestions else _prepare_interest_suggestions(student_state.interests.get('ai_suggestions', [])) %}
+{% set interest_options = [
+  {'value': 'debates', 'label': 'Debating big questions'},
+  {'value': 'stories', 'label': 'Learning through people\'s stories'},
+  {'value': 'data', 'label': 'Digging into data & evidence'},
+  {'value': 'maps', 'label': 'Working with maps & visuals'},
+  {'value': 'design', 'label': 'Designing solutions to real problems'},
+  {'value': 'art', 'label': 'Creating media or art to express ideas'},
+  {'value': 'action', 'label': 'Planning civic action or advocacy'}
+] %}
+{% set learning_modes = [
+  {'value': 'speaking', 'label': 'Live discussion & debate'},
+  {'value': 'visual', 'label': 'Visual / multimedia exploration'},
+  {'value': 'data', 'label': 'Data investigations'},
+  {'value': 'writing', 'label': 'Writing & argumentation'},
+  {'value': 'project', 'label': 'Hands-on project build'}
+] %}
+{% set support_levels = [
+  {'value': 'structure', 'label': 'Step-by-step guidance'},
+  {'value': 'balance', 'label': 'A mix of guidance and choice'},
+  {'value': 'independent', 'label': 'Mostly independent exploration'}
+] %}
+<form method="post" class="interest-form" id="interest-form">
+  <section class="panel interest-panel">
+    <h2>Shape Your Inquiry</h2>
+    <p class="panel-intro">Share what motivates you so the system can tune exemplars, sources, and pathways while keeping the same objectives.</p>
+    <div class="interest-grid">
+      <article class="interest-card interest-card--curiosity required-section" data-required-section="interest_modes">
+        <h3>What sparks your curiosity?</h3>
+        <p class="instructions">Select all the experiences that feel energizing.</p>
+        <div class="card-option-list">
+          {% for option in interest_options %}
+          <label class="card-toggle">
+            <input type="checkbox" name="interest_modes" value="{{ option.value }}" {% if option.value in selected_modes %}checked{% endif %}>
+            <div class="card-toggle__body">
+              <span>{{ option.label }}</span>
+            </div>
+          </label>
+          {% endfor %}
+        </div>
+      </article>
+      <article class="interest-card interest-card--topics required-section" data-required-section="topics">
+        <h3>Topics you care about</h3>
+        <p class="instructions">List issues, communities, or examples you want to connect. Separate ideas with commas.</p>
+        <textarea id="interest-topics" name="interest_topics" rows="4" placeholder="e.g., youth climate strikes, school discipline, local government">{{ topic_focus }}</textarea>
+      </article>
+      <article class="interest-card interest-card--learning required-section" data-required-section="learning_mode">
+        <h3>How should your learning path feel?</h3>
+        <p class="instructions">Choose the experiences that keep you engaged.</p>
+        <div class="card-option-list">
+          {% for mode in learning_modes %}
+          <label class="card-toggle">
+            <input type="checkbox" name="learning_mode" value="{{ mode.value }}" {% if mode.value in selected_learning %}checked{% endif %}>
+            <div class="card-toggle__body">
+              <span>{{ mode.label }}</span>
+            </div>
+          </label>
+          {% endfor %}
+        </div>
+      </article>
+      <article class="interest-card interest-card--guidance required-section" data-required-section="support_preference">
+        <h3>How much guidance do you want?</h3>
+        <div class="card-option-list card-option-list--single">
+          {% for support in support_levels %}
+          <label class="card-toggle">
+            <input type="radio" name="support_preference" value="{{ support.value }}" {% if support.value == support_choice %}checked{% endif %}>
+            <div class="card-toggle__body">
+              <span>{{ support.label }}</span>
+            </div>
+          </label>
+          {% endfor %}
+        </div>
+      </article>
+    </div>
+    <div class="interest-panel__actions">
+      <div class="interest-panel__actions-info">
+        <p class="form-helper" id="interest-requirements" {% if can_generate_examples %}hidden{% endif %}>
+          Complete each section above to save your inquiry preferences.
+        </p>
+      </div>
+      <div class="interest-panel__actions-controls">
+        <button
+          type="submit"
+          name="action"
+          value="save"
+          class="button secondary"
+          id="interest-save"
+          {% if not can_generate_examples %}disabled{% endif %}
+        >
+          Save selections
+        </button>
+        {% if saved_message %}
+        <div class="form-status form-status--inline" role="status">{{ saved_message }}</div>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+
+  <section class="panel exemplar-panel">
+    <div class="interest-exemplars__header">
+      <h3>Pick the examples you would like to learn more about</h3>
+      <p class="instructions">Select at least one context now. You can ask the AI for more ideas based on your interests.</p>
+    </div>
+    <div class="exemplar-list exemplar-list--ai" id="ai-suggestions" {% if not ai_suggestions %}hidden{% endif %}>
+        {% for suggestion in ai_suggestions %}
+        {% if suggestion is mapping %}
+        {% set selected = suggestion.title in saved_exemplars %}
+        <label class="exemplar-card exemplar-card--ai" data-suggestion-id="{{ suggestion.id }}">
+          <input type="checkbox" name="selected_exemplars" value="{{ suggestion.title }}" {% if selected %}checked{% endif %}>
+          <div class="exemplar-card__body">
+            <h4>{{ suggestion.title }}</h4>
+            {% if suggestion.description %}<p>{{ suggestion.description }}</p>{% endif %}
+            <ul class="exemplar-meta">
+              {% if suggestion.era_or_setting %}<li>{{ suggestion.era_or_setting }}</li>{% endif %}
+              {% if suggestion.discipline_emphasis %}<li>{{ suggestion.discipline_emphasis }}</li>{% endif %}
+            </ul>
+          </div>
+        </label>
+        {% endif %}
+        {% endfor %}
+      </div>
+      <div class="ai-locked" id="ai-locked-message" {% if can_generate_examples %}hidden{% endif %}>
+        <p>Save your inquiry selections above to unlock AI-generated exemplar ideas.</p>
+      </div>
+      <div
+        class="ai-actions"
+        id="ai-controls"
+        data-ready="{{ 'true' if can_generate_examples else 'false' }}"
+        {% if not can_generate_examples %}hidden{% endif %}
+      >
+        <button type="button" class="button tertiary" id="interest-suggest">Ask the AI for more exemplar options</button>
+        <p class="instructions" id="ai-status" role="status"></p>
+      </div>
+  </section>
+
+  <div class="form-actions form-actions--dual">
+    <button type="submit" name="action" value="continue" class="button">Continue to learning path &raquo;</button>
+  </div>
+</form>
+{% endblock %}

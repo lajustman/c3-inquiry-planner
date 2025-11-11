@@ -1,0 +1,175 @@
+@prefix c3:     <urn:c3:> .
+@prefix dcterms:<http://purl.org/dc/terms/> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@base <file:///Users/louisjustman/Downloads/C3%20Project/Curriculum-Ontology/c3/> .
+
+<c3-dimension2-core.ttl> a owl:Ontology ;
+  rdfs:label "C3 Framework — Dimension 2 Core" ;
+  dcterms:description "Core module for Dimension 2 domains and strands." ;
+  dcterms:creator "NCSS — College, Career, and Civic Life (C3) Framework for Social Studies State Standards" ;
+  dcterms:source "C3 Framework, pp. 31–49" .
+
+#################################################################
+# Annotation properties
+#################################################################
+
+c3:status        a owl:AnnotationProperty .
+c3:createdOn     a owl:AnnotationProperty .
+c3:alignmentNote a owl:AnnotationProperty .
+c3:officialText  a owl:AnnotationProperty .
+c3:sourceDoc     a owl:AnnotationProperty .
+c3:sourcePage    a owl:AnnotationProperty .
+
+#################################################################
+# Property alignment with SKOS navigation
+#################################################################
+
+c3:hasDomain     rdfs:subPropertyOf skos:narrower .
+c3:hasStrand     rdfs:subPropertyOf skos:narrower .
+c3:hasIndicator  rdfs:subPropertyOf skos:narrower .
+
+#################################################################
+# Dimension 2 — Core structure
+#################################################################
+
+c3:Dimension2 a c3:Dimension ;
+  rdfs:label "Dimension 2: Applying Disciplinary Concepts & Tools" ;
+  skos:prefLabel "Dimension 2: Applying Disciplinary Concepts & Tools" ;
+  skos:altLabel "D2" ;
+  c3:status "official" ;
+  c3:sourceDoc "NCSS — College, Career, and Civic Life (C3) Framework for Social Studies State Standards" ;
+  c3:sourcePage "31" ;
+  c3:createdOn "2025-11-02"^^xsd:date ;
+  c3:alignmentNote "Core structure for Dimension 2 domains and strands." .
+
+c3:Dimension2 c3:hasDomain c3:Civics, c3:Economics, c3:Geography, c3:History .
+
+c3:Civics a c3:DisciplinaryDomain ;
+  rdfs:label "Civics" ;
+  skos:prefLabel "Civics" ;
+  skos:altLabel "D2 — Civics" ;
+  c3:status "official" ;
+  c3:sourcePage "32" .
+
+c3:Str_Civ_CivicInstitutions a c3:Strand ;
+  rdfs:label "Civic & Political Institutions" ;
+  skos:prefLabel "Civic & Political Institutions" ;
+  skos:altLabel "D2.Civ.1–6 — Civic Institutions" ;
+  c3:status "official" .
+
+c3:Str_Civ_Participation a c3:Strand ;
+  rdfs:label "Participation & Deliberation" ;
+  skos:prefLabel "Participation & Deliberation" ;
+  skos:altLabel "D2.Civ.7–10 — Participation & Deliberation" ;
+  c3:status "official" .
+
+c3:Str_Civ_ProcessesRules a c3:Strand ;
+  rdfs:label "Processes, Rules, and Laws" ;
+  skos:prefLabel "Processes, Rules, and Laws" ;
+  skos:altLabel "D2.Civ.11–14 — Processes, Rules, and Laws" ;
+  c3:status "official" .
+
+c3:Civics c3:hasStrand c3:Str_Civ_CivicInstitutions, c3:Str_Civ_Participation, c3:Str_Civ_ProcessesRules .
+
+c3:Economics a c3:DisciplinaryDomain ;
+  rdfs:label "Economics" ;
+  skos:prefLabel "Economics" ;
+  skos:altLabel "D2 — Economics" ;
+  c3:status "official" ;
+  c3:sourcePage "36" .
+
+c3:Str_Eco_DecisionMaking a c3:Strand ;
+  rdfs:label "Economic Decision-Making" ;
+  skos:prefLabel "Economic Decision-Making" ;
+  skos:altLabel "D2.Eco.1–2 — Decision-Making" ;
+  c3:status "official" .
+
+c3:Str_Eco_ExchangeMarkets a c3:Strand ;
+  rdfs:label "Exchange & Markets" ;
+  skos:prefLabel "Exchange & Markets" ;
+  skos:altLabel "D2.Eco.3–9 — Exchange & Markets" ;
+  c3:status "official" .
+
+c3:Str_Eco_NationalEconomy a c3:Strand ;
+  rdfs:label "National Economy" ;
+  skos:prefLabel "National Economy" ;
+  skos:altLabel "D2.Eco.10–13 — National Economy" ;
+  c3:status "official" .
+
+c3:Str_Eco_GlobalEconomy a c3:Strand ;
+  rdfs:label "Global Economy" ;
+  skos:prefLabel "Global Economy" ;
+  skos:altLabel "D2.Eco.14–15 — Global Economy" ;
+  c3:status "official" .
+
+c3:Economics c3:hasStrand c3:Str_Eco_DecisionMaking, c3:Str_Eco_ExchangeMarkets, c3:Str_Eco_NationalEconomy, c3:Str_Eco_GlobalEconomy .
+
+c3:Geography a c3:DisciplinaryDomain ;
+  rdfs:label "Geography" ;
+  skos:prefLabel "Geography" ;
+  skos:altLabel "D2 — Geography" ;
+  c3:status "official" ;
+  c3:sourcePage "40" .
+
+c3:Str_Geo_Representations a c3:Strand ;
+  rdfs:label "Geographic Representations" ;
+  skos:prefLabel "Geographic Representations" ;
+  skos:altLabel "D2.Geo.1–3 — Representations" ;
+  c3:status "official" .
+
+c3:Str_Geo_HumanEnvironment a c3:Strand ;
+  rdfs:label "Human–Environment Interaction" ;
+  skos:prefLabel "Human–Environment Interaction" ;
+  skos:altLabel "D2.Geo.4–6 — Human–Environment Interaction" ;
+  c3:status "official" .
+
+c3:Str_Geo_HumanPopulation a c3:Strand ;
+  rdfs:label "Human Population: Spatial Patterns & Movements" ;
+  skos:prefLabel "Human Population: Spatial Patterns & Movements" ;
+  skos:altLabel "D2.Geo.7–9 — Human Population" ;
+  c3:status "official" .
+
+c3:Str_Geo_GlobalInterconn a c3:Strand ;
+  rdfs:label "Global Interconnections" ;
+  skos:prefLabel "Global Interconnections" ;
+  skos:altLabel "D2.Geo.10–12 — Global Interconnections" ;
+  c3:status "official" .
+
+c3:Geography c3:hasStrand c3:Str_Geo_Representations, c3:Str_Geo_HumanEnvironment, c3:Str_Geo_HumanPopulation, c3:Str_Geo_GlobalInterconn .
+
+c3:History a c3:DisciplinaryDomain ;
+  rdfs:label "History" ;
+  skos:prefLabel "History" ;
+  skos:altLabel "D2 — History" ;
+  c3:status "official" ;
+  c3:sourcePage "46" .
+
+c3:Str_His_ChangeContinuity a c3:Strand ;
+  rdfs:label "Change, Continuity, and Context" ;
+  skos:prefLabel "Change, Continuity, and Context" ;
+  skos:altLabel "D2.His.1–3 — Change & Continuity" ;
+  c3:status "official" .
+
+c3:Str_His_Perspectives a c3:Strand ;
+  rdfs:label "Perspectives" ;
+  skos:prefLabel "Perspectives" ;
+  skos:altLabel "D2.His.4–8 — Perspectives" ;
+  c3:status "official" .
+
+c3:Str_His_SourcesEvidence a c3:Strand ;
+  rdfs:label "Historical Sources and Evidence" ;
+  skos:prefLabel "Historical Sources and Evidence" ;
+  skos:altLabel "D2.His.9–13 — Sources & Evidence" ;
+  c3:status "official" .
+
+c3:Str_His_CausationArgument a c3:Strand ;
+  rdfs:label "Causation and Argumentation" ;
+  skos:prefLabel "Causation and Argumentation" ;
+  skos:altLabel "D2.His.14–17 — Causation & Argumentation" ;
+  c3:status "official" .
+
+c3:History c3:hasStrand c3:Str_His_ChangeContinuity, c3:Str_His_Perspectives, c3:Str_His_SourcesEvidence, c3:Str_His_CausationArgument .

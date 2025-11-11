@@ -1,0 +1,554 @@
+@prefix c3:     <urn:c3:> .
+@prefix dcterms:<http://purl.org/dc/terms/> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@base <file:///Users/louisjustman/Downloads/C3%20Project/Curriculum-Ontology/c3/> .
+
+<c3-dimension2-economics.ttl> a owl:Ontology ;
+  rdfs:label "C3 Framework — Dimension 2 Economics" ;
+  dcterms:description "Dimension 2 Economics indicators with SKOS alignment and provenance." ;
+  dcterms:creator "NCSS — College, Career, and Civic Life (C3) Framework for Social Studies State Standards" ;
+  dcterms:source "C3 Framework, pp. 31–49" .
+
+#################################################################
+# Annotation properties
+#################################################################
+
+c3:status        a owl:AnnotationProperty .
+c3:createdOn     a owl:AnnotationProperty .
+c3:alignmentNote a owl:AnnotationProperty .
+c3:officialText  a owl:AnnotationProperty .
+c3:sourceDoc     a owl:AnnotationProperty .
+c3:sourcePage    a owl:AnnotationProperty .
+
+#################################################################
+# Indicators
+#################################################################
+
+c3:I_D2_Eco_1_K_2 a c3:Indicator ;
+  c3:hasCode "D2.Eco.1.K-2" ; rdfs:label "Explain how scarcity necessitates decision making." ;
+  skos:prefLabel "Explain how scarcity necessitates decision making." ;
+  skos:altLabel "Indicator D2.Eco.1.K-2" ;
+  c3:officialText "Explain how scarcity necessitates decision making." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:Scarcity , c3:EconomicDecisionMaking , c3:CostsBenefits ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Eco_DecisionMaking ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 12, p. 36" .
+
+c3:I_D2_Eco_1_3_5 a c3:Indicator ;
+  c3:hasCode "D2.Eco.1.3-5" ; rdfs:label "Compare the benefits and costs of individual choices." ;
+  skos:prefLabel "Compare the benefits and costs of individual choices." ;
+  skos:altLabel "Indicator D2.Eco.1.3-5" ;
+  c3:officialText "Compare the benefits and costs of individual choices." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:Scarcity , c3:EconomicDecisionMaking , c3:CostsBenefits ; c3:requiresSkill c3:Compare ;
+  c3:inStrand c3:Str_Eco_DecisionMaking ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 12, p. 36" .
+
+c3:I_D2_Eco_1_6_8 a c3:Indicator ;
+  c3:hasCode "D2.Eco.1.6-8" ; rdfs:label "Explain how economic decisions affect the well-being of individuals, businesses, and society." ;
+  skos:prefLabel "Explain how economic decisions affect the well-being of individuals, businesses, and society." ;
+  skos:altLabel "Indicator D2.Eco.1.6-8" ;
+  c3:officialText "Explain how economic decisions affect the well-being of individuals, businesses, and society." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:Scarcity , c3:EconomicDecisionMaking , c3:CostsBenefits ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Eco_DecisionMaking ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 12, p. 36" .
+
+c3:I_D2_Eco_1_9_12 a c3:Indicator ;
+  c3:hasCode "D2.Eco.1.9-12" ; rdfs:label "Analyze how incentives influence choices that may result in policies with a range of costs and benefits for different groups." ;
+  skos:prefLabel "Analyze how incentives influence choices that may result in policies with a range of costs and benefits for different groups." ;
+  skos:altLabel "Indicator D2.Eco.1.9-12" ;
+  c3:officialText "Analyze how incentives influence choices that may result in policies with a range of costs and benefits for different groups." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:Scarcity , c3:EconomicDecisionMaking , c3:CostsBenefits ; c3:requiresSkill c3:Analyze ;
+  c3:inStrand c3:Str_Eco_DecisionMaking ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 12, p. 36" .
+
+c3:I_D2_Eco_2_K_2 a c3:Indicator ;
+  c3:hasCode "D2.Eco.2.K-2" ; rdfs:label "Identify the benefits and costs of making various personal decisions." ;
+  skos:prefLabel "Identify the benefits and costs of making various personal decisions." ;
+  skos:altLabel "Indicator D2.Eco.2.K-2" ;
+  c3:officialText "Identify the benefits and costs of making various personal decisions." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:Incentives , c3:CostsBenefits ; c3:requiresSkill c3:Identify ;
+  c3:inStrand c3:Str_Eco_DecisionMaking ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 12, p. 36" .
+
+c3:I_D2_Eco_2_3_5 a c3:Indicator ;
+  c3:hasCode "D2.Eco.2.3-5" ; rdfs:label "Identify positive and negative incentives that influence the decisions people make." ;
+  skos:prefLabel "Identify positive and negative incentives that influence the decisions people make." ;
+  skos:altLabel "Indicator D2.Eco.2.3-5" ;
+  c3:officialText "Identify positive and negative incentives that influence the decisions people make." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:Incentives , c3:CostsBenefits ; c3:requiresSkill c3:Identify ;
+  c3:inStrand c3:Str_Eco_DecisionMaking ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 12, p. 36" .
+
+c3:I_D2_Eco_2_6_8 a c3:Indicator ;
+  c3:hasCode "D2.Eco.2.6-8" ; rdfs:label "Evaluate alternative approaches or solutions to current economic issues in terms of benefits and costs for different groups and society as a whole." ;
+  skos:prefLabel "Evaluate alternative approaches or solutions to current economic issues in terms of benefits and costs for different groups and society as a whole." ;
+  skos:altLabel "Indicator D2.Eco.2.6-8" ;
+  c3:officialText "Evaluate alternative approaches or solutions to current economic issues in terms of benefits and costs for different groups and society as a whole." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:Incentives , c3:CostsBenefits ; c3:requiresSkill c3:Evaluate ;
+  c3:inStrand c3:Str_Eco_DecisionMaking ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 12, p. 36" .
+
+c3:I_D2_Eco_2_9_12 a c3:Indicator ;
+  c3:hasCode "D2.Eco.2.9-12" ; rdfs:label "Use marginal benefits and marginal costs to construct an argument for or against an approach or solution to an economic issue." ;
+  skos:prefLabel "Use marginal benefits and marginal costs to construct an argument for or against an approach or solution to an economic issue." ;
+  skos:altLabel "Indicator D2.Eco.2.9-12" ;
+  c3:officialText "Use marginal benefits and marginal costs to construct an argument for or against an approach or solution to an economic issue." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:Incentives , c3:CostsBenefits ; c3:requiresSkill c3:Apply ;
+  c3:inStrand c3:Str_Eco_DecisionMaking ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 12, p. 36" .
+
+c3:I_D2_Eco_3_K_2 a c3:Indicator ;
+  c3:hasCode "D2.Eco.3.K-2" ; rdfs:label "Describe the skills and knowledge required to produce certain goods and services." ;
+  skos:prefLabel "Describe the skills and knowledge required to produce certain goods and services." ;
+  skos:altLabel "Indicator D2.Eco.3.K-2" ;
+  c3:officialText "Describe the skills and knowledge required to produce certain goods and services." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:EconomicResources , c3:HumanCapital , c3:Markets ; c3:requiresSkill c3:Describe ;
+  c3:inStrand c3:Str_Eco_ExchangeMarkets ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 13, p. 37" .
+
+c3:I_D2_Eco_3_3_5 a c3:Indicator ;
+  c3:hasCode "D2.Eco.3.3-5" ; rdfs:label "Identify examples of the variety of resources (human capital, physical capital, and natural resources) that are used to produce goods and services." ;
+  skos:prefLabel "Identify examples of the variety of resources (human capital, physical capital, and natural resources) that are used to produce goods and services." ;
+  skos:altLabel "Indicator D2.Eco.3.3-5" ;
+  c3:officialText "Identify examples of the variety of resources (human capital, physical capital, and natural resources) that are used to produce goods and services." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:EconomicResources , c3:HumanCapital , c3:Markets ; c3:requiresSkill c3:Identify ;
+  c3:inStrand c3:Str_Eco_ExchangeMarkets ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 13, p. 37" .
+
+c3:I_D2_Eco_3_6_8 a c3:Indicator ;
+  c3:hasCode "D2.Eco.3.6-8" ; rdfs:label "Explain the roles of buyers and sellers in product, labor, and financial markets." ;
+  skos:prefLabel "Explain the roles of buyers and sellers in product, labor, and financial markets." ;
+  skos:altLabel "Indicator D2.Eco.3.6-8" ;
+  c3:officialText "Explain the roles of buyers and sellers in product, labor, and financial markets." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:EconomicResources , c3:HumanCapital , c3:Markets ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Eco_ExchangeMarkets ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 13, p. 37" .
+
+c3:I_D2_Eco_3_9_12 a c3:Indicator ;
+  c3:hasCode "D2.Eco.3.9-12" ; rdfs:label "Analyze the ways in which incentives influence what is produced and distributed in a market system." ;
+  skos:prefLabel "Analyze the ways in which incentives influence what is produced and distributed in a market system." ;
+  skos:altLabel "Indicator D2.Eco.3.9-12" ;
+  c3:officialText "Analyze the ways in which incentives influence what is produced and distributed in a market system." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:EconomicResources , c3:HumanCapital , c3:Markets ; c3:requiresSkill c3:Analyze ;
+  c3:inStrand c3:Str_Eco_ExchangeMarkets ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 13, p. 37" .
+
+c3:I_D2_Eco_4_K_2 a c3:Indicator ;
+  c3:hasCode "D2.Eco.4.K-2" ; rdfs:label "Describe the goods and services that people in the local community produce and those that are produced in other communities." ;
+  skos:prefLabel "Describe the goods and services that people in the local community produce and those that are produced in other communities." ;
+  skos:altLabel "Indicator D2.Eco.4.K-2" ;
+  c3:officialText "Describe the goods and services that people in the local community produce and those that are produced in other communities." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:Trade , c3:Specialization , c3:Competition ; c3:requiresSkill c3:Describe ;
+  c3:inStrand c3:Str_Eco_ExchangeMarkets ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 13, p. 37" .
+
+c3:I_D2_Eco_4_3_5 a c3:Indicator ;
+  c3:hasCode "D2.Eco.4.3-5" ; rdfs:label "Explain why individuals and businesses specialize and trade." ;
+  skos:prefLabel "Explain why individuals and businesses specialize and trade." ;
+  skos:altLabel "Indicator D2.Eco.4.3-5" ;
+  c3:officialText "Explain why individuals and businesses specialize and trade." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:Trade , c3:Specialization , c3:Competition ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Eco_ExchangeMarkets ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 13, p. 37" .
+
+c3:I_D2_Eco_4_6_8 a c3:Indicator ;
+  c3:hasCode "D2.Eco.4.6-8" ; rdfs:label "Describe the role of competition in the determination of prices and wages in a market economy." ;
+  skos:prefLabel "Describe the role of competition in the determination of prices and wages in a market economy." ;
+  skos:altLabel "Indicator D2.Eco.4.6-8" ;
+  c3:officialText "Describe the role of competition in the determination of prices and wages in a market economy." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:Trade , c3:Specialization , c3:Competition ; c3:requiresSkill c3:Describe ;
+  c3:inStrand c3:Str_Eco_ExchangeMarkets ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 13, p. 37" .
+
+c3:I_D2_Eco_4_9_12 a c3:Indicator ;
+  c3:hasCode "D2.Eco.4.9-12" ; rdfs:label "Evaluate the extent to which competition among sellers and among buyers exists in specific markets." ;
+  skos:prefLabel "Evaluate the extent to which competition among sellers and among buyers exists in specific markets." ;
+  skos:altLabel "Indicator D2.Eco.4.9-12" ;
+  c3:officialText "Evaluate the extent to which competition among sellers and among buyers exists in specific markets." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:Trade , c3:Specialization , c3:Competition ; c3:requiresSkill c3:Evaluate ;
+  c3:inStrand c3:Str_Eco_ExchangeMarkets ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 13, p. 37" .
+
+c3:I_D2_Eco_5_K_2 a c3:Indicator ;
+  c3:hasCode "D2.Eco.5.K-2" ; rdfs:label "Identify prices of products in a local market." ;
+  skos:prefLabel "Identify prices of products in a local market." ;
+  skos:altLabel "Indicator D2.Eco.5.K-2" ;
+  c3:officialText "Identify prices of products in a local market." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:Money , c3:PriceMechanism , c3:Markets ; c3:requiresSkill c3:Identify ;
+  c3:inStrand c3:Str_Eco_ExchangeMarkets ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 13, p. 37" .
+
+c3:I_D2_Eco_5_3_5 a c3:Indicator ;
+  c3:hasCode "D2.Eco.5.3-5" ; rdfs:label "Explain the role of money in making exchange easier." ;
+  skos:prefLabel "Explain the role of money in making exchange easier." ;
+  skos:altLabel "Indicator D2.Eco.5.3-5" ;
+  c3:officialText "Explain the role of money in making exchange easier." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:Money , c3:PriceMechanism , c3:Markets ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Eco_ExchangeMarkets ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 13, p. 37" .
+
+c3:I_D2_Eco_5_6_8 a c3:Indicator ;
+  c3:hasCode "D2.Eco.5.6-8" ; rdfs:label "Explain ways in which money facilitates exchange by reducing transactional costs." ;
+  skos:prefLabel "Explain ways in which money facilitates exchange by reducing transactional costs." ;
+  skos:altLabel "Indicator D2.Eco.5.6-8" ;
+  c3:officialText "Explain ways in which money facilitates exchange by reducing transactional costs." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:Money , c3:PriceMechanism , c3:Markets ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Eco_ExchangeMarkets ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 13, p. 37" .
+
+c3:I_D2_Eco_5_9_12 a c3:Indicator ;
+  c3:hasCode "D2.Eco.5.9-12" ; rdfs:label "Describe the consequences of competition in specific markets." ;
+  skos:prefLabel "Describe the consequences of competition in specific markets." ;
+  skos:altLabel "Indicator D2.Eco.5.9-12" ;
+  c3:officialText "Describe the consequences of competition in specific markets." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:Money , c3:PriceMechanism , c3:Markets ; c3:requiresSkill c3:Describe ;
+  c3:inStrand c3:Str_Eco_ExchangeMarkets ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 13, p. 37" .
+
+c3:I_D2_Eco_6_K_2 a c3:Indicator ;
+  c3:hasCode "D2.Eco.6.K-2" ; rdfs:label "Explain how people earn income." ;
+  skos:prefLabel "Explain how people earn income." ;
+  skos:altLabel "Indicator D2.Eco.6.K-2" ;
+  c3:officialText "Explain how people earn income." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:HumanCapital , c3:Income , c3:Productivity , c3:SupplyDemand ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Eco_ExchangeMarkets ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 13, p. 37" .
+
+c3:I_D2_Eco_6_3_5 a c3:Indicator ;
+  c3:hasCode "D2.Eco.6.3-5" ; rdfs:label "Explain the relationship between investment in human capital, productivity, and future incomes." ;
+  skos:prefLabel "Explain the relationship between investment in human capital, productivity, and future incomes." ;
+  skos:altLabel "Indicator D2.Eco.6.3-5" ;
+  c3:officialText "Explain the relationship between investment in human capital, productivity, and future incomes." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:HumanCapital , c3:Income , c3:Productivity , c3:SupplyDemand ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Eco_ExchangeMarkets ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 13, p. 37" .
+
+c3:I_D2_Eco_6_6_8 a c3:Indicator ;
+  c3:hasCode "D2.Eco.6.6-8" ; rdfs:label "Explain how changes in supply and demand cause changes in prices and quantities of goods and services, labor, credit, and foreign currencies." ;
+  skos:prefLabel "Explain how changes in supply and demand cause changes in prices and quantities of goods and services, labor, credit, and foreign currencies." ;
+  skos:altLabel "Indicator D2.Eco.6.6-8" ;
+  c3:officialText "Explain how changes in supply and demand cause changes in prices and quantities of goods and services, labor, credit, and foreign currencies." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:HumanCapital , c3:Income , c3:Productivity , c3:SupplyDemand ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Eco_ExchangeMarkets ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 13, p. 37" .
+
+c3:I_D2_Eco_6_9_12 a c3:Indicator ;
+  c3:hasCode "D2.Eco.6.9-12" ; rdfs:label "Generate possible explanations for a government role in markets when market inefficiencies exist." ;
+  skos:prefLabel "Generate possible explanations for a government role in markets when market inefficiencies exist." ;
+  skos:altLabel "Indicator D2.Eco.6.9-12" ;
+  c3:officialText "Generate possible explanations for a government role in markets when market inefficiencies exist." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:HumanCapital , c3:Income , c3:Productivity , c3:SupplyDemand ; c3:requiresSkill c3:Synthesize ;
+  c3:inStrand c3:Str_Eco_ExchangeMarkets ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 13, p. 37" .
+
+c3:I_D2_Eco_7_K_2 a c3:Indicator ;
+  c3:hasCode "D2.Eco.7.K-2" ; rdfs:label "Describe examples of costs of production." ;
+  skos:prefLabel "Describe examples of costs of production." ;
+  skos:altLabel "Indicator D2.Eco.7.K-2" ;
+  c3:officialText "Describe examples of costs of production." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:ProductionCosts , c3:Innovation , c3:Entrepreneurship ; c3:requiresSkill c3:Describe ;
+  c3:inStrand c3:Str_Eco_ExchangeMarkets ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 13, p. 37" .
+
+c3:I_D2_Eco_7_3_5 a c3:Indicator ;
+  c3:hasCode "D2.Eco.7.3-5" ; rdfs:label "Explain how profits influence sellers in markets." ;
+  skos:prefLabel "Explain how profits influence sellers in markets." ;
+  skos:altLabel "Indicator D2.Eco.7.3-5" ;
+  c3:officialText "Explain how profits influence sellers in markets." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:ProductionCosts , c3:Innovation , c3:Entrepreneurship ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Eco_ExchangeMarkets ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 13, p. 37" .
+
+c3:I_D2_Eco_7_6_8 a c3:Indicator ;
+  c3:hasCode "D2.Eco.7.6-8" ; rdfs:label "Analyze the role of innovation and entrepreneurship in a market economy." ;
+  skos:prefLabel "Analyze the role of innovation and entrepreneurship in a market economy." ;
+  skos:altLabel "Indicator D2.Eco.7.6-8" ;
+  c3:officialText "Analyze the role of innovation and entrepreneurship in a market economy." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:ProductionCosts , c3:Innovation , c3:Entrepreneurship ; c3:requiresSkill c3:Analyze ;
+  c3:inStrand c3:Str_Eco_ExchangeMarkets ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 13, p. 37" .
+
+c3:I_D2_Eco_7_9_12 a c3:Indicator ;
+  c3:hasCode "D2.Eco.7.9-12" ; rdfs:label "Use benefits and costs to evaluate the effectiveness of government policies to improve market outcomes." ;
+  skos:prefLabel "Use benefits and costs to evaluate the effectiveness of government policies to improve market outcomes." ;
+  skos:altLabel "Indicator D2.Eco.7.9-12" ;
+  c3:officialText "Use benefits and costs to evaluate the effectiveness of government policies to improve market outcomes." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:ProductionCosts , c3:Innovation , c3:Entrepreneurship ; c3:requiresSkill c3:Apply ;
+  c3:inStrand c3:Str_Eco_ExchangeMarkets ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 13, p. 37" .
+
+c3:I_D2_Eco_8_3_5 a c3:Indicator ;
+  c3:hasCode "D2.Eco.8.3-5" ; rdfs:label "Identify examples of external benefits and costs." ;
+  skos:prefLabel "Identify examples of external benefits and costs." ;
+  skos:altLabel "Indicator D2.Eco.8.3-5" ;
+  c3:officialText "Identify examples of external benefits and costs." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:Externalities , c3:Policy ; c3:requiresSkill c3:Identify ;
+  c3:inStrand c3:Str_Eco_ExchangeMarkets ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 13, p. 37" .
+
+c3:I_D2_Eco_8_6_8 a c3:Indicator ;
+  c3:hasCode "D2.Eco.8.6-8" ; rdfs:label "Explain how external benefits and costs influence market outcomes." ;
+  skos:prefLabel "Explain how external benefits and costs influence market outcomes." ;
+  skos:altLabel "Indicator D2.Eco.8.6-8" ;
+  c3:officialText "Explain how external benefits and costs influence market outcomes." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:Externalities , c3:Policy ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Eco_ExchangeMarkets ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 13, p. 37" .
+
+c3:I_D2_Eco_8_9_12 a c3:Indicator ;
+  c3:hasCode "D2.Eco.8.9-12" ; rdfs:label "Describe the possible consequences, both intended and unintended, of government policies to improve market outcomes." ;
+  skos:prefLabel "Describe the possible consequences, both intended and unintended, of government policies to improve market outcomes." ;
+  skos:altLabel "Indicator D2.Eco.8.9-12" ;
+  c3:officialText "Describe the possible consequences, both intended and unintended, of government policies to improve market outcomes." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:Externalities , c3:Policy ; c3:requiresSkill c3:Describe ;
+  c3:inStrand c3:Str_Eco_ExchangeMarkets ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 13, p. 37" .
+
+c3:I_D2_Eco_9_K_2 a c3:Indicator ;
+  c3:hasCode "D2.Eco.9.K-2" ; rdfs:label "Describe the role of banks in an economy." ;
+  skos:prefLabel "Describe the role of banks in an economy." ;
+  skos:altLabel "Indicator D2.Eco.9.K-2" ;
+  c3:officialText "Describe the role of banks in an economy." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:FinancialInstitutions , c3:Institutions ; c3:requiresSkill c3:Describe ;
+  c3:inStrand c3:Str_Eco_NationalEconomy ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 13, p. 37" .
+
+c3:I_D2_Eco_9_3_5 a c3:Indicator ;
+  c3:hasCode "D2.Eco.9.3-5" ; rdfs:label "Describe the role of other financial institutions in an economy." ;
+  skos:prefLabel "Describe the role of other financial institutions in an economy." ;
+  skos:altLabel "Indicator D2.Eco.9.3-5" ;
+  c3:officialText "Describe the role of other financial institutions in an economy." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:FinancialInstitutions , c3:Institutions ; c3:requiresSkill c3:Describe ;
+  c3:inStrand c3:Str_Eco_NationalEconomy ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 13, p. 37" .
+
+c3:I_D2_Eco_9_6_8 a c3:Indicator ;
+  c3:hasCode "D2.Eco.9.6-8" ; rdfs:label "Describe the roles of institutions such as corporations, non-profits, and labor unions in a market economy." ;
+  skos:prefLabel "Describe the roles of institutions such as corporations, non-profits, and labor unions in a market economy." ;
+  skos:altLabel "Indicator D2.Eco.9.6-8" ;
+  c3:officialText "Describe the roles of institutions such as corporations, non-profits, and labor unions in a market economy." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:FinancialInstitutions , c3:Institutions ; c3:requiresSkill c3:Describe ;
+  c3:inStrand c3:Str_Eco_NationalEconomy ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 13, p. 37" .
+
+c3:I_D2_Eco_9_9_12 a c3:Indicator ;
+  c3:hasCode "D2.Eco.9.9-12" ; rdfs:label "Describe the roles of institutions such as clearly defined property rights and the rule of law in a market economy." ;
+  skos:prefLabel "Describe the roles of institutions such as clearly defined property rights and the rule of law in a market economy." ;
+  skos:altLabel "Indicator D2.Eco.9.9-12" ;
+  c3:officialText "Describe the roles of institutions such as clearly defined property rights and the rule of law in a market economy." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:FinancialInstitutions , c3:Institutions ; c3:requiresSkill c3:Describe ;
+  c3:inStrand c3:Str_Eco_NationalEconomy ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 13, p. 37" .
+
+c3:I_D2_Eco_10_K_2 a c3:Indicator ;
+  c3:hasCode "D2.Eco.10.K-2" ; rdfs:label "Explain why people save." ;
+  skos:prefLabel "Explain why people save." ;
+  skos:altLabel "Indicator D2.Eco.10.K-2" ;
+  c3:officialText "Explain why people save." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:Money , c3:InterestRates ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Eco_NationalEconomy ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 14, p. 38" .
+
+c3:I_D2_Eco_10_3_5 a c3:Indicator ;
+  c3:hasCode "D2.Eco.10.3-5" ; rdfs:label "Explain what interest rates are." ;
+  skos:prefLabel "Explain what interest rates are." ;
+  skos:altLabel "Indicator D2.Eco.10.3-5" ;
+  c3:officialText "Explain what interest rates are." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:Money , c3:InterestRates ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Eco_NationalEconomy ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 14, p. 38" .
+
+c3:I_D2_Eco_10_6_8 a c3:Indicator ;
+  c3:hasCode "D2.Eco.10.6-8" ; rdfs:label "Explain the influence of changes in interest rates on borrowing and investing." ;
+  skos:prefLabel "Explain the influence of changes in interest rates on borrowing and investing." ;
+  skos:altLabel "Indicator D2.Eco.10.6-8" ;
+  c3:officialText "Explain the influence of changes in interest rates on borrowing and investing." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:Money , c3:InterestRates ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Eco_NationalEconomy ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 14, p. 38" .
+
+c3:I_D2_Eco_10_9_12 a c3:Indicator ;
+  c3:hasCode "D2.Eco.10.9-12" ; rdfs:label "Use current data to explain the influence of changes in spending, production, and the money supply on various economic conditions." ;
+  skos:prefLabel "Use current data to explain the influence of changes in spending, production, and the money supply on various economic conditions." ;
+  skos:altLabel "Indicator D2.Eco.10.9-12" ;
+  c3:officialText "Use current data to explain the influence of changes in spending, production, and the money supply on various economic conditions." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:Money , c3:InterestRates ; c3:requiresSkill c3:Apply ;
+  c3:inStrand c3:Str_Eco_NationalEconomy ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 14, p. 38" .
+
+c3:I_D2_Eco_11_3_5 a c3:Indicator ;
+  c3:hasCode "D2.Eco.11.3-5" ; rdfs:label "Explain the meaning of inflation, deflation, and unemployment." ;
+  skos:prefLabel "Explain the meaning of inflation, deflation, and unemployment." ;
+  skos:altLabel "Indicator D2.Eco.11.3-5" ;
+  c3:officialText "Explain the meaning of inflation, deflation, and unemployment." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:Inflation , c3:Unemployment , c3:EconomicIndicators ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Eco_NationalEconomy ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 14, p. 38" .
+
+c3:I_D2_Eco_11_6_8 a c3:Indicator ;
+  c3:hasCode "D2.Eco.11.6-8" ; rdfs:label "Use appropriate data to evaluate the state of employment, unemployment, inflation, total production, income, and economic growth in the economy." ;
+  skos:prefLabel "Use appropriate data to evaluate the state of employment, unemployment, inflation, total production, income, and economic growth in the economy." ;
+  skos:altLabel "Indicator D2.Eco.11.6-8" ;
+  c3:officialText "Use appropriate data to evaluate the state of employment, unemployment, inflation, total production, income, and economic growth in the economy." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:Inflation , c3:Unemployment , c3:EconomicIndicators ; c3:requiresSkill c3:Apply ;
+  c3:inStrand c3:Str_Eco_NationalEconomy ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 14, p. 38" .
+
+c3:I_D2_Eco_11_9_12 a c3:Indicator ;
+  c3:hasCode "D2.Eco.11.9-12" ; rdfs:label "Use economic indicators to analyze the current and future state of the economy." ;
+  skos:prefLabel "Use economic indicators to analyze the current and future state of the economy." ;
+  skos:altLabel "Indicator D2.Eco.11.9-12" ;
+  c3:officialText "Use economic indicators to analyze the current and future state of the economy." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:Inflation , c3:Unemployment , c3:EconomicIndicators ; c3:requiresSkill c3:Apply ;
+  c3:inStrand c3:Str_Eco_NationalEconomy ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 14, p. 38" .
+
+c3:I_D2_Eco_12_K_2 a c3:Indicator ;
+  c3:hasCode "D2.Eco.12.K-2" ; rdfs:label "Describe examples of the goods and services that governments provide." ;
+  skos:prefLabel "Describe examples of the goods and services that governments provide." ;
+  skos:altLabel "Indicator D2.Eco.12.K-2" ;
+  c3:officialText "Describe examples of the goods and services that governments provide." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:Policy , c3:MonetaryPolicy , c3:FiscalPolicy ; c3:requiresSkill c3:Describe ;
+  c3:inStrand c3:Str_Eco_NationalEconomy ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 14, p. 38" .
+
+c3:I_D2_Eco_12_3_5 a c3:Indicator ;
+  c3:hasCode "D2.Eco.12.3-5" ; rdfs:label "Explain the ways in which the government pays for the goods and services it provides." ;
+  skos:prefLabel "Explain the ways in which the government pays for the goods and services it provides." ;
+  skos:altLabel "Indicator D2.Eco.12.3-5" ;
+  c3:officialText "Explain the ways in which the government pays for the goods and services it provides." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:Policy , c3:MonetaryPolicy , c3:FiscalPolicy ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Eco_NationalEconomy ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 14, p. 38" .
+
+c3:I_D2_Eco_12_6_8 a c3:Indicator ;
+  c3:hasCode "D2.Eco.12.6-8" ; rdfs:label "Explain how inflation, deflation, and unemployment affect different groups." ;
+  skos:prefLabel "Explain how inflation, deflation, and unemployment affect different groups." ;
+  skos:altLabel "Indicator D2.Eco.12.6-8" ;
+  c3:officialText "Explain how inflation, deflation, and unemployment affect different groups." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:Policy , c3:MonetaryPolicy , c3:FiscalPolicy ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Eco_NationalEconomy ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 14, p. 38" .
+
+c3:I_D2_Eco_12_9_12 a c3:Indicator ;
+  c3:hasCode "D2.Eco.12.9-12" ; rdfs:label "Evaluate the selection of monetary and fiscal policies in a variety of economic conditions." ;
+  skos:prefLabel "Evaluate the selection of monetary and fiscal policies in a variety of economic conditions." ;
+  skos:altLabel "Indicator D2.Eco.12.9-12" ;
+  c3:officialText "Evaluate the selection of monetary and fiscal policies in a variety of economic conditions." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:Policy , c3:MonetaryPolicy , c3:FiscalPolicy ; c3:requiresSkill c3:Evaluate ;
+  c3:inStrand c3:Str_Eco_NationalEconomy ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 14, p. 38" .
+
+c3:I_D2_Eco_13_K_2 a c3:Indicator ;
+  c3:hasCode "D2.Eco.13.K-2" ; rdfs:label "Describe examples of capital goods and human capital." ;
+  skos:prefLabel "Describe examples of capital goods and human capital." ;
+  skos:altLabel "Indicator D2.Eco.13.K-2" ;
+  c3:officialText "Describe examples of capital goods and human capital." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:CapitalGoods , c3:HumanCapital , c3:Productivity , c3:GDP ; c3:requiresSkill c3:Describe ;
+  c3:inStrand c3:Str_Eco_NationalEconomy ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 14, p. 38" .
+
+c3:I_D2_Eco_13_3_5 a c3:Indicator ;
+  c3:hasCode "D2.Eco.13.3-5" ; rdfs:label "Describe ways people can increase productivity by using improved capital goods and improving their human capital." ;
+  skos:prefLabel "Describe ways people can increase productivity by using improved capital goods and improving their human capital." ;
+  skos:altLabel "Indicator D2.Eco.13.3-5" ;
+  c3:officialText "Describe ways people can increase productivity by using improved capital goods and improving their human capital." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:CapitalGoods , c3:HumanCapital , c3:Productivity , c3:GDP ; c3:requiresSkill c3:Describe ;
+  c3:inStrand c3:Str_Eco_NationalEconomy ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 14, p. 38" .
+
+c3:I_D2_Eco_13_6_8 a c3:Indicator ;
+  c3:hasCode "D2.Eco.13.6-8" ; rdfs:label "Explain why standards of living increase as productivity improves." ;
+  skos:prefLabel "Explain why standards of living increase as productivity improves." ;
+  skos:altLabel "Indicator D2.Eco.13.6-8" ;
+  c3:officialText "Explain why standards of living increase as productivity improves." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:CapitalGoods , c3:HumanCapital , c3:Productivity , c3:GDP ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Eco_NationalEconomy ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 14, p. 38" .
+
+c3:I_D2_Eco_13_9_12 a c3:Indicator ;
+  c3:hasCode "D2.Eco.13.9-12" ; rdfs:label "Explain why advancements in technology and investments in capital goods and human capital increase economic growth and standards of living." ;
+  skos:prefLabel "Explain why advancements in technology and investments in capital goods and human capital increase economic growth and standards of living." ;
+  skos:altLabel "Indicator D2.Eco.13.9-12" ;
+  c3:officialText "Explain why advancements in technology and investments in capital goods and human capital increase economic growth and standards of living." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:CapitalGoods , c3:HumanCapital , c3:Productivity , c3:GDP ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Eco_NationalEconomy ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 14, p. 38" .
+
+c3:I_D2_Eco_14_K_2 a c3:Indicator ;
+  c3:hasCode "D2.Eco.14.K-2" ; rdfs:label "Describe why people in one country trade goods and services with people in other countries." ;
+  skos:prefLabel "Describe why people in one country trade goods and services with people in other countries." ;
+  skos:altLabel "Indicator D2.Eco.14.K-2" ;
+  c3:officialText "Describe why people in one country trade goods and services with people in other countries." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:Trade , c3:EconomicInterdependence , c3:ComparativeAdvantage ; c3:requiresSkill c3:Describe ;
+  c3:inStrand c3:Str_Eco_GlobalEconomy ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 15, p. 39" .
+
+c3:I_D2_Eco_14_3_5 a c3:Indicator ;
+  c3:hasCode "D2.Eco.14.3-5" ; rdfs:label "Explain how trade leads to increasing economic interdependence among nations." ;
+  skos:prefLabel "Explain how trade leads to increasing economic interdependence among nations." ;
+  skos:altLabel "Indicator D2.Eco.14.3-5" ;
+  c3:officialText "Explain how trade leads to increasing economic interdependence among nations." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:Trade , c3:EconomicInterdependence , c3:ComparativeAdvantage ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Eco_GlobalEconomy ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 15, p. 39" .
+
+c3:I_D2_Eco_14_6_8 a c3:Indicator ;
+  c3:hasCode "D2.Eco.14.6-8" ; rdfs:label "Explain barriers to trade and how those barriers influence trade among nations." ;
+  skos:prefLabel "Explain barriers to trade and how those barriers influence trade among nations." ;
+  skos:altLabel "Indicator D2.Eco.14.6-8" ;
+  c3:officialText "Explain barriers to trade and how those barriers influence trade among nations." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:Trade , c3:EconomicInterdependence , c3:ComparativeAdvantage ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Eco_GlobalEconomy ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 15, p. 39" .
+
+c3:I_D2_Eco_14_9_12 a c3:Indicator ;
+  c3:hasCode "D2.Eco.14.9-12" ; rdfs:label "Analyze the role of comparative advantage in international trade of goods and services." ;
+  skos:prefLabel "Analyze the role of comparative advantage in international trade of goods and services." ;
+  skos:altLabel "Indicator D2.Eco.14.9-12" ;
+  c3:officialText "Analyze the role of comparative advantage in international trade of goods and services." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:Trade , c3:EconomicInterdependence , c3:ComparativeAdvantage ; c3:requiresSkill c3:Analyze ;
+  c3:inStrand c3:Str_Eco_GlobalEconomy ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 15, p. 39" .
+
+c3:I_D2_Eco_15_K_2 a c3:Indicator ;
+  c3:hasCode "D2.Eco.15.K-2" ; rdfs:label "Describe products that are produced abroad and sold domestically and products that are produced domestically and sold abroad." ;
+  skos:prefLabel "Describe products that are produced abroad and sold domestically and products that are produced domestically and sold abroad." ;
+  skos:altLabel "Indicator D2.Eco.15.K-2" ;
+  c3:officialText "Describe products that are produced abroad and sold domestically and products that are produced domestically and sold abroad." ;
+  c3:targetsGradeBand c3:K_2 ; c3:addressesConcept c3:Trade , c3:EconomicInterdependence , c3:Globalization ; c3:requiresSkill c3:Describe ;
+  c3:inStrand c3:Str_Eco_GlobalEconomy ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 15, p. 39" .
+
+c3:I_D2_Eco_15_3_5 a c3:Indicator ;
+  c3:hasCode "D2.Eco.15.3-5" ; rdfs:label "Explain the effects of increasing economic interdependence on different groups within participating nations." ;
+  skos:prefLabel "Explain the effects of increasing economic interdependence on different groups within participating nations." ;
+  skos:altLabel "Indicator D2.Eco.15.3-5" ;
+  c3:officialText "Explain the effects of increasing economic interdependence on different groups within participating nations." ;
+  c3:targetsGradeBand c3:G3_5 ; c3:addressesConcept c3:Trade , c3:EconomicInterdependence , c3:Globalization ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Eco_GlobalEconomy ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 15, p. 39" .
+
+c3:I_D2_Eco_15_6_8 a c3:Indicator ;
+  c3:hasCode "D2.Eco.15.6-8" ; rdfs:label "Explain the benefits and the costs of trade policies to individuals, businesses, and society." ;
+  skos:prefLabel "Explain the benefits and the costs of trade policies to individuals, businesses, and society." ;
+  skos:altLabel "Indicator D2.Eco.15.6-8" ;
+  c3:officialText "Explain the benefits and the costs of trade policies to individuals, businesses, and society." ;
+  c3:targetsGradeBand c3:G6_8 ; c3:addressesConcept c3:Trade , c3:EconomicInterdependence , c3:Globalization ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Eco_GlobalEconomy ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 15, p. 39" .
+
+c3:I_D2_Eco_15_9_12 a c3:Indicator ;
+  c3:hasCode "D2.Eco.15.9-12" ; rdfs:label "Explain how current globalization trends and policies affect economic growth, labor markets, rights of citizens, the environment, and resource and income distribution in different nations." ;
+  skos:prefLabel "Explain how current globalization trends and policies affect economic growth, labor markets, rights of citizens, the environment, and resource and income distribution in different nations." ;
+  skos:altLabel "Indicator D2.Eco.15.9-12" ;
+  c3:officialText "Explain how current globalization trends and policies affect economic growth, labor markets, rights of citizens, the environment, and resource and income distribution in different nations." ;
+  c3:targetsGradeBand c3:G9_12 ; c3:addressesConcept c3:Trade , c3:EconomicInterdependence , c3:Globalization ; c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_Eco_GlobalEconomy ; c3:inDimension c3:Dimension2 ; c3:isIndicatorOf c3:Economics ;
+  dcterms:source "C3 Framework, Table 15, p. 39" .
+
+c3:Dimension2
+  c3:alignmentNote "Module extracted for reuse of Dimension 2 Economics indicators." .

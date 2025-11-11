@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Select a Topic | Inquiry Planner</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body class="catalog-page">
+    <main class="content">
+      <section class="panel catalog-header">
+        <h1>Choose a standards-aligned starting point</h1>
+        <p>Browse the full Michigan C3-aligned curriculum. Pick an expectation to anchor the inquiry you want to build. When you choose a starting point, our AI lesson builder will craft the inquiry plan live so you can dive in immediately.</p>
+      </section>
+
+      {% if selection_message %}
+      <div class="catalog-flash catalog-flash--{{ selection_message.type }}">
+        {{ selection_message.text }}
+      </div>
+      {% endif %}
+
+      <section class="panel catalog-selected" id="current-selection" {% if not selected_standard %}hidden{% endif %}>
+        <div class="catalog-selected__details">
+          <h2>Current selection</h2>
+          <p class="catalog-selected__code" id="current-selection-code">
+            {% if selected_standard %}{{ selected_standard.full_code }} — {{ selected_standard.label }}{% endif %}
+          </p>
+          <p class="catalog-selected__meta" id="current-selection-meta">
+            {% if selected_standard %}{{ selected_standard.unit_label }} · {{ selected_standard.discipline_label }}{% endif %}
+          </p>
+          <p class="catalog-note" id="current-selection-summary" {% if not selected_standard or not selected_standard.lesson_summary %}hidden{% endif %}>
+            {% if selected_standard and selected_standard.lesson_summary %}{{ selected_standard.lesson_summary }}{% endif %}
+          </p>
+        </div>
+        <div class="catalog-selected__actions">
+          <a class="button" id="current-selection-open" href="{{ url_for('overview') }}">Open lesson</a>
+        </div>
+      </section>
+
+      <div class="accordion" id="catalog-accordion">
+        {% for unit in catalog_units %}
+        <section class="panel catalog-unit" id="{{ unit.id }}">
+          <header class="catalog-unit__header">
+            <h2>{{ unit.label }}</h2>
+            <span class="catalog-unit__type">{{ 'Course' if unit.type == 'course' else 'Grade' }} {{ unit.code }}</span>
+          </header>
+
+          <div class="catalog-unit__disciplines">
+            {% for discipline in unit.disciplines %}
+            {% set collapse_id = unit.id ~ '-' ~ discipline.code %}
+            <div class="catalog-discipline">
+              <button class="catalog-accordion-toggle"
+                      type="button"
+                      data-unit="{{ unit.id }}"
+                      data-target="panel-{{ collapse_id }}"
+                      aria-expanded="false">
+                <span>{{ discipline.label }}</span>
+                <span class="catalog-accordion-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="catalog-accordion-panel" id="panel-{{ collapse_id }}" hidden>
+                {% for category in discipline.categories %}
+                <article class="catalog-category" id="{{ category.code }}-{{ unit.id }}">
+                  <header class="catalog-category__header">
+                    <h4>{{ category.code }} · {{ category.label }}</h4>
+                    {% if category.description %}
+                    <p class="catalog-category__description">{{ category.description }}</p>
+                    {% endif %}
+                  </header>
+                  <ul class="catalog-expectations">
+                    {% for expectation in category.expectations %}
+                    <li class="catalog-expectation{% if expectation.is_selected %} is-selected{% endif %}">
+                      <div class="catalog-expectation__header">
+                        <span class="catalog-expectation__code">{{ expectation.full_code }}</span>
+                      </div>
+                      <p class="catalog-expectation__text">{{ expectation.label }}</p>
+                      <button type="button"
+                              class="catalog-select"
+                              data-code="{{ expectation.full_code }}"
+                              data-label="{{ expectation.label }}"
+                              data-unit="{{ unit.label }}"
+                              data-discipline="{{ discipline.label }}">
+                        Build this lesson
+                      </button>
+                    </li>
+                    {% endfor %}
+                  </ul>
+                </article>
+                {% endfor %}
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </section>
+        {% endfor %}
+      </div>
+    </main>
+    <div class="catalog-overlay" id="catalog-overlay" hidden>
+      <div class="catalog-overlay__dialog">
+        <h3 class="catalog-overlay__status" id="catalog-overlay-status">Preparing lesson…</h3>
+        <p id="catalog-overlay-message"></p>
+        <div class="catalog-overlay__actions">
+          <a class="button" id="catalog-overlay-open" href="{{ url_for('overview') }}" hidden>Open lesson</a>
+          <button type="button" class="link-button" id="catalog-overlay-close">Keep browsing</button>
+        </div>
+      </div>
+    </div>
+    <script defer src="{{ url_for('static', filename='catalog.js') }}"></script>
+  </body>
+</html>

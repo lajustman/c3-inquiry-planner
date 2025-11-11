@@ -1,0 +1,1415 @@
+@prefix mi:     <urn:mi:ss:> .
+@prefix dcterms:<http://purl.org/dc/terms/> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@base <file:///Users/louisjustman/Downloads/C3%20Project/Curriculum-Ontology/michigan/> .
+
+<mi-grade-1.ttl> a owl:Ontology ;
+  owl:versionIRI <urn:mi:ss:grade:1> ;
+  rdfs:label "Michigan Social Studies GLCE - Grade 1" ;
+  dcterms:creator "Michigan Department of Education" ;
+  dcterms:source "Michigan K-12 Social Studies Standards (Michigan Department of Education)" ;
+  owl:imports <mi-base.ttl> .
+
+mi:Grade_1 a mi:Grade ;
+  skos:prefLabel "Grade 1" ;
+  mi:hasCategory
+    mi:Cat_1_C1 ,
+    mi:Cat_1_C2 ,
+    mi:Cat_1_C5 ,
+    mi:Cat_1_E1 ,
+    mi:Cat_1_G1 ,
+    mi:Cat_1_G2 ,
+    mi:Cat_1_G4 ,
+    mi:Cat_1_G5 ,
+    mi:Cat_1_H2 ,
+    mi:Cat_1_P3_1 ,
+    mi:Cat_1_P3_3 ,
+    mi:Cat_1_P4_2 ;
+  mi:isGradeOf mi:MichiganGLCEFramework ;
+  mi:gradeCode "1" ;
+  mi:gradeOrder 1 .
+
+#################################################################
+# Categories
+#################################################################
+mi:Cat_1_C1 a mi:StandardCategory ;
+  mi:categoryCode "C1" ;
+  skos:prefLabel "Purposes of Government" ;
+  mi:categoryDescription "Explain why people create governments." ;
+  mi:inGrade mi:Grade_1 ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExpectation
+    mi:Exp_1_C1_0_1 ,
+    mi:Exp_1_C1_0_2 ,
+    mi:Exp_1_C1_0_3 ;
+  mi:isCategoryOf mi:Grade_1 .
+
+mi:Cat_1_C2 a mi:StandardCategory ;
+  mi:categoryCode "C2" ;
+  skos:prefLabel "Values and Principles of American Democracy" ;
+  mi:categoryDescription "Understand values and principles of American constitutional democracy." ;
+  mi:inGrade mi:Grade_1 ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExpectation
+    mi:Exp_1_C2_0_1 ,
+    mi:Exp_1_C2_0_2 ;
+  mi:isCategoryOf mi:Grade_1 .
+
+mi:Cat_1_C5 a mi:StandardCategory ;
+  mi:categoryCode "C5" ;
+  skos:prefLabel "Roles of the Citizen in American Democracy" ;
+  mi:categoryDescription "Explain important rights and how, when, and where American citizens demonstrate their responsibilities by participating in government." ;
+  mi:inGrade mi:Grade_1 ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExpectation
+    mi:Exp_1_C5_0_1 ,
+    mi:Exp_1_C5_0_2 ;
+  mi:isCategoryOf mi:Grade_1 .
+
+mi:Cat_1_E1 a mi:StandardCategory ;
+  mi:categoryCode "E1" ;
+  skos:prefLabel "Market Economy" ;
+  mi:categoryDescription "Use fundamental principles and concepts of economics to understand economic activity in a market economy." ;
+  mi:inGrade mi:Grade_1 ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExpectation
+    mi:Exp_1_E1_0_1 ,
+    mi:Exp_1_E1_0_2 ,
+    mi:Exp_1_E1_0_3 ,
+    mi:Exp_1_E1_0_4 ,
+    mi:Exp_1_E1_0_5 ,
+    mi:Exp_1_E1_0_6 ;
+  mi:isCategoryOf mi:Grade_1 .
+
+mi:Cat_1_G1 a mi:StandardCategory ;
+  mi:categoryCode "G1" ;
+  skos:prefLabel "The World in Spatial Terms" ;
+  mi:categoryDescription "Use geographic representations to acquire, process, and report information from a spatial perspective." ;
+  mi:inGrade mi:Grade_1 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:hasExpectation
+    mi:Exp_1_G1_0_1 ,
+    mi:Exp_1_G1_0_2 ,
+    mi:Exp_1_G1_0_3 ,
+    mi:Exp_1_G1_0_4 ;
+  mi:isCategoryOf mi:Grade_1 .
+
+mi:Cat_1_G2 a mi:StandardCategory ;
+  mi:categoryCode "G2" ;
+  skos:prefLabel "Places and Regions" ;
+  mi:categoryDescription "Understand how regions are created from common physical and human characteristics." ;
+  mi:inGrade mi:Grade_1 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:hasExpectation
+    mi:Exp_1_G2_0_1 ,
+    mi:Exp_1_G2_0_2 ;
+  mi:isCategoryOf mi:Grade_1 .
+
+mi:Cat_1_G4 a mi:StandardCategory ;
+  mi:categoryCode "G4" ;
+  skos:prefLabel "Human Systems" ;
+  mi:categoryDescription "Understand how human activities help shape the Earth's surface." ;
+  mi:inGrade mi:Grade_1 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:hasExpectation
+    mi:Exp_1_G4_0_1 ;
+  mi:isCategoryOf mi:Grade_1 .
+
+mi:Cat_1_G5 a mi:StandardCategory ;
+  mi:categoryCode "G5" ;
+  skos:prefLabel "Environment and Society" ;
+  mi:categoryDescription "Understand the effects of human-environment interactions." ;
+  mi:inGrade mi:Grade_1 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:hasExpectation
+    mi:Exp_1_G5_0_1 ;
+  mi:isCategoryOf mi:Grade_1 .
+
+mi:Cat_1_H2 a mi:StandardCategory ;
+  mi:categoryCode "H2" ;
+  skos:prefLabel "Living and Working Together in Families and Schools" ;
+  mi:categoryDescription "Use historical thinking to understand the past." ;
+  mi:inGrade mi:Grade_1 ;
+  mi:inDiscipline mi:Discipline_H ;
+  mi:hasExpectation
+    mi:Exp_1_H2_0_1 ,
+    mi:Exp_1_H2_0_2 ,
+    mi:Exp_1_H2_0_3 ,
+    mi:Exp_1_H2_0_4 ,
+    mi:Exp_1_H2_0_5 ,
+    mi:Exp_1_H2_0_6 ,
+    mi:Exp_1_H2_0_7 ;
+  mi:isCategoryOf mi:Grade_1 .
+
+mi:Cat_1_P3_1 a mi:StandardCategory ;
+  mi:categoryCode "P3.1" ;
+  skos:prefLabel "Identifying and Analyzing Public Issues" ;
+  mi:categoryDescription "Clearly state a problem as a public policy issue, analyze various perspectives, and generate and evaluate possible alternative resolutions." ;
+  mi:inGrade mi:Grade_1 ;
+  mi:inDiscipline mi:Discipline_P ;
+  mi:hasExpectation
+    mi:Exp_1_P3_1_1 ,
+    mi:Exp_1_P3_1_2 ,
+    mi:Exp_1_P3_1_3 ;
+  mi:isCategoryOf mi:Grade_1 .
+
+mi:Cat_1_P3_3 a mi:StandardCategory ;
+  mi:categoryCode "P3.3" ;
+  skos:prefLabel "Persuasive Communication About a Public Issue" ;
+  mi:categoryDescription "Communicate a reasoned position on a public issue." ;
+  mi:inGrade mi:Grade_1 ;
+  mi:inDiscipline mi:Discipline_P ;
+  mi:hasExpectation
+    mi:Exp_1_P3_3_1 ;
+  mi:isCategoryOf mi:Grade_1 .
+
+mi:Cat_1_P4_2 a mi:StandardCategory ;
+  mi:categoryCode "P4.2" ;
+  skos:prefLabel "Citizen Involvement" ;
+  mi:categoryDescription "Act constructively to further the public good." ;
+  mi:inGrade mi:Grade_1 ;
+  mi:inDiscipline mi:Discipline_P ;
+  mi:hasExpectation
+    mi:Exp_1_P4_2_1 ,
+    mi:Exp_1_P4_2_2 ;
+  mi:isCategoryOf mi:Grade_1 .
+
+#################################################################
+# Expectations
+#################################################################
+mi:Exp_1_C1_0_1 a mi:Expectation ;
+  mi:expectationCode "C1.0.1" ;
+  mi:fullCode "1-C1.0.1" ;
+  mi:officialText "Identify some reasons for rules in school." ;
+  skos:prefLabel "Some Reasons for Rules in School" ;
+  skos:broader mi:Cat_1_C1 ;
+  mi:inCategory mi:Cat_1_C1 ;
+  mi:inGrade mi:Grade_1 ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_1_C1_0_1_1 ,
+    mi:Example_exp_1_C1_0_1_2 ,
+    mi:Example_exp_1_C1_0_1_3 ;
+  mi:isExpectationOf mi:Cat_1_C1 .
+
+mi:Exp_1_C1_0_2 a mi:Expectation ;
+  mi:expectationCode "C1.0.2" ;
+  mi:fullCode "1-C1.0.2" ;
+  mi:officialText "Give examples of the use of power with authority in school." ;
+  skos:prefLabel "Give Examples of the Use of Power" ;
+  skos:broader mi:Cat_1_C1 ;
+  mi:inCategory mi:Cat_1_C1 ;
+  mi:inGrade mi:Grade_1 ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_1_C1_0_2_1 ,
+    mi:Example_exp_1_C1_0_2_2 ;
+  mi:isExpectationOf mi:Cat_1_C1 .
+
+mi:Exp_1_C1_0_3 a mi:Expectation ;
+  mi:expectationCode "C1.0.3" ;
+  mi:fullCode "1-C1.0.3" ;
+  mi:officialText "Give examples of the use of power without authority in school." ;
+  skos:prefLabel "Give Examples of the Use of Power Without Authority in School" ;
+  skos:broader mi:Cat_1_C1 ;
+  mi:inCategory mi:Cat_1_C1 ;
+  mi:inGrade mi:Grade_1 ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_1_C1_0_3_1 ,
+    mi:Example_exp_1_C1_0_3_2 ;
+  mi:isExpectationOf mi:Cat_1_C1 .
+
+mi:Exp_1_C2_0_1 a mi:Expectation ;
+  mi:expectationCode "C2.0.1" ;
+  mi:fullCode "1-C2.0.1" ;
+  mi:officialText "Explain how decisions can be made or how conflicts might be resolved in fair and just ways." ;
+  skos:prefLabel "Decisions Can Be Made or How Conflicts Might Be Resolved in Fair and Just Ways" ;
+  skos:broader mi:Cat_1_C2 ;
+  mi:inCategory mi:Cat_1_C2 ;
+  mi:inGrade mi:Grade_1 ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_1_C2_0_1_1 ;
+  mi:isExpectationOf mi:Cat_1_C2 .
+
+mi:Exp_1_C2_0_2 a mi:Expectation ;
+  mi:expectationCode "C2.0.2" ;
+  mi:fullCode "1-C2.0.2" ;
+  mi:officialText "Identify important symbols of the United States of America." ;
+  skos:prefLabel "Important Symbols of the United States of America" ;
+  skos:broader mi:Cat_1_C2 ;
+  mi:inCategory mi:Cat_1_C2 ;
+  mi:inGrade mi:Grade_1 ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_1_C2_0_2_1 ,
+    mi:Example_exp_1_C2_0_2_2 ,
+    mi:Example_exp_1_C2_0_2_3 ,
+    mi:Example_exp_1_C2_0_2_4 ;
+  mi:isExpectationOf mi:Cat_1_C2 .
+
+mi:Exp_1_C5_0_1 a mi:Expectation ;
+  mi:expectationCode "C5.0.1" ;
+  mi:fullCode "1-C5.0.1" ;
+  mi:officialText "Describe some responsibilities people have at home and at school." ;
+  skos:prefLabel "Some Responsibilities People Have at Home and at School" ;
+  skos:broader mi:Cat_1_C5 ;
+  mi:inCategory mi:Cat_1_C5 ;
+  mi:inGrade mi:Grade_1 ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_1_C5_0_1_1 ,
+    mi:Example_exp_1_C5_0_1_2 ,
+    mi:Example_exp_1_C5_0_1_3 ,
+    mi:Example_exp_1_C5_0_1_4 ;
+  mi:isExpectationOf mi:Cat_1_C5 .
+
+mi:Exp_1_C5_0_2 a mi:Expectation ;
+  mi:expectationCode "C5.0.2" ;
+  mi:fullCode "1-C5.0.2" ;
+  mi:officialText "Identify situations in which people act as good citizens in the school community. ECONOMICS" ;
+  skos:prefLabel "Situations" ;
+  skos:broader mi:Cat_1_C5 ;
+  mi:inCategory mi:Cat_1_C5 ;
+  mi:inGrade mi:Grade_1 ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_1_C5_0_2_1 ,
+    mi:Example_exp_1_C5_0_2_2 ,
+    mi:Example_exp_1_C5_0_2_3 ,
+    mi:Example_exp_1_C5_0_2_4 ,
+    mi:Example_exp_1_C5_0_2_5 ,
+    mi:Example_exp_1_C5_0_2_6 ,
+    mi:Example_exp_1_C5_0_2_7 ,
+    mi:Example_exp_1_C5_0_2_8 ;
+  mi:isExpectationOf mi:Cat_1_C5 .
+
+mi:Exp_1_E1_0_1 a mi:Expectation ;
+  mi:expectationCode "E1.0.1" ;
+  mi:fullCode "1-E1.0.1" ;
+  mi:officialText "Distinguish between producers and consumers of goods and services." ;
+  skos:prefLabel "Distinguish between Producers and Consumers of Goods and Services" ;
+  skos:broader mi:Cat_1_E1 ;
+  mi:inCategory mi:Cat_1_E1 ;
+  mi:inGrade mi:Grade_1 ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_1_E1 .
+
+mi:Exp_1_E1_0_2 a mi:Expectation ;
+  mi:expectationCode "E1.0.2" ;
+  mi:fullCode "1-E1.0.2" ;
+  mi:officialText "Describe ways in which families consume goods and services." ;
+  skos:prefLabel "Ways" ;
+  skos:broader mi:Cat_1_E1 ;
+  mi:inCategory mi:Cat_1_E1 ;
+  mi:inGrade mi:Grade_1 ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_1_E1 .
+
+mi:Exp_1_E1_0_3 a mi:Expectation ;
+  mi:expectationCode "E1.0.3" ;
+  mi:fullCode "1-E1.0.3" ;
+  mi:officialText "Using examples, explain why people cannot have everything they want (scarcity) and describe how people respond (choice)." ;
+  skos:prefLabel "Why People Cannot Have Everything They Want and Describe How People Respond" ;
+  skos:broader mi:Cat_1_E1 ;
+  mi:inCategory mi:Cat_1_E1 ;
+  mi:inGrade mi:Grade_1 ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_1_E1 .
+
+mi:Exp_1_E1_0_4 a mi:Expectation ;
+  mi:expectationCode "E1.0.4" ;
+  mi:fullCode "1-E1.0.4" ;
+  mi:officialText "Describe reasons why people voluntarily trade." ;
+  skos:prefLabel "Reasons Why People Voluntarily Trade" ;
+  skos:broader mi:Cat_1_E1 ;
+  mi:inCategory mi:Cat_1_E1 ;
+  mi:inGrade mi:Grade_1 ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_1_E1 .
+
+mi:Exp_1_E1_0_5 a mi:Expectation ;
+  mi:expectationCode "E1.0.5" ;
+  mi:fullCode "1-E1.0.5" ;
+  mi:officialText "Describe ways in which people earn money." ;
+  skos:prefLabel "Ways" ;
+  skos:broader mi:Cat_1_E1 ;
+  mi:inCategory mi:Cat_1_E1 ;
+  mi:inGrade mi:Grade_1 ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:hasExample
+    mi:Example_exp_1_E1_0_5_1 ,
+    mi:Example_exp_1_E1_0_5_2 ;
+  mi:isExpectationOf mi:Cat_1_E1 .
+
+mi:Exp_1_E1_0_6 a mi:Expectation ;
+  mi:expectationCode "E1.0.6" ;
+  mi:fullCode "1-E1.0.6" ;
+  mi:officialText "Describe how money simplifies trade." ;
+  skos:prefLabel "Money Simplifies Trade" ;
+  skos:broader mi:Cat_1_E1 ;
+  mi:inCategory mi:Cat_1_E1 ;
+  mi:inGrade mi:Grade_1 ;
+  mi:inDiscipline mi:Discipline_E ;
+  mi:isExpectationOf mi:Cat_1_E1 .
+
+mi:Exp_1_G1_0_1 a mi:Expectation ;
+  mi:expectationCode "G1.0.1" ;
+  mi:fullCode "1-G1.0.1" ;
+  mi:officialText "Construct simple maps of the classroom to demonstrate aerial perspective." ;
+  skos:prefLabel "Simple Maps of the Classroom to Demonstrate Aerial Perspective" ;
+  skos:broader mi:Cat_1_G1 ;
+  mi:inCategory mi:Cat_1_G1 ;
+  mi:inGrade mi:Grade_1 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:isExpectationOf mi:Cat_1_G1 .
+
+mi:Exp_1_G1_0_2 a mi:Expectation ;
+  mi:expectationCode "G1.0.2" ;
+  mi:fullCode "1-G1.0.2" ;
+  mi:officialText "Give examples of places that have absolute locations." ;
+  skos:prefLabel "Give Examples of Places That Have Absolute Locations" ;
+  skos:broader mi:Cat_1_G1 ;
+  mi:inCategory mi:Cat_1_G1 ;
+  mi:inGrade mi:Grade_1 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:hasExample
+    mi:Example_exp_1_G1_0_2_1 ,
+    mi:Example_exp_1_G1_0_2_2 ;
+  mi:isExpectationOf mi:Cat_1_G1 .
+
+mi:Exp_1_G1_0_3 a mi:Expectation ;
+  mi:expectationCode "G1.0.3" ;
+  mi:fullCode "1-G1.0.3" ;
+  mi:officialText "Use personal directions (left, right, front, back) to describe the relative location of significant places in the school environment." ;
+  skos:prefLabel "Personal Directions to Describe the Relative Location of Significant Places in the School Environment" ;
+  skos:broader mi:Cat_1_G1 ;
+  mi:inCategory mi:Cat_1_G1 ;
+  mi:inGrade mi:Grade_1 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:isExpectationOf mi:Cat_1_G1 .
+
+mi:Exp_1_G1_0_4 a mi:Expectation ;
+  mi:expectationCode "G1.0.4" ;
+  mi:fullCode "1-G1.0.4" ;
+  mi:officialText "Distinguish between landmasses and bodies of water using maps and globes." ;
+  skos:prefLabel "Distinguish between Landmasses and Bodies of Water" ;
+  skos:broader mi:Cat_1_G1 ;
+  mi:inCategory mi:Cat_1_G1 ;
+  mi:inGrade mi:Grade_1 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:isExpectationOf mi:Cat_1_G1 .
+
+mi:Exp_1_G2_0_1 a mi:Expectation ;
+  mi:expectationCode "G2.0.1" ;
+  mi:fullCode "1-G2.0.1" ;
+  mi:officialText "Distinguish between physical and human characteristics of places." ;
+  skos:prefLabel "Distinguish between Physical and Human Characteristics of Places" ;
+  skos:broader mi:Cat_1_G2 ;
+  mi:inCategory mi:Cat_1_G2 ;
+  mi:inGrade mi:Grade_1 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:hasExample
+    mi:Example_exp_1_G2_0_1_1 ,
+    mi:Example_exp_1_G2_0_1_2 ,
+    mi:Example_exp_1_G2_0_1_3 ,
+    mi:Example_exp_1_G2_0_1_4 ,
+    mi:Example_exp_1_G2_0_1_5 ,
+    mi:Example_exp_1_G2_0_1_6 ;
+  mi:isExpectationOf mi:Cat_1_G2 .
+
+mi:Exp_1_G2_0_2 a mi:Expectation ;
+  mi:expectationCode "G2.0.2" ;
+  mi:fullCode "1-G2.0.2" ;
+  mi:officialText "Describe the unifying characteristics and/or boundaries of different school regions." ;
+  skos:prefLabel "Unifying Characteristics and or Boundaries of Different School Regions" ;
+  skos:broader mi:Cat_1_G2 ;
+  mi:inCategory mi:Cat_1_G2 ;
+  mi:inGrade mi:Grade_1 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:hasExample
+    mi:Example_exp_1_G2_0_2_1 ,
+    mi:Example_exp_1_G2_0_2_2 ,
+    mi:Example_exp_1_G2_0_2_3 ,
+    mi:Example_exp_1_G2_0_2_4 ;
+  mi:isExpectationOf mi:Cat_1_G2 .
+
+mi:Exp_1_G4_0_1 a mi:Expectation ;
+  mi:expectationCode "G4.0.1" ;
+  mi:fullCode "1-G4.0.1" ;
+  mi:officialText "Use components of culture to describe diversity in family life." ;
+  skos:prefLabel "Components of Culture to Describe Diversity in Family Life" ;
+  skos:broader mi:Cat_1_G4 ;
+  mi:inCategory mi:Cat_1_G4 ;
+  mi:inGrade mi:Grade_1 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:hasExample
+    mi:Example_exp_1_G4_0_1_1 ,
+    mi:Example_exp_1_G4_0_1_2 ,
+    mi:Example_exp_1_G4_0_1_3 ,
+    mi:Example_exp_1_G4_0_1_4 ;
+  mi:isExpectationOf mi:Cat_1_G4 .
+
+mi:Exp_1_G5_0_1 a mi:Expectation ;
+  mi:expectationCode "G5.0.1" ;
+  mi:fullCode "1-G5.0.1" ;
+  mi:officialText "Describe ways in which people modify and adapt to the environment." ;
+  skos:prefLabel "Ways" ;
+  skos:broader mi:Cat_1_G5 ;
+  mi:inCategory mi:Cat_1_G5 ;
+  mi:inGrade mi:Grade_1 ;
+  mi:inDiscipline mi:Discipline_G ;
+  mi:hasExample
+    mi:Example_exp_1_G5_0_1_1 ,
+    mi:Example_exp_1_G5_0_1_2 ,
+    mi:Example_exp_1_G5_0_1_3 ,
+    mi:Example_exp_1_G5_0_1_4 ,
+    mi:Example_exp_1_G5_0_1_5 ;
+  mi:isExpectationOf mi:Cat_1_G5 .
+
+mi:Exp_1_H2_0_1 a mi:Expectation ;
+  mi:expectationCode "H2.0.1" ;
+  mi:fullCode "1-H2.0.1" ;
+  mi:officialText "Demonstrate chronological thinking by distinguishing among past, present, and future using family or school events." ;
+  skos:prefLabel "Demonstrate Chronological Thinking by Distinguishing Among Past, Present, and Future" ;
+  skos:broader mi:Cat_1_H2 ;
+  mi:inCategory mi:Cat_1_H2 ;
+  mi:inGrade mi:Grade_1 ;
+  mi:inDiscipline mi:Discipline_H ;
+  mi:isExpectationOf mi:Cat_1_H2 .
+
+mi:Exp_1_H2_0_2 a mi:Expectation ;
+  mi:expectationCode "H2.0.2" ;
+  mi:fullCode "1-H2.0.2" ;
+  mi:officialText "Use a calendar to distinguish among days, weeks, and months." ;
+  skos:prefLabel "A Calendar to Distinguish Among Days, Weeks, and Months" ;
+  skos:broader mi:Cat_1_H2 ;
+  mi:inCategory mi:Cat_1_H2 ;
+  mi:inGrade mi:Grade_1 ;
+  mi:inDiscipline mi:Discipline_H ;
+  mi:isExpectationOf mi:Cat_1_H2 .
+
+mi:Exp_1_H2_0_3 a mi:Expectation ;
+  mi:expectationCode "H2.0.3" ;
+  mi:fullCode "1-H2.0.3" ;
+  mi:officialText "Investigate a family history for at least two generations, identifying various members and their connections in order to tell a narrative about family life." ;
+  skos:prefLabel "A Family History for at Least Two Generations, Identifying Various Members and Their Connections" ;
+  skos:broader mi:Cat_1_H2 ;
+  mi:inCategory mi:Cat_1_H2 ;
+  mi:inGrade mi:Grade_1 ;
+  mi:inDiscipline mi:Discipline_H ;
+  mi:isExpectationOf mi:Cat_1_H2 .
+
+mi:Exp_1_H2_0_4 a mi:Expectation ;
+  mi:expectationCode "H2.0.4" ;
+  mi:fullCode "1-H2.0.4" ;
+  mi:officialText "Retell in sequence important ideas and details from stories about families or schools." ;
+  skos:prefLabel "Retell in Sequence Important Ideas and Details from Stories about Families or Schools" ;
+  skos:broader mi:Cat_1_H2 ;
+  mi:inCategory mi:Cat_1_H2 ;
+  mi:inGrade mi:Grade_1 ;
+  mi:inDiscipline mi:Discipline_H ;
+  mi:isExpectationOf mi:Cat_1_H2 .
+
+mi:Exp_1_H2_0_5 a mi:Expectation ;
+  mi:expectationCode "H2.0.5" ;
+  mi:fullCode "1-H2.0.5" ;
+  mi:officialText "Use historical records and artifacts to draw possible conclusions about family or school life in the past." ;
+  skos:prefLabel "Historical Records and Artifacts to Draw Possible Conclusions about Family or School Life in the..." ;
+  skos:broader mi:Cat_1_H2 ;
+  mi:inCategory mi:Cat_1_H2 ;
+  mi:inGrade mi:Grade_1 ;
+  mi:inDiscipline mi:Discipline_H ;
+  mi:hasExample
+    mi:Example_exp_1_H2_0_5_1 ,
+    mi:Example_exp_1_H2_0_5_2 ,
+    mi:Example_exp_1_H2_0_5_3 ,
+    mi:Example_exp_1_H2_0_5_4 ;
+  mi:isExpectationOf mi:Cat_1_H2 .
+
+mi:Exp_1_H2_0_6 a mi:Expectation ;
+  mi:expectationCode "H2.0.6" ;
+  mi:fullCode "1-H2.0.6" ;
+  mi:officialText "Compare life today with life in the past using the criteria of family, school, jobs, or communication." ;
+  skos:prefLabel "Life Today with Life in the Past" ;
+  skos:broader mi:Cat_1_H2 ;
+  mi:inCategory mi:Cat_1_H2 ;
+  mi:inGrade mi:Grade_1 ;
+  mi:inDiscipline mi:Discipline_H ;
+  mi:isExpectationOf mi:Cat_1_H2 .
+
+mi:Exp_1_H2_0_7 a mi:Expectation ;
+  mi:expectationCode "H2.0.7" ;
+  mi:fullCode "1-H2.0.7" ;
+  mi:officialText "Identify the events or people celebrated during United States national holidays and why we celebrate them" ;
+  skos:prefLabel "Events or People Celebrated During United States National Holidays" ;
+  skos:broader mi:Cat_1_H2 ;
+  mi:inCategory mi:Cat_1_H2 ;
+  mi:inGrade mi:Grade_1 ;
+  mi:inDiscipline mi:Discipline_H ;
+  mi:hasExample
+    mi:Example_exp_1_H2_0_7_1 ,
+    mi:Example_exp_1_H2_0_7_2 ,
+    mi:Example_exp_1_H2_0_7_3 ,
+    mi:Example_exp_1_H2_0_7_4 ;
+  mi:isExpectationOf mi:Cat_1_H2 .
+
+mi:Exp_1_P3_1_1 a mi:Expectation ;
+  mi:expectationCode "P3.1.1" ;
+  mi:fullCode "1-P3.1.1" ;
+  mi:officialText "Identify public issues in the school community." ;
+  skos:prefLabel "Public Issues in the School Community" ;
+  skos:broader mi:Cat_1_P3_1 ;
+  mi:inCategory mi:Cat_1_P3_1 ;
+  mi:inGrade mi:Grade_1 ;
+  mi:inDiscipline mi:Discipline_P ;
+  mi:isExpectationOf mi:Cat_1_P3_1 .
+
+mi:Exp_1_P3_1_2 a mi:Expectation ;
+  mi:expectationCode "P3.1.2" ;
+  mi:fullCode "1-P3.1.2" ;
+  mi:officialText "Use graphic data to analyze information about a public issue in the school community." ;
+  skos:prefLabel "Graphic Data to Analyze Information about a Public Issue in the School Community" ;
+  skos:broader mi:Cat_1_P3_1 ;
+  mi:inCategory mi:Cat_1_P3_1 ;
+  mi:inGrade mi:Grade_1 ;
+  mi:inDiscipline mi:Discipline_P ;
+  mi:isExpectationOf mi:Cat_1_P3_1 .
+
+mi:Exp_1_P3_1_3 a mi:Expectation ;
+  mi:expectationCode "P3.1.3" ;
+  mi:fullCode "1-P3.1.3" ;
+  mi:officialText "Identify alternative resolutions to a public issue in the school community." ;
+  skos:prefLabel "Alternative Resolutions to a Public Issue in the School Community" ;
+  skos:broader mi:Cat_1_P3_1 ;
+  mi:inCategory mi:Cat_1_P3_1 ;
+  mi:inGrade mi:Grade_1 ;
+  mi:inDiscipline mi:Discipline_P ;
+  mi:isExpectationOf mi:Cat_1_P3_1 .
+
+mi:Exp_1_P3_3_1 a mi:Expectation ;
+  mi:expectationCode "P3.3.1" ;
+  mi:fullCode "1-P3.3.1" ;
+  mi:officialText "Express a position on a public policy issue in the school community and justify the position with a reasoned argument." ;
+  skos:prefLabel "Express a Position on a Public Policy Issue in the School Community and Justify the..." ;
+  skos:broader mi:Cat_1_P3_3 ;
+  mi:inCategory mi:Cat_1_P3_3 ;
+  mi:inGrade mi:Grade_1 ;
+  mi:inDiscipline mi:Discipline_P ;
+  mi:isExpectationOf mi:Cat_1_P3_3 .
+
+mi:Exp_1_P4_2_1 a mi:Expectation ;
+  mi:expectationCode "P4.2.1" ;
+  mi:fullCode "1-P4.2.1" ;
+  mi:officialText "Develop and implement an action plan to address or inform others about a public issue." ;
+  skos:prefLabel "And Implement an Action Plan to Address or Inform Others about a Public Issue" ;
+  skos:broader mi:Cat_1_P4_2 ;
+  mi:inCategory mi:Cat_1_P4_2 ;
+  mi:inGrade mi:Grade_1 ;
+  mi:inDiscipline mi:Discipline_P ;
+  mi:isExpectationOf mi:Cat_1_P4_2 .
+
+mi:Exp_1_P4_2_2 a mi:Expectation ;
+  mi:expectationCode "P4.2.2" ;
+  mi:fullCode "1-P4.2.2" ;
+  mi:officialText "Participate in projects to help or inform others." ;
+  skos:prefLabel "Participate in Projects to Help or Inform Others" ;
+  skos:broader mi:Cat_1_P4_2 ;
+  mi:inCategory mi:Cat_1_P4_2 ;
+  mi:inGrade mi:Grade_1 ;
+  mi:inDiscipline mi:Discipline_P ;
+  mi:isExpectationOf mi:Cat_1_P4_2 .
+
+#################################################################
+# Examples
+#################################################################
+mi:Example_exp_1_C1_0_1_1 a mi:Example ;
+  skos:prefLabel "provide order" ;
+  mi:exampleText "provide order" .
+
+mi:Example_exp_1_C1_0_1_2 a mi:Example ;
+  skos:prefLabel "predictability" ;
+  mi:exampleText "predictability" .
+
+mi:Example_exp_1_C1_0_1_3 a mi:Example ;
+  skos:prefLabel "safety" ;
+  mi:exampleText "safety" .
+
+mi:Example_exp_1_C1_0_2_1 a mi:Example ;
+  skos:prefLabel "principal" ;
+  mi:exampleText "principal" .
+
+mi:Example_exp_1_C1_0_2_2 a mi:Example ;
+  skos:prefLabel "teacher or bus driver enforcing school rules" ;
+  mi:exampleText "teacher or bus driver enforcing school rules" .
+
+mi:Example_exp_1_C1_0_3_1 a mi:Example ;
+  skos:prefLabel "types of bullying" ;
+  mi:exampleText "types of bullying" .
+
+mi:Example_exp_1_C1_0_3_2 a mi:Example ;
+  skos:prefLabel "taking cuts in line" ;
+  mi:exampleText "taking cuts in line" .
+
+mi:Example_exp_1_C2_0_1_1 a mi:Example ;
+  skos:prefLabel "majority rules" ;
+  mi:exampleText "majority rules" .
+
+mi:Example_exp_1_C2_0_2_1 a mi:Example ;
+  skos:prefLabel "Statue of Liberty" ;
+  mi:exampleText "Statue of Liberty" .
+
+mi:Example_exp_1_C2_0_2_2 a mi:Example ;
+  skos:prefLabel "Uncle Sam" ;
+  mi:exampleText "Uncle Sam" .
+
+mi:Example_exp_1_C2_0_2_3 a mi:Example ;
+  skos:prefLabel "White House" ;
+  mi:exampleText "White House" .
+
+mi:Example_exp_1_C2_0_2_4 a mi:Example ;
+  skos:prefLabel "Bald Eagle" ;
+  mi:exampleText "Bald Eagle" .
+
+mi:Example_exp_1_C5_0_1_1 a mi:Example ;
+  skos:prefLabel "taking care of oneself" ;
+  mi:exampleText "taking care of oneself" .
+
+mi:Example_exp_1_C5_0_1_2 a mi:Example ;
+  skos:prefLabel "respect for the rights of others" ;
+  mi:exampleText "respect for the rights of others" .
+
+mi:Example_exp_1_C5_0_1_3 a mi:Example ;
+  skos:prefLabel "following rules" ;
+  mi:exampleText "following rules" .
+
+mi:Example_exp_1_C5_0_1_4 a mi:Example ;
+  skos:prefLabel "getting along with others" ;
+  mi:exampleText "getting along with others" .
+
+mi:Example_exp_1_C5_0_2_1 a mi:Example ;
+  skos:prefLabel "thoughtful and effective participation in the school decisions" ;
+  mi:exampleText "thoughtful and effective participation in the school decisions" .
+
+mi:Example_exp_1_C5_0_2_2 a mi:Example ;
+  skos:prefLabel "respect for the rights of others" ;
+  mi:exampleText "respect for the rights of others" .
+
+mi:Example_exp_1_C5_0_2_3 a mi:Example ;
+  skos:prefLabel "respect for rule of law" ;
+  mi:exampleText "respect for rule of law" .
+
+mi:Example_exp_1_C5_0_2_4 a mi:Example ;
+  skos:prefLabel "voting" ;
+  mi:exampleText "voting" .
+
+mi:Example_exp_1_C5_0_2_5 a mi:Example ;
+  skos:prefLabel "volunteering" ;
+  mi:exampleText "volunteering" .
+
+mi:Example_exp_1_C5_0_2_6 a mi:Example ;
+  skos:prefLabel "compassion" ;
+  mi:exampleText "compassion" .
+
+mi:Example_exp_1_C5_0_2_7 a mi:Example ;
+  skos:prefLabel "courage" ;
+  mi:exampleText "courage" .
+
+mi:Example_exp_1_C5_0_2_8 a mi:Example ;
+  skos:prefLabel "honesty" ;
+  mi:exampleText "honesty" .
+
+mi:Example_exp_1_E1_0_5_1 a mi:Example ;
+  skos:prefLabel "providing goods and services to others" ;
+  mi:exampleText "providing goods and services to others" .
+
+mi:Example_exp_1_E1_0_5_2 a mi:Example ;
+  skos:prefLabel "jobs" ;
+  mi:exampleText "jobs" .
+
+mi:Example_exp_1_G1_0_2_1 a mi:Example ;
+  skos:prefLabel "home address" ;
+  mi:exampleText "home address" .
+
+mi:Example_exp_1_G1_0_2_2 a mi:Example ;
+  skos:prefLabel "school address" ;
+  mi:exampleText "school address" .
+
+mi:Example_exp_1_G2_0_1_1 a mi:Example ;
+  skos:prefLabel "clouds" ;
+  mi:exampleText "clouds" .
+
+mi:Example_exp_1_G2_0_1_2 a mi:Example ;
+  skos:prefLabel "buildings" ;
+  mi:exampleText "buildings" .
+
+mi:Example_exp_1_G2_0_1_3 a mi:Example ;
+  skos:prefLabel "weather" ;
+  mi:exampleText "weather" .
+
+mi:Example_exp_1_G2_0_1_4 a mi:Example ;
+  skos:prefLabel "trees" ;
+  mi:exampleText "trees" .
+
+mi:Example_exp_1_G2_0_1_5 a mi:Example ;
+  skos:prefLabel "playgrounds" ;
+  mi:exampleText "playgrounds" .
+
+mi:Example_exp_1_G2_0_1_6 a mi:Example ;
+  skos:prefLabel "sidewalks" ;
+  mi:exampleText "sidewalks" .
+
+mi:Example_exp_1_G2_0_2_1 a mi:Example ;
+  skos:prefLabel "playground" ;
+  mi:exampleText "playground" .
+
+mi:Example_exp_1_G2_0_2_2 a mi:Example ;
+  skos:prefLabel "reading corner" ;
+  mi:exampleText "reading corner" .
+
+mi:Example_exp_1_G2_0_2_3 a mi:Example ;
+  skos:prefLabel "library" ;
+  mi:exampleText "library" .
+
+mi:Example_exp_1_G2_0_2_4 a mi:Example ;
+  skos:prefLabel "restroom" ;
+  mi:exampleText "restroom" .
+
+mi:Example_exp_1_G4_0_1_1 a mi:Example ;
+  skos:prefLabel "foods" ;
+  mi:exampleText "foods" .
+
+mi:Example_exp_1_G4_0_1_2 a mi:Example ;
+  skos:prefLabel "language" ;
+  mi:exampleText "language" .
+
+mi:Example_exp_1_G4_0_1_3 a mi:Example ;
+  skos:prefLabel "religion" ;
+  mi:exampleText "religion" .
+
+mi:Example_exp_1_G4_0_1_4 a mi:Example ;
+  skos:prefLabel "traditions" ;
+  mi:exampleText "traditions" .
+
+mi:Example_exp_1_G5_0_1_1 a mi:Example ;
+  skos:prefLabel "cutting down trees" ;
+  mi:exampleText "cutting down trees" .
+
+mi:Example_exp_1_G5_0_1_2 a mi:Example ;
+  skos:prefLabel "clothing" ;
+  mi:exampleText "clothing" .
+
+mi:Example_exp_1_G5_0_1_3 a mi:Example ;
+  skos:prefLabel "transportation" ;
+  mi:exampleText "transportation" .
+
+mi:Example_exp_1_G5_0_1_4 a mi:Example ;
+  skos:prefLabel "building roads" ;
+  mi:exampleText "building roads" .
+
+mi:Example_exp_1_G5_0_1_5 a mi:Example ;
+  skos:prefLabel "housing" ;
+  mi:exampleText "housing" .
+
+mi:Example_exp_1_H2_0_5_1 a mi:Example ;
+  skos:prefLabel "photos" ;
+  mi:exampleText "photos" .
+
+mi:Example_exp_1_H2_0_5_2 a mi:Example ;
+  skos:prefLabel "diaries" ;
+  mi:exampleText "diaries" .
+
+mi:Example_exp_1_H2_0_5_3 a mi:Example ;
+  skos:prefLabel "oral histories" ;
+  mi:exampleText "oral histories" .
+
+mi:Example_exp_1_H2_0_5_4 a mi:Example ;
+  skos:prefLabel "videos" ;
+  mi:exampleText "videos" .
+
+mi:Example_exp_1_H2_0_7_1 a mi:Example ;
+  skos:prefLabel "Independence Day" ;
+  mi:exampleText "Independence Day" .
+
+mi:Example_exp_1_H2_0_7_2 a mi:Example ;
+  skos:prefLabel "Constitution Day" ;
+  mi:exampleText "Constitution Day" .
+
+mi:Example_exp_1_H2_0_7_3 a mi:Example ;
+  skos:prefLabel "Martin Luther King, Jr. Day" ;
+  mi:exampleText "Martin Luther King, Jr. Day" .
+
+mi:Example_exp_1_H2_0_7_4 a mi:Example ;
+  skos:prefLabel "Presidents' Day" ;
+  mi:exampleText "Presidents' Day" .
+
+#################################################################
+# Vertical Progressions
+#################################################################
+# Progresses To (next grades)
+mi:Exp_1_C1_0_2 mi:progressesTo mi:Exp_2_C1_0_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_C1_0_2 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_2_C1_0_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode C1.0.2 between Grade 1 and Grade 2." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_C1_0_3 mi:progressesTo mi:Exp_4_C1_0_3 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_C1_0_3 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_4_C1_0_3 ;
+  skos:note "Vertical progression inferred from shared expectationCode C1.0.3 between Grade 1 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_C2_0_1 mi:progressesTo mi:Exp_2_C2_0_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_C2_0_1 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_2_C2_0_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode C2.0.1 between Grade 1 and Grade 2." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_C2_0_2 mi:progressesTo mi:Exp_2_C2_0_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_C2_0_2 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_2_C2_0_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode C2.0.2 between Grade 1 and Grade 2." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_C5_0_1 mi:progressesTo mi:Exp_2_C5_0_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_C5_0_1 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_2_C5_0_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode C5.0.1 between Grade 1 and Grade 2." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_C5_0_2 mi:progressesTo mi:Exp_2_C5_0_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_C5_0_2 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_2_C5_0_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode C5.0.2 between Grade 1 and Grade 2." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_E1_0_1 mi:progressesTo mi:Exp_2_E1_0_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_E1_0_1 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_2_E1_0_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode E1.0.1 between Grade 1 and Grade 2." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_E1_0_2 mi:progressesTo mi:Exp_2_E1_0_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_E1_0_2 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_2_E1_0_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode E1.0.2 between Grade 1 and Grade 2." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_E1_0_3 mi:progressesTo mi:Exp_2_E1_0_3 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_E1_0_3 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_2_E1_0_3 ;
+  skos:note "Vertical progression inferred from shared expectationCode E1.0.3 between Grade 1 and Grade 2." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_E1_0_4 mi:progressesTo mi:Exp_2_E1_0_4 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_E1_0_4 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_2_E1_0_4 ;
+  skos:note "Vertical progression inferred from shared expectationCode E1.0.4 between Grade 1 and Grade 2." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_E1_0_5 mi:progressesTo mi:Exp_2_E1_0_5 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_E1_0_5 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_2_E1_0_5 ;
+  skos:note "Vertical progression inferred from shared expectationCode E1.0.5 between Grade 1 and Grade 2." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_E1_0_6 mi:progressesTo mi:Exp_4_E1_0_6 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_E1_0_6 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_4_E1_0_6 ;
+  skos:note "Vertical progression inferred from shared expectationCode E1.0.6 between Grade 1 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_G1_0_1 mi:progressesTo mi:Exp_2_G1_0_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_G1_0_1 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_2_G1_0_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode G1.0.1 between Grade 1 and Grade 2." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_G1_0_2 mi:progressesTo mi:Exp_2_G1_0_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_G1_0_2 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_2_G1_0_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode G1.0.2 between Grade 1 and Grade 2." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_G1_0_3 mi:progressesTo mi:Exp_4_G1_0_3 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_G1_0_3 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_4_G1_0_3 ;
+  skos:note "Vertical progression inferred from shared expectationCode G1.0.3 between Grade 1 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_G1_0_4 mi:progressesTo mi:Exp_4_G1_0_4 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_G1_0_4 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_4_G1_0_4 ;
+  skos:note "Vertical progression inferred from shared expectationCode G1.0.4 between Grade 1 and Grade 4." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_G2_0_1 mi:progressesTo mi:Exp_2_G2_0_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_G2_0_1 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_2_G2_0_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode G2.0.1 between Grade 1 and Grade 2." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_G2_0_2 mi:progressesTo mi:Exp_2_G2_0_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_G2_0_2 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_2_G2_0_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode G2.0.2 between Grade 1 and Grade 2." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_G4_0_1 mi:progressesTo mi:Exp_2_G4_0_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_G4_0_1 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_2_G4_0_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode G4.0.1 between Grade 1 and Grade 2." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_G5_0_1 mi:progressesTo mi:Exp_2_G5_0_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_G5_0_1 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_2_G5_0_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode G5.0.1 between Grade 1 and Grade 2." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_H2_0_1 mi:progressesTo mi:Exp_2_H2_0_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_H2_0_1 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_2_H2_0_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode H2.0.1 between Grade 1 and Grade 2." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_H2_0_2 mi:progressesTo mi:Exp_2_H2_0_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_H2_0_2 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_2_H2_0_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode H2.0.2 between Grade 1 and Grade 2." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_H2_0_3 mi:progressesTo mi:Exp_2_H2_0_3 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_H2_0_3 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_2_H2_0_3 ;
+  skos:note "Vertical progression inferred from shared expectationCode H2.0.3 between Grade 1 and Grade 2." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_H2_0_4 mi:progressesTo mi:Exp_2_H2_0_4 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_H2_0_4 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_2_H2_0_4 ;
+  skos:note "Vertical progression inferred from shared expectationCode H2.0.4 between Grade 1 and Grade 2." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_H2_0_5 mi:progressesTo mi:Exp_2_H2_0_5 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_H2_0_5 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_2_H2_0_5 ;
+  skos:note "Vertical progression inferred from shared expectationCode H2.0.5 between Grade 1 and Grade 2." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_H2_0_6 mi:progressesTo mi:Exp_2_H2_0_6 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_H2_0_6 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_2_H2_0_6 ;
+  skos:note "Vertical progression inferred from shared expectationCode H2.0.6 between Grade 1 and Grade 2." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_P3_1_1 mi:progressesTo mi:Exp_2_P3_1_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_P3_1_1 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_2_P3_1_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode P3.1.1 between Grade 1 and Grade 2." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_P3_1_2 mi:progressesTo mi:Exp_2_P3_1_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_P3_1_2 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_2_P3_1_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode P3.1.2 between Grade 1 and Grade 2." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_P3_1_3 mi:progressesTo mi:Exp_2_P3_1_3 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_P3_1_3 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_2_P3_1_3 ;
+  skos:note "Vertical progression inferred from shared expectationCode P3.1.3 between Grade 1 and Grade 2." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_P3_3_1 mi:progressesTo mi:Exp_2_P3_3_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_P3_3_1 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_2_P3_3_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode P3.3.1 between Grade 1 and Grade 2." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_P4_2_1 mi:progressesTo mi:Exp_2_P4_2_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_P4_2_1 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_2_P4_2_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode P4.2.1 between Grade 1 and Grade 2." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_P4_2_2 mi:progressesTo mi:Exp_2_P4_2_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_P4_2_2 ;
+  rdf:predicate mi:progressesTo ;
+  rdf:object mi:Exp_2_P4_2_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode P4.2.2 between Grade 1 and Grade 2." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+# Progresses From (prior grades)
+mi:Exp_1_C2_0_2 mi:progressesFrom mi:Exp_K_C2_0_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_C2_0_2 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_K_C2_0_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode C2.0.2 between Kindergarten and Grade 1." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_C5_0_1 mi:progressesFrom mi:Exp_K_C5_0_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_C5_0_1 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_K_C5_0_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode C5.0.1 between Kindergarten and Grade 1." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_E1_0_1 mi:progressesFrom mi:Exp_K_E1_0_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_E1_0_1 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_K_E1_0_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode E1.0.1 between Kindergarten and Grade 1." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_E1_0_2 mi:progressesFrom mi:Exp_K_E1_0_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_E1_0_2 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_K_E1_0_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode E1.0.2 between Kindergarten and Grade 1." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_E1_0_3 mi:progressesFrom mi:Exp_K_E1_0_3 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_E1_0_3 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_K_E1_0_3 ;
+  skos:note "Vertical progression inferred from shared expectationCode E1.0.3 between Kindergarten and Grade 1." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_G1_0_1 mi:progressesFrom mi:Exp_K_G1_0_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_G1_0_1 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_K_G1_0_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode G1.0.1 between Kindergarten and Grade 1." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_G1_0_2 mi:progressesFrom mi:Exp_K_G1_0_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_G1_0_2 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_K_G1_0_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode G1.0.2 between Kindergarten and Grade 1." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_G2_0_1 mi:progressesFrom mi:Exp_K_G2_0_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_G2_0_1 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_K_G2_0_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode G2.0.1 between Kindergarten and Grade 1." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_G5_0_1 mi:progressesFrom mi:Exp_K_G5_0_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_G5_0_1 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_K_G5_0_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode G5.0.1 between Kindergarten and Grade 1." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_H2_0_1 mi:progressesFrom mi:Exp_K_H2_0_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_H2_0_1 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_K_H2_0_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode H2.0.1 between Kindergarten and Grade 1." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_H2_0_2 mi:progressesFrom mi:Exp_K_H2_0_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_H2_0_2 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_K_H2_0_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode H2.0.2 between Kindergarten and Grade 1." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_H2_0_3 mi:progressesFrom mi:Exp_K_H2_0_3 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_H2_0_3 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_K_H2_0_3 ;
+  skos:note "Vertical progression inferred from shared expectationCode H2.0.3 between Kindergarten and Grade 1." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_H2_0_4 mi:progressesFrom mi:Exp_K_H2_0_4 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_H2_0_4 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_K_H2_0_4 ;
+  skos:note "Vertical progression inferred from shared expectationCode H2.0.4 between Kindergarten and Grade 1." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_P3_1_1 mi:progressesFrom mi:Exp_K_P3_1_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_P3_1_1 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_K_P3_1_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode P3.1.1 between Kindergarten and Grade 1." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_P3_1_2 mi:progressesFrom mi:Exp_K_P3_1_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_P3_1_2 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_K_P3_1_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode P3.1.2 between Kindergarten and Grade 1." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_P3_1_3 mi:progressesFrom mi:Exp_K_P3_1_3 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_P3_1_3 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_K_P3_1_3 ;
+  skos:note "Vertical progression inferred from shared expectationCode P3.1.3 between Kindergarten and Grade 1." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_P3_3_1 mi:progressesFrom mi:Exp_K_P3_3_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_P3_3_1 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_K_P3_3_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode P3.3.1 between Kindergarten and Grade 1." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_P4_2_1 mi:progressesFrom mi:Exp_K_P4_2_1 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_P4_2_1 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_K_P4_2_1 ;
+  skos:note "Vertical progression inferred from shared expectationCode P4.2.1 between Kindergarten and Grade 1." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .
+
+mi:Exp_1_P4_2_2 mi:progressesFrom mi:Exp_K_P4_2_2 .
+
+[
+  a rdf:Statement ;
+  rdf:subject mi:Exp_1_P4_2_2 ;
+  rdf:predicate mi:progressesFrom ;
+  rdf:object mi:Exp_K_P4_2_2 ;
+  skos:note "Vertical progression inferred from shared expectationCode P4.2.2 between Kindergarten and Grade 1." ;
+  dcterms:source "Michigan K-12 Social Studies Standards (shared expectationCode alignment)"
+] .

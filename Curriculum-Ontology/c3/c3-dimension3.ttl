@@ -1,0 +1,297 @@
+@prefix c3:     <urn:c3:> .
+@prefix dcterms:<http://purl.org/dc/terms/> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@base <file:///Users/louisjustman/Downloads/C3%20Project/Curriculum-Ontology/c3/> .
+
+<c3-dimension3.ttl> a owl:Ontology ;
+  rdfs:label "C3 Framework — Dimension 3 Module" ;
+  dcterms:description "Modular slice of the C3 Framework capturing Dimension 3 (Evaluating Sources & Using Evidence) with SKOS-aligned labels and provenance." ;
+  dcterms:creator "NCSS — College, Career, and Civic Life (C3) Framework for Social Studies State Standards" ;
+  dcterms:source "C3 Framework, pp. 54–55" .
+
+#################################################################
+# Annotation properties
+#################################################################
+
+c3:status        a owl:AnnotationProperty .
+c3:createdOn     a owl:AnnotationProperty .
+c3:alignmentNote a owl:AnnotationProperty .
+c3:officialText  a owl:AnnotationProperty .
+c3:sourceDoc     a owl:AnnotationProperty .
+c3:sourcePage    a owl:AnnotationProperty .
+
+#################################################################
+# Property alignment with SKOS navigation
+#################################################################
+
+c3:hasDomain     rdfs:subPropertyOf skos:narrower .
+c3:hasStrand     rdfs:subPropertyOf skos:narrower .
+c3:hasIndicator  rdfs:subPropertyOf skos:narrower .
+
+#################################################################
+# Dimension 3 — Core structure
+#################################################################
+
+c3:Dimension3 a c3:Dimension ;
+  rdfs:label "Dimension 3: Evaluating Sources & Using Evidence" ;
+  skos:prefLabel "Dimension 3: Evaluating Sources & Using Evidence" ;
+  skos:altLabel "D3" ;
+  c3:status "official" ;
+  c3:sourceDoc "NCSS — College, Career, and Civic Life (C3) Framework for Social Studies State Standards" ;
+  c3:sourcePage "54" ;
+  c3:createdOn "2025-11-02"^^xsd:date .
+
+c3:EvidenceDomain a c3:DisciplinaryDomain ;
+  rdfs:label "Evaluating Sources & Evidence" ;
+  skos:prefLabel "Evaluating Sources & Evidence" ;
+  skos:altLabel "Dimension 3 Domain" ;
+  c3:status "official" ;
+  c3:sourcePage "54" ;
+  c3:alignmentNote "Domain gathering the source-evaluation and claims strands of Dimension 3." .
+
+c3:Dimension3 c3:hasDomain c3:EvidenceDomain .
+
+#################################################################
+# Strands (Dimension 3)
+#################################################################
+
+c3:Str_D3_GatherEvaluate a c3:Strand ;
+  rdfs:label "Gathering & Evaluating Sources" ;
+  skos:prefLabel "Gathering & Evaluating Sources" ;
+  skos:altLabel "D3.1 — Gathering & Evaluating Sources" ;
+  c3:status "official" ;
+  c3:sourcePage "54" .
+
+c3:Str_D3_ClaimsEvidence a c3:Strand ;
+  rdfs:label "Developing Claims & Using Evidence" ;
+  skos:prefLabel "Developing Claims & Using Evidence" ;
+  skos:altLabel "D3.2–D3.4 — Claims & Evidence" ;
+  c3:status "official" ;
+  c3:sourcePage "55" .
+
+c3:EvidenceDomain c3:hasStrand
+  c3:Str_D3_GatherEvaluate ,
+  c3:Str_D3_ClaimsEvidence .
+
+#################################################################
+# Indicators — D3.1 (Gathering & Evaluating Sources)
+#################################################################
+
+c3:I_D3_1_K_2 a c3:Indicator ;
+  c3:hasCode "D3.1.K-2" ;
+  rdfs:label "Gather relevant information from one or two sources while using the origin and structure to guide the selection." ;
+  skos:prefLabel "Gather relevant information from one or two sources while using the origin and structure to guide the selection." ;
+  skos:altLabel "Indicator D3.1.K-2" ;
+  c3:officialText "Gather relevant information from one or two sources while using the origin and structure to guide the selection." ;
+  c3:targetsGradeBand c3:K_2 ;
+  c3:addressesConcept c3:HelpfulSources ;
+  c3:requiresSkill c3:Identify ;
+  c3:inStrand c3:Str_D3_GatherEvaluate ;
+  c3:inDimension c3:Dimension3 ;
+  c3:isIndicatorOf c3:EvidenceDomain ;
+  dcterms:source "C3 Framework, Table 25, p. 54" .
+
+c3:I_D3_1_3_5 a c3:Indicator ;
+  c3:hasCode "D3.1.3-5" ;
+  rdfs:label "Gather relevant information from multiple sources while using the origin, structure, and context to guide the selection." ;
+  skos:prefLabel "Gather relevant information from multiple sources while using the origin, structure, and context to guide the selection." ;
+  skos:altLabel "Indicator D3.1.3-5" ;
+  c3:officialText "Gather relevant information from multiple sources while using the origin, structure, and context to guide the selection." ;
+  c3:targetsGradeBand c3:G3_5 ;
+  c3:addressesConcept c3:SourceRelevance , c3:SourceCredibility ;
+  c3:requiresSkill c3:Analyze ;
+  c3:inStrand c3:Str_D3_GatherEvaluate ;
+  c3:inDimension c3:Dimension3 ;
+  c3:isIndicatorOf c3:EvidenceDomain ;
+  dcterms:source "C3 Framework, Table 25, p. 54" .
+
+c3:I_D3_1_6_8 a c3:Indicator ;
+  c3:hasCode "D3.1.6-8" ;
+  rdfs:label "Gather relevant information from multiple sources while using the origin, authority, structure, context, and corroborative value of the sources to guide the selection." ;
+  skos:prefLabel "Gather relevant information from multiple sources while using the origin, authority, structure, context, and corroborative value of the sources to guide the selection." ;
+  skos:altLabel "Indicator D3.1.6-8" ;
+  c3:officialText "Gather relevant information from multiple sources while using the origin, authority, structure, context, and corroborative value of the sources to guide the selection." ;
+  c3:targetsGradeBand c3:G6_8 ;
+  c3:addressesConcept c3:SourceCredibility , c3:SourcesEvidence ;
+  c3:requiresSkill c3:Analyze , c3:Evaluate ;
+  c3:inStrand c3:Str_D3_GatherEvaluate ;
+  c3:inDimension c3:Dimension3 ;
+  c3:isIndicatorOf c3:EvidenceDomain ;
+  dcterms:source "C3 Framework, Table 25, p. 54" .
+
+c3:I_D3_1_9_12 a c3:Indicator ;
+  c3:hasCode "D3.1.9-12" ;
+  rdfs:label "Gather relevant information from multiple sources representing a wide range of views while using the origin, authority, structure, context, and corroborative value of the sources to guide the selection." ;
+  skos:prefLabel "Gather relevant information from multiple sources representing a wide range of views while using the origin, authority, structure, context, and corroborative value of the sources to guide the selection." ;
+  skos:altLabel "Indicator D3.1.9-12" ;
+  c3:officialText "Gather relevant information from multiple sources representing a wide range of views while using the origin, authority, structure, context, and corroborative value of the sources to guide the selection." ;
+  c3:targetsGradeBand c3:G9_12 ;
+  c3:addressesConcept c3:SourceCredibility , c3:SourceRelevance , c3:SourcesEvidence ;
+  c3:requiresSkill c3:Analyze , c3:Evaluate , c3:Synthesize ;
+  c3:inStrand c3:Str_D3_GatherEvaluate ;
+  c3:inDimension c3:Dimension3 ;
+  c3:isIndicatorOf c3:EvidenceDomain ;
+  dcterms:source "C3 Framework, Table 25, p. 54" .
+
+#################################################################
+# Indicators — D3.2 (Evaluating Source Credibility)
+#################################################################
+
+c3:I_D3_2_K_2 a c3:Indicator ;
+  c3:hasCode "D3.2.K-2" ;
+  rdfs:label "Evaluate a source by distinguishing between fact and opinion." ;
+  skos:prefLabel "Evaluate a source by distinguishing between fact and opinion." ;
+  skos:altLabel "Indicator D3.2.K-2" ;
+  c3:officialText "Evaluate a source by distinguishing between fact and opinion." ;
+  c3:targetsGradeBand c3:K_2 ;
+  c3:addressesConcept c3:SourceCredibility ;
+  c3:requiresSkill c3:Identify ;
+  c3:inStrand c3:Str_D3_GatherEvaluate ;
+  c3:inDimension c3:Dimension3 ;
+  c3:isIndicatorOf c3:EvidenceDomain ;
+  dcterms:source "C3 Framework, Table 25, p. 54" .
+
+c3:I_D3_2_3_5 a c3:Indicator ;
+  c3:hasCode "D3.2.3-5" ;
+  rdfs:label "Use distinctions among fact and opinion to determine the credibility of multiple sources." ;
+  skos:prefLabel "Use distinctions among fact and opinion to determine the credibility of multiple sources." ;
+  skos:altLabel "Indicator D3.2.3-5" ;
+  c3:officialText "Use distinctions among fact and opinion to determine the credibility of multiple sources." ;
+  c3:targetsGradeBand c3:G3_5 ;
+  c3:addressesConcept c3:SourceCredibility , c3:SourceRelevance ;
+  c3:requiresSkill c3:Analyze ;
+  c3:inStrand c3:Str_D3_GatherEvaluate ;
+  c3:inDimension c3:Dimension3 ;
+  c3:isIndicatorOf c3:EvidenceDomain ;
+  dcterms:source "C3 Framework, Table 25, p. 54" .
+
+c3:I_D3_2_6_8 a c3:Indicator ;
+  c3:hasCode "D3.2.6-8" ;
+  rdfs:label "Evaluate the credibility of a source by determining its relevance and intended use." ;
+  skos:prefLabel "Evaluate the credibility of a source by determining its relevance and intended use." ;
+  skos:altLabel "Indicator D3.2.6-8" ;
+  c3:officialText "Evaluate the credibility of a source by determining its relevance and intended use." ;
+  c3:targetsGradeBand c3:G6_8 ;
+  c3:addressesConcept c3:SourceCredibility , c3:SourceRelevance ;
+  c3:requiresSkill c3:Analyze , c3:Evaluate ;
+  c3:inStrand c3:Str_D3_GatherEvaluate ;
+  c3:inDimension c3:Dimension3 ;
+  c3:isIndicatorOf c3:EvidenceDomain ;
+  dcterms:source "C3 Framework, Table 25, p. 54" .
+
+c3:I_D3_2_9_12 a c3:Indicator ;
+  c3:hasCode "D3.2.9-12" ;
+  rdfs:label "Evaluate the credibility of a source by examining how experts value the source." ;
+  skos:prefLabel "Evaluate the credibility of a source by examining how experts value the source." ;
+  skos:altLabel "Indicator D3.2.9-12" ;
+  c3:officialText "Evaluate the credibility of a source by examining how experts value the source." ;
+  c3:targetsGradeBand c3:G9_12 ;
+  c3:addressesConcept c3:SourceCredibility , c3:SourceRelevance ;
+  c3:requiresSkill c3:Evaluate , c3:Analyze ;
+  c3:inStrand c3:Str_D3_GatherEvaluate ;
+  c3:inDimension c3:Dimension3 ;
+  c3:isIndicatorOf c3:EvidenceDomain ;
+  dcterms:source "C3 Framework, Table 25, p. 54" .
+
+#################################################################
+# Indicators — D3.3 (Identifying Evidence)
+#################################################################
+
+c3:I_D3_3_3_5 a c3:Indicator ;
+  c3:hasCode "D3.3.3-5" ;
+  rdfs:label "Identify evidence that draws information from multiple sources in response to compelling questions." ;
+  skos:prefLabel "Identify evidence that draws information from multiple sources in response to compelling questions." ;
+  skos:altLabel "Indicator D3.3.3-5" ;
+  c3:officialText "Identify evidence that draws information from multiple sources in response to compelling questions." ;
+  c3:targetsGradeBand c3:G3_5 ;
+  c3:addressesConcept c3:SourcesEvidence , c3:ClaimConcept ;
+  c3:requiresSkill c3:Identify ;
+  c3:inStrand c3:Str_D3_ClaimsEvidence ;
+  c3:inDimension c3:Dimension3 ;
+  c3:isIndicatorOf c3:EvidenceDomain ;
+  dcterms:source "C3 Framework, Table 26, p. 55" .
+
+c3:I_D3_3_6_8 a c3:Indicator ;
+  c3:hasCode "D3.3.6-8" ;
+  rdfs:label "Identify evidence that draws information from multiple sources to support claims, noting evidentiary limitations." ;
+  skos:prefLabel "Identify evidence that draws information from multiple sources to support claims, noting evidentiary limitations." ;
+  skos:altLabel "Indicator D3.3.6-8" ;
+  c3:officialText "Identify evidence that draws information from multiple sources to support claims, noting evidentiary limitations." ;
+  c3:targetsGradeBand c3:G6_8 ;
+  c3:addressesConcept c3:SourcesEvidence , c3:ClaimConcept ;
+  c3:requiresSkill c3:Analyze ;
+  c3:inStrand c3:Str_D3_ClaimsEvidence ;
+  c3:inDimension c3:Dimension3 ;
+  c3:isIndicatorOf c3:EvidenceDomain ;
+  dcterms:source "C3 Framework, Table 26, p. 55" .
+
+c3:I_D3_3_9_12 a c3:Indicator ;
+  c3:hasCode "D3.3.9-12" ;
+  rdfs:label "Identify evidence that draws information directly and substantively from multiple sources to detect inconsistencies in evidence in order to revise or strengthen claims." ;
+  skos:prefLabel "Identify evidence that draws information directly and substantively from multiple sources to detect inconsistencies in evidence in order to revise or strengthen claims." ;
+  skos:altLabel "Indicator D3.3.9-12" ;
+  c3:officialText "Identify evidence that draws information directly and substantively from multiple sources to detect inconsistencies in evidence in order to revise or strengthen claims." ;
+  c3:targetsGradeBand c3:G9_12 ;
+  c3:addressesConcept c3:SourcesEvidence , c3:ClaimConcept ;
+  c3:requiresSkill c3:Analyze , c3:Synthesize ;
+  c3:inStrand c3:Str_D3_ClaimsEvidence ;
+  c3:inDimension c3:Dimension3 ;
+  c3:isIndicatorOf c3:EvidenceDomain ;
+  dcterms:source "C3 Framework, Table 26, p. 55" .
+
+#################################################################
+# Indicators — D3.4 (Developing Claims & Using Evidence)
+#################################################################
+
+c3:I_D3_4_3_5 a c3:Indicator ;
+  c3:hasCode "D3.4.3-5" ;
+  rdfs:label "Use evidence to develop claims in response to compelling questions." ;
+  skos:prefLabel "Use evidence to develop claims in response to compelling questions." ;
+  skos:altLabel "Indicator D3.4.3-5" ;
+  c3:officialText "Use evidence to develop claims in response to compelling questions." ;
+  c3:targetsGradeBand c3:G3_5 ;
+  c3:addressesConcept c3:ClaimConcept , c3:Argumentation ;
+  c3:requiresSkill c3:ConstructClaim ;
+  c3:inStrand c3:Str_D3_ClaimsEvidence ;
+  c3:inDimension c3:Dimension3 ;
+  c3:isIndicatorOf c3:EvidenceDomain ;
+  dcterms:source "C3 Framework, Table 26, p. 55" .
+
+c3:I_D3_4_6_8 a c3:Indicator ;
+  c3:hasCode "D3.4.6-8" ;
+  rdfs:label "Develop claims and counterclaims while pointing out the strengths and limitations of both." ;
+  skos:prefLabel "Develop claims and counterclaims while pointing out the strengths and limitations of both." ;
+  skos:altLabel "Indicator D3.4.6-8" ;
+  c3:officialText "Develop claims and counterclaims while pointing out the strengths and limitations of both." ;
+  c3:targetsGradeBand c3:G6_8 ;
+  c3:addressesConcept c3:ClaimConcept , c3:Argumentation ;
+  c3:requiresSkill c3:ConstructClaim , c3:Evaluate ;
+  c3:inStrand c3:Str_D3_ClaimsEvidence ;
+  c3:inDimension c3:Dimension3 ;
+  c3:isIndicatorOf c3:EvidenceDomain ;
+  dcterms:source "C3 Framework, Table 26, p. 55" .
+
+c3:I_D3_4_9_12 a c3:Indicator ;
+  c3:hasCode "D3.4.9-12" ;
+  rdfs:label "Refine claims and counterclaims attending to precision, significance, and knowledge conveyed through the claim while pointing out the strengths and limitations of both." ;
+  skos:prefLabel "Refine claims and counterclaims attending to precision, significance, and knowledge conveyed through the claim while pointing out the strengths and limitations of both." ;
+  skos:altLabel "Indicator D3.4.9-12" ;
+  c3:officialText "Refine claims and counterclaims attending to precision, significance, and knowledge conveyed through the claim while pointing out the strengths and limitations of both." ;
+  c3:targetsGradeBand c3:G9_12 ;
+  c3:addressesConcept c3:ClaimConcept , c3:Argumentation ;
+  c3:requiresSkill c3:ConstructClaim , c3:Synthesize , c3:Evaluate ;
+  c3:inStrand c3:Str_D3_ClaimsEvidence ;
+  c3:inDimension c3:Dimension3 ;
+  c3:isIndicatorOf c3:EvidenceDomain ;
+  dcterms:source "C3 Framework, Table 26, p. 55" .
+
+#################################################################
+# Provenance summary
+#################################################################
+
+c3:Dimension3
+  c3:alignmentNote "Module extracted for reuse; see C3 Framework pp. 54–55 for official text." .

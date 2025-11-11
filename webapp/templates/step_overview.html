@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="panel overview-panel">
+  <h2>Lesson Overview</h2>
+  <div class="overview-meta">
+    {% if plan.grade_band %}
+    <span><strong>Grade band:</strong> {{ plan.grade_band }}</span>
+    {% endif %}
+    {% if plan.disciplines %}
+    <span><strong>Disciplines:</strong> {{ plan.disciplines | join(', ') }}</span>
+    {% endif %}
+  </div>
+  <p class="panel-intro">
+    {% if plan.teacher_intent %}
+      {{ highlight(plan.teacher_intent) }}
+    {% elif plan.anchor_context or plan.transfer_context %}
+      {{ highlight("This inquiry invites you to analyze " ~ (plan.transfer_context or "a civic challenge") ~ " by grounding your learning in " ~ (plan.anchor_context or "relevant exemplars") ~ " and translating insights into informed action.") }}
+    {% else %}
+      {{ highlight("This inquiry helps you investigate disciplinary concepts, analyze sources, and plan informed action tied to your selected expectation.") }}
+    {% endif %}
+  </p>
+  {% if plan.teacher_intent %}
+  <div class="overview-intent block">
+    <h3>Why this lesson matters</h3>
+    <p>{{ highlight(plan.teacher_intent) }}</p>
+  </div>
+  {% endif %}
+  <div class="overview-grid">
+    <div class="overview-card">
+      <h3>Essential Concepts</h3>
+      <ul>
+        {% for concept in plan.focus_concepts %}
+        <li>{{ highlight(concept) }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="overview-card">
+      <h3>Contexts You Connect</h3>
+      <ul>
+        {% if plan.anchor_context %}
+        <li>{{ highlight("Anchor case: " ~ plan.anchor_context) }}</li>
+        {% endif %}
+        {% if plan.transfer_context %}
+        <li>{{ highlight("Transfer focus: " ~ plan.transfer_context) }}</li>
+        {% endif %}
+        <li>{{ highlight("Apply disciplinary concepts to your own evidence set and interests.") }}</li>
+        <li>{{ highlight("Translate what you learn into informed action aligned with the expectation.") }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="overview-flow block">
+    <h3>Learning Journey</h3>
+    <ol>
+      <li><strong>Objectives:</strong> Preview the “After this lesson…” goals and craft your own supporting questions.</li>
+      <li><strong>Interests:</strong> Share preferences and topics to personalize exemplars and resources.</li>
+      <li><strong>Learn:</strong> Move through curated activities, primers, and resources tailored to your path.</li>
+      <li><strong>Mastery:</strong> Demonstrate understanding with scaffolded DOK-aligned checks.</li>
+      <li><strong>Summary:</strong> Reflect on your growth, evidence gathered, and next civic actions.</li>
+    </ol>
+  </div>
+  <a class="button" href="{{ url_for('objectives') }}">Start with the objectives &raquo;</a>
+</section>
+{% endblock %}

@@ -1,0 +1,2080 @@
+@prefix mi:     <urn:mi:ss:> .
+@prefix dcterms:<http://purl.org/dc/terms/> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@base <file:///Users/louisjustman/Downloads/C3%20Project/Curriculum-Ontology/michigan/> .
+
+<mi-course-civics.ttl> a owl:Ontology ;
+  owl:versionIRI <urn:mi:ss:course:CIVICS> ;
+  rdfs:label "Michigan Social Studies GLCE - Civics" ;
+  dcterms:creator "Michigan Department of Education" ;
+  dcterms:source "Michigan K-12 Social Studies Standards (Michigan Department of Education)" ;
+  owl:imports <mi-base.ttl> .
+
+mi:Course_CIVICS a mi:Course ;
+  skos:prefLabel "Civics" ;
+  mi:hasCategory
+    mi:Cat_CIVICS_2_1 ,
+    mi:Cat_CIVICS_2_2 ,
+    mi:Cat_CIVICS_3_1 ,
+    mi:Cat_CIVICS_3_2 ,
+    mi:Cat_CIVICS_4_1 ,
+    mi:Cat_CIVICS_4_2 ,
+    mi:Cat_CIVICS_4_3 ,
+    mi:Cat_CIVICS_5_1 ,
+    mi:Cat_CIVICS_5_2 ,
+    mi:Cat_CIVICS_6_1 ,
+    mi:Cat_CIVICS_6_2 ,
+    mi:Cat_CIVICS_6_3 ,
+    mi:Cat_CIVICS_6_4 ,
+    mi:Cat_CIVICS_C1 ,
+    mi:Cat_CIVICS_C1_1 ,
+    mi:Cat_CIVICS_C2 ,
+    mi:Cat_CIVICS_C2_1 ,
+    mi:Cat_CIVICS_C2_2 ,
+    mi:Cat_CIVICS_C3 ,
+    mi:Cat_CIVICS_C3_1 ,
+    mi:Cat_CIVICS_C3_2 ,
+    mi:Cat_CIVICS_C3_3 ,
+    mi:Cat_CIVICS_C4 ,
+    mi:Cat_CIVICS_C4_1 ,
+    mi:Cat_CIVICS_C4_2 ,
+    mi:Cat_CIVICS_C4_3 ,
+    mi:Cat_CIVICS_C5 ,
+    mi:Cat_CIVICS_C5_1 ,
+    mi:Cat_CIVICS_C5_2 ,
+    mi:Cat_CIVICS_C6 ,
+    mi:Cat_CIVICS_C6_1 ,
+    mi:Cat_CIVICS_C6_2 ,
+    mi:Cat_CIVICS_C6_3 ,
+    mi:Cat_CIVICS_C6_4 ,
+    mi:Cat_CIVICS_P1 ,
+    mi:Cat_CIVICS_P2 ,
+    mi:Cat_CIVICS_P3 ,
+    mi:Cat_CIVICS_P4 ;
+  mi:isCourseOf mi:MichiganGLCEFramework ;
+  mi:courseCode "CIVICS" .
+
+#################################################################
+# Categories
+#################################################################
+mi:Cat_CIVICS_2_1 a mi:StandardCategory ;
+  mi:categoryCode "2.1" ;
+  skos:prefLabel "Origins of American Constitutional Government" ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExpectation
+    mi:Exp_CIVICS_2_1 ;
+  mi:isCategoryOf mi:Course_CIVICS .
+
+mi:Cat_CIVICS_2_2 a mi:StandardCategory ;
+  mi:categoryCode "2.2" ;
+  skos:prefLabel "Democratic Values and Constitutional Principles" ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExpectation
+    mi:Exp_CIVICS_2_2 ;
+  mi:isCategoryOf mi:Course_CIVICS .
+
+mi:Cat_CIVICS_3_1 a mi:StandardCategory ;
+  mi:categoryCode "3.1" ;
+  skos:prefLabel "Structures, Functions, Powers, and Limits of the Federal Government" ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExpectation
+    mi:Exp_CIVICS_3_1 ;
+  mi:isCategoryOf mi:Course_CIVICS .
+
+mi:Cat_CIVICS_3_2 a mi:StandardCategory ;
+  mi:categoryCode "3.2" ;
+  skos:prefLabel "Structure, Functions, Powers, and Limits of the State, Local, and Tribal Governments" ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExpectation
+    mi:Exp_CIVICS_3_2 ;
+  mi:isCategoryOf mi:Course_CIVICS .
+
+mi:Cat_CIVICS_4_1 a mi:StandardCategory ;
+  mi:categoryCode "4.1" ;
+  skos:prefLabel "Application of the Bill of Rights" ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExpectation
+    mi:Exp_CIVICS_4_1 ;
+  mi:isCategoryOf mi:Course_CIVICS .
+
+mi:Cat_CIVICS_4_2 a mi:StandardCategory ;
+  mi:categoryCode "4.2" ;
+  skos:prefLabel "The Extension of Civil Rights and Liberties" ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExpectation
+    mi:Exp_CIVICS_4_2 ;
+  mi:isCategoryOf mi:Course_CIVICS .
+
+mi:Cat_CIVICS_4_3 a mi:StandardCategory ;
+  mi:categoryCode "4.3" ;
+  skos:prefLabel "Examining Tensions and Limits on Rights and Liberties" ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExpectation
+    mi:Exp_CIVICS_4_3 ;
+  mi:isCategoryOf mi:Course_CIVICS .
+
+mi:Cat_CIVICS_5_1 a mi:StandardCategory ;
+  mi:categoryCode "5.1" ;
+  skos:prefLabel "Formation and Implementation of U.S. Foreign Policy" ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExpectation
+    mi:Exp_CIVICS_5_1 ;
+  mi:isCategoryOf mi:Course_CIVICS .
+
+mi:Cat_CIVICS_5_2 a mi:StandardCategory ;
+  mi:categoryCode "5.2" ;
+  skos:prefLabel "U.S. Role in International Institutions and Affairs" ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExpectation
+    mi:Exp_CIVICS_5_2 ;
+  mi:isCategoryOf mi:Course_CIVICS .
+
+mi:Cat_CIVICS_6_1 a mi:StandardCategory ;
+  mi:categoryCode "6.1" ;
+  skos:prefLabel "Citizenship in the United States of America" ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExpectation
+    mi:Exp_CIVICS_6_1 ;
+  mi:isCategoryOf mi:Course_CIVICS .
+
+mi:Cat_CIVICS_6_2 a mi:StandardCategory ;
+  mi:categoryCode "6.2" ;
+  skos:prefLabel "Rights and Responsibilities in Civic Society" ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExpectation
+    mi:Exp_CIVICS_6_2 ;
+  mi:isCategoryOf mi:Course_CIVICS .
+
+mi:Cat_CIVICS_6_3 a mi:StandardCategory ;
+  mi:categoryCode "6.3" ;
+  skos:prefLabel "Dispositions for Civic Participation" ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExpectation
+    mi:Exp_CIVICS_6_3 ;
+  mi:isCategoryOf mi:Course_CIVICS .
+
+mi:Cat_CIVICS_6_4 a mi:StandardCategory ;
+  mi:categoryCode "6.4" ;
+  skos:prefLabel "Civic Inquiry, Public Policy, Civic Action, and Public Discourse" ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExpectation
+    mi:Exp_CIVICS_6_4 ;
+  mi:isCategoryOf mi:Course_CIVICS .
+
+mi:Cat_CIVICS_C1 a mi:StandardCategory ;
+  mi:categoryCode "C1" ;
+  skos:prefLabel "Philosophical Foundations of Civic Society and Government" ;
+  mi:categoryDescription "Compelling Questions: • How might both the pursuit of the common good and the protection of unalienable rights (including life, liberty, and the pursuit of happiness) create tension in the structure and pursuit of governance? • In what ways does the structure of government influence our possibilities as a society and reveal societal values? Process and Skills Possibilities: • Collaboratively design your own society to represent the rights you envision each person or group of people to have alongside appropriate governmental powers." ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isCategoryOf mi:Course_CIVICS .
+
+mi:Cat_CIVICS_C1_1 a mi:StandardCategory ;
+  mi:categoryCode "C1.1" ;
+  skos:prefLabel "C1.1" ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExpectation
+    mi:Exp_CIVICS_C1_1_1 ,
+    mi:Exp_CIVICS_C1_1_2 ,
+    mi:Exp_CIVICS_C1_1_3 ,
+    mi:Exp_CIVICS_C1_1_4 ;
+  mi:isCategoryOf mi:Course_CIVICS .
+
+mi:Cat_CIVICS_C2 a mi:StandardCategory ;
+  mi:categoryCode "C2" ;
+  skos:prefLabel "Origins and Foundations of Government of the United States of America" ;
+  mi:categoryDescription "Compelling Questions: • In what ways might the federal and state governments reflect characteristics of both direct democracy and a representative republic (or neither)? What might be the best forms of representation? • In what ways has the Constitution created a just government? In what ways has the Constitution created an unjust government? What, if any, remedies were embedded to address problems in the Constitution? Process and Skills Possibilities: • Analyze founding documents to find Democratic Values. America" ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_cat_CIVICS_C2_1 ,
+    mi:Example_cat_CIVICS_C2_2 ;
+  mi:isCategoryOf mi:Course_CIVICS .
+
+mi:Cat_CIVICS_C2_1 a mi:StandardCategory ;
+  mi:categoryCode "C2.1" ;
+  skos:prefLabel "Origins of the American Constitutional Government" ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExpectation
+    mi:Exp_CIVICS_C2_1_1 ,
+    mi:Exp_CIVICS_C2_1_2 ,
+    mi:Exp_CIVICS_C2_1_3 ;
+  mi:isCategoryOf mi:Course_CIVICS .
+
+mi:Cat_CIVICS_C2_2 a mi:StandardCategory ;
+  mi:categoryCode "C2.2" ;
+  skos:prefLabel "Democratic Values and U.S. Constitutional Principles" ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExpectation
+    mi:Exp_CIVICS_C2_2_1 ,
+    mi:Exp_CIVICS_C2_2_2 ,
+    mi:Exp_CIVICS_C2_2_3 ;
+  mi:isCategoryOf mi:Course_CIVICS .
+
+mi:Cat_CIVICS_C3 a mi:StandardCategory ;
+  mi:categoryCode "C3" ;
+  skos:prefLabel "Structure and Function of Governments in the United States of America" ;
+  mi:categoryDescription "Compelling Questions: • In what ways has the Constitution, and its competitive policy-making process, served to represent the people's will and limit government power to ensure that the people's will is represented? • In what ways do the branches of the national government compete and cooperate in order to govern? • How has the intent of federalism been impacted by provisions within the Constitution and policies over time? Process and Skills Possibilities: • As a classroom, propose a law and walk it through the complexities of becoming law at the federal level." ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_cat_CIVICS_C3_1 ;
+  mi:isCategoryOf mi:Course_CIVICS .
+
+mi:Cat_CIVICS_C3_1 a mi:StandardCategory ;
+  mi:categoryCode "C3.1" ;
+  skos:prefLabel "Structure, Functions, Powers, and Limits of Federal Government" ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExpectation
+    mi:Exp_CIVICS_C3_1_1 ,
+    mi:Exp_CIVICS_C3_1_2 ,
+    mi:Exp_CIVICS_C3_1_3 ,
+    mi:Exp_CIVICS_C3_1_4 ,
+    mi:Exp_CIVICS_C3_1_5 ,
+    mi:Exp_CIVICS_C3_1_6 ,
+    mi:Exp_CIVICS_C3_1_7 ;
+  mi:isCategoryOf mi:Course_CIVICS .
+
+mi:Cat_CIVICS_C3_2 a mi:StandardCategory ;
+  mi:categoryCode "C3.2" ;
+  skos:prefLabel "Structure and Functions of State, Local, and Tribal Governments" ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExpectation
+    mi:Exp_CIVICS_C3_2_1 ,
+    mi:Exp_CIVICS_C3_2_2 ,
+    mi:Exp_CIVICS_C3_2_3 ,
+    mi:Exp_CIVICS_C3_2_4 ,
+    mi:Exp_CIVICS_C3_2_5 ,
+    mi:Exp_CIVICS_C3_2_6 ;
+  mi:isCategoryOf mi:Course_CIVICS .
+
+mi:Cat_CIVICS_C3_3 a mi:StandardCategory ;
+  mi:categoryCode "C3.3" ;
+  skos:prefLabel "Additional Actors and Influences in American Civic Society" ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExpectation
+    mi:Exp_CIVICS_C3_3_1 ,
+    mi:Exp_CIVICS_C3_3_2 ,
+    mi:Exp_CIVICS_C3_3_3 ,
+    mi:Exp_CIVICS_C3_3_4 ,
+    mi:Exp_CIVICS_C3_3_5 ,
+    mi:Exp_CIVICS_C3_3_6 ,
+    mi:Exp_CIVICS_C3_3_7 ;
+  mi:isCategoryOf mi:Course_CIVICS .
+
+mi:Cat_CIVICS_C4 a mi:StandardCategory ;
+  mi:categoryCode "C4" ;
+  skos:prefLabel "Rights and Liberties in the United States of America" ;
+  mi:categoryDescription "Compelling Questions: • In what ways has the development and interpretation of the Constitution influenced policies that impact citizens and people living in the United States? • How has (or might) the will of the majority upheld or infringed upon rights of the unenfranchised, disenfranchised, or underrepresented? • How might the tension between life and liberty balance against the desire for security in an open society? Process and Skills Possibilities: • Research an issue concerning one of the First Amendment five protections (speech, assembly, religion, press, petition)." ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_cat_CIVICS_C4_1 ,
+    mi:Example_cat_CIVICS_C4_2 ;
+  mi:isCategoryOf mi:Course_CIVICS .
+
+mi:Cat_CIVICS_C4_1 a mi:StandardCategory ;
+  mi:categoryCode "C4.1" ;
+  skos:prefLabel "Application of the Bill of Rights" ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExpectation
+    mi:Exp_CIVICS_C4_1_1 ,
+    mi:Exp_CIVICS_C4_1_2 ;
+  mi:isCategoryOf mi:Course_CIVICS .
+
+mi:Cat_CIVICS_C4_2 a mi:StandardCategory ;
+  mi:categoryCode "C4.2" ;
+  skos:prefLabel "Extensions of Civil Rights and Civil Liberties" ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExpectation
+    mi:Exp_CIVICS_C4_2_1 ,
+    mi:Exp_CIVICS_C4_2_2 ,
+    mi:Exp_CIVICS_C4_2_3 ;
+  mi:isCategoryOf mi:Course_CIVICS .
+
+mi:Cat_CIVICS_C4_3 a mi:StandardCategory ;
+  mi:categoryCode "C4.3" ;
+  skos:prefLabel "Examining Tensions and Limits on Rights and Liberties" ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExpectation
+    mi:Exp_CIVICS_C4_3_1 ,
+    mi:Exp_CIVICS_C4_3_2 ;
+  mi:isCategoryOf mi:Course_CIVICS .
+
+mi:Cat_CIVICS_C5 a mi:StandardCategory ;
+  mi:categoryCode "C5" ;
+  skos:prefLabel "The United States of America and World Affairs" ;
+  mi:categoryDescription "Compelling Questions: • To what degree, if any, should questions of sovereignty and openness impact the United States and its foreign policy? What possibilities and challenges are posed in open and closed societies? • What, if any, rights of people extend beyond the borders of the United States? What, if any, rights of people from abroad exist inside the borders of the United States? • In what ways have American political ideas, ideals, and the American Constitutional system influenced other governments? Process and Skills Possibilities: • Choose an issue of international importance and convene an international conference where different countries discuss their perspectives." ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_cat_CIVICS_C5_1 ,
+    mi:Example_cat_CIVICS_C5_2 ;
+  mi:isCategoryOf mi:Course_CIVICS .
+
+mi:Cat_CIVICS_C5_1 a mi:StandardCategory ;
+  mi:categoryCode "C5.1" ;
+  skos:prefLabel "Formation and Implementation of U.S. Foreign Policy" ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExpectation
+    mi:Exp_CIVICS_C5_1_1 ,
+    mi:Exp_CIVICS_C5_1_2 ,
+    mi:Exp_CIVICS_C5_1_3 ;
+  mi:isCategoryOf mi:Course_CIVICS .
+
+mi:Cat_CIVICS_C5_2 a mi:StandardCategory ;
+  mi:categoryCode "C5.2" ;
+  skos:prefLabel "U.S. Role in International Institutions and Affairs" ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExpectation
+    mi:Exp_CIVICS_C5_2_1 ,
+    mi:Exp_CIVICS_C5_2_2 ,
+    mi:Exp_CIVICS_C5_2_3 ,
+    mi:Exp_CIVICS_C5_2_4 ;
+  mi:isCategoryOf mi:Course_CIVICS .
+
+mi:Cat_CIVICS_C6 a mi:StandardCategory ;
+  mi:categoryCode "C6" ;
+  skos:prefLabel "Citizenship and Civic Participation in the United States of America" ;
+  mi:categoryDescription "Compelling Questions: • What civic skills are necessary for vibrant Constitutional democracies and how might schools cultivate healthy civic virtue? • To what degree should citizens be required to be involved in the responsibilities of citizenship? What might be some of the most important legal and moral rights and obligations of citizenship? Process and Skills Possibilities: • Collaboratively, identify and discuss community needs that have potential public policy solutions." ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_cat_CIVICS_C6_1 ,
+    mi:Example_cat_CIVICS_C6_2 ;
+  mi:isCategoryOf mi:Course_CIVICS .
+
+mi:Cat_CIVICS_C6_1 a mi:StandardCategory ;
+  mi:categoryCode "C6.1" ;
+  skos:prefLabel "Citizenship in the United States of America" ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExpectation
+    mi:Exp_CIVICS_C6_1_1 ,
+    mi:Exp_CIVICS_C6_1_2 ,
+    mi:Exp_CIVICS_C6_1_3 ;
+  mi:isCategoryOf mi:Course_CIVICS .
+
+mi:Cat_CIVICS_C6_2 a mi:StandardCategory ;
+  mi:categoryCode "C6.2" ;
+  skos:prefLabel "Rights and Responsibilities in Civic Society" ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExpectation
+    mi:Exp_CIVICS_C6_2_1 ;
+  mi:isCategoryOf mi:Course_CIVICS .
+
+mi:Cat_CIVICS_C6_3 a mi:StandardCategory ;
+  mi:categoryCode "C6.3" ;
+  skos:prefLabel "Dispositions for Civic Participation" ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExpectation
+    mi:Exp_CIVICS_C6_3_1 ,
+    mi:Exp_CIVICS_C6_3_2 ;
+  mi:isCategoryOf mi:Course_CIVICS .
+
+mi:Cat_CIVICS_C6_4 a mi:StandardCategory ;
+  mi:categoryCode "C6.4" ;
+  skos:prefLabel "Civic Inquiry, Public Policy, Civic Action, and Public Discourse" ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExpectation
+    mi:Exp_CIVICS_C6_4_1 ,
+    mi:Exp_CIVICS_C6_4_2 ,
+    mi:Exp_CIVICS_C6_4_3 ,
+    mi:Exp_CIVICS_C6_4_4 ;
+  mi:isCategoryOf mi:Course_CIVICS .
+
+mi:Cat_CIVICS_P1 a mi:StandardCategory ;
+  mi:categoryCode "P1" ;
+  skos:prefLabel "Reading and Communication" ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExpectation
+    mi:Exp_CIVICS_P1_1 ,
+    mi:Exp_CIVICS_P1_2 ,
+    mi:Exp_CIVICS_P1_3 ,
+    mi:Exp_CIVICS_P1_4 ,
+    mi:Exp_CIVICS_P1_5 ;
+  mi:isCategoryOf mi:Course_CIVICS .
+
+mi:Cat_CIVICS_P2 a mi:StandardCategory ;
+  mi:categoryCode "P2" ;
+  skos:prefLabel "Inquiry, Research, and Analysis" ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExpectation
+    mi:Exp_CIVICS_P2_1 ,
+    mi:Exp_CIVICS_P2_2 ,
+    mi:Exp_CIVICS_P2_3 ,
+    mi:Exp_CIVICS_P2_4 ;
+  mi:isCategoryOf mi:Course_CIVICS .
+
+mi:Cat_CIVICS_P3 a mi:StandardCategory ;
+  mi:categoryCode "P3" ;
+  skos:prefLabel "Public Discourse and Decision Making" ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExpectation
+    mi:Exp_CIVICS_P3_1 ,
+    mi:Exp_CIVICS_P3_2 ,
+    mi:Exp_CIVICS_P3_3 ,
+    mi:Exp_CIVICS_P3_4 ;
+  mi:isCategoryOf mi:Course_CIVICS .
+
+mi:Cat_CIVICS_P4 a mi:StandardCategory ;
+  mi:categoryCode "P4" ;
+  skos:prefLabel "Civic Participation" ;
+  mi:categoryDescription "CIVICS CONTENT STATEMENT OUTLINE" ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExpectation
+    mi:Exp_CIVICS_P4_1 ,
+    mi:Exp_CIVICS_P4_2 ,
+    mi:Exp_CIVICS_P4_3 ;
+  mi:isCategoryOf mi:Course_CIVICS .
+
+#################################################################
+# Expectations
+#################################################################
+mi:Exp_CIVICS_2_1 a mi:Expectation ;
+  mi:expectationCode "2.1" ;
+  mi:fullCode "CIVICS-2.1" ;
+  mi:officialText "Origins of American Constitutional Government" ;
+  skos:prefLabel "Origins of American Constitutional Government" ;
+  skos:broader mi:Cat_CIVICS_2_1 ;
+  mi:inCategory mi:Cat_CIVICS_2_1 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_CIVICS_2_1 .
+
+mi:Exp_CIVICS_2_2 a mi:Expectation ;
+  mi:expectationCode "2.2" ;
+  mi:fullCode "CIVICS-2.2" ;
+  mi:officialText "Democratic Values and Constitutional Principles" ;
+  skos:prefLabel "Democratic Values and Constitutional Principles" ;
+  skos:broader mi:Cat_CIVICS_2_2 ;
+  mi:inCategory mi:Cat_CIVICS_2_2 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_CIVICS_2_2 .
+
+mi:Exp_CIVICS_3_1 a mi:Expectation ;
+  mi:expectationCode "3.1" ;
+  mi:fullCode "CIVICS-3.1" ;
+  mi:officialText "Structures, Functions, Powers, and Limits of the Federal Government" ;
+  skos:prefLabel "Structures, Functions, Powers, and Limits of the Federal Government" ;
+  skos:broader mi:Cat_CIVICS_3_1 ;
+  mi:inCategory mi:Cat_CIVICS_3_1 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_CIVICS_3_1 .
+
+mi:Exp_CIVICS_3_2 a mi:Expectation ;
+  mi:expectationCode "3.2" ;
+  mi:fullCode "CIVICS-3.2" ;
+  mi:officialText "Structure, Functions, Powers, and Limits of the State, Local, and Tribal Governments" ;
+  skos:prefLabel "Structure, Functions, Powers, and Limits of the State, Local, and Tribal Governments" ;
+  skos:broader mi:Cat_CIVICS_3_2 ;
+  mi:inCategory mi:Cat_CIVICS_3_2 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_CIVICS_3_2 .
+
+mi:Exp_CIVICS_4_1 a mi:Expectation ;
+  mi:expectationCode "4.1" ;
+  mi:fullCode "CIVICS-4.1" ;
+  mi:officialText "Application of the Bill of Rights" ;
+  skos:prefLabel "Application of the Bill of Rights" ;
+  skos:broader mi:Cat_CIVICS_4_1 ;
+  mi:inCategory mi:Cat_CIVICS_4_1 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_CIVICS_4_1 .
+
+mi:Exp_CIVICS_4_2 a mi:Expectation ;
+  mi:expectationCode "4.2" ;
+  mi:fullCode "CIVICS-4.2" ;
+  mi:officialText "The Extension of Civil Rights and Liberties" ;
+  skos:prefLabel "The Extension of Civil Rights and Liberties" ;
+  skos:broader mi:Cat_CIVICS_4_2 ;
+  mi:inCategory mi:Cat_CIVICS_4_2 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_CIVICS_4_2 .
+
+mi:Exp_CIVICS_4_3 a mi:Expectation ;
+  mi:expectationCode "4.3" ;
+  mi:fullCode "CIVICS-4.3" ;
+  mi:officialText "Examining Tensions and Limits on Rights and Liberties" ;
+  skos:prefLabel "Examining Tensions and Limits on Rights and Liberties" ;
+  skos:broader mi:Cat_CIVICS_4_3 ;
+  mi:inCategory mi:Cat_CIVICS_4_3 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_CIVICS_4_3 .
+
+mi:Exp_CIVICS_5_1 a mi:Expectation ;
+  mi:expectationCode "5.1" ;
+  mi:fullCode "CIVICS-5.1" ;
+  mi:officialText "Formation and Implementation of U.S. Foreign Policy" ;
+  skos:prefLabel "Formation and Implementation of U.S. Foreign Policy" ;
+  skos:broader mi:Cat_CIVICS_5_1 ;
+  mi:inCategory mi:Cat_CIVICS_5_1 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_CIVICS_5_1 .
+
+mi:Exp_CIVICS_5_2 a mi:Expectation ;
+  mi:expectationCode "5.2" ;
+  mi:fullCode "CIVICS-5.2" ;
+  mi:officialText "U.S. Role in International Institutions and Affairs" ;
+  skos:prefLabel "U.S. Role in International Institutions and Affairs" ;
+  skos:broader mi:Cat_CIVICS_5_2 ;
+  mi:inCategory mi:Cat_CIVICS_5_2 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_CIVICS_5_2 .
+
+mi:Exp_CIVICS_6_1 a mi:Expectation ;
+  mi:expectationCode "6.1" ;
+  mi:fullCode "CIVICS-6.1" ;
+  mi:officialText "Citizenship in the United States of America" ;
+  skos:prefLabel "Citizenship in the United States of America" ;
+  skos:broader mi:Cat_CIVICS_6_1 ;
+  mi:inCategory mi:Cat_CIVICS_6_1 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_CIVICS_6_1 .
+
+mi:Exp_CIVICS_6_2 a mi:Expectation ;
+  mi:expectationCode "6.2" ;
+  mi:fullCode "CIVICS-6.2" ;
+  mi:officialText "Rights and Responsibilities in Civic Society" ;
+  skos:prefLabel "Rights and Responsibilities in Civic Society" ;
+  skos:broader mi:Cat_CIVICS_6_2 ;
+  mi:inCategory mi:Cat_CIVICS_6_2 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_CIVICS_6_2 .
+
+mi:Exp_CIVICS_6_3 a mi:Expectation ;
+  mi:expectationCode "6.3" ;
+  mi:fullCode "CIVICS-6.3" ;
+  mi:officialText "Dispositions for Civic Participation" ;
+  skos:prefLabel "Dispositions for Civic Participation" ;
+  skos:broader mi:Cat_CIVICS_6_3 ;
+  mi:inCategory mi:Cat_CIVICS_6_3 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_CIVICS_6_3 .
+
+mi:Exp_CIVICS_6_4 a mi:Expectation ;
+  mi:expectationCode "6.4" ;
+  mi:fullCode "CIVICS-6.4" ;
+  mi:officialText "Civic Inquiry, Public Policy, Civic Action, and Public Discourse" ;
+  skos:prefLabel "Civic Inquiry, Public Policy, Civic Action, and Public Discourse" ;
+  skos:broader mi:Cat_CIVICS_6_4 ;
+  mi:inCategory mi:Cat_CIVICS_6_4 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_CIVICS_6_4 .
+
+mi:Exp_CIVICS_C1_1_1 a mi:Expectation ;
+  mi:expectationCode "C1.1.1" ;
+  mi:fullCode "CIVICS-C1.1.1" ;
+  mi:officialText "Describe, compare, and contrast political philosophers views on purposes of government(s) including but not limited to Aristotle, Locke, Hobbes, Montesquieu, and Rousseau." ;
+  skos:prefLabel "Describe, Compare, and Contrast Political Philosophers Views on Purposes of Government" ;
+  skos:broader mi:Cat_CIVICS_C1_1 ;
+  mi:inCategory mi:Cat_CIVICS_C1_1 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_CIVICS_C1_1 .
+
+mi:Exp_CIVICS_C1_1_2 a mi:Expectation ;
+  mi:expectationCode "C1.1.2" ;
+  mi:fullCode "CIVICS-C1.1.2" ;
+  mi:officialText "Identify, provide examples of, and distinguish among different systems of government by analyzing similarities and differences in sovereignty, power, legitimacy, and authority." ;
+  skos:prefLabel "Identify, Provide Examples Of, and Distinguish Among Different Systems of Government" ;
+  skos:broader mi:Cat_CIVICS_C1_1 ;
+  mi:inCategory mi:Cat_CIVICS_C1_1 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_CIVICS_C1_1_2_1 ;
+  mi:isExpectationOf mi:Cat_CIVICS_C1_1 .
+
+mi:Exp_CIVICS_C1_1_3 a mi:Expectation ;
+  mi:expectationCode "C1.1.3" ;
+  mi:fullCode "CIVICS-C1.1.3" ;
+  mi:officialText "Compare, contrast, and evaluate models of representation in democratic governments including presidential and parliamentary systems." ;
+  skos:prefLabel "Compare, Contrast, and Evaluate Models of Representation in Democratic Governments" ;
+  skos:broader mi:Cat_CIVICS_C1_1 ;
+  mi:inCategory mi:Cat_CIVICS_C1_1 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_CIVICS_C1_1_3_1 ;
+  mi:isExpectationOf mi:Cat_CIVICS_C1_1 .
+
+mi:Exp_CIVICS_C1_1_4 a mi:Expectation ;
+  mi:expectationCode "C1.1.4" ;
+  mi:fullCode "CIVICS-C1.1.4" ;
+  mi:officialText "Compare and contrast federal, confederal, and unitary systems of government by analyzing similarities and differences in sovereignty and distribution of governmental powers." ;
+  skos:prefLabel "Federal, Confederal, and Unitary Systems of Government" ;
+  skos:broader mi:Cat_CIVICS_C1_1 ;
+  mi:inCategory mi:Cat_CIVICS_C1_1 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_CIVICS_C1_1 .
+
+mi:Exp_CIVICS_C2_1_1 a mi:Expectation ;
+  mi:expectationCode "C2.1.1" ;
+  mi:fullCode "CIVICS-C2.1.1" ;
+  mi:officialText "Analyze the historical and philosophical origins of American Constitutional Democracy and analyze the influence of ideas found in the Magna Carta, Declaration of Independence, Articles of Confederation, and John Locke's Second Treatise." ;
+  skos:prefLabel "Historical and Philosophical Origins of American Constitutional Democracy and Analyze the Influence of Ideas Found..." ;
+  skos:broader mi:Cat_CIVICS_C2_1 ;
+  mi:inCategory mi:Cat_CIVICS_C2_1 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_CIVICS_C2_1_1_1 ;
+  mi:isExpectationOf mi:Cat_CIVICS_C2_1 .
+
+mi:Exp_CIVICS_C2_1_2 a mi:Expectation ;
+  mi:expectationCode "C2.1.2" ;
+  mi:fullCode "CIVICS-C2.1.2" ;
+  mi:officialText "Identify and analyze various Democratic Values of the United States as found in the Declaration of Independence." ;
+  skos:prefLabel "And Analyze Various Democratic Values of the United States as Found in the Declaration of..." ;
+  skos:broader mi:Cat_CIVICS_C2_1 ;
+  mi:inCategory mi:Cat_CIVICS_C2_1 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_CIVICS_C2_1_2_1 ,
+    mi:Example_exp_CIVICS_C2_1_2_2 ,
+    mi:Example_exp_CIVICS_C2_1_2_3 ;
+  mi:isExpectationOf mi:Cat_CIVICS_C2_1 .
+
+mi:Exp_CIVICS_C2_1_3 a mi:Expectation ;
+  mi:expectationCode "C2.1.3" ;
+  mi:fullCode "CIVICS-C2.1.3" ;
+  mi:officialText "Explain the impact of the major debates and compromises underlying the drafting and ratification of the American Constitution including the Virginia and New Jersey plans, the Great Compromise, debates between Federalists and Anti-Federalists, debates concerning slavery, and the promise for a Bill of Rights after ratification." ;
+  skos:prefLabel "Impact of the Major Debates and Compromises Underlying the Drafting and Ratification of the American..." ;
+  skos:broader mi:Cat_CIVICS_C2_1 ;
+  mi:inCategory mi:Cat_CIVICS_C2_1 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_CIVICS_C2_1 .
+
+mi:Exp_CIVICS_C2_2_1 a mi:Expectation ;
+  mi:expectationCode "C2.2.1" ;
+  mi:fullCode "CIVICS-C2.2.1" ;
+  mi:officialText "Analyze relationships between Democratic Values and Constitutional Principles." ;
+  skos:prefLabel "Relationships between Democratic Values and Constitutional Principles" ;
+  skos:broader mi:Cat_CIVICS_C2_2 ;
+  mi:inCategory mi:Cat_CIVICS_C2_2 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_CIVICS_C2_2_1_1 ;
+  mi:isExpectationOf mi:Cat_CIVICS_C2_2 .
+
+mi:Exp_CIVICS_C2_2_2 a mi:Expectation ;
+  mi:expectationCode "C2.2.2" ;
+  mi:fullCode "CIVICS-C2.2.2" ;
+  mi:officialText "Analyze how influential historical speeches, writings, cases, and laws express Democratic Values and influenced changes in American culture, law, and the Constitution." ;
+  skos:prefLabel "Influential Historical Speeches, Writings, Cases, and Laws Express Democratic Values and Influenced Changes in American..." ;
+  skos:broader mi:Cat_CIVICS_C2_2 ;
+  mi:inCategory mi:Cat_CIVICS_C2_2 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_CIVICS_C2_2_2_1 ,
+    mi:Example_exp_CIVICS_C2_2_2_2 ,
+    mi:Example_exp_CIVICS_C2_2_2_3 ,
+    mi:Example_exp_CIVICS_C2_2_2_4 ,
+    mi:Example_exp_CIVICS_C2_2_2_5 ,
+    mi:Example_exp_CIVICS_C2_2_2_6 ,
+    mi:Example_exp_CIVICS_C2_2_2_7 ,
+    mi:Example_exp_CIVICS_C2_2_2_8 ,
+    mi:Example_exp_CIVICS_C2_2_2_9 ,
+    mi:Example_exp_CIVICS_C2_2_2_10 ;
+  mi:isExpectationOf mi:Cat_CIVICS_C2_2 .
+
+mi:Exp_CIVICS_C2_2_3 a mi:Expectation ;
+  mi:expectationCode "C2.2.3" ;
+  mi:fullCode "CIVICS-C2.2.3" ;
+  mi:officialText "Use examples to investigate why people may agree on Democratic Values and Constitutional Principles in the abstract, yet disagree over their meaning when they are applied to specific situations." ;
+  skos:prefLabel "Examples to Investigate Why People May Agree on Democratic Values and Constitutional Principles in the..." ;
+  skos:broader mi:Cat_CIVICS_C2_2 ;
+  mi:inCategory mi:Cat_CIVICS_C2_2 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_CIVICS_C2_2_3_1 ;
+  mi:isExpectationOf mi:Cat_CIVICS_C2_2 .
+
+mi:Exp_CIVICS_C3_1_1 a mi:Expectation ;
+  mi:expectationCode "C3.1.1" ;
+  mi:fullCode "CIVICS-C3.1.1" ;
+  mi:officialText "Identify and describe the purposes, organization, powers, processes, and election of the legislative branch as enumerated in Article I of the Constitution." ;
+  skos:prefLabel "And Describe the Purposes, Organization, Powers, Processes, and Election of the Legislative Branch as Enumerated..." ;
+  skos:broader mi:Cat_CIVICS_C3_1 ;
+  mi:inCategory mi:Cat_CIVICS_C3_1 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_CIVICS_C3_1_1_1 ;
+  mi:isExpectationOf mi:Cat_CIVICS_C3_1 .
+
+mi:Exp_CIVICS_C3_1_2 a mi:Expectation ;
+  mi:expectationCode "C3.1.2" ;
+  mi:fullCode "CIVICS-C3.1.2" ;
+  mi:officialText "Identify and describe the purposes, organization, powers, processes, and election of the executive branch as enumerated in Article II of the Constitution." ;
+  skos:prefLabel "And Describe the Purposes, Organization, Powers, Processes, and Election of the Executive Branch as Enumerated..." ;
+  skos:broader mi:Cat_CIVICS_C3_1 ;
+  mi:inCategory mi:Cat_CIVICS_C3_1 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_CIVICS_C3_1_2_1 ;
+  mi:isExpectationOf mi:Cat_CIVICS_C3_1 .
+
+mi:Exp_CIVICS_C3_1_3 a mi:Expectation ;
+  mi:expectationCode "C3.1.3" ;
+  mi:fullCode "CIVICS-C3.1.3" ;
+  mi:officialText "Identify and describe the purposes, organization, powers, processes, and appointment or election of the judicial branch as enumerated in Article III of the Constitution and as established in Marbury v. Madison." ;
+  skos:prefLabel "And Describe the Purposes, Organization, Powers, Processes, and Appointment or Election of the Judicial Branch..." ;
+  skos:broader mi:Cat_CIVICS_C3_1 ;
+  mi:inCategory mi:Cat_CIVICS_C3_1 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_CIVICS_C3_1_3_1 ;
+  mi:isExpectationOf mi:Cat_CIVICS_C3_1 .
+
+mi:Exp_CIVICS_C3_1_4 a mi:Expectation ;
+  mi:expectationCode "C3.1.4" ;
+  mi:fullCode "CIVICS-C3.1.4" ;
+  mi:officialText "Examine and evaluate the effectiveness the role of separation of powers and checks and balances in regard to the distribution of power and authority between the three branches of government." ;
+  skos:prefLabel "And Evaluate the Effectiveness the Role of Separation of Powers and Checks and Balances in..." ;
+  skos:broader mi:Cat_CIVICS_C3_1 ;
+  mi:inCategory mi:Cat_CIVICS_C3_1 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_CIVICS_C3_1_4_1 ;
+  mi:isExpectationOf mi:Cat_CIVICS_C3_1 .
+
+mi:Exp_CIVICS_C3_1_5 a mi:Expectation ;
+  mi:expectationCode "C3.1.5" ;
+  mi:fullCode "CIVICS-C3.1.5" ;
+  mi:officialText "Analyze the various levels and responsibilities in the federal and state judicial systems and explain the relationships among them." ;
+  skos:prefLabel "Various Levels and Responsibilities in the Federal and State Judicial Systems and Explain the Relationships..." ;
+  skos:broader mi:Cat_CIVICS_C3_1 ;
+  mi:inCategory mi:Cat_CIVICS_C3_1 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_CIVICS_C3_1 .
+
+mi:Exp_CIVICS_C3_1_6 a mi:Expectation ;
+  mi:expectationCode "C3.1.6" ;
+  mi:fullCode "CIVICS-C3.1.6" ;
+  mi:officialText "Evaluate major sources of revenue and major expenditures of the federal government." ;
+  skos:prefLabel "Major Sources of Revenue and Major Expenditures of the Federal Government" ;
+  skos:broader mi:Cat_CIVICS_C3_1 ;
+  mi:inCategory mi:Cat_CIVICS_C3_1 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_CIVICS_C3_1_6_1 ;
+  mi:isExpectationOf mi:Cat_CIVICS_C3_1 .
+
+mi:Exp_CIVICS_C3_1_7 a mi:Expectation ;
+  mi:expectationCode "C3.1.7" ;
+  mi:fullCode "CIVICS-C3.1.7" ;
+  mi:officialText "Identify and explain how Supreme Court decisions and provisions in the U.S." ;
+  skos:prefLabel "And Explain How Supreme Court Decisions and Provisions in the U.S" ;
+  skos:broader mi:Cat_CIVICS_C3_1 ;
+  mi:inCategory mi:Cat_CIVICS_C3_1 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_CIVICS_C3_1_7_1 ,
+    mi:Example_exp_CIVICS_C3_1_7_2 ,
+    mi:Example_exp_CIVICS_C3_1_7_3 ;
+  mi:isExpectationOf mi:Cat_CIVICS_C3_1 .
+
+mi:Exp_CIVICS_C3_2_1 a mi:Expectation ;
+  mi:expectationCode "C3.2.1" ;
+  mi:fullCode "CIVICS-C3.2.1" ;
+  mi:officialText "Describe limits the U.S." ;
+  skos:prefLabel "Limits the U.S" ;
+  skos:broader mi:Cat_CIVICS_C3_2 ;
+  mi:inCategory mi:Cat_CIVICS_C3_2 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_CIVICS_C3_2_1_1 ,
+    mi:Example_exp_CIVICS_C3_2_1_2 ,
+    mi:Example_exp_CIVICS_C3_2_1_3 ,
+    mi:Example_exp_CIVICS_C3_2_1_4 ,
+    mi:Example_exp_CIVICS_C3_2_1_5 ;
+  mi:isExpectationOf mi:Cat_CIVICS_C3_2 .
+
+mi:Exp_CIVICS_C3_2_2 a mi:Expectation ;
+  mi:expectationCode "C3.2.2" ;
+  mi:fullCode "CIVICS-C3.2.2" ;
+  mi:officialText "Explain interactions and tensions among federal, state, and local governments using the necessary and proper clause, the Commerce Clause, and the Tenth Amendment." ;
+  skos:prefLabel "Interactions and Tensions Among Federal, State, and Local Governments" ;
+  skos:broader mi:Cat_CIVICS_C3_2 ;
+  mi:inCategory mi:Cat_CIVICS_C3_2 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_CIVICS_C3_2 .
+
+mi:Exp_CIVICS_C3_2_3 a mi:Expectation ;
+  mi:expectationCode "C3.2.3" ;
+  mi:fullCode "CIVICS-C3.2.3" ;
+  mi:officialText "Describe how state, local, and tribal governments are organized, their major responsibilities, and how they affect the lives of people residing in their jurisdiction(s)." ;
+  skos:prefLabel "State, Local, and Tribal Governments Are Organized, Their Major Responsibilities" ;
+  skos:broader mi:Cat_CIVICS_C3_2 ;
+  mi:inCategory mi:Cat_CIVICS_C3_2 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_CIVICS_C3_2 .
+
+mi:Exp_CIVICS_C3_2_4 a mi:Expectation ;
+  mi:expectationCode "C3.2.4" ;
+  mi:fullCode "CIVICS-C3.2.4" ;
+  mi:officialText "Analyze sovereignty of tribal governments in interactions with U.S." ;
+  skos:prefLabel "Sovereignty of Tribal Governments in Interactions" ;
+  skos:broader mi:Cat_CIVICS_C3_2 ;
+  mi:inCategory mi:Cat_CIVICS_C3_2 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_CIVICS_C3_2_4_1 ;
+  mi:isExpectationOf mi:Cat_CIVICS_C3_2 .
+
+mi:Exp_CIVICS_C3_2_5 a mi:Expectation ;
+  mi:expectationCode "C3.2.5" ;
+  mi:fullCode "CIVICS-C3.2.5" ;
+  mi:officialText "Evaluate the major sources of revenue and expenditures for state, local, and tribal governments." ;
+  skos:prefLabel "Major Sources of Revenue and Expenditures for State, Local, and Tribal Governments" ;
+  skos:broader mi:Cat_CIVICS_C3_2 ;
+  mi:inCategory mi:Cat_CIVICS_C3_2 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_CIVICS_C3_2 .
+
+mi:Exp_CIVICS_C3_2_6 a mi:Expectation ;
+  mi:expectationCode "C3.2.6" ;
+  mi:fullCode "CIVICS-C3.2.6" ;
+  mi:officialText "Describe and evaluate referendums, initiatives, and recall as mechanisms used to influence state and local government." ;
+  skos:prefLabel "And Evaluate Referendums, Initiatives, and Recall as Mechanisms Used to Influence State and Local Government" ;
+  skos:broader mi:Cat_CIVICS_C3_2 ;
+  mi:inCategory mi:Cat_CIVICS_C3_2 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_CIVICS_C3_2_6_1 ;
+  mi:isExpectationOf mi:Cat_CIVICS_C3_2 .
+
+mi:Exp_CIVICS_C3_3_1 a mi:Expectation ;
+  mi:expectationCode "C3.3.1" ;
+  mi:fullCode "CIVICS-C3.3.1" ;
+  mi:officialText "Describe and analyze how groups and individuals influence public policy." ;
+  skos:prefLabel "And Analyze How Groups and Individuals Influence Public Policy" ;
+  skos:broader mi:Cat_CIVICS_C3_3 ;
+  mi:inCategory mi:Cat_CIVICS_C3_3 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_CIVICS_C3_3_1_1 ;
+  mi:isExpectationOf mi:Cat_CIVICS_C3_3 .
+
+mi:Exp_CIVICS_C3_3_2 a mi:Expectation ;
+  mi:expectationCode "C3.3.2" ;
+  mi:fullCode "CIVICS-C3.3.2" ;
+  mi:officialText "Describe the evolution of political parties and their contemporary influence on public policy." ;
+  skos:prefLabel "Evolution of Political Parties and Their Contemporary Influence on Public Policy" ;
+  skos:broader mi:Cat_CIVICS_C3_3 ;
+  mi:inCategory mi:Cat_CIVICS_C3_3 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_CIVICS_C3_3 .
+
+mi:Exp_CIVICS_C3_3_3 a mi:Expectation ;
+  mi:expectationCode "C3.3.3" ;
+  mi:fullCode "CIVICS-C3.3.3" ;
+  mi:officialText "Explain the concept of public opinion, factors that shape it, and contrasting views on the role it should and does play in public policy." ;
+  skos:prefLabel "Concept of Public Opinion, Factors That Shape It, and Contrasting Views on the Role It..." ;
+  skos:broader mi:Cat_CIVICS_C3_3 ;
+  mi:inCategory mi:Cat_CIVICS_C3_3 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_CIVICS_C3_3 .
+
+mi:Exp_CIVICS_C3_3_4 a mi:Expectation ;
+  mi:expectationCode "C3.3.4" ;
+  mi:fullCode "CIVICS-C3.3.4" ;
+  mi:officialText "Explain the significance of campaigns and elections in American politics, current criticisms of campaigns, and proposals for their reform." ;
+  skos:prefLabel "Significance of Campaigns and Elections in American Politics, Current Criticisms of Campaigns, and Proposals for..." ;
+  skos:broader mi:Cat_CIVICS_C3_3 ;
+  mi:inCategory mi:Cat_CIVICS_C3_3 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_CIVICS_C3_3 .
+
+mi:Exp_CIVICS_C3_3_5 a mi:Expectation ;
+  mi:expectationCode "C3.3.5" ;
+  mi:fullCode "CIVICS-C3.3.5" ;
+  mi:officialText "Identify and discuss roles of non-governmental organizations in American civic society." ;
+  skos:prefLabel "And Discuss Roles of Non-Governmental Organizations in American Civic Society" ;
+  skos:broader mi:Cat_CIVICS_C3_3 ;
+  mi:inCategory mi:Cat_CIVICS_C3_3 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_CIVICS_C3_3 .
+
+mi:Exp_CIVICS_C3_3_6 a mi:Expectation ;
+  mi:expectationCode "C3.3.6" ;
+  mi:fullCode "CIVICS-C3.3.6" ;
+  mi:officialText "Explain functions and possible influence of various news and other media sources in political communication." ;
+  skos:prefLabel "Functions and Possible Influence of Various News and Other Media Sources in Political Communication" ;
+  skos:broader mi:Cat_CIVICS_C3_3 ;
+  mi:inCategory mi:Cat_CIVICS_C3_3 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_CIVICS_C3_3_6_1 ;
+  mi:isExpectationOf mi:Cat_CIVICS_C3_3 .
+
+mi:Exp_CIVICS_C3_3_7 a mi:Expectation ;
+  mi:expectationCode "C3.3.7" ;
+  mi:fullCode "CIVICS-C3.3.7" ;
+  mi:officialText "Analyze the credibility and validity of various forms of political communication." ;
+  skos:prefLabel "Credibility and Validity of Various Forms of Political Communication" ;
+  skos:broader mi:Cat_CIVICS_C3_3 ;
+  mi:inCategory mi:Cat_CIVICS_C3_3 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_CIVICS_C3_3_7_1 ;
+  mi:isExpectationOf mi:Cat_CIVICS_C3_3 .
+
+mi:Exp_CIVICS_C4_1_1 a mi:Expectation ;
+  mi:expectationCode "C4.1.1" ;
+  mi:fullCode "CIVICS-C4.1.1" ;
+  mi:officialText "Describe the five essential rights protected by the First Amendment." ;
+  skos:prefLabel "Five Essential Rights Protected" ;
+  skos:broader mi:Cat_CIVICS_C4_1 ;
+  mi:inCategory mi:Cat_CIVICS_C4_1 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_CIVICS_C4_1_1_1 ,
+    mi:Example_exp_CIVICS_C4_1_1_2 ,
+    mi:Example_exp_CIVICS_C4_1_1_3 ,
+    mi:Example_exp_CIVICS_C4_1_1_4 ,
+    mi:Example_exp_CIVICS_C4_1_1_5 ,
+    mi:Example_exp_CIVICS_C4_1_1_6 ,
+    mi:Example_exp_CIVICS_C4_1_1_7 ,
+    mi:Example_exp_CIVICS_C4_1_1_8 ,
+    mi:Example_exp_CIVICS_C4_1_1_9 ,
+    mi:Example_exp_CIVICS_C4_1_1_10 ,
+    mi:Example_exp_CIVICS_C4_1_1_11 ,
+    mi:Example_exp_CIVICS_C4_1_1_12 ,
+    mi:Example_exp_CIVICS_C4_1_1_13 ,
+    mi:Example_exp_CIVICS_C4_1_1_14 ,
+    mi:Example_exp_CIVICS_C4_1_1_15 ;
+  mi:isExpectationOf mi:Cat_CIVICS_C4_1 .
+
+mi:Exp_CIVICS_C4_1_2 a mi:Expectation ;
+  mi:expectationCode "C4.1.2" ;
+  mi:fullCode "CIVICS-C4.1.2" ;
+  mi:officialText "Using the Fourth, Fifth, Sixth, Seventh, and Eighth Amendments, describe the rights of the accused; using court cases and examples, describe the limit and scope of these rights." ;
+  skos:prefLabel "Rights of the Accused" ;
+  skos:broader mi:Cat_CIVICS_C4_1 ;
+  mi:inCategory mi:Cat_CIVICS_C4_1 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_CIVICS_C4_1_2_1 ,
+    mi:Example_exp_CIVICS_C4_1_2_2 ,
+    mi:Example_exp_CIVICS_C4_1_2_3 ,
+    mi:Example_exp_CIVICS_C4_1_2_4 ,
+    mi:Example_exp_CIVICS_C4_1_2_5 ,
+    mi:Example_exp_CIVICS_C4_1_2_6 ,
+    mi:Example_exp_CIVICS_C4_1_2_7 ;
+  mi:isExpectationOf mi:Cat_CIVICS_C4_1 .
+
+mi:Exp_CIVICS_C4_2_1 a mi:Expectation ;
+  mi:expectationCode "C4.2.1" ;
+  mi:fullCode "CIVICS-C4.2.1" ;
+  mi:officialText "Explain how the Civil War led to the creation of the Thirteenth, Fourteenth, and Fifteenth Amendments to the U.S." ;
+  skos:prefLabel "The Civil War Led to the Creation of the Thirteenth, Fourteenth, and Fifteenth Amendments to..." ;
+  skos:broader mi:Cat_CIVICS_C4_2 ;
+  mi:inCategory mi:Cat_CIVICS_C4_2 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_CIVICS_C4_2_1_1 ;
+  mi:isExpectationOf mi:Cat_CIVICS_C4_2 .
+
+mi:Exp_CIVICS_C4_2_2 a mi:Expectation ;
+  mi:expectationCode "C4.2.2" ;
+  mi:fullCode "CIVICS-C4.2.2" ;
+  mi:officialText "Explain how significant historical events, including but not limited to the suffrage movements and the civil rights movements, resulted in changes to the interpretation of and Amendments to the U.S." ;
+  skos:prefLabel "Significant Historical Events" ;
+  skos:broader mi:Cat_CIVICS_C4_2 ;
+  mi:inCategory mi:Cat_CIVICS_C4_2 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_CIVICS_C4_2_2_1 ,
+    mi:Example_exp_CIVICS_C4_2_2_2 ;
+  mi:isExpectationOf mi:Cat_CIVICS_C4_2 .
+
+mi:Exp_CIVICS_C4_2_3 a mi:Expectation ;
+  mi:expectationCode "C4.2.3" ;
+  mi:fullCode "CIVICS-C4.2.3" ;
+  mi:officialText "Using the Fourteenth Amendment, describe the impact of the doctrine of incorporation, due process of law, and equal protection of law on the articulation and extension of rights." ;
+  skos:prefLabel "Impact of the Doctrine of Incorporation, Due Process of Law, and Equal Protection of Law..." ;
+  skos:broader mi:Cat_CIVICS_C4_2 ;
+  mi:inCategory mi:Cat_CIVICS_C4_2 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_CIVICS_C4_2_3_1 ,
+    mi:Example_exp_CIVICS_C4_2_3_2 ,
+    mi:Example_exp_CIVICS_C4_2_3_3 ,
+    mi:Example_exp_CIVICS_C4_2_3_4 ,
+    mi:Example_exp_CIVICS_C4_2_3_5 ,
+    mi:Example_exp_CIVICS_C4_2_3_6 ,
+    mi:Example_exp_CIVICS_C4_2_3_7 ,
+    mi:Example_exp_CIVICS_C4_2_3_8 ,
+    mi:Example_exp_CIVICS_C4_2_3_9 ,
+    mi:Example_exp_CIVICS_C4_2_3_10 ,
+    mi:Example_exp_CIVICS_C4_2_3_11 ,
+    mi:Example_exp_CIVICS_C4_2_3_12 ,
+    mi:Example_exp_CIVICS_C4_2_3_13 ;
+  mi:isExpectationOf mi:Cat_CIVICS_C4_2 .
+
+mi:Exp_CIVICS_C4_3_1 a mi:Expectation ;
+  mi:expectationCode "C4.3.1" ;
+  mi:fullCode "CIVICS-C4.3.1" ;
+  mi:officialText "Identify and explain personal rights, political rights, and economic rights as well as how these rights might conflict." ;
+  skos:prefLabel "And Explain Personal Rights, Political Rights, and Economic Rights as Well as How These Rights..." ;
+  skos:broader mi:Cat_CIVICS_C4_3 ;
+  mi:inCategory mi:Cat_CIVICS_C4_3 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_CIVICS_C4_3_1_1 ,
+    mi:Example_exp_CIVICS_C4_3_1_2 ,
+    mi:Example_exp_CIVICS_C4_3_1_3 ,
+    mi:Example_exp_CIVICS_C4_3_1_4 ,
+    mi:Example_exp_CIVICS_C4_3_1_5 ,
+    mi:Example_exp_CIVICS_C4_3_1_6 ,
+    mi:Example_exp_CIVICS_C4_3_1_7 ,
+    mi:Example_exp_CIVICS_C4_3_1_8 ,
+    mi:Example_exp_CIVICS_C4_3_1_9 ;
+  mi:isExpectationOf mi:Cat_CIVICS_C4_3 .
+
+mi:Exp_CIVICS_C4_3_2 a mi:Expectation ;
+  mi:expectationCode "C4.3.2" ;
+  mi:fullCode "CIVICS-C4.3.2" ;
+  mi:officialText "Describe considerations, criteria, and examples that have been used to deny, limit, or extend protection of individual rights." ;
+  skos:prefLabel "Considerations, Criteria, and Examples That Have Been Used to Deny, Limit, or Extend Protection of..." ;
+  skos:broader mi:Cat_CIVICS_C4_3 ;
+  mi:inCategory mi:Cat_CIVICS_C4_3 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_CIVICS_C4_3_2_1 ,
+    mi:Example_exp_CIVICS_C4_3_2_2 ,
+    mi:Example_exp_CIVICS_C4_3_2_3 ,
+    mi:Example_exp_CIVICS_C4_3_2_4 ,
+    mi:Example_exp_CIVICS_C4_3_2_5 ,
+    mi:Example_exp_CIVICS_C4_3_2_6 ,
+    mi:Example_exp_CIVICS_C4_3_2_7 ,
+    mi:Example_exp_CIVICS_C4_3_2_8 ,
+    mi:Example_exp_CIVICS_C4_3_2_9 ;
+  mi:isExpectationOf mi:Cat_CIVICS_C4_3 .
+
+mi:Exp_CIVICS_C5_1_1 a mi:Expectation ;
+  mi:expectationCode "C5.1.1" ;
+  mi:fullCode "CIVICS-C5.1.1" ;
+  mi:officialText "Identify and describe ways in which foreign policy is made including Constitutional powers of the executive, legislative, and judicial branches and how those powers have been clarified or interpreted over time." ;
+  skos:prefLabel "And Describe Ways in Which Foreign Policy Is Made Including Constitutional Powers of the Executive,..." ;
+  skos:broader mi:Cat_CIVICS_C5_1 ;
+  mi:inCategory mi:Cat_CIVICS_C5_1 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_CIVICS_C5_1_1_1 ;
+  mi:isExpectationOf mi:Cat_CIVICS_C5_1 .
+
+mi:Exp_CIVICS_C5_1_2 a mi:Expectation ;
+  mi:expectationCode "C5.1.2" ;
+  mi:fullCode "CIVICS-C5.1.2" ;
+  mi:officialText "Analyze past and present examples of U.S." ;
+  skos:prefLabel "Past and Present Examples of U.S" ;
+  skos:broader mi:Cat_CIVICS_C5_1 ;
+  mi:inCategory mi:Cat_CIVICS_C5_1 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_CIVICS_C5_1_2_1 ,
+    mi:Example_exp_CIVICS_C5_1_2_2 ;
+  mi:isExpectationOf mi:Cat_CIVICS_C5_1 .
+
+mi:Exp_CIVICS_C5_1_3 a mi:Expectation ;
+  mi:expectationCode "C5.1.3" ;
+  mi:fullCode "CIVICS-C5.1.3" ;
+  mi:officialText "Describe ways in which groups and individuals influence foreign policy." ;
+  skos:prefLabel "Ways" ;
+  skos:broader mi:Cat_CIVICS_C5_1 ;
+  mi:inCategory mi:Cat_CIVICS_C5_1 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_CIVICS_C5_1_3_1 ;
+  mi:isExpectationOf mi:Cat_CIVICS_C5_1 .
+
+mi:Exp_CIVICS_C5_2_1 a mi:Expectation ;
+  mi:expectationCode "C5.2.1" ;
+  mi:fullCode "CIVICS-C5.2.1" ;
+  mi:officialText "Analyze the influence and impact of U.S." ;
+  skos:prefLabel "Influence and Impact of U.S" ;
+  skos:broader mi:Cat_CIVICS_C5_2 ;
+  mi:inCategory mi:Cat_CIVICS_C5_2 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_CIVICS_C5_2_1_1 ,
+    mi:Example_exp_CIVICS_C5_2_1_2 ;
+  mi:isExpectationOf mi:Cat_CIVICS_C5_2 .
+
+mi:Exp_CIVICS_C5_2_2 a mi:Expectation ;
+  mi:expectationCode "C5.2.2" ;
+  mi:fullCode "CIVICS-C5.2.2" ;
+  mi:officialText "Analyze how international political, economic, technological, and cultural developments impact U.S." ;
+  skos:prefLabel "International Political, Economic, Technological, and Cultural Developments Impact U.S" ;
+  skos:broader mi:Cat_CIVICS_C5_2 ;
+  mi:inCategory mi:Cat_CIVICS_C5_2 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_CIVICS_C5_2_2_1 ,
+    mi:Example_exp_CIVICS_C5_2_2_2 ;
+  mi:isExpectationOf mi:Cat_CIVICS_C5_2 .
+
+mi:Exp_CIVICS_C5_2_3 a mi:Expectation ;
+  mi:expectationCode "C5.2.3" ;
+  mi:fullCode "CIVICS-C5.2.3" ;
+  mi:officialText "Identify and evaluate the roles and responsibilities of the United States in international governmental organizations including bilateral and multilateral agreements." ;
+  skos:prefLabel "And Evaluate the Roles and Responsibilities of the United States in International Governmental Organizations" ;
+  skos:broader mi:Cat_CIVICS_C5_2 ;
+  mi:inCategory mi:Cat_CIVICS_C5_2 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_CIVICS_C5_2_3_1 ;
+  mi:isExpectationOf mi:Cat_CIVICS_C5_2 .
+
+mi:Exp_CIVICS_C5_2_4 a mi:Expectation ;
+  mi:expectationCode "C5.2.4" ;
+  mi:fullCode "CIVICS-C5.2.4" ;
+  mi:officialText "Identify and evaluate international non-governmental organizations." ;
+  skos:prefLabel "And Evaluate International Non-Governmental Organizations" ;
+  skos:broader mi:Cat_CIVICS_C5_2 ;
+  mi:inCategory mi:Cat_CIVICS_C5_2 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_CIVICS_C5_2_4_1 ;
+  mi:isExpectationOf mi:Cat_CIVICS_C5_2 .
+
+mi:Exp_CIVICS_C6_1_1 a mi:Expectation ;
+  mi:expectationCode "C6.1.1" ;
+  mi:fullCode "CIVICS-C6.1.1" ;
+  mi:officialText "Describe and evaluate the requirements and process for becoming a citizen of the United States." ;
+  skos:prefLabel "And Evaluate the Requirements and Process for Becoming a Citizen of the United States" ;
+  skos:broader mi:Cat_CIVICS_C6_1 ;
+  mi:inCategory mi:Cat_CIVICS_C6_1 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_CIVICS_C6_1 .
+
+mi:Exp_CIVICS_C6_1_2 a mi:Expectation ;
+  mi:expectationCode "C6.1.2" ;
+  mi:fullCode "CIVICS-C6.1.2" ;
+  mi:officialText "Explain how the United States has limited and expanded citizenship over time." ;
+  skos:prefLabel "The United States Has Limited and Expanded Citizenship over Time" ;
+  skos:broader mi:Cat_CIVICS_C6_1 ;
+  mi:inCategory mi:Cat_CIVICS_C6_1 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_CIVICS_C6_1_2_1 ;
+  mi:isExpectationOf mi:Cat_CIVICS_C6_1 .
+
+mi:Exp_CIVICS_C6_1_3 a mi:Expectation ;
+  mi:expectationCode "C6.1.3" ;
+  mi:fullCode "CIVICS-C6.1.3" ;
+  mi:officialText "Compare and contrast rights and representation among U.S." ;
+  skos:prefLabel "Rights and Representation Among U.S" ;
+  skos:broader mi:Cat_CIVICS_C6_1 ;
+  mi:inCategory mi:Cat_CIVICS_C6_1 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_CIVICS_C6_1_3_1 ;
+  mi:isExpectationOf mi:Cat_CIVICS_C6_1 .
+
+mi:Exp_CIVICS_C6_2_1 a mi:Expectation ;
+  mi:expectationCode "C6.2.1" ;
+  mi:fullCode "CIVICS-C6.2.1" ;
+  mi:officialText "Using examples, explain the rights and responsibilities of U.S." ;
+  skos:prefLabel "Rights and Responsibilities of U.S" ;
+  skos:broader mi:Cat_CIVICS_C6_2 ;
+  mi:inCategory mi:Cat_CIVICS_C6_2 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_CIVICS_C6_2_1_1 ,
+    mi:Example_exp_CIVICS_C6_2_1_2 ,
+    mi:Example_exp_CIVICS_C6_2_1_3 ,
+    mi:Example_exp_CIVICS_C6_2_1_4 ,
+    mi:Example_exp_CIVICS_C6_2_1_5 ,
+    mi:Example_exp_CIVICS_C6_2_1_6 ,
+    mi:Example_exp_CIVICS_C6_2_1_7 ,
+    mi:Example_exp_CIVICS_C6_2_1_8 ,
+    mi:Example_exp_CIVICS_C6_2_1_9 ,
+    mi:Example_exp_CIVICS_C6_2_1_10 ,
+    mi:Example_exp_CIVICS_C6_2_1_11 ,
+    mi:Example_exp_CIVICS_C6_2_1_12 ,
+    mi:Example_exp_CIVICS_C6_2_1_13 ;
+  mi:isExpectationOf mi:Cat_CIVICS_C6_2 .
+
+mi:Exp_CIVICS_C6_3_1 a mi:Expectation ;
+  mi:expectationCode "C6.3.1" ;
+  mi:fullCode "CIVICS-C6.3.1" ;
+  mi:officialText "Explain the personal dispositions that contribute to knowledgeable and engaged participation in civic communities." ;
+  skos:prefLabel "Personal Dispositions That Contribute to Knowledgeable and Engaged Participation in Civic Communities" ;
+  skos:broader mi:Cat_CIVICS_C6_3 ;
+  mi:inCategory mi:Cat_CIVICS_C6_3 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_CIVICS_C6_3_1_1 ;
+  mi:isExpectationOf mi:Cat_CIVICS_C6_3 .
+
+mi:Exp_CIVICS_C6_3_2 a mi:Expectation ;
+  mi:expectationCode "C6.3.2" ;
+  mi:fullCode "CIVICS-C6.3.2" ;
+  mi:officialText "Explain how informed members of society influence civic life." ;
+  skos:prefLabel "Informed Members of Society Influence Civic Life" ;
+  skos:broader mi:Cat_CIVICS_C6_3 ;
+  mi:inCategory mi:Cat_CIVICS_C6_3 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_CIVICS_C6_3_2_1 ;
+  mi:isExpectationOf mi:Cat_CIVICS_C6_3 .
+
+mi:Exp_CIVICS_C6_4_1 a mi:Expectation ;
+  mi:expectationCode "C6.4.1" ;
+  mi:fullCode "CIVICS-C6.4.1" ;
+  mi:officialText "Explain and evaluate how people, individually or collectively, seek to bring the United States closer to its Democratic Values." ;
+  skos:prefLabel "And Evaluate How People, Individually or Collectively, Seek to Bring the United States Closer to..." ;
+  skos:broader mi:Cat_CIVICS_C6_4 ;
+  mi:inCategory mi:Cat_CIVICS_C6_4 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_CIVICS_C6_4 .
+
+mi:Exp_CIVICS_C6_4_2 a mi:Expectation ;
+  mi:expectationCode "C6.4.2" ;
+  mi:fullCode "CIVICS-C6.4.2" ;
+  mi:officialText "Identify, discuss, and analyze methods individuals and/or groups have chosen to attempt social and legal change." ;
+  skos:prefLabel "Identify, Discuss, and Analyze Methods Individuals and or Groups Have Chosen to Attempt Social and..." ;
+  skos:broader mi:Cat_CIVICS_C6_4 ;
+  mi:inCategory mi:Cat_CIVICS_C6_4 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_CIVICS_C6_4_2_1 ,
+    mi:Example_exp_CIVICS_C6_4_2_2 ;
+  mi:isExpectationOf mi:Cat_CIVICS_C6_4 .
+
+mi:Exp_CIVICS_C6_4_3 a mi:Expectation ;
+  mi:expectationCode "C6.4.3" ;
+  mi:fullCode "CIVICS-C6.4.3" ;
+  mi:officialText "Identify and describe a local, state, national, or international public policy issue; research and evaluate multiple solutions; analyze the consequences of each solution and propose, defend, and take relevant action to address or resolve the issue." ;
+  skos:prefLabel "And Describe a Local, State, National, or International Public Policy Issue; Research and Evaluate Multiple..." ;
+  skos:broader mi:Cat_CIVICS_C6_4 ;
+  mi:inCategory mi:Cat_CIVICS_C6_4 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_CIVICS_C6_4_3_1 ,
+    mi:Example_exp_CIVICS_C6_4_3_2 ;
+  mi:isExpectationOf mi:Cat_CIVICS_C6_4 .
+
+mi:Exp_CIVICS_C6_4_4 a mi:Expectation ;
+  mi:expectationCode "C6.4.4" ;
+  mi:fullCode "CIVICS-C6.4.4" ;
+  mi:officialText "Equip students with the skills and knowledge to explore multiple pathways for knowledgeable, civic engagement through simulations and/or real-world opportunities for involvement." ;
+  skos:prefLabel "Multiple Pathways for Knowledgeable, Civic Engagement" ;
+  skos:broader mi:Cat_CIVICS_C6_4 ;
+  mi:inCategory mi:Cat_CIVICS_C6_4 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:hasExample
+    mi:Example_exp_CIVICS_C6_4_4_1 ;
+  mi:isExpectationOf mi:Cat_CIVICS_C6_4 .
+
+mi:Exp_CIVICS_P1_1 a mi:Expectation ;
+  mi:expectationCode "P1.1" ;
+  mi:fullCode "CIVICS-P1.1" ;
+  mi:officialText "Use appropriate strategies to read and analyze social science tables, graphs, graphics, maps, and texts." ;
+  skos:prefLabel "Appropriate Strategies to Read and Analyze Social Science Tables, Graphs, Graphics, Maps, and Texts" ;
+  skos:broader mi:Cat_CIVICS_P1 ;
+  mi:inCategory mi:Cat_CIVICS_P1 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_CIVICS_P1 .
+
+mi:Exp_CIVICS_P1_2 a mi:Expectation ;
+  mi:expectationCode "P1.2" ;
+  mi:fullCode "CIVICS-P1.2" ;
+  mi:officialText "Interpret primary and secondary source documents for point of view, context, bias, and frame of reference or perspective." ;
+  skos:prefLabel "Primary and Secondary Source Documents for Point of View, Context, Bias, and Frame of Reference..." ;
+  skos:broader mi:Cat_CIVICS_P1 ;
+  mi:inCategory mi:Cat_CIVICS_P1 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_CIVICS_P1 .
+
+mi:Exp_CIVICS_P1_3 a mi:Expectation ;
+  mi:expectationCode "P1.3" ;
+  mi:fullCode "CIVICS-P1.3" ;
+  mi:officialText "Explain points of agreement and disagreement experts have about the interpretation of sources and the application of disciplinary concepts." ;
+  skos:prefLabel "Points of Agreement and Disagreement Experts Have about the Interpretation of Sources and the Application..." ;
+  skos:broader mi:Cat_CIVICS_P1 ;
+  mi:inCategory mi:Cat_CIVICS_P1 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_CIVICS_P1 .
+
+mi:Exp_CIVICS_P1_4 a mi:Expectation ;
+  mi:expectationCode "P1.4" ;
+  mi:fullCode "CIVICS-P1.4" ;
+  mi:officialText "Express social science ideas clearly in written, spoken, and graphic forms." ;
+  skos:prefLabel "Express Social Science Ideas Clearly in Written, Spoken, and Graphic Forms" ;
+  skos:broader mi:Cat_CIVICS_P1 ;
+  mi:inCategory mi:Cat_CIVICS_P1 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_CIVICS_P1 .
+
+mi:Exp_CIVICS_P1_5 a mi:Expectation ;
+  mi:expectationCode "P1.5" ;
+  mi:fullCode "CIVICS-P1.5" ;
+  mi:officialText "Construct and present an argument supported with evidence." ;
+  skos:prefLabel "And Present an Argument Supported" ;
+  skos:broader mi:Cat_CIVICS_P1 ;
+  mi:inCategory mi:Cat_CIVICS_P1 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_CIVICS_P1 .
+
+mi:Exp_CIVICS_P2_1 a mi:Expectation ;
+  mi:expectationCode "P2.1" ;
+  mi:fullCode "CIVICS-P2.1" ;
+  mi:officialText "Apply methods of inquiry, including asking and answering compelling and supporting questions, to investigate social science problems." ;
+  skos:prefLabel "Methods of Inquiry" ;
+  skos:broader mi:Cat_CIVICS_P2 ;
+  mi:inCategory mi:Cat_CIVICS_P2 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_CIVICS_P2 .
+
+mi:Exp_CIVICS_P2_2 a mi:Expectation ;
+  mi:expectationCode "P2.2" ;
+  mi:fullCode "CIVICS-P2.2" ;
+  mi:officialText "Evaluate data presented in social science tables, graphs, graphics, maps, and texts for credibility, considering the origin, authority, structure, and context of the information." ;
+  skos:prefLabel "Data Presented in Social Science Tables, Graphs, Graphics, Maps, and Texts for Credibility, Considering the..." ;
+  skos:broader mi:Cat_CIVICS_P2 ;
+  mi:inCategory mi:Cat_CIVICS_P2 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_CIVICS_P2 .
+
+mi:Exp_CIVICS_P2_3 a mi:Expectation ;
+  mi:expectationCode "P2.3" ;
+  mi:fullCode "CIVICS-P2.3" ;
+  mi:officialText "Know how to find, organize, evaluate, and interpret information from a variety of credible sources." ;
+  skos:prefLabel "Evaluate, and Interpret Information from a Variety of Credible Sources" ;
+  skos:broader mi:Cat_CIVICS_P2 ;
+  mi:inCategory mi:Cat_CIVICS_P2 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_CIVICS_P2 .
+
+mi:Exp_CIVICS_P2_4 a mi:Expectation ;
+  mi:expectationCode "P2.4" ;
+  mi:fullCode "CIVICS-P2.4" ;
+  mi:officialText "Use relevant information from multiple credible sources representing a wide range of views, considering the origin, authority, structure, and context, to answer a compelling or supporting question." ;
+  skos:prefLabel "Relevant Information from Multiple Credible Sources Representing a Wide Range of Views, Considering the Origin,..." ;
+  skos:broader mi:Cat_CIVICS_P2 ;
+  mi:inCategory mi:Cat_CIVICS_P2 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_CIVICS_P2 .
+
+mi:Exp_CIVICS_P3_1 a mi:Expectation ;
+  mi:expectationCode "P3.1" ;
+  mi:fullCode "CIVICS-P3.1" ;
+  mi:officialText "Clearly state an issue as a question of public policy, gather and interpret information about that issue, analyze various perspectives, and generate and evaluate possible alternative resolutions." ;
+  skos:prefLabel "Information about That Issue, Analyze Various Perspectives, and Generate and Evaluate Possible Alternative Resolutions" ;
+  skos:broader mi:Cat_CIVICS_P3 ;
+  mi:inCategory mi:Cat_CIVICS_P3 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_CIVICS_P3 .
+
+mi:Exp_CIVICS_P3_2 a mi:Expectation ;
+  mi:expectationCode "P3.2" ;
+  mi:fullCode "CIVICS-P3.2" ;
+  mi:officialText "Discuss public policy issues, by clarifying positions, considering opposing views, and applying democratic values or Constitutional Principles to develop and refine claims." ;
+  skos:prefLabel "Public Policy Issues" ;
+  skos:broader mi:Cat_CIVICS_P3 ;
+  mi:inCategory mi:Cat_CIVICS_P3 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_CIVICS_P3 .
+
+mi:Exp_CIVICS_P3_3 a mi:Expectation ;
+  mi:expectationCode "P3.3" ;
+  mi:fullCode "CIVICS-P3.3" ;
+  mi:officialText "Construct claims and refine counter-claims expressing and justifying decisions on public policy issues." ;
+  skos:prefLabel "Claims and Refine Counter-Claims Expressing and Justifying Decisions on Public Policy Issues" ;
+  skos:broader mi:Cat_CIVICS_P3 ;
+  mi:inCategory mi:Cat_CIVICS_P3 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_CIVICS_P3 .
+
+mi:Exp_CIVICS_P3_4 a mi:Expectation ;
+  mi:expectationCode "P3.4" ;
+  mi:fullCode "CIVICS-P3.4" ;
+  mi:officialText "Critique the use of reasoning, sequence, and supporting details in creating a claim and the subsequent evidence used to support a claim for credibility." ;
+  skos:prefLabel "Of Reasoning, Sequence, and Supporting Details in Creating a Claim and the Subsequent Evidence Used..." ;
+  skos:broader mi:Cat_CIVICS_P3 ;
+  mi:inCategory mi:Cat_CIVICS_P3 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_CIVICS_P3 .
+
+mi:Exp_CIVICS_P4_1 a mi:Expectation ;
+  mi:expectationCode "P4.1" ;
+  mi:fullCode "CIVICS-P4.1" ;
+  mi:officialText "Act within the rule of law and hold others to the same standard." ;
+  skos:prefLabel "Act Within the Rule of Law and Hold Others to the Same Standard" ;
+  skos:broader mi:Cat_CIVICS_P4 ;
+  mi:inCategory mi:Cat_CIVICS_P4 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_CIVICS_P4 .
+
+mi:Exp_CIVICS_P4_2 a mi:Expectation ;
+  mi:expectationCode "P4.2" ;
+  mi:fullCode "CIVICS-P4.2" ;
+  mi:officialText "Assess options for individual and collective action to advance views on matters of public policy and address local, regional, or global problems." ;
+  skos:prefLabel "Options for Individual and Collective Action to Advance Views on Matters of Public Policy and..." ;
+  skos:broader mi:Cat_CIVICS_P4 ;
+  mi:inCategory mi:Cat_CIVICS_P4 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_CIVICS_P4 .
+
+mi:Exp_CIVICS_P4_3 a mi:Expectation ;
+  mi:expectationCode "P4.3" ;
+  mi:fullCode "CIVICS-P4.3" ;
+  mi:officialText "Plan, conduct, and evaluate the effectiveness of activities intended to advance views on matters of public policy and to address local, regional, or global problems." ;
+  skos:prefLabel "Effectiveness of Activities Intended to Advance Views on Matters of Public Policy and to Address..." ;
+  skos:broader mi:Cat_CIVICS_P4 ;
+  mi:inCategory mi:Cat_CIVICS_P4 ;
+  mi:inCourse mi:Course_CIVICS ;
+  mi:inDiscipline mi:Discipline_C ;
+  mi:isExpectationOf mi:Cat_CIVICS_P4 .
+
+#################################################################
+# Examples
+#################################################################
+mi:Example_cat_CIVICS_C2_1 a mi:Example ;
+  skos:prefLabel "Connect the Democratic Values to mechanisms in the Constitution or subsequent documents" ;
+  mi:exampleText "Connect the Democratic Values to mechanisms in the Constitution or subsequent documents" .
+
+mi:Example_cat_CIVICS_C2_2 a mi:Example ;
+  skos:prefLabel "Convene a Constitutional Convention in your class in which you decide what to keep and what to update collaboratively from the Constitution and the Amendments" ;
+  mi:exampleText "Convene a Constitutional Convention in your class in which you decide what to keep and what to update collaboratively from the Constitution and the Amendments" .
+
+mi:Example_cat_CIVICS_C3_1 a mi:Example ;
+  skos:prefLabel "As a classroom propose a law and walk it through the complexities of becoming law at the state level" ;
+  mi:exampleText "As a classroom propose a law and walk it through the complexities of becoming law at the state level" .
+
+mi:Example_cat_CIVICS_C4_1 a mi:Example ;
+  skos:prefLabel "Put on a mock trial using the evidence from the case to review the evidence and decide. The case could be historical breaking in the news or one pending in front of a court" ;
+  mi:exampleText "Put on a mock trial using the evidence from the case to review the evidence and decide. The case could be historical breaking in the news or one pending in front of a court" .
+
+mi:Example_cat_CIVICS_C4_2 a mi:Example ;
+  skos:prefLabel "Identify a pressing issue under the Fourteenth Amendment's equal protection of the law. Research and write amicus briefs exploring all sides of the issue. Present and question the briefs" ;
+  mi:exampleText "Identify a pressing issue under the Fourteenth Amendment's equal protection of the law. Research and write amicus briefs exploring all sides of the issue. Present and question the briefs" .
+
+mi:Example_cat_CIVICS_C5_1 a mi:Example ;
+  skos:prefLabel "As a class create a position paper on how the United States of America views the issue and why" ;
+  mi:exampleText "As a class create a position paper on how the United States of America views the issue and why" .
+
+mi:Example_cat_CIVICS_C5_2 a mi:Example ;
+  skos:prefLabel "Identify research evaluate take and defend positions regarding why some aspects of the American Constitutional system that have been effective in the United States either have or have not been used or have not been successful in other countries" ;
+  mi:exampleText "Identify research evaluate take and defend positions regarding why some aspects of the American Constitutional system that have been effective in the United States either have or have not been used or have not been successful in other countries" .
+
+mi:Example_cat_CIVICS_C6_1 a mi:Example ;
+  skos:prefLabel "Develop possible solutions evaluate their pros and cons and choose one to defend in a simulated public hearing. Develop and defend a proposal for appropriate public policy officials" ;
+  mi:exampleText "Develop possible solutions evaluate their pros and cons and choose one to defend in a simulated public hearing. Develop and defend a proposal for appropriate public policy officials" .
+
+mi:Example_cat_CIVICS_C6_2 a mi:Example ;
+  skos:prefLabel "Research and design a campaign to educate and encourage students in your school to vote. Create simulated voting opportunities for students throughout your district to experience voting" ;
+  mi:exampleText "Research and design a campaign to educate and encourage students in your school to vote. Create simulated voting opportunities for students throughout your district to experience voting" .
+
+mi:Example_exp_CIVICS_C1_1_2_1 a mi:Example ;
+  skos:prefLabel "anarchy dictatorship democracy monarchy oligarchy republic theocracy military junta socialist and tribal governments" ;
+  mi:exampleText "anarchy dictatorship democracy monarchy oligarchy republic theocracy military junta socialist and tribal governments" .
+
+mi:Example_exp_CIVICS_C1_1_3_1 a mi:Example ;
+  skos:prefLabel "direct democracy constitutional democracy constitutional republic representative democracy indirect democracy/ republic" ;
+  mi:exampleText "direct democracy constitutional democracy constitutional republic representative democracy indirect democracy/ republic" .
+
+mi:Example_exp_CIVICS_C2_1_1_1 a mi:Example ;
+  skos:prefLabel "the Iroquois Confederation English Bill of Rights Mayflower Compact Northwest Ordinance Virginia Statute for Religious Freedom Montesquieu's Spirit of Laws Paine's Common Sense Aristotle's Politics and select Federalist Papers (10th 14th and 51st)" ;
+  mi:exampleText "the Iroquois Confederation English Bill of Rights Mayflower Compact Northwest Ordinance Virginia Statute for Religious Freedom Montesquieu's Spirit of Laws Paine's Common Sense Aristotle's Politics and select Federalist Papers (10th 14th and 51st)" .
+
+mi:Example_exp_CIVICS_C2_1_2_1 a mi:Example ;
+  skos:prefLabel "justice unalienable rights (life liberty pursuit of happiness) and equality" ;
+  mi:exampleText "justice unalienable rights (life liberty pursuit of happiness) and equality" .
+
+mi:Example_exp_CIVICS_C2_1_2_2 a mi:Example ;
+  skos:prefLabel "but is not limited to" ;
+  mi:exampleText "but is not limited to" .
+
+mi:Example_exp_CIVICS_C2_1_2_3 a mi:Example ;
+  skos:prefLabel "how might the ideals in the Declaration have been in tension with reality?" ;
+  mi:exampleText "how might the ideals in the Declaration have been in tension with reality?" .
+
+mi:Example_exp_CIVICS_C2_2_1_1 a mi:Example ;
+  skos:prefLabel "ways in which the Constitutional Principle of due process of laws correlates with the Democratic Value of justice ways in which the Constitutional Principle of equal protection of the law correlates with the Democratic Value of equality" ;
+  mi:exampleText "ways in which the Constitutional Principle of due process of laws correlates with the Democratic Value of justice ways in which the Constitutional Principle of equal protection of the law correlates with the Democratic Value of equality" .
+
+mi:Example_exp_CIVICS_C2_2_2_1 a mi:Example ;
+  skos:prefLabel "Dred Scott v. Sandford" ;
+  mi:exampleText "Dred Scott v. Sandford" .
+
+mi:Example_exp_CIVICS_C2_2_2_2 a mi:Example ;
+  skos:prefLabel "Plessy v. Ferguson" ;
+  mi:exampleText "Plessy v. Ferguson" .
+
+mi:Example_exp_CIVICS_C2_2_2_3 a mi:Example ;
+  skos:prefLabel "Loving v. Virginia" ;
+  mi:exampleText "Loving v. Virginia" .
+
+mi:Example_exp_CIVICS_C2_2_2_4 a mi:Example ;
+  skos:prefLabel "Obergefell v. Hodges" ;
+  mi:exampleText "Obergefell v. Hodges" .
+
+mi:Example_exp_CIVICS_C2_2_2_5 a mi:Example ;
+  skos:prefLabel "equality" ;
+  mi:exampleText "equality" .
+
+mi:Example_exp_CIVICS_C2_2_2_6 a mi:Example ;
+  skos:prefLabel "drawing upon Martin Luther King's \"I Have a Dream\" speech and \"Letter from Birmingham City Jail\"" ;
+  mi:exampleText "drawing upon Martin Luther King's \"I Have a Dream\" speech and \"Letter from Birmingham City Jail\"" .
+
+mi:Example_exp_CIVICS_C2_2_2_7 a mi:Example ;
+  skos:prefLabel "the Universal Declaration of Human Rights" ;
+  mi:exampleText "the Universal Declaration of Human Rights" .
+
+mi:Example_exp_CIVICS_C2_2_2_8 a mi:Example ;
+  skos:prefLabel "the Declaration of Sentiments" ;
+  mi:exampleText "the Declaration of Sentiments" .
+
+mi:Example_exp_CIVICS_C2_2_2_9 a mi:Example ;
+  skos:prefLabel "the Equal Rights Amendment" ;
+  mi:exampleText "the Equal Rights Amendment" .
+
+mi:Example_exp_CIVICS_C2_2_2_10 a mi:Example ;
+  skos:prefLabel "the Americans With Disabilities Act and" ;
+  mi:exampleText "the Americans With Disabilities Act and" .
+
+mi:Example_exp_CIVICS_C2_2_3_1 a mi:Example ;
+  skos:prefLabel "liberty and authority/order justice and equality individual rights and the common good" ;
+  mi:exampleText "liberty and authority/order justice and equality individual rights and the common good" .
+
+mi:Example_exp_CIVICS_C3_1_1_1 a mi:Example ;
+  skos:prefLabel "the House of Representatives and Senate (including election and qualifications to hold office) advise and consent impeachment power of the purse approval of treaties and war powers" ;
+  mi:exampleText "the House of Representatives and Senate (including election and qualifications to hold office) advise and consent impeachment power of the purse approval of treaties and war powers" .
+
+mi:Example_exp_CIVICS_C3_1_2_1 a mi:Example ;
+  skos:prefLabel "the President (including election and qualifications to hold office) Commander-in-Chief appointment power presidential pardon executive departments due care (faithful execution of the laws) clause independent regulatory agencies treaty negotiations veto power electoral college Twenty-fifth Amendment" ;
+  mi:exampleText "the President (including election and qualifications to hold office) Commander-in-Chief appointment power presidential pardon executive departments due care (faithful execution of the laws) clause independent regulatory agencies treaty negotiations veto power electoral college Twenty-fifth Amendment" .
+
+mi:Example_exp_CIVICS_C3_1_3_1 a mi:Example ;
+  skos:prefLabel "the Supreme Court (nomination and appointment process lifetime tenure) original and appellate jurisdictions resolution of disputes" ;
+  mi:exampleText "the Supreme Court (nomination and appointment process lifetime tenure) original and appellate jurisdictions resolution of disputes" .
+
+mi:Example_exp_CIVICS_C3_1_4_1 a mi:Example ;
+  skos:prefLabel "advise and consent power of the purse veto power judicial review war powers treaty negotiation and approval the necessary and proper clause and impeachment" ;
+  mi:exampleText "advise and consent power of the purse veto power judicial review war powers treaty negotiation and approval the necessary and proper clause and impeachment" .
+
+mi:Example_exp_CIVICS_C3_1_6_1 a mi:Example ;
+  skos:prefLabel "discretionary spending federal income tax and mandatory spending" ;
+  mi:exampleText "discretionary spending federal income tax and mandatory spending" .
+
+mi:Example_exp_CIVICS_C3_1_7_1 a mi:Example ;
+  skos:prefLabel "McCulloch v. Maryland" ;
+  mi:exampleText "McCulloch v. Maryland" .
+
+mi:Example_exp_CIVICS_C3_1_7_2 a mi:Example ;
+  skos:prefLabel "Constitution have impacted the power of the federal government" ;
+  mi:exampleText "Constitution have impacted the power of the federal government" .
+
+mi:Example_exp_CIVICS_C3_1_7_3 a mi:Example ;
+  skos:prefLabel "the Bill of Rights rule of law enumerated powers implied powers federalism and" ;
+  mi:exampleText "the Bill of Rights rule of law enumerated powers implied powers federalism and" .
+
+mi:Example_exp_CIVICS_C3_2_1_1 a mi:Example ;
+  skos:prefLabel "Constitution places on powers of the states and on the federal government's power over the states" ;
+  mi:exampleText "Constitution places on powers of the states and on the federal government's power over the states" .
+
+mi:Example_exp_CIVICS_C3_2_1_2 a mi:Example ;
+  skos:prefLabel "prohibitions against coining money impairing interstate commerce making treaties with foreign governments" ;
+  mi:exampleText "prohibitions against coining money impairing interstate commerce making treaties with foreign governments" .
+
+mi:Example_exp_CIVICS_C3_2_1_3 a mi:Example ;
+  skos:prefLabel "federal government cannot abolish a state" ;
+  mi:exampleText "federal government cannot abolish a state" .
+
+mi:Example_exp_CIVICS_C3_2_1_4 a mi:Example ;
+  skos:prefLabel "Tenth Amendment reserves powers to the states" ;
+  mi:exampleText "Tenth Amendment reserves powers to the states" .
+
+mi:Example_exp_CIVICS_C3_2_1_5 a mi:Example ;
+  skos:prefLabel "federal government cannot commandeer state employees" ;
+  mi:exampleText "federal government cannot commandeer state employees" .
+
+mi:Example_exp_CIVICS_C3_2_4_1 a mi:Example ;
+  skos:prefLabel "governments including treaty formation implementation and enforcement between federal state and local governments and tribal governments" ;
+  mi:exampleText "governments including treaty formation implementation and enforcement between federal state and local governments and tribal governments" .
+
+mi:Example_exp_CIVICS_C3_2_6_1 a mi:Example ;
+  skos:prefLabel "Use a case study to examine the impact of one such listed mechanism" ;
+  mi:exampleText "Use a case study to examine the impact of one such listed mechanism" .
+
+mi:Example_exp_CIVICS_C3_3_1_1 a mi:Example ;
+  skos:prefLabel "political action committees voluntary organizations professional organizations civic organizations media" ;
+  mi:exampleText "political action committees voluntary organizations professional organizations civic organizations media" .
+
+mi:Example_exp_CIVICS_C3_3_6_1 a mi:Example ;
+  skos:prefLabel "television print press Internet (including social media) radio" ;
+  mi:exampleText "television print press Internet (including social media) radio" .
+
+mi:Example_exp_CIVICS_C3_3_7_1 a mi:Example ;
+  skos:prefLabel "logic factual accuracy selective omission emotional appeal distorted evidence appeals to bias or prejudice confirmation and source bias" ;
+  mi:exampleText "logic factual accuracy selective omission emotional appeal distorted evidence appeals to bias or prejudice confirmation and source bias" .
+
+mi:Example_exp_CIVICS_C4_1_1_1 a mi:Example ;
+  skos:prefLabel "First Amendment rights. Schenck v. United States" ;
+  mi:exampleText "First Amendment rights. Schenck v. United States" .
+
+mi:Example_exp_CIVICS_C4_1_1_2 a mi:Example ;
+  skos:prefLabel "Brandenburg v. Ohio" ;
+  mi:exampleText "Brandenburg v. Ohio" .
+
+mi:Example_exp_CIVICS_C4_1_1_3 a mi:Example ;
+  skos:prefLabel "Tinker v. Des Moines Independent Community School District" ;
+  mi:exampleText "Tinker v. Des Moines Independent Community School District" .
+
+mi:Example_exp_CIVICS_C4_1_1_4 a mi:Example ;
+  skos:prefLabel "Bethel School District v. Fraser" ;
+  mi:exampleText "Bethel School District v. Fraser" .
+
+mi:Example_exp_CIVICS_C4_1_1_5 a mi:Example ;
+  skos:prefLabel "Hazelwood School District v. Kuhlmeier" ;
+  mi:exampleText "Hazelwood School District v. Kuhlmeier" .
+
+mi:Example_exp_CIVICS_C4_1_1_6 a mi:Example ;
+  skos:prefLabel "Texas v. Johnson" ;
+  mi:exampleText "Texas v. Johnson" .
+
+mi:Example_exp_CIVICS_C4_1_1_7 a mi:Example ;
+  skos:prefLabel "New York Times Co. v. United States" ;
+  mi:exampleText "New York Times Co. v. United States" .
+
+mi:Example_exp_CIVICS_C4_1_1_8 a mi:Example ;
+  skos:prefLabel "Village of Skokie v. National Socialist Party" ;
+  mi:exampleText "Village of Skokie v. National Socialist Party" .
+
+mi:Example_exp_CIVICS_C4_1_1_9 a mi:Example ;
+  skos:prefLabel "Minersville School District v. Gobitis" ;
+  mi:exampleText "Minersville School District v. Gobitis" .
+
+mi:Example_exp_CIVICS_C4_1_1_10 a mi:Example ;
+  skos:prefLabel "West Virginia State Board of Education v. Barnette" ;
+  mi:exampleText "West Virginia State Board of Education v. Barnette" .
+
+mi:Example_exp_CIVICS_C4_1_1_11 a mi:Example ;
+  skos:prefLabel "Engel v. Vitale" ;
+  mi:exampleText "Engel v. Vitale" .
+
+mi:Example_exp_CIVICS_C4_1_1_12 a mi:Example ;
+  skos:prefLabel "Lemon v. Kurtzman" ;
+  mi:exampleText "Lemon v. Kurtzman" .
+
+mi:Example_exp_CIVICS_C4_1_1_13 a mi:Example ;
+  skos:prefLabel "Wisconsin v. Yoder" ;
+  mi:exampleText "Wisconsin v. Yoder" .
+
+mi:Example_exp_CIVICS_C4_1_1_14 a mi:Example ;
+  skos:prefLabel "NAACP v. Alabama" ;
+  mi:exampleText "NAACP v. Alabama" .
+
+mi:Example_exp_CIVICS_C4_1_1_15 a mi:Example ;
+  skos:prefLabel "Through the use of court cases and examples explore and analyze the scope and limits of" ;
+  mi:exampleText "Through the use of court cases and examples explore and analyze the scope and limits of" .
+
+mi:Example_exp_CIVICS_C4_1_2_1 a mi:Example ;
+  skos:prefLabel "Mapp v. Ohio" ;
+  mi:exampleText "Mapp v. Ohio" .
+
+mi:Example_exp_CIVICS_C4_1_2_2 a mi:Example ;
+  skos:prefLabel "Katz v. United States" ;
+  mi:exampleText "Katz v. United States" .
+
+mi:Example_exp_CIVICS_C4_1_2_3 a mi:Example ;
+  skos:prefLabel "New Jersey v. T.L.O" ;
+  mi:exampleText "New Jersey v. T.L.O" .
+
+mi:Example_exp_CIVICS_C4_1_2_4 a mi:Example ;
+  skos:prefLabel "Riley v. California" ;
+  mi:exampleText "Riley v. California" .
+
+mi:Example_exp_CIVICS_C4_1_2_5 a mi:Example ;
+  skos:prefLabel "Gideon v. Wainwright" ;
+  mi:exampleText "Gideon v. Wainwright" .
+
+mi:Example_exp_CIVICS_C4_1_2_6 a mi:Example ;
+  skos:prefLabel "Miranda v. Arizona" ;
+  mi:exampleText "Miranda v. Arizona" .
+
+mi:Example_exp_CIVICS_C4_1_2_7 a mi:Example ;
+  skos:prefLabel "Gregg v. Georgia" ;
+  mi:exampleText "Gregg v. Georgia" .
+
+mi:Example_exp_CIVICS_C4_2_1_1 a mi:Example ;
+  skos:prefLabel "Constitution. Analyze each Amendment's relative effectiveness" ;
+  mi:exampleText "Constitution. Analyze each Amendment's relative effectiveness" .
+
+mi:Example_exp_CIVICS_C4_2_2_1 a mi:Example ;
+  skos:prefLabel "Constitution" ;
+  mi:exampleText "Constitution" .
+
+mi:Example_exp_CIVICS_C4_2_2_2 a mi:Example ;
+  skos:prefLabel "suffrage movements (Fifteenth Nineteenth Twenty-Third Twenty-Fourth Twenty-Sixth Amendments) and the civil rights movements (Twenty-Fourth Twenty-Sixth Amendments)" ;
+  mi:exampleText "suffrage movements (Fifteenth Nineteenth Twenty-Third Twenty-Fourth Twenty-Sixth Amendments) and the civil rights movements (Twenty-Fourth Twenty-Sixth Amendments)" .
+
+mi:Example_exp_CIVICS_C4_2_3_1 a mi:Example ;
+  skos:prefLabel "Barron v. Baltimore" ;
+  mi:exampleText "Barron v. Baltimore" .
+
+mi:Example_exp_CIVICS_C4_2_3_2 a mi:Example ;
+  skos:prefLabel "Gitlow v. New York" ;
+  mi:exampleText "Gitlow v. New York" .
+
+mi:Example_exp_CIVICS_C4_2_3_3 a mi:Example ;
+  skos:prefLabel "Gideon v. Wainwright" ;
+  mi:exampleText "Gideon v. Wainwright" .
+
+mi:Example_exp_CIVICS_C4_2_3_4 a mi:Example ;
+  skos:prefLabel "Mapp v. Ohio" ;
+  mi:exampleText "Mapp v. Ohio" .
+
+mi:Example_exp_CIVICS_C4_2_3_5 a mi:Example ;
+  skos:prefLabel "Meyer v. Nebraska" ;
+  mi:exampleText "Meyer v. Nebraska" .
+
+mi:Example_exp_CIVICS_C4_2_3_6 a mi:Example ;
+  skos:prefLabel "Griswold v. Connecticut" ;
+  mi:exampleText "Griswold v. Connecticut" .
+
+mi:Example_exp_CIVICS_C4_2_3_7 a mi:Example ;
+  skos:prefLabel "Roe v. Wade" ;
+  mi:exampleText "Roe v. Wade" .
+
+mi:Example_exp_CIVICS_C4_2_3_8 a mi:Example ;
+  skos:prefLabel "Cantwell v. Connecticut" ;
+  mi:exampleText "Cantwell v. Connecticut" .
+
+mi:Example_exp_CIVICS_C4_2_3_9 a mi:Example ;
+  skos:prefLabel "McDonald v. Chicago" ;
+  mi:exampleText "McDonald v. Chicago" .
+
+mi:Example_exp_CIVICS_C4_2_3_10 a mi:Example ;
+  skos:prefLabel "Shelby County v. Holder" ;
+  mi:exampleText "Shelby County v. Holder" .
+
+mi:Example_exp_CIVICS_C4_2_3_11 a mi:Example ;
+  skos:prefLabel "Obergefell v. Hodges" ;
+  mi:exampleText "Obergefell v. Hodges" .
+
+mi:Example_exp_CIVICS_C4_2_3_12 a mi:Example ;
+  skos:prefLabel "United States v. Wong Kim Ark" ;
+  mi:exampleText "United States v. Wong Kim Ark" .
+
+mi:Example_exp_CIVICS_C4_2_3_13 a mi:Example ;
+  skos:prefLabel "Civil Rights Act of 1964 Voting Right Act of 1965 Slaughterhouse cases" ;
+  mi:exampleText "Civil Rights Act of 1964 Voting Right Act of 1965 Slaughterhouse cases" .
+
+mi:Example_exp_CIVICS_C4_3_1_1 a mi:Example ;
+  skos:prefLabel "freedom of thought conscience expression association movement and residence privacy personal autonomy due process of law free exercise of religion and equal protection of the law" ;
+  mi:exampleText "freedom of thought conscience expression association movement and residence privacy personal autonomy due process of law free exercise of religion and equal protection of the law" .
+
+mi:Example_exp_CIVICS_C4_3_1_2 a mi:Example ;
+  skos:prefLabel "freedom of speech press assembly and petition" ;
+  mi:exampleText "freedom of speech press assembly and petition" .
+
+mi:Example_exp_CIVICS_C4_3_1_3 a mi:Example ;
+  skos:prefLabel "the right to vote and run for public office" ;
+  mi:exampleText "the right to vote and run for public office" .
+
+mi:Example_exp_CIVICS_C4_3_1_4 a mi:Example ;
+  skos:prefLabel "acquire use transfer and dispose of property" ;
+  mi:exampleText "acquire use transfer and dispose of property" .
+
+mi:Example_exp_CIVICS_C4_3_1_5 a mi:Example ;
+  skos:prefLabel "choose one's work change employment join labor unions and professional associations" ;
+  mi:exampleText "choose one's work change employment join labor unions and professional associations" .
+
+mi:Example_exp_CIVICS_C4_3_1_6 a mi:Example ;
+  skos:prefLabel "establish and operate a business" ;
+  mi:exampleText "establish and operate a business" .
+
+mi:Example_exp_CIVICS_C4_3_1_7 a mi:Example ;
+  skos:prefLabel "copyright protection" ;
+  mi:exampleText "copyright protection" .
+
+mi:Example_exp_CIVICS_C4_3_1_8 a mi:Example ;
+  skos:prefLabel "enter into lawful contracts" ;
+  mi:exampleText "enter into lawful contracts" .
+
+mi:Example_exp_CIVICS_C4_3_1_9 a mi:Example ;
+  skos:prefLabel "just compensation for the taking of private property for public use" ;
+  mi:exampleText "just compensation for the taking of private property for public use" .
+
+mi:Example_exp_CIVICS_C4_3_2_1 a mi:Example ;
+  skos:prefLabel "Plessy v. Ferguson" ;
+  mi:exampleText "Plessy v. Ferguson" .
+
+mi:Example_exp_CIVICS_C4_3_2_2 a mi:Example ;
+  skos:prefLabel "Korematsu v. United States" ;
+  mi:exampleText "Korematsu v. United States" .
+
+mi:Example_exp_CIVICS_C4_3_2_3 a mi:Example ;
+  skos:prefLabel "clear and present danger" ;
+  mi:exampleText "clear and present danger" .
+
+mi:Example_exp_CIVICS_C4_3_2_4 a mi:Example ;
+  skos:prefLabel "time place and manner restrictions on speech" ;
+  mi:exampleText "time place and manner restrictions on speech" .
+
+mi:Example_exp_CIVICS_C4_3_2_5 a mi:Example ;
+  skos:prefLabel "compelling government interest" ;
+  mi:exampleText "compelling government interest" .
+
+mi:Example_exp_CIVICS_C4_3_2_6 a mi:Example ;
+  skos:prefLabel "security" ;
+  mi:exampleText "security" .
+
+mi:Example_exp_CIVICS_C4_3_2_7 a mi:Example ;
+  skos:prefLabel "libel or slander" ;
+  mi:exampleText "libel or slander" .
+
+mi:Example_exp_CIVICS_C4_3_2_8 a mi:Example ;
+  skos:prefLabel "public safety" ;
+  mi:exampleText "public safety" .
+
+mi:Example_exp_CIVICS_C4_3_2_9 a mi:Example ;
+  skos:prefLabel "equal opportunity. Dred Scott" ;
+  mi:exampleText "equal opportunity. Dred Scott" .
+
+mi:Example_exp_CIVICS_C5_1_1_1 a mi:Example ;
+  skos:prefLabel "Senate treaty ratification powers Senate advise and consent of political appointments Congressional declarations of war War Powers Act of 1973 executive orders and related injunctions power of the purse" ;
+  mi:exampleText "Senate treaty ratification powers Senate advise and consent of political appointments Congressional declarations of war War Powers Act of 1973 executive orders and related injunctions power of the purse" .
+
+mi:Example_exp_CIVICS_C5_1_2_1 a mi:Example ;
+  skos:prefLabel "foreign policy its implementation and its impact on American and international institutions and individuals" ;
+  mi:exampleText "foreign policy its implementation and its impact on American and international institutions and individuals" .
+
+mi:Example_exp_CIVICS_C5_1_2_2 a mi:Example ;
+  skos:prefLabel "immigration policies nuclear treaties Paris Accords and climate change war on terrorism space treaties privatization and militarism of space the Spanish-American War American isolationism the Atlantic Charter cold war containment post-cold war policy modern treaties tariffs trade wars cyber-security gag rules" ;
+  mi:exampleText "immigration policies nuclear treaties Paris Accords and climate change war on terrorism space treaties privatization and militarism of space the Spanish-American War American isolationism the Atlantic Charter cold war containment post-cold war policy modern treaties tariffs trade wars cyber-security gag rules" .
+
+mi:Example_exp_CIVICS_C5_1_3_1 a mi:Example ;
+  skos:prefLabel "political action committees voluntary organizations professional organizations civic organizations media individuals' public opinions interest groups the media news cycles think tanks foreign policy" ;
+  mi:exampleText "political action committees voluntary organizations professional organizations civic organizations media individuals' public opinions interest groups the media news cycles think tanks foreign policy" .
+
+mi:Example_exp_CIVICS_C5_2_1_1 a mi:Example ;
+  skos:prefLabel "political economic technological and cultural developments on countries and people around the world" ;
+  mi:exampleText "political economic technological and cultural developments on countries and people around the world" .
+
+mi:Example_exp_CIVICS_C5_2_1_2 a mi:Example ;
+  skos:prefLabel "foreign policy popular culture fashion music Democratic Values Constitutional Principles backlash" ;
+  mi:exampleText "foreign policy popular culture fashion music Democratic Values Constitutional Principles backlash" .
+
+mi:Example_exp_CIVICS_C5_2_2_1 a mi:Example ;
+  skos:prefLabel "institutions and individuals" ;
+  mi:exampleText "institutions and individuals" .
+
+mi:Example_exp_CIVICS_C5_2_2_2 a mi:Example ;
+  skos:prefLabel "multinational corporations terrorism regional organizations trade migration human trafficking telecommunications" ;
+  mi:exampleText "multinational corporations terrorism regional organizations trade migration human trafficking telecommunications" .
+
+mi:Example_exp_CIVICS_C5_2_3_1 a mi:Example ;
+  skos:prefLabel "the United Nations North Atlantic Treaty Organization Organization of American States USMCA Helsinki Accords Antarctic Treaty Most Favored Nation Agreements Paris Climate Accords and Nuclear Non-Proliferation Treaty" ;
+  mi:exampleText "the United Nations North Atlantic Treaty Organization Organization of American States USMCA Helsinki Accords Antarctic Treaty Most Favored Nation Agreements Paris Climate Accords and Nuclear Non-Proliferation Treaty" .
+
+mi:Example_exp_CIVICS_C5_2_4_1 a mi:Example ;
+  skos:prefLabel "International Red Cross Amnesty International Doctors Without Borders" ;
+  mi:exampleText "International Red Cross Amnesty International Doctors Without Borders" .
+
+mi:Example_exp_CIVICS_C6_1_2_1 a mi:Example ;
+  skos:prefLabel "legislation Constitutional Amendments" ;
+  mi:exampleText "legislation Constitutional Amendments" .
+
+mi:Example_exp_CIVICS_C6_1_3_1 a mi:Example ;
+  skos:prefLabel "people and citizens living in states territories federal districts and on tribally governed land. District of Columbia Guam Puerto Rico Northern Mariana Islands U.S. Virgin Islands American Samoa Tribal Governments" ;
+  mi:exampleText "people and citizens living in states territories federal districts and on tribally governed land. District of Columbia Guam Puerto Rico Northern Mariana Islands U.S. Virgin Islands American Samoa Tribal Governments" .
+
+mi:Example_exp_CIVICS_C6_2_1_1 a mi:Example ;
+  skos:prefLabel "voting in national state and local elections serving as a juror running for elected office" ;
+  mi:exampleText "voting in national state and local elections serving as a juror running for elected office" .
+
+mi:Example_exp_CIVICS_C6_2_1_2 a mi:Example ;
+  skos:prefLabel "serving in the armed forces voting in local jurisdictions serving on some local juries registering to vote" ;
+  mi:exampleText "serving in the armed forces voting in local jurisdictions serving on some local juries registering to vote" .
+
+mi:Example_exp_CIVICS_C6_2_1_3 a mi:Example ;
+  skos:prefLabel "participating in public life" ;
+  mi:exampleText "participating in public life" .
+
+mi:Example_exp_CIVICS_C6_2_1_4 a mi:Example ;
+  skos:prefLabel "participating in political life" ;
+  mi:exampleText "participating in political life" .
+
+mi:Example_exp_CIVICS_C6_2_1_5 a mi:Example ;
+  skos:prefLabel "being informed about laws that govern society" ;
+  mi:exampleText "being informed about laws that govern society" .
+
+mi:Example_exp_CIVICS_C6_2_1_6 a mi:Example ;
+  skos:prefLabel "respecting and obeying just laws" ;
+  mi:exampleText "respecting and obeying just laws" .
+
+mi:Example_exp_CIVICS_C6_2_1_7 a mi:Example ;
+  skos:prefLabel "stay informed and attentive about public issues" ;
+  mi:exampleText "stay informed and attentive about public issues" .
+
+mi:Example_exp_CIVICS_C6_2_1_8 a mi:Example ;
+  skos:prefLabel "monitoring political leaders and governmental agencies" ;
+  mi:exampleText "monitoring political leaders and governmental agencies" .
+
+mi:Example_exp_CIVICS_C6_2_1_9 a mi:Example ;
+  skos:prefLabel "assuming community leadership when appropriate" ;
+  mi:exampleText "assuming community leadership when appropriate" .
+
+mi:Example_exp_CIVICS_C6_2_1_10 a mi:Example ;
+  skos:prefLabel "paying taxes" ;
+  mi:exampleText "paying taxes" .
+
+mi:Example_exp_CIVICS_C6_2_1_11 a mi:Example ;
+  skos:prefLabel "registering to vote and voting knowledgeably on candidates and issues" ;
+  mi:exampleText "registering to vote and voting knowledgeably on candidates and issues" .
+
+mi:Example_exp_CIVICS_C6_2_1_12 a mi:Example ;
+  skos:prefLabel "performing public service" ;
+  mi:exampleText "performing public service" .
+
+mi:Example_exp_CIVICS_C6_2_1_13 a mi:Example ;
+  skos:prefLabel "assuming leadership when appropriate. * incarceration is an exception in some states" ;
+  mi:exampleText "assuming leadership when appropriate. * incarceration is an exception in some states" .
+
+mi:Example_exp_CIVICS_C6_3_1_1 a mi:Example ;
+  skos:prefLabel "concern for the well-being of others civility respect for the rights of other individuals respect for law honesty open-mindedness negotiation and compromise persistence civic-mindedness compassion patriotism courage and tolerance for ambiguity" ;
+  mi:exampleText "concern for the well-being of others civility respect for the rights of other individuals respect for law honesty open-mindedness negotiation and compromise persistence civic-mindedness compassion patriotism courage and tolerance for ambiguity" .
+
+mi:Example_exp_CIVICS_C6_3_2_1 a mi:Example ;
+  skos:prefLabel "obeying just law disobeying unjust law being informed and attentive to public issues monitoring political leaders and governmental agencies assuming leadership when appropriate paying taxes registering to vote and voting knowledgeably on candidates and issues serving as a juror serving in the armed forces performing public service" ;
+  mi:exampleText "obeying just law disobeying unjust law being informed and attentive to public issues monitoring political leaders and governmental agencies assuming leadership when appropriate paying taxes registering to vote and voting knowledgeably on candidates and issues serving as a juror serving in the armed forces performing public service" .
+
+mi:Example_exp_CIVICS_C6_4_2_1 a mi:Example ;
+  skos:prefLabel "Assess the effects of civil disobedience social movements demonstrations protests on society and law" ;
+  mi:exampleText "Assess the effects of civil disobedience social movements demonstrations protests on society and law" .
+
+mi:Example_exp_CIVICS_C6_4_2_2 a mi:Example ;
+  skos:prefLabel "abolitionists women's suffrage movement Civil Rights movement direct action sit-down strikes walk-outs" ;
+  mi:exampleText "abolitionists women's suffrage movement Civil Rights movement direct action sit-down strikes walk-outs" .
+
+mi:Example_exp_CIVICS_C6_4_3_1 a mi:Example ;
+  skos:prefLabel "primary and secondary sources legal documents (Constitutions court decisions state law) non-text based information (oral speeches/presentations political cartoons campaign advertisements) and other forms of political communication (speeches and blogs)" ;
+  mi:exampleText "primary and secondary sources legal documents (Constitutions court decisions state law) non-text based information (oral speeches/presentations political cartoons campaign advertisements) and other forms of political communication (speeches and blogs)" .
+
+mi:Example_exp_CIVICS_C6_4_3_2 a mi:Example ;
+  skos:prefLabel "logical validity factual accuracy and/or omission emotional appeal unstated assumptions logical fallacies inconsistencies distortions appeals to bias or prejudice overall strength of argument" ;
+  mi:exampleText "logical validity factual accuracy and/or omission emotional appeal unstated assumptions logical fallacies inconsistencies distortions appeals to bias or prejudice overall strength of argument" .
+
+mi:Example_exp_CIVICS_C6_4_4_1 a mi:Example ;
+  skos:prefLabel "trials school board meetings congressional hearings running for office letters to the editor political campaigns" ;
+  mi:exampleText "trials school board meetings congressional hearings running for office letters to the editor political campaigns" .

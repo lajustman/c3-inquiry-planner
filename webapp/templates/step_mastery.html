@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="panel">
+  <h2>5. Did I get it? (Mastery Check)</h2>
+  <p>Work through the mastery check items. Submit your responses in class or through the assessment tool.</p>
+  <div class="mastery-items">
+    {% for task in plan.dok_set %}
+    <article class="mastery-item">
+      <h3>{{ task.level }}</h3>
+      <p>{{ task.prompt }}</p>
+      <p class="meta"><strong>Suggested products:</strong> {{ ", ".join(task.products) }}</p>
+      <p class="meta"><strong>Supports:</strong> {{ ", ".join(task.supports) }}</p>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+<section class="panel">
+  <h2>6. Close the loop. (Iterate until mastery)</h2>
+  <div class="mastery-loop">
+    <p><strong>Proficiency target:</strong> {{ plan.mastery_loop.target }}</p>
+    <p><strong>Expectation:</strong> {{ plan.mastery_loop.expectation }}</p>
+    <h3>Loop through these tasks as needed:</h3>
+    <ol>
+      {% for task in plan.mastery_loop.dok_tasks %}
+      <li><strong>{{ task.level }}</strong>: {{ task.prompt }} <em>(Products: {{ ", ".join(task.products) }})</em></li>
+      {% endfor %}
+    </ol>
+  </div>
+  {% if plan.iteration_cycles %}
+  <h3>Checkpoint guidance</h3>
+  <ul class="cycles">
+    {% for cycle in plan.iteration_cycles %}
+    <li>
+      <strong>{{ cycle.cycle }}</strong>: {{ cycle.purpose }}<br>
+      <em>Checkpoint:</em> {{ cycle.checkpoint.prompt if cycle.checkpoint.prompt else cycle.checkpoint.level }}<br>
+      <em>Feedback:</em> {{ cycle.feedback }}<br>
+      <em>Next step:</em> {{ cycle.next_step }}
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  <form method="post" class="form-block">
+    <button type="submit">Mark mastery check complete &raquo;</button>
+  </form>
+</section>
+{% endblock %}

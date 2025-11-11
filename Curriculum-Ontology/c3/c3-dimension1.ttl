@@ -1,0 +1,394 @@
+@prefix c3:     <urn:c3:> .
+@prefix dcterms:<http://purl.org/dc/terms/> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@base <file:///Users/louisjustman/Downloads/C3%20Project/Curriculum-Ontology/c3/> .
+
+<c3-dimension1.ttl> a owl:Ontology ;
+  rdfs:label "C3 Framework — Dimension 1 Module" ;
+  dcterms:description "Modular slice of the C3 Framework capturing Dimension 1 (Developing Questions & Planning Inquiries) with enhanced SKOS alignment and provenance." ;
+  dcterms:creator "NCSS — College, Career, and Civic Life (C3) Framework for Social Studies State Standards" ;
+  dcterms:source "C3 Framework, pp. 17–24" .
+
+#################################################################
+# Annotation properties (declared for reuse in this module)
+#################################################################
+
+c3:status       a owl:AnnotationProperty .
+c3:createdOn    a owl:AnnotationProperty .
+c3:alignmentNote a owl:AnnotationProperty .
+c3:officialText a owl:AnnotationProperty .
+c3:sourceDoc    a owl:AnnotationProperty .
+c3:sourcePage   a owl:AnnotationProperty .
+
+#################################################################
+# Property alignment with SKOS navigation
+#################################################################
+
+c3:hasDomain    rdfs:subPropertyOf skos:narrower .
+c3:hasStrand    rdfs:subPropertyOf skos:narrower .
+c3:hasIndicator rdfs:subPropertyOf skos:narrower .
+
+#################################################################
+# Dimension 1 — Core structure
+#################################################################
+
+c3:Dimension1 a c3:Dimension ;
+  rdfs:label "Dimension 1: Developing Questions & Planning Inquiries" ;
+  skos:prefLabel "Dimension 1: Developing Questions & Planning Inquiries" ;
+  skos:altLabel "D1" ;
+  c3:status "official" ;
+  c3:sourceDoc "NCSS — College, Career, and Civic Life (C3) Framework for Social Studies State Standards" ;
+  c3:sourcePage "17" .
+
+c3:Inquiry a c3:DisciplinaryDomain ;
+  rdfs:label "Inquiry Practices" ;
+  skos:prefLabel "Inquiry Practices" ;
+  skos:altLabel "D1 — Inquiry" ;
+  c3:status "official" ;
+  c3:sourcePage "19" ;
+  c3:createdOn "2025-11-02"^^xsd:date ;
+  c3:alignmentNote "Dimension 1 domain capturing the inquiry practices strand cluster." .
+
+c3:Dimension1 c3:hasDomain c3:Inquiry .
+
+#################################################################
+# Strands (Dimension 1)
+#################################################################
+
+c3:Str_D1_Compelling a c3:Strand ;
+  rdfs:label "Construct Compelling Questions" ;
+  skos:prefLabel "Construct Compelling Questions" ;
+  skos:altLabel "D1.1 — Compelling Questions" ;
+  c3:status "official" ;
+  c3:sourcePage "20" .
+
+c3:Str_D1_Disciplinary a c3:Strand ;
+  rdfs:label "Identify Disciplinary Ideas" ;
+  skos:prefLabel "Identify Disciplinary Ideas" ;
+  skos:altLabel "D1.2 — Disciplinary Ideas" ;
+  c3:status "official" ;
+  c3:sourcePage "21" .
+
+c3:Str_D1_Supporting a c3:Strand ;
+  rdfs:label "Construct Supporting Questions" ;
+  skos:prefLabel "Construct Supporting Questions" ;
+  skos:altLabel "D1.3 — Supporting Questions" ;
+  c3:status "official" ;
+  c3:sourcePage "21" .
+
+c3:Str_D1_LinkQuestions a c3:Strand ;
+  rdfs:label "Relate Supporting to Compelling Questions" ;
+  skos:prefLabel "Relate Supporting to Compelling Questions" ;
+  skos:altLabel "D1.4 — Linking Questions" ;
+  c3:status "official" ;
+  c3:sourcePage "22" .
+
+c3:Str_D1_Sources a c3:Strand ;
+  rdfs:label "Determine Helpful Sources" ;
+  skos:prefLabel "Determine Helpful Sources" ;
+  skos:altLabel "D1.5 — Helpful Sources" ;
+  c3:status "official" ;
+  c3:sourcePage "23" .
+
+c3:Inquiry c3:hasStrand
+  c3:Str_D1_Compelling ,
+  c3:Str_D1_Disciplinary ,
+  c3:Str_D1_Supporting ,
+  c3:Str_D1_LinkQuestions ,
+  c3:Str_D1_Sources .
+
+#################################################################
+# Indicators — Dimension 1 (D1.1–D1.5)
+#################################################################
+
+c3:I_D1_1_K_2 a c3:Indicator ;
+  c3:hasCode "D1.1.K-2" ;
+  rdfs:label "Explain why the compelling question is important to the student." ;
+  skos:prefLabel "Explain why the compelling question is important to the student." ;
+  skos:altLabel "Indicator D1.1.K-2" ;
+  c3:officialText "Explain why the compelling question is important to the student." ;
+  c3:targetsGradeBand c3:K_2 ;
+  c3:addressesConcept c3:CompellingQs ;
+  c3:requiresSkill c3:Explain , c3:Identify ;
+  c3:inStrand c3:Str_D1_Compelling ;
+  c3:inDimension c3:Dimension1 ;
+  c3:isIndicatorOf c3:Inquiry ;
+  dcterms:source "C3 Framework, Table 5, p. 20" .
+
+c3:I_D1_1_3_5 a c3:Indicator ;
+  c3:hasCode "D1.1.3-5" ;
+  rdfs:label "Explain why compelling questions are important to others (e.g., peers, adults)." ;
+  skos:prefLabel "Explain why compelling questions are important to others (e.g., peers, adults)." ;
+  skos:altLabel "Indicator D1.1.3-5" ;
+  c3:officialText "Explain why compelling questions are important to others (e.g., peers, adults)." ;
+  c3:targetsGradeBand c3:G3_5 ;
+  c3:addressesConcept c3:CompellingQs ;
+  c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_D1_Compelling ;
+  c3:inDimension c3:Dimension1 ;
+  c3:isIndicatorOf c3:Inquiry ;
+  dcterms:source "C3 Framework, Table 5, p. 20" .
+
+c3:I_D1_1_6_8 a c3:Indicator ;
+  c3:hasCode "D1.1.6-8" ;
+  rdfs:label "Explain how a question represents key ideas in the field." ;
+  skos:prefLabel "Explain how a question represents key ideas in the field." ;
+  skos:altLabel "Indicator D1.1.6-8" ;
+  c3:officialText "Explain how a question represents key ideas in the field." ;
+  c3:targetsGradeBand c3:G6_8 ;
+  c3:addressesConcept c3:CompellingQs ;
+  c3:requiresSkill c3:Explain , c3:Analyze ;
+  c3:inStrand c3:Str_D1_Compelling ;
+  c3:inDimension c3:Dimension1 ;
+  c3:isIndicatorOf c3:Inquiry ;
+  dcterms:source "C3 Framework, Table 5, p. 20" .
+
+c3:I_D1_1_9_12 a c3:Indicator ;
+  c3:hasCode "D1.1.9-12" ;
+  rdfs:label "Explain how a question reflects an enduring issue in the field." ;
+  skos:prefLabel "Explain how a question reflects an enduring issue in the field." ;
+  skos:altLabel "Indicator D1.1.9-12" ;
+  c3:officialText "Explain how a question reflects an enduring issue in the field." ;
+  c3:targetsGradeBand c3:G9_12 ;
+  c3:addressesConcept c3:CompellingQs ;
+  c3:requiresSkill c3:Explain , c3:Analyze ;
+  c3:inStrand c3:Str_D1_Compelling ;
+  c3:inDimension c3:Dimension1 ;
+  c3:isIndicatorOf c3:Inquiry ;
+  dcterms:source "C3 Framework, Table 5, p. 20" .
+
+c3:I_D1_2_K_2 a c3:Indicator ;
+  c3:hasCode "D1.2.K-2" ;
+  rdfs:label "Identify disciplinary ideas associated with a compelling question." ;
+  skos:prefLabel "Identify disciplinary ideas associated with a compelling question." ;
+  skos:altLabel "Indicator D1.2.K-2" ;
+  c3:officialText "Identify disciplinary ideas associated with a compelling question." ;
+  c3:targetsGradeBand c3:K_2 ;
+  c3:addressesConcept c3:DisciplinaryIdeas ;
+  c3:requiresSkill c3:Identify ;
+  c3:inStrand c3:Str_D1_Disciplinary ;
+  c3:inDimension c3:Dimension1 ;
+  c3:isIndicatorOf c3:Inquiry ;
+  dcterms:source "C3 Framework, Table 5, p. 21" .
+
+c3:I_D1_2_3_5 a c3:Indicator ;
+  c3:hasCode "D1.2.3-5" ;
+  rdfs:label "Identify disciplinary concepts and ideas associated with a compelling question that are open to different interpretations." ;
+  skos:prefLabel "Identify disciplinary concepts and ideas associated with a compelling question that are open to different interpretations." ;
+  skos:altLabel "Indicator D1.2.3-5" ;
+  c3:officialText "Identify disciplinary concepts and ideas associated with a compelling question that are open to different interpretations." ;
+  c3:targetsGradeBand c3:G3_5 ;
+  c3:addressesConcept c3:DisciplinaryIdeas ;
+  c3:requiresSkill c3:Identify , c3:Explain ;
+  c3:inStrand c3:Str_D1_Disciplinary ;
+  c3:inDimension c3:Dimension1 ;
+  c3:isIndicatorOf c3:Inquiry ;
+  dcterms:source "C3 Framework, Table 5, p. 21" .
+
+c3:I_D1_2_6_8 a c3:Indicator ;
+  c3:hasCode "D1.2.6-8" ;
+  rdfs:label "Explain points of agreement experts have about interpretations and applications of disciplinary concepts and ideas associated with a compelling question." ;
+  skos:prefLabel "Explain points of agreement experts have about interpretations and applications of disciplinary concepts and ideas associated with a compelling question." ;
+  skos:altLabel "Indicator D1.2.6-8" ;
+  c3:officialText "Explain points of agreement experts have about interpretations and applications of disciplinary concepts and ideas associated with a compelling question." ;
+  c3:targetsGradeBand c3:G6_8 ;
+  c3:addressesConcept c3:DisciplinaryIdeas ;
+  c3:requiresSkill c3:Explain , c3:Analyze ;
+  c3:inStrand c3:Str_D1_Disciplinary ;
+  c3:inDimension c3:Dimension1 ;
+  c3:isIndicatorOf c3:Inquiry ;
+  dcterms:source "C3 Framework, Table 5, p. 21" .
+
+c3:I_D1_2_9_12 a c3:Indicator ;
+  c3:hasCode "D1.2.9-12" ;
+  rdfs:label "Explain points of agreement and disagreement experts have about interpretations and applications of disciplinary concepts and ideas associated with a compelling question." ;
+  skos:prefLabel "Explain points of agreement and disagreement experts have about interpretations and applications of disciplinary concepts and ideas associated with a compelling question." ;
+  skos:altLabel "Indicator D1.2.9-12" ;
+  c3:officialText "Explain points of agreement and disagreement experts have about interpretations and applications of disciplinary concepts and ideas associated with a compelling question." ;
+  c3:targetsGradeBand c3:G9_12 ;
+  c3:addressesConcept c3:DisciplinaryIdeas ;
+  c3:requiresSkill c3:Analyze , c3:Evaluate ;
+  c3:inStrand c3:Str_D1_Disciplinary ;
+  c3:inDimension c3:Dimension1 ;
+  c3:isIndicatorOf c3:Inquiry ;
+  dcterms:source "C3 Framework, Table 5, p. 21" .
+
+c3:I_D1_3_K_2 a c3:Indicator ;
+  c3:hasCode "D1.3.K-2" ;
+  rdfs:label "Identify facts and concepts associated with a supporting question." ;
+  skos:prefLabel "Identify facts and concepts associated with a supporting question." ;
+  skos:altLabel "Indicator D1.3.K-2" ;
+  c3:officialText "Identify facts and concepts associated with a supporting question." ;
+  c3:targetsGradeBand c3:K_2 ;
+  c3:addressesConcept c3:SupportingQs ;
+  c3:requiresSkill c3:Identify ;
+  c3:inStrand c3:Str_D1_Supporting ;
+  c3:inDimension c3:Dimension1 ;
+  c3:isIndicatorOf c3:Inquiry ;
+  dcterms:source "C3 Framework, Table 6, p. 21" .
+
+c3:I_D1_3_3_5 a c3:Indicator ;
+  c3:hasCode "D1.3.3-5" ;
+  rdfs:label "Identify the disciplinary concepts and ideas associated with a supporting question that are open to interpretation." ;
+  skos:prefLabel "Identify the disciplinary concepts and ideas associated with a supporting question that are open to interpretation." ;
+  skos:altLabel "Indicator D1.3.3-5" ;
+  c3:officialText "Identify the disciplinary concepts and ideas associated with a supporting question that are open to interpretation." ;
+  c3:targetsGradeBand c3:G3_5 ;
+  c3:addressesConcept c3:SupportingQs ;
+  c3:requiresSkill c3:Identify , c3:Explain ;
+  c3:inStrand c3:Str_D1_Supporting ;
+  c3:inDimension c3:Dimension1 ;
+  c3:isIndicatorOf c3:Inquiry ;
+  dcterms:source "C3 Framework, Table 6, p. 21" .
+
+c3:I_D1_3_6_8 a c3:Indicator ;
+  c3:hasCode "D1.3.6-8" ;
+  rdfs:label "Explain points of agreement experts have about interpretations and applications of disciplinary concepts and ideas associated with a supporting question." ;
+  skos:prefLabel "Explain points of agreement experts have about interpretations and applications of disciplinary concepts and ideas associated with a supporting question." ;
+  skos:altLabel "Indicator D1.3.6-8" ;
+  c3:officialText "Explain points of agreement experts have about interpretations and applications of disciplinary concepts and ideas associated with a supporting question." ;
+  c3:targetsGradeBand c3:G6_8 ;
+  c3:addressesConcept c3:SupportingQs ;
+  c3:requiresSkill c3:Explain , c3:Analyze ;
+  c3:inStrand c3:Str_D1_Supporting ;
+  c3:inDimension c3:Dimension1 ;
+  c3:isIndicatorOf c3:Inquiry ;
+  dcterms:source "C3 Framework, Table 6, p. 21" .
+
+c3:I_D1_3_9_12 a c3:Indicator ;
+  c3:hasCode "D1.3.9-12" ;
+  rdfs:label "Explain points of agreement and disagreement experts have about interpretations and applications of disciplinary concepts and ideas associated with a supporting question." ;
+  skos:prefLabel "Explain points of agreement and disagreement experts have about interpretations and applications of disciplinary concepts and ideas associated with a supporting question." ;
+  skos:altLabel "Indicator D1.3.9-12" ;
+  c3:officialText "Explain points of agreement and disagreement experts have about interpretations and applications of disciplinary concepts and ideas associated with a supporting question." ;
+  c3:targetsGradeBand c3:G9_12 ;
+  c3:addressesConcept c3:SupportingQs ;
+  c3:requiresSkill c3:Analyze , c3:Evaluate ;
+  c3:inStrand c3:Str_D1_Supporting ;
+  c3:inDimension c3:Dimension1 ;
+  c3:isIndicatorOf c3:Inquiry ;
+  dcterms:source "C3 Framework, Table 6, p. 21" .
+
+c3:I_D1_4_K_2 a c3:Indicator ;
+  c3:hasCode "D1.4.K-2" ;
+  rdfs:label "Make connections between supporting questions and compelling questions." ;
+  skos:prefLabel "Make connections between supporting questions and compelling questions." ;
+  skos:altLabel "Indicator D1.4.K-2" ;
+  c3:officialText "Make connections between supporting questions and compelling questions." ;
+  c3:targetsGradeBand c3:K_2 ;
+  c3:addressesConcept c3:SupportingQs , c3:CompellingQs ;
+  c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_D1_LinkQuestions ;
+  c3:inDimension c3:Dimension1 ;
+  c3:isIndicatorOf c3:Inquiry ;
+  dcterms:source "C3 Framework, Table 6, p. 22" .
+
+c3:I_D1_4_3_5 a c3:Indicator ;
+  c3:hasCode "D1.4.3-5" ;
+  rdfs:label "Explain how supporting questions help answer compelling questions in an inquiry." ;
+  skos:prefLabel "Explain how supporting questions help answer compelling questions in an inquiry." ;
+  skos:altLabel "Indicator D1.4.3-5" ;
+  c3:officialText "Explain how supporting questions help answer compelling questions in an inquiry." ;
+  c3:targetsGradeBand c3:G3_5 ;
+  c3:addressesConcept c3:SupportingQs , c3:CompellingQs ;
+  c3:requiresSkill c3:Explain ;
+  c3:inStrand c3:Str_D1_LinkQuestions ;
+  c3:inDimension c3:Dimension1 ;
+  c3:isIndicatorOf c3:Inquiry ;
+  dcterms:source "C3 Framework, Table 6, p. 22" .
+
+c3:I_D1_4_6_8 a c3:Indicator ;
+  c3:hasCode "D1.4.6-8" ;
+  rdfs:label "Explain how the relationship between supporting questions and compelling questions is mutually reinforcing." ;
+  skos:prefLabel "Explain how the relationship between supporting questions and compelling questions is mutually reinforcing." ;
+  skos:altLabel "Indicator D1.4.6-8" ;
+  c3:officialText "Explain how the relationship between supporting questions and compelling questions is mutually reinforcing." ;
+  c3:targetsGradeBand c3:G6_8 ;
+  c3:addressesConcept c3:SupportingQs , c3:CompellingQs ;
+  c3:requiresSkill c3:Explain , c3:Analyze ;
+  c3:inStrand c3:Str_D1_LinkQuestions ;
+  c3:inDimension c3:Dimension1 ;
+  c3:isIndicatorOf c3:Inquiry ;
+  dcterms:source "C3 Framework, Table 6, p. 22" .
+
+c3:I_D1_4_9_12 a c3:Indicator ;
+  c3:hasCode "D1.4.9-12" ;
+  rdfs:label "Explain how supporting questions contribute to an inquiry and how, through engaging source work, new compelling and supporting questions emerge." ;
+  skos:prefLabel "Explain how supporting questions contribute to an inquiry and how, through engaging source work, new compelling and supporting questions emerge." ;
+  skos:altLabel "Indicator D1.4.9-12" ;
+  c3:officialText "Explain how supporting questions contribute to an inquiry and how, through engaging source work, new compelling and supporting questions emerge." ;
+  c3:targetsGradeBand c3:G9_12 ;
+  c3:addressesConcept c3:SupportingQs , c3:CompellingQs ;
+  c3:requiresSkill c3:Synthesize , c3:Analyze ;
+  c3:inStrand c3:Str_D1_LinkQuestions ;
+  c3:inDimension c3:Dimension1 ;
+  c3:isIndicatorOf c3:Inquiry ;
+  dcterms:source "C3 Framework, Table 6, p. 22" .
+
+c3:I_D1_5_K_2 a c3:Indicator ;
+  c3:hasCode "D1.5.K-2" ;
+  rdfs:label "Determine the kinds of sources that will be helpful in answering compelling and supporting questions." ;
+  skos:prefLabel "Determine the kinds of sources that will be helpful in answering compelling and supporting questions." ;
+  skos:altLabel "Indicator D1.5.K-2" ;
+  c3:officialText "Determine the kinds of sources that will be helpful in answering compelling and supporting questions." ;
+  c3:targetsGradeBand c3:K_2 ;
+  c3:addressesConcept c3:HelpfulSources ;
+  c3:requiresSkill c3:Identify ;
+  c3:inStrand c3:Str_D1_Sources ;
+  c3:inDimension c3:Dimension1 ;
+  c3:isIndicatorOf c3:Inquiry ;
+  dcterms:source "C3 Framework, Table 7, p. 23" .
+
+c3:I_D1_5_3_5 a c3:Indicator ;
+  c3:hasCode "D1.5.3-5" ;
+  rdfs:label "Determine the kinds of sources that will be helpful in answering compelling and supporting questions, taking into consideration the different opinions people have about how to answer the questions." ;
+  skos:prefLabel "Determine the kinds of sources that will be helpful in answering compelling and supporting questions, taking into consideration the different opinions people have about how to answer the questions." ;
+  skos:altLabel "Indicator D1.5.3-5" ;
+  c3:officialText "Determine the kinds of sources that will be helpful in answering compelling and supporting questions, taking into consideration the different opinions people have about how to answer the questions." ;
+  c3:targetsGradeBand c3:G3_5 ;
+  c3:addressesConcept c3:HelpfulSources ;
+  c3:requiresSkill c3:Identify , c3:Explain ;
+  c3:inStrand c3:Str_D1_Sources ;
+  c3:inDimension c3:Dimension1 ;
+  c3:isIndicatorOf c3:Inquiry ;
+  dcterms:source "C3 Framework, Table 7, p. 23" .
+
+c3:I_D1_5_6_8 a c3:Indicator ;
+  c3:hasCode "D1.5.6-8" ;
+  rdfs:label "Determine the kinds of sources that will be helpful in answering compelling and supporting questions, taking into consideration multiple points of view represented in the sources." ;
+  skos:prefLabel "Determine the kinds of sources that will be helpful in answering compelling and supporting questions, taking into consideration multiple points of view represented in the sources." ;
+  skos:altLabel "Indicator D1.5.6-8" ;
+  c3:officialText "Determine the kinds of sources that will be helpful in answering compelling and supporting questions, taking into consideration multiple points of view represented in the sources." ;
+  c3:targetsGradeBand c3:G6_8 ;
+  c3:addressesConcept c3:HelpfulSources ;
+  c3:requiresSkill c3:Analyze , c3:Explain ;
+  c3:inStrand c3:Str_D1_Sources ;
+  c3:inDimension c3:Dimension1 ;
+  c3:isIndicatorOf c3:Inquiry ;
+  dcterms:source "C3 Framework, Table 7, p. 23" .
+
+c3:I_D1_5_9_12 a c3:Indicator ;
+  c3:hasCode "D1.5.9-12" ;
+  rdfs:label "Determine the kinds of sources that will be helpful in answering compelling and supporting questions, taking into consideration multiple points of view represented in the sources, the types of sources available, and the potential uses of the sources." ;
+  skos:prefLabel "Determine the kinds of sources that will be helpful in answering compelling and supporting questions, taking into consideration multiple points of view represented in the sources, the types of sources available, and the potential uses of the sources." ;
+  skos:altLabel "Indicator D1.5.9-12" ;
+  c3:officialText "Determine the kinds of sources that will be helpful in answering compelling and supporting questions, taking into consideration multiple points of view represented in the sources, the types of sources available, and the potential uses of the sources." ;
+  c3:targetsGradeBand c3:G9_12 ;
+  c3:addressesConcept c3:HelpfulSources ;
+  c3:requiresSkill c3:Analyze , c3:Evaluate ;
+  c3:inStrand c3:Str_D1_Sources ;
+  c3:inDimension c3:Dimension1 ;
+  c3:isIndicatorOf c3:Inquiry ;
+  dcterms:source "C3 Framework, Table 7, p. 23" .
+
+#################################################################
+# Provenance summary
+#################################################################
+
+c3:Dimension1
+  c3:alignmentNote "Module extracted for reuse; see C3 Framework pp. 17–24 for official text." ;
+  c3:createdOn "2025-11-02"^^xsd:date .
